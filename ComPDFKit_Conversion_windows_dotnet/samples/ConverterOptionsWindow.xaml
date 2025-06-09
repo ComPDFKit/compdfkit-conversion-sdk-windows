@@ -1,0 +1,132 @@
+﻿<Window x:Class="ComPDFKit_Conversion_Demo.ConverterOptionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComPDFKit_Conversion_Demo"
+        mc:Ignorable="d"
+        Title="Converter Options" Height="550" Width="350"
+        WindowStartupLocation ="CenterScreen"
+        Loaded="Window_Loaded"
+        >
+    <Grid>
+        <StackPanel>
+            <StackPanel x:Name="IsContainImagesPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Contain Images : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="ContainImages" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsContainAnnotationsPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-140,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Contain Annotations : " Width="133" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="ContainAnnotations" Margin="6,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsFormulaToImagePanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-140,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Formula To Image : " Width="133" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="FormulaToImage" Margin="6,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsAllContentPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="All Content : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="AllContent" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsCsvFormatPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Csv Format : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="CsvFormat" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsTxtTableFormatPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Table Format : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="TxtTableFormat" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsContainTablesPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Contain Tables : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="ContainTables" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsImagePathEnhancePanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Path Enhance : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="ImagePathEnhance" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsEnableAiLayoutPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="AI Layout Analysis : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="EnableAiLayout" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsEnableOCRPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Enable OCR : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="EnableOCR" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="PageLayoutOptionsPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-60,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Page Layout Options : " Width="150" Height="30" TextAlignment="Center"/>
+                <ComboBox x:Name="PageLayoutOptions" Width="105" Height="30" SelectedIndex="0">
+                    <ComboBoxItem x:Name="PageLayoutBox" Content="Fixed"/>
+                    <ComboBoxItem x:Name="PageLayoutFlow" Content="Hybrid"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel x:Name="ExcelWorksheetOptionsPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-60,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Excel Worksheet Options : " Width="150" Height="30" TextAlignment="Center"/>
+                <ComboBox x:Name="ExcelWorksheetOptions" Width="105" Height="30" SelectedIndex="0">
+                    <ComboBoxItem x:Name="ForTable" Content="For Table"/>
+                    <ComboBoxItem x:Name="ForPage" Content="For Page"/>
+                    <ComboBoxItem x:Name="ForDocument" Content="For Document"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel x:Name="HtmlOptionsPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-60,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Html Options : " Width="150" Height="30" TextAlignment="Center"/>
+                <ComboBox x:Name="HtmlOptions" Width="105" Height="30" SelectedIndex="0">
+                    <ComboBoxItem x:Name="SinglePage" Content="Single Page"/>
+                    <ComboBoxItem x:Name="SinglePageWithBookmark" Content="Single Page With Bookmark"/>
+                    <ComboBoxItem x:Name="MultiPage" Content="Multi Page"/>
+                    <ComboBoxItem x:Name="MultiPageWithBookmark" Content="Multi Page With Bookmark"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel x:Name="ImageFormatPanel"  Orientation="Horizontal" HorizontalAlignment="Center" Visibility="Collapsed">
+                <TextBlock Text="Image Format : " Width="120" Height="30" TextAlignment="Center"/>
+                <ComboBox x:Name="ImageFormat" Width="140" Height="30" SelectedIndex="0" Margin="10" IsEnabled="True">
+                    <ComboBoxItem x:Name="JPG" Content="JPG" />
+                    <ComboBoxItem x:Name="JPEG" Content="JPEG"/>
+                    <ComboBoxItem x:Name="PNG" Content="PNG"/>
+                    <ComboBoxItem x:Name="BMP" Content="BMP"/>
+                    <ComboBoxItem x:Name="TIFF" Content="TIFF"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel x:Name="ImageModePanel"  Orientation="Horizontal" HorizontalAlignment="Center" Visibility="Collapsed">
+                <TextBlock Text="Image Mode : " Width="120" Height="30" TextAlignment="Center"/>
+                <ComboBox x:Name="ImageMode" Width="140" Height="30" SelectedIndex="0" Margin="10" IsEnabled="True">
+                    <ComboBoxItem x:Name="Color" Content="Color" />
+                    <ComboBoxItem x:Name="Gray" Content="Gray"/>
+                    <ComboBoxItem x:Name="Binary" Content="Binary"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel x:Name="OCRLanguagePanel"  Orientation="Horizontal" HorizontalAlignment="Center" Visibility="Collapsed">
+                <TextBlock Text="OCR Language : " Width="120" Height="30" TextAlignment="Center"/>
+                <ComboBox x:Name="OCRLanguage" Width="140" Height="30" SelectedIndex="2" Margin="10" IsEnabled="False">
+                    <ComboBoxItem x:Name="Chinese" Content="Chinese" />
+                    <ComboBoxItem x:Name="ChineseTraditional" Content="Chinese Traditional"/>
+                    <ComboBoxItem x:Name="ENGLISH" Content="English"/>
+                    <ComboBoxItem x:Name="KOREAN" Content="Korean"/>
+                    <ComboBoxItem x:Name="JAPANESE" Content="Japanese"/>
+                    <ComboBoxItem x:Name="LATIN" Content="Latin"/>
+                    <ComboBoxItem x:Name="DEVANAGARI" Content="Devanagari"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel x:Name="ImageRatioPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-46,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Image Ratio : " Width="110" Height="30" TextAlignment="Center" />
+                <TextBox x:Name="ImageRatio" Text="200" Width="80" Height="30" TextAlignment="Center"/>
+            </StackPanel>
+
+            <Button Content="OK" Width="70" Height="25" Margin="20" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

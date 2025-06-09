@@ -1,0 +1,537 @@
+﻿using ComPDFKit_Conversion.Common;
+using ComPDFKit_Conversion.Conversion;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.IO.Pipes;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using System.Xml.Linq;
+using MessageBox = System.Windows.MessageBox;
+
+namespace ComPDFKit_Conversion_Demo
+{
+  public class ConvertOptions
+  {
+    public OCRLanguage OCRLanguage = OCRLanguage.e_ENGLISH;
+    public bool ContainAnnotation = true;
+    public bool CsvFormat = false;
+    public bool AllContent = false;
+    public bool OneTablePerSheet = true;
+    public bool ContainImage = true;
+    public bool EnableAiLayout = true;
+    public bool EnableOCR = false;
+    public bool TxtTableFormat = true;
+    public bool FormulaToImage = false;
+    public bool ImagePathEnhance = false;
+    public bool ContainTables = true;
+    public float ImageRatio = 1.0f;
+    public PageLayoutMode LayoutMode = PageLayoutMode.e_Flow;
+    public ExcelWorksheetOption WorksheetOption = ExcelWorksheetOption.e_ForTable;
+    public HtmlPageOption htmlOption  = HtmlPageOption.e_SinglePage;
+    public ImageType ImageFormat = ImageType.PNG;
+    public ImageColorMode ImageMode = ImageColorMode.Color;
+  }
+
+  /// <summary>
+  /// Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+  ///
+  /// THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
+  /// AND MAY NOT BE RESOLD OR REDISTRIBUTED.USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
+  /// UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS SUBJECT TO CIVIL AND CRIMINAL PENALTIES.
+  /// This notice may not be removed from this file.
+  ///
+  /// https://www.compdf.com
+  /// </summary>
+  public partial class MainWindow : Window
+  {
+    private OnProgress getPorgress = null;
+    private ErrorCode err;
+    public ConvertOptions Options;
+    private List<string> selectedFiles;
+    public MainWindow()
+    {
+      InitializeComponent();
+      getPorgress = GetProgress;
+      Options = new ConvertOptions();
+    }
+
+    #region Method
+    private void GetProgress(int pageIndex, int total)
+    {
+      Dispatcher.Invoke(() =>
+      {
+        Progress.Text = pageIndex + "/" + total;
+        if (pageIndex == total)
+        {
+          Progress.Text += " Conversion to complete.";
+        }
+      });
+    }
+
+    private void ShowErrorMessage(ErrorCode error)
+    {
+      string errorMessage = "";
+
+      switch (error)
+      {
+        case ErrorCode.e_ErrPDFPassword:
+          errorMessage = "Password required or incorrect password.";
+          break;
+
+        case ErrorCode.e_ErrLicensePermissionDeny:
+          errorMessage = "The license doesn't allow the permission.";
+          break;
+
+        case ErrorCode.e_ErrOutOfMemory:
+          errorMessage = "Malloc failure.";
+          break;
+
+        case ErrorCode.e_ErrFile:
+          errorMessage = "File not found or could not be opened.";
+          break;
+
+        case ErrorCode.e_ErrPDFFormat:
+          errorMessage = "File not in PDF format or corrupted.";
+          break;
+
+        case ErrorCode.e_ErrPDFSecurity:
+          errorMessage = "Unsupported security scheme.";
+          break;
+
+        case ErrorCode.e_ErrPDFPage:
+          errorMessage = "Page not found or content error.";
+          break;
+
+        case ErrorCode.e_ErrCancel:
+          errorMessage = "Conversion task Canceled.";
+          break;
+
+        case ErrorCode.e_ErrNoTable:
+          errorMessage = "There are no tables in the PDF document.";
+          break;
+
+        case ErrorCode.e_ErrConverting:
+          errorMessage = "A file is already being converted, so other files could not be converted at the same time.";
+          break;
+
+        case ErrorCode.e_ErrUnknown:
+          errorMessage = "Unknown error in processing conversion.";
+          break;
+
+        default:
+          errorMessage = "Unknown error in processing conversion.";
+          break;
+      }
+
+      MessageBox.Show("Conversion failure : " + errorMessage);
+    }
+
+    private async Task WordConvert()
+    {
+      try
+      {
+        WordOptions wordOptions = new WordOptions();
+        wordOptions.ContainImage = Options.ContainImage;
+        wordOptions.ContainAnnotation = Options.ContainAnnotation;
+        wordOptions.FormulaToImage = Options.FormulaToImage;
+        wordOptions.EnableAiLayout = Options.EnableAiLayout;
+        wordOptions.EnableOCR = Options.EnableOCR;
+        wordOptions.LayoutMode = Options.LayoutMode;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToWord(input, "", outputFolder, wordOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task ExcelConvert()
+    {
+      try
+      {
+        ExcelOptions excelOptions = new ExcelOptions();
+        excelOptions.ContainImage = Options.ContainImage;
+        excelOptions.ContainAnnotation = Options.ContainAnnotation;
+        excelOptions.FormulaToImage = Options.FormulaToImage;
+        excelOptions.AllContent = Options.AllContent;
+        excelOptions.CsvFormat = Options.CsvFormat;
+        excelOptions.EnableAiLayout = Options.EnableAiLayout;
+        excelOptions.EnableOCR = Options.EnableOCR;
+        excelOptions.WorksheetOption = Options.WorksheetOption;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToExcel(input, "", outputFolder, excelOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task PptConvert()
+    {
+      try
+      {
+        PptOptions pptOptions = new PptOptions();
+        pptOptions.ContainImage = Options.ContainImage;
+        pptOptions.ContainAnnotation = Options.ContainAnnotation;
+        pptOptions.FormulaToImage = Options.FormulaToImage;
+        pptOptions.EnableAiLayout = Options.EnableAiLayout;
+        pptOptions.EnableOCR = Options.EnableOCR;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToPpt(input, "", outputFolder, pptOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task HtmlConvert()
+    {
+      try
+      {
+        HtmlOptions htmlOptions = new HtmlOptions();
+        htmlOptions.ContainImage = Options.ContainImage;
+        htmlOptions.ContainAnnotation = Options.ContainAnnotation;
+        htmlOptions.FormulaToImage = Options.FormulaToImage;
+        htmlOptions.EnableAiLayout = Options.EnableAiLayout;
+        htmlOptions.EnableOCR = Options.EnableOCR;
+        htmlOptions.LayoutMode = Options.LayoutMode;
+        htmlOptions.HtmlOption = Options.htmlOption;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToHtml(input, "", outputFolder, htmlOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task RtfConvert()
+    {
+      try
+      {
+        RtfOptions rtfOptions = new RtfOptions();
+        rtfOptions.ContainImage = Options.ContainImage;
+        rtfOptions.ContainAnnotation = Options.ContainAnnotation;
+        rtfOptions.FormulaToImage = Options.FormulaToImage;
+        rtfOptions.EnableAiLayout = Options.EnableAiLayout;
+        rtfOptions.EnableOCR = Options.EnableOCR;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToRtf(input, "", outputFolder, rtfOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task PdfConvert()
+    {
+      try
+      {
+        SearchablePdfOptions pdfOptions = new SearchablePdfOptions();
+        pdfOptions.ContainImage = Options.ContainImage;
+        pdfOptions.EnableOCR = true;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToSearchablePDF(input, "", outputFolder, pdfOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task TxtConvert()
+    {
+      try
+      {
+        TxtOptions txtOptions = new TxtOptions();
+        txtOptions.TableFormat = Options.TxtTableFormat;
+        txtOptions.EnableAiLayout = Options.EnableAiLayout;
+        txtOptions.EnableOCR = Options.EnableOCR;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToTxt(input, "", outputFolder, txtOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task ImageConvert()
+    {
+      try
+      {
+        ImageOptions imageOptions = new ImageOptions();
+        imageOptions.ImageScaling = Options.ImageRatio;
+        imageOptions.PathEnhance = Options.ImagePathEnhance;
+        imageOptions.ImageType = Options.ImageFormat;
+        imageOptions.ImageColorMode = Options.ImageMode;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToImage(input, "", Path.Combine(outputFolder, outputFileName), imageOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task JsonConvert()
+    {
+      try
+      {
+        JsonOptions jsonOptions = new JsonOptions();
+        jsonOptions.ContainImage = Options.ContainImage;
+        jsonOptions.ContainTable = Options.ContainTables;
+        jsonOptions.EnableAiLayout = Options.EnableAiLayout;
+        jsonOptions.EnableOCR = Options.EnableOCR;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToJson(input, "", outputFolder, jsonOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task MarkdownConvert()
+    {
+      try
+      {
+        MarkdownOptions markdownOptions = new MarkdownOptions();
+        markdownOptions.ContainImage = Options.ContainImage;
+        markdownOptions.ContainAnnotation = Options.ContainAnnotation;
+        markdownOptions.EnableAiLayout = Options.EnableAiLayout;
+        markdownOptions.EnableOCR = Options.EnableOCR;
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        err = await Task.Run(() => CPDFConversion.StartPDFToMarkdown(input, "", outputFolder, markdownOptions));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+    #endregion
+
+    #region Event
+    private void Window_Loaded(object sender, RoutedEventArgs e)
+    {
+      string License = "nHTx+ovPhhn7zyHJtV4+PcZlztVF79aJP+bXusMKB8BNfGhoNOiWknVycUgh88KzdHZY25Vq1ZjV+xYmONgSS5KTnu0eHFap1qAN/7BV44n+5wL1BRquiOtp/QhBMCEPyX5Y89zsxAafVQT28wDTgf88BXheZ0OPBWSVAKyUiWryguYjsiMI+3tHXLPbWAKvPio9q6Ok1zHH0D8gb3jBlik9mOEQuLuysfNg05D2LzkiVCKVdlVV1Q8QKO7HAkX2YSYtjFbDz1weEEpY8l+fgEhftD4tJXOvwY6aatNfbVvDDINN2REg6fad2G4ZU9tHH620GKIRzSkKOgOjAbVYWK8kD+Q9C95FZo3W7DLPF5KHAYEs2RF7Z9toqEufbP3GkrSF8rrxDKX4enQyBHWqvMxiKiLVQvUOqimc5KbdOcTvzFStjtQ0ZXEzsoE9DFElqtgYGJfOc+DPxdyR8b4tHM/4Wu10G7037suVOaNLq7oe1jpq/rY86x/3DCADjT8SEbQQ9Xg4/3r+aORj1MId+0gVusE/Tqjcp3dmNqQj/PjH5aVb21O7zKqBclDRwwPQtafo14hiD8c+XZHmibaf0mSc1iVtuHBhZTFhkup+L6Qgh7kq7soeyX4bU2tS9R8/jF7i0/jKom3qTkre1u0IGRqKi/fNKu/e5CeMvqysL8EPO/pADHF3Jh+dAhOW0mnbj0AS+u6O6+BW4LrMR7cuVaekwwQvAr6a7Jt34MeZafigJYGkKbPZ1JJFMu1zbWRryFlTWilteBjIVCBY2NZalNy23wNRqyp7wrBUC7V7CW89KBUo0LkjrL4ZBCUfIBBAG/B1tCmblU/dMaf/0iiTsuubqZ7NNd50kLpVVQKy2BqM6sQqacODSuEteLvrE2lS";
+      string exePath = Path.GetDirectoryName(typeof(MainWindow).Assembly.Location);
+      string resPath = exePath + "\\";
+
+      if (LibraryManager.InitLibrary(Path.Combine(resPath, "x64")))
+      {
+        LibraryManager.Initialize(Path.Combine(resPath, "resource"));
+        LibraryManager.SetProgress(Marshal.GetFunctionPointerForDelegate(getPorgress));
+        ErrorCode result = LibraryManager.LicenseVerify(License);
+        LibraryManager.SetDocumentAIModel(Path.Combine(exePath, "resource", "models", "documentai.model"), OCRLanguage.e_ENGLISH);
+
+        if (result != ErrorCode.e_ErrSuccess)
+        {
+          MessageBox.Show("ComPDFKit Conversion SDK Load Failed!");
+        }
+      } else {
+        MessageBox.Show("ComPDFKit Conversion SDK NativeLibrary Load Failed!");
+        LibraryManager.Release();
+      }
+    }
+
+    private void Input_Click(object sender, RoutedEventArgs e)
+    {
+      var dlg = new Microsoft.Win32.OpenFileDialog();
+      dlg.Filter = "PDF Image Files (*.pdf;*.bmp;*.jpg;*.jpeg;*.png;*.tiff)|*.pdf;*.bmp;*.jpg;*.jpeg;*.png;*.tiff";
+      dlg.Multiselect = true;
+
+      if (dlg.ShowDialog() == true)
+      {
+        selectedFiles = new List<string>(dlg.FileNames);
+
+        if (selectedFiles.Count > 0)
+        {
+          InputPath.Text = selectedFiles[0];
+        }
+        Progress.Text = "";
+      }
+    }
+
+    private void Output_Click(object sender, RoutedEventArgs e)
+    {
+      FolderSelectDialog dlg = new FolderSelectDialog();
+
+      if (dlg.ShowDialog())
+      {
+        OutputPath.Text = dlg.FileName;
+      }
+    }
+
+    private async void Convert_Click(object sender, RoutedEventArgs e)
+    {
+      if (selectedFiles == null || selectedFiles.Count == 0)
+      {
+        MessageBox.Show("Invalid input path!");
+        return;
+      }
+
+      if (string.IsNullOrEmpty(OutputPath.Text))
+      {
+        MessageBox.Show("Invalid output path!");
+        return;
+      }
+
+      Cancel.IsEnabled = true;
+      Convert.IsEnabled = false;
+      ConvertType.IsEnabled = false;
+      ConverterOptions.IsEnabled = false;
+      if (Options.EnableOCR)
+        LibraryManager.SetOCRLanguage(Options.OCRLanguage);
+
+      foreach (string filePath in selectedFiles)
+      {
+        InputPath.Text = filePath;
+        switch ((ConvertType.SelectedItem as ComboBoxItem).Name)
+        {
+          case "Word":
+            await WordConvert();
+            break;
+
+          case "Excel":
+            await ExcelConvert();
+            break;
+
+          case "Ppt":
+            await PptConvert();
+            break;
+
+          case "Html":
+            await HtmlConvert();
+            break;
+
+          case "Rtf":
+            await RtfConvert();
+            break;
+
+          case "SearchablePDF":
+            await PdfConvert();
+            break;
+
+          case "Txt":
+            await TxtConvert();
+            break;
+
+          case "Json":
+            await JsonConvert();
+            break;
+
+          case "Image":
+            await ImageConvert();
+            break;
+
+          case "Markdown":
+            await MarkdownConvert();
+            break;
+
+          default:
+            break;
+        }
+      }
+      
+      if (err == ErrorCode.e_ErrSuccess)
+        Process.Start(OutputPath.Text);
+
+      Cancel.IsEnabled = false;
+      Convert.IsEnabled = true;
+      ConvertType.IsEnabled = true;
+      ConverterOptions.IsEnabled = true;
+    }
+
+    private void Cancel_Click(object sender, RoutedEventArgs e)
+    {
+      CPDFConversion.Cancel();
+    }
+
+    private void ConverterOptions_Click(object sender, RoutedEventArgs e)
+    {
+      ConverterOptionsWindow optionsWindow = new ConverterOptionsWindow(this, (ConvertType.SelectedItem as ComboBoxItem).Name);
+      optionsWindow.ShowDialog();
+    }
+#endregion
+  }
+}
