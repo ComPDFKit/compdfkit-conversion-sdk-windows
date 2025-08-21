@@ -1,5 +1,6 @@
 ﻿using ComPDFKit_Conversion.Common;
 using ComPDFKit_Conversion.Conversion;
+using ComPDFKit_Conversion.DocumentAI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -18,16 +19,16 @@ namespace ComPDFKit_Conversion_Demo
   public class ConvertOptions
   {
     public OCRLanguage OCRLanguage = OCRLanguage.e_ENGLISH;
-    public bool ContainAnnotation = true;
+    public bool ContainAnnotations = true;
     public bool CsvFormat = false;
     public bool AllContent = false;
     public bool OneTablePerSheet = true;
-    public bool ContainImage = true;
+    public bool ContainImages = true;
     public bool EnableAiLayout = true;
     public bool EnableOCR = false;
     public bool TxtTableFormat = true;
     public bool FormulaToImage = false;
-    public bool ImagePathEnhance = false;
+    public bool ImagePathEnhance = true;
     public bool ContainTables = true;
     public float ImageRatio = 1.0f;
     public PageLayoutMode LayoutMode = PageLayoutMode.e_Flow;
@@ -136,8 +137,8 @@ namespace ComPDFKit_Conversion_Demo
       try
       {
         WordOptions wordOptions = new WordOptions();
-        wordOptions.ContainImage = Options.ContainImage;
-        wordOptions.ContainAnnotation = Options.ContainAnnotation;
+        wordOptions.ContainImage = Options.ContainImages;
+        wordOptions.ContainAnnotation = Options.ContainAnnotations;
         wordOptions.FormulaToImage = Options.FormulaToImage;
         wordOptions.EnableAiLayout = Options.EnableAiLayout;
         wordOptions.EnableOCR = Options.EnableOCR;
@@ -163,8 +164,8 @@ namespace ComPDFKit_Conversion_Demo
       try
       {
         ExcelOptions excelOptions = new ExcelOptions();
-        excelOptions.ContainImage = Options.ContainImage;
-        excelOptions.ContainAnnotation = Options.ContainAnnotation;
+        excelOptions.ContainImage = Options.ContainImages;
+        excelOptions.ContainAnnotation = Options.ContainAnnotations;
         excelOptions.FormulaToImage = Options.FormulaToImage;
         excelOptions.AllContent = Options.AllContent;
         excelOptions.CsvFormat = Options.CsvFormat;
@@ -192,8 +193,8 @@ namespace ComPDFKit_Conversion_Demo
       try
       {
         PptOptions pptOptions = new PptOptions();
-        pptOptions.ContainImage = Options.ContainImage;
-        pptOptions.ContainAnnotation = Options.ContainAnnotation;
+        pptOptions.ContainImage = Options.ContainImages;
+        pptOptions.ContainAnnotation = Options.ContainAnnotations;
         pptOptions.FormulaToImage = Options.FormulaToImage;
         pptOptions.EnableAiLayout = Options.EnableAiLayout;
         pptOptions.EnableOCR = Options.EnableOCR;
@@ -218,8 +219,8 @@ namespace ComPDFKit_Conversion_Demo
       try
       {
         HtmlOptions htmlOptions = new HtmlOptions();
-        htmlOptions.ContainImage = Options.ContainImage;
-        htmlOptions.ContainAnnotation = Options.ContainAnnotation;
+        htmlOptions.ContainImage = Options.ContainImages;
+        htmlOptions.ContainAnnotation = Options.ContainAnnotations;
         htmlOptions.FormulaToImage = Options.FormulaToImage;
         htmlOptions.EnableAiLayout = Options.EnableAiLayout;
         htmlOptions.EnableOCR = Options.EnableOCR;
@@ -246,8 +247,8 @@ namespace ComPDFKit_Conversion_Demo
       try
       {
         RtfOptions rtfOptions = new RtfOptions();
-        rtfOptions.ContainImage = Options.ContainImage;
-        rtfOptions.ContainAnnotation = Options.ContainAnnotation;
+        rtfOptions.ContainImage = Options.ContainImages;
+        rtfOptions.ContainAnnotation = Options.ContainAnnotations;
         rtfOptions.FormulaToImage = Options.FormulaToImage;
         rtfOptions.EnableAiLayout = Options.EnableAiLayout;
         rtfOptions.EnableOCR = Options.EnableOCR;
@@ -272,7 +273,7 @@ namespace ComPDFKit_Conversion_Demo
       try
       {
         SearchablePdfOptions pdfOptions = new SearchablePdfOptions();
-        pdfOptions.ContainImage = Options.ContainImage;
+        pdfOptions.ContainImage = Options.ContainImages;
         pdfOptions.EnableOCR = true;
 
         string outputFolder = OutputPath.Text;
@@ -344,7 +345,7 @@ namespace ComPDFKit_Conversion_Demo
       try
       {
         JsonOptions jsonOptions = new JsonOptions();
-        jsonOptions.ContainImage = Options.ContainImage;
+        jsonOptions.ContainImage = Options.ContainImages;
         jsonOptions.ContainTable = Options.ContainTables;
         jsonOptions.EnableAiLayout = Options.EnableAiLayout;
         jsonOptions.EnableOCR = Options.EnableOCR;
@@ -369,8 +370,8 @@ namespace ComPDFKit_Conversion_Demo
       try
       {
         MarkdownOptions markdownOptions = new MarkdownOptions();
-        markdownOptions.ContainImage = Options.ContainImage;
-        markdownOptions.ContainAnnotation = Options.ContainAnnotation;
+        markdownOptions.ContainImage = Options.ContainImages;
+        markdownOptions.ContainAnnotation = Options.ContainAnnotations;
         markdownOptions.EnableAiLayout = Options.EnableAiLayout;
         markdownOptions.EnableOCR = Options.EnableOCR;
 
@@ -393,7 +394,6 @@ namespace ComPDFKit_Conversion_Demo
     #region Event
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
-      string License = "nHTx+ovPhhn7zyHJtV4+PcZlztVF79aJP+bXusMKB8BNfGhoNOiWknVycUgh88KzdHZY25Vq1ZjV+xYmONgSS5KTnu0eHFap1qAN/7BV44n+5wL1BRquiOtp/QhBMCEPyX5Y89zsxAafVQT28wDTgf88BXheZ0OPBWSVAKyUiWryguYjsiMI+3tHXLPbWAKvPio9q6Ok1zHH0D8gb3jBlik9mOEQuLuysfNg05D2LzkiVCKVdlVV1Q8QKO7HAkX2YSYtjFbDz1weEEpY8l+fgEhftD4tJXOvwY6aatNfbVvDDINN2REg6fad2G4ZU9tHH620GKIRzSkKOgOjAbVYWK8kD+Q9C95FZo3W7DLPF5KHAYEs2RF7Z9toqEufbP3GkrSF8rrxDKX4enQyBHWqvMxiKiLVQvUOqimc5KbdOcTvzFStjtQ0ZXEzsoE9DFElqtgYGJfOc+DPxdyR8b4tHM/4Wu10G7037suVOaNLq7oe1jpq/rY86x/3DCADjT8SEbQQ9Xg4/3r+aORj1MId+0gVusE/Tqjcp3dmNqQj/PjH5aVb21O7zKqBclDRwwPQtafo14hiD8c+XZHmibaf0mSc1iVtuHBhZTFhkup+L6Qgh7kq7soeyX4bU2tS9R8/jF7i0/jKom3qTkre1u0IGRqKi/fNKu/e5CeMvqysL8EPO/pADHF3Jh+dAhOW0mnbj0AS+u6O6+BW4LrMR7cuVaekwwQvAr6a7Jt34MeZafigJYGkKbPZ1JJFMu1zbWRryFlTWilteBjIVCBY2NZalNy23wNRqyp7wrBUC7V7CW89KBUo0LkjrL4ZBCUfIBBAG/B1tCmblU/dMaf/0iiTsuubqZ7NNd50kLpVVQKy2BqM6sQqacODSuEteLvrE2lS";
       string exePath = Path.GetDirectoryName(typeof(MainWindow).Assembly.Location);
       string resPath = exePath + "\\";
 
@@ -401,8 +401,8 @@ namespace ComPDFKit_Conversion_Demo
       {
         LibraryManager.Initialize(Path.Combine(resPath, "resource"));
         LibraryManager.SetProgress(Marshal.GetFunctionPointerForDelegate(getPorgress));
-        ErrorCode result = LibraryManager.LicenseVerify(License);
-        LibraryManager.SetDocumentAIModel(Path.Combine(exePath, "resource", "models", "documentai.model"), OCRLanguage.e_ENGLISH);
+        ErrorCode result = LibraryManager.LicenseVerify(Path.Combine(resPath, "license.xml"));
+        LibraryManager.SetDocumentAIModel(Path.Combine(resPath, "resource", "models", "documentai.model"), OCRLanguage.e_Cyrillic);
 
         if (result != ErrorCode.e_ErrSuccess)
         {
@@ -410,7 +410,6 @@ namespace ComPDFKit_Conversion_Demo
         }
       } else {
         MessageBox.Show("ComPDFKit Conversion SDK NativeLibrary Load Failed!");
-        LibraryManager.Release();
       }
     }
 
@@ -489,6 +488,7 @@ namespace ComPDFKit_Conversion_Demo
             break;
 
           case "SearchablePDF":
+            LibraryManager.SetOCRLanguage(Options.OCRLanguage);
             await PdfConvert();
             break;
 

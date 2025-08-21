@@ -17,7 +17,7 @@ namespace ComPDFKit_Conversion_Demo
       ContainAnnotations.Click += (sender, args) =>
       {
         if (ContainAnnotations.IsChecked != null)
-          this.parent.Options.ContainAnnotation = ContainAnnotations.IsChecked.Value;
+          this.parent.Options.ContainAnnotations = ContainAnnotations.IsChecked.Value;
       };
 
       CsvFormat.Click += (sender, args) =>
@@ -32,7 +32,7 @@ namespace ComPDFKit_Conversion_Demo
 
       ContainImages.Click += (sender, args) =>
       {
-        if (ContainImages.IsChecked != null) this.parent.Options.ContainImage = ContainImages.IsChecked.Value;
+        if (ContainImages.IsChecked != null) this.parent.Options.ContainImages = ContainImages.IsChecked.Value;
       };
 
       EnableAiLayout.Click += (sender, args) =>
@@ -187,8 +187,8 @@ namespace ComPDFKit_Conversion_Demo
     private void Window_Loaded(object sender, RoutedEventArgs e)
     {
       OCRLanguage.SelectedIndex = (int)parent.Options.OCRLanguage - 1;
-      ContainAnnotations.IsChecked = parent.Options.ContainAnnotation;
-      ContainImages.IsChecked = parent.Options.ContainImage;
+      ContainAnnotations.IsChecked = parent.Options.ContainAnnotations;
+      ContainImages.IsChecked = parent.Options.ContainImages;
       EnableAiLayout.IsChecked = parent.Options.EnableAiLayout;
       EnableOCR.IsChecked = parent.Options.EnableOCR;
       CsvFormat.IsChecked = parent.Options.CsvFormat;

@@ -93,9 +93,12 @@
                 <ComboBox x:Name="ImageFormat" Width="140" Height="30" SelectedIndex="0" Margin="10" IsEnabled="True">
                     <ComboBoxItem x:Name="JPG" Content="JPG" />
                     <ComboBoxItem x:Name="JPEG" Content="JPEG"/>
+                    <ComboBoxItem x:Name="JPEG2000" Content="JPEG2000"/>
                     <ComboBoxItem x:Name="PNG" Content="PNG"/>
                     <ComboBoxItem x:Name="BMP" Content="BMP"/>
                     <ComboBoxItem x:Name="TIFF" Content="TIFF"/>
+                    <ComboBoxItem x:Name="TGA" Content="TGA"/>
+                    <ComboBoxItem x:Name="GIF" Content="GIF"/>
                 </ComboBox>
             </StackPanel>
 
@@ -118,6 +121,11 @@
                     <ComboBoxItem x:Name="JAPANESE" Content="Japanese"/>
                     <ComboBoxItem x:Name="LATIN" Content="Latin"/>
                     <ComboBoxItem x:Name="DEVANAGARI" Content="Devanagari"/>
+                    <ComboBoxItem x:Name="Cyrillic" Content="Cyrillic"/>
+                    <ComboBoxItem x:Name="Arabic" Content="Arabic"/>
+                    <ComboBoxItem x:Name="Tamil" Content="Tamil"/>
+                    <ComboBoxItem x:Name="Telugu" Content="Telugu"/>
+                    <ComboBoxItem x:Name="Kannada" Content="Kannada"/>
                 </ComboBox>
             </StackPanel>
 

@@ -26,7 +26,7 @@
       <div id="Header" class="fixedHeader">
         <div class="pageHeader level mb-0 py-2 px-4">
           <div id="TitleContainer" class="level-left">
-            <div id="DocumentationTitle" class="level-item">ComPDFKit Conversion Windows SDK 3.0.0</div>
+            <div id="DocumentationTitle" class="level-item">ComPDFKit Conversion Windows SDK 3.1.0</div>
           </div>
           <div id="LangFilterSearchContainer" class="level-right">
             <div class="level-item">
@@ -86,7 +86,7 @@
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="769ebda9-b22f-fbb9-aba2-89b661fc33fb.htm">ComPDFKit_Conversion.Common</a><br /><strong>Assembly:</strong> cpdfconversionsdk_dotnet (in cpdfconversionsdk_dotnet.dll) Version: 3.0.0.0 (3.0.0.0)<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="identifier">ErrorCode</span></code></pre></div></div></div>
+              <strong>Namespace:</strong> <a href="769ebda9-b22f-fbb9-aba2-89b661fc33fb.htm">ComPDFKit_Conversion.Common</a><br /><strong>Assembly:</strong> cpdfconversionsdk_dotnet (in cpdfconversionsdk_dotnet.dll) Version: 3.0.1.0 (3.0.1.0)<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="identifier">ErrorCode</span></code></pre></div></div></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
@@ -252,6 +252,111 @@
                   <td>60</td>
                   <td>
             Currently executing conversion task.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrInvalidArg</td>
+                  <td>80</td>
+                  <td>
+            Invalid argument provided.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrInvalidHandle</td>
+                  <td>81</td>
+                  <td>
+            The handle is invalid, possibly uninitialized or already released.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrModelInvalidFormat</td>
+                  <td>82</td>
+                  <td>
+            The model file format is invalid or corrupted.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrModelFunctionUnsupported</td>
+                  <td>83</td>
+                  <td>
+            The model does not support the requested function or operation.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrModelFormatUnsupported</td>
+                  <td>84</td>
+                  <td>
+            The model format is not supported by this system or SDK.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrModelSDKMismatch</td>
+                  <td>85</td>
+                  <td>
+            The model is incompatible with the current SDK version.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrImageDataEmpty</td>
+                  <td>86</td>
+                  <td>
+            The image data is empty or not provided.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrImageWHError</td>
+                  <td>87</td>
+                  <td>
+            The image width or height is invalid (e.g., less than or equal to zero).
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrImageUnsupportedFormat</td>
+                  <td>88</td>
+                  <td>
+            The image format is not supported (e.g., not RGB, YUV, etc.).
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrImageInvalid</td>
+                  <td>89</td>
+                  <td>
+            The image is invalid or corrupted.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrExpire</td>
+                  <td>90</td>
+                  <td>
+            The resource (e.g., license, token) has expired.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrMissingArg</td>
+                  <td>91</td>
+                  <td>
+            A required argument is missing.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrLicenseUnsupportedAPI</td>
+                  <td>92</td>
+                  <td>
+            The current license does not support calling this API.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrLicenseMismatch</td>
+                  <td>93</td>
+                  <td>
+            The license does not match the device, module, or version.
+            </td>
+                </tr>
+                <tr>
+                  <td>e_ErrInvalidTable</td>
+                  <td>94</td>
+                  <td>
+            The table data is invalid or null.
             </td>
                 </tr>
                 <tr>
