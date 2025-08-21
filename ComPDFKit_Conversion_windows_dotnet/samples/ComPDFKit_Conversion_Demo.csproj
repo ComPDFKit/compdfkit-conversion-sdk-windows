@@ -7,7 +7,7 @@
     <ProjectGuid>{6B277AC5-2CA3-4BB5-951F-F4E1C9571AA1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ComPDFKit_Conversion_Demo</RootNamespace>
-    <AssemblyName>ComPDFKit_Conversion_Demo</AssemblyName>
+    <AssemblyName>com.compdfkit.conversion</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -167,6 +167,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="license.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="App.ico" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -178,10 +181,6 @@
     </Content>
     <Content Include="..\lib\x64\DocumentAI.dll">
       <Link>x64\DocumentAI.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\lib\x64\fastdeploy.dll">
-      <Link>x64\fastdeploy.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\lib\x64\onnxruntime.dll">
@@ -196,12 +195,20 @@
       <Link>x64\opencv_world480.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\lib\x64\paddle2onnx.dll">
-      <Link>x64\paddle2onnx.dll</Link>
+    <Content Include="..\resource\fonts\DroidSansFallbackFull.ttf">
+      <Link>resource\fonts\DroidSansFallbackFull.ttf</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\lib\x64\yaml-cpp.dll">
-      <Link>x64\yaml-cpp.dll</Link>
+    <Content Include="..\resource\fonts\Iansui-Regular.ttf">
+      <Link>resource\fonts\Iansui-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\Roboto-Regular.ttf">
+      <Link>resource\fonts\Roboto-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\models\documentai.model">
+      <Link>resource\models\documentai.model</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />

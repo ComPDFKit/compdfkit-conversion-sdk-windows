@@ -18,14 +18,14 @@
     <meta name="Help.ContentType" content="Reference" />
     <meta name="container" content="ComPDFKit_Conversion.Common" />
     <meta name="guid" content="d6620f03-7aac-268f-43da-6d40e19ba6f8" />
-    <meta name="tocFile" content="../toc/IDJAA.xml" />
+    <meta name="tocFile" content="../toc/IDKAA.xml" />
   </head>
   <body>
     <div class="fixedLayout">
       <div id="Header" class="fixedHeader">
         <div class="pageHeader level mb-0 py-2 px-4">
           <div id="TitleContainer" class="level-left">
-            <div id="DocumentationTitle" class="level-item">ComPDFKit Conversion Windows SDK 3.0.0</div>
+            <div id="DocumentationTitle" class="level-item">ComPDFKit Conversion Windows SDK 3.1.0</div>
           </div>
           <div id="LangFilterSearchContainer" class="level-right">
             <div class="level-item">
@@ -121,6 +121,22 @@
                   </td>
                   <td>
             Verifies the provided license key along with device ID and application ID.
+            </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="1d2b1b3f-dee6-88af-954d-031eca0d38c5.htm">OnlineLicenseVerify</a>
+                  </td>
+                  <td>
+            When the result in the registry is empty, it needs to be read from the remote server.
+            <br />
+            When the result in the registry is not empty, it is first verified locally.
+            <br />
+            Then, the remote content is read during the program execution.
+            <br />
+            If the remote content is different from the local content, the local content will be updated.
+            <br />
+            Otherwise, it will be not updated.
             </td>
                 </tr>
                 <tr>

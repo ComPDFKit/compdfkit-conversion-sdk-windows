@@ -26,7 +26,7 @@
       <div id="Header" class="fixedHeader">
         <div class="pageHeader level mb-0 py-2 px-4">
           <div id="TitleContainer" class="level-left">
-            <div id="DocumentationTitle" class="level-item">ComPDFKit Conversion Windows SDK 3.0.0</div>
+            <div id="DocumentationTitle" class="level-item">ComPDFKit Conversion Windows SDK 3.1.0</div>
           </div>
           <div id="LangFilterSearchContainer" class="level-right">
             <div class="level-item">
@@ -89,12 +89,12 @@
                 <i class="fa fa-angle-down"></i>
               </span>Definition</h2>
             <div id="IDBSection">
-              <strong>Namespace:</strong> <a href="769ebda9-b22f-fbb9-aba2-89b661fc33fb.htm">ComPDFKit_Conversion.Common</a><br /><strong>Assembly:</strong> cpdfconversionsdk_dotnet (in cpdfconversionsdk_dotnet.dll) Version: 3.0.0.0 (3.0.0.0)<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">LibraryManager</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">LibraryManager</span></dd></dl></div>
+              <strong>Namespace:</strong> <a href="769ebda9-b22f-fbb9-aba2-89b661fc33fb.htm">ComPDFKit_Conversion.Common</a><br /><strong>Assembly:</strong> cpdfconversionsdk_dotnet (in cpdfconversionsdk_dotnet.dll) Version: 3.0.1.0 (3.0.1.0)<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">class</span> <span class="identifier">LibraryManager</span></code></pre></div></div><dl class="inheritanceHierarchy"><dt>Inheritance</dt><dd><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  <span class="icon is-small"><i class="fa fa-arrow-right"></i></span>  <span class="selflink">LibraryManager</span></dd></dl></div>
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Constructors</h2>
-            <div id="IDAEASection">
+            <div id="IDBEASection">
               <table id="ConstructorList" class="table is-hoverable">
                 <tr>
                   <td>
@@ -108,7 +108,7 @@
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
               </span>Methods</h2>
-            <div id="IDBEASection">
+            <div id="IDCEASection">
               <table id="MethodList" class="table is-hoverable">
                 <tr>
                   <td>
@@ -152,6 +152,22 @@
                 </tr>
                 <tr>
                   <td>
+                    <a href="1d2b1b3f-dee6-88af-954d-031eca0d38c5.htm">OnlineLicenseVerify</a>
+                  </td>
+                  <td>
+            When the result in the registry is empty, it needs to be read from the remote server.
+            <br />
+            When the result in the registry is not empty, it is first verified locally.
+            <br />
+            Then, the remote content is read during the program execution.
+            <br />
+            If the remote content is different from the local content, the local content will be updated.
+            <br />
+            Otherwise, it will be not updated.
+            </td>
+                </tr>
+                <tr>
+                  <td>
                     <a href="ef7fdf73-4c34-99ce-670e-440a1bfef7f5.htm">Release</a>
                   </td>
                   <td>
@@ -187,6 +203,20 @@
             <h2 class="quickLinkHeader">
               <span class="icon toggleSection" tabindex="0">
                 <i class="fa fa-angle-down"></i>
+              </span>Events</h2>
+            <div id="IDAEASection">
+              <table id="EventList" class="table is-hoverable">
+                <tr>
+                  <td>
+                    <a href="f7add0df-ef4d-092b-f9de-af164fb5b5c3.htm">LicenseRefreshed</a>
+                  </td>
+                  <td> </td>
+                </tr>
+              </table>
+            </div>
+            <h2 class="quickLinkHeader">
+              <span class="icon toggleSection" tabindex="0">
+                <i class="fa fa-angle-down"></i>
               </span>See Also</h2>
             <div id="seeAlsoSection">
               <h4>Reference</h4>
@@ -209,6 +239,9 @@
                 </li>
                 <li>
                   <a class="quickLink">Methods</a>
+                </li>
+                <li>
+                  <a class="quickLink">Events</a>
                 </li>
                 <li>
                   <a class="quickLink">See Also</a>

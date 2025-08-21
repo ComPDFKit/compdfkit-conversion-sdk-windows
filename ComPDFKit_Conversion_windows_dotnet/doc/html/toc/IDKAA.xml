@@ -11,18 +11,25 @@
       <a href="769ebda9-b22f-fbb9-aba2-89b661fc33fb.htm">Com<wbr />PDFKit_<wbr />Conversion.<wbr />Common</a>
     </li>
     <li>
-      <a href="36fcd1b9-e68a-c85a-c5f9-6637a46f4747.htm">Markdown<wbr />Options</a>
+      <a href="acc9ac2b-74c1-3b83-6c51-86a044a478be.htm">Library<wbr />Manager</a>
     </li>
   </breadcrumbs>
   <tocItems>
     <li>
-      <a id="082471b0-fd60-6e5e-0372-cec468e93486" href="082471b0-fd60-6e5e-0372-cec468e93486.htm">Constructor</a>
+      <a id="8eb24b03-26b2-03c5-5fe9-b66f09383af3" href="8eb24b03-26b2-03c5-5fe9-b66f09383af3.htm">Constructor</a>
     </li>
     <li>
-      <a id="e6edc223-3eb9-5d4c-54c6-e852f092f159" class="has-submenu" href="e6edc223-3eb9-5d4c-54c6-e852f092f159.htm">
+      <a id="d6620f03-7aac-268f-43da-6d40e19ba6f8" class="has-submenu" href="d6620f03-7aac-268f-43da-6d40e19ba6f8.htm">
         <span data-tocFile="../toc/IDBKAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
           <i class="fa fa-angle-right"> </i>
-        </span>Fields</a>
+        </span>Methods</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
+    <li>
+      <a id="c123d526-6353-6c9f-b905-4af8c21f52af" class="has-submenu" href="c123d526-6353-6c9f-b905-4af8c21f52af.htm">
+        <span data-tocFile="../toc/IDCKAA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Events</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
   </tocItems>

@@ -23,5 +23,12 @@
         </span>Com<wbr />PDFKit_<wbr />Conversion.<wbr />Conversion</a>
       <ul class="toc-menu is-hidden"> </ul>
     </li>
+    <li>
+      <a id="a781077a-4f24-64ba-d975-0fe28c2a0132" class="has-submenu" href="a781077a-4f24-64ba-d975-0fe28c2a0132.htm">
+        <span data-tocFile="../toc/IDCA.xml" class="icon toggle" onclick="ToggleExpandCollapse(this); return false;">
+          <i class="fa fa-angle-right"> </i>
+        </span>Com<wbr />PDFKit_<wbr />Conversion.<wbr />Document<wbr />AI</a>
+      <ul class="toc-menu is-hidden"> </ul>
+    </li>
   </tocItems>
 </toc>
