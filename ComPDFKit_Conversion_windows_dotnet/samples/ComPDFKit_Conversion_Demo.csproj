@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6B277AC5-2CA3-4BB5-951F-F4E1C9571AA1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ComPDFKit_Conversion_Demo</RootNamespace>
+    <RootNamespace>ComPDF_Conversion_Demo</RootNamespace>
     <AssemblyName>com.compdfkit.conversion</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -167,6 +167,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="..\lib\x64\opencv_world4100.dll">
+      <Link>x64\opencv_world4100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="license.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -191,24 +195,52 @@
       <Link>x64\onnxruntime_providers_shared.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\lib\x64\opencv_world480.dll">
-      <Link>x64\opencv_world480.dll</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\DroidSansFallbackFull.ttf">
-      <Link>resource\fonts\DroidSansFallbackFull.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\Iansui-Regular.ttf">
-      <Link>resource\fonts\Iansui-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\Roboto-Regular.ttf">
-      <Link>resource\fonts\Roboto-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\resource\models\documentai.model">
       <Link>resource\models\documentai.model</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSans-Regular.ttf">
+      <Link>resource\fonts\NotoSans-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansArabic-Regular.ttf">
+      <Link>resource\fonts\NotoSansArabic-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansDevanagari-Regular.ttf">
+      <Link>resource\fonts\NotoSansDevanagari-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansJP-Regular.ttf">
+      <Link>resource\fonts\NotoSansJP-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansKannada-Regular.ttf">
+      <Link>resource\fonts\NotoSansKannada-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansKR-Regular.ttf">
+      <Link>resource\fonts\NotoSansKR-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansSC-Regular.ttf">
+      <Link>resource\fonts\NotoSansSC-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansTamil-Regular.ttf">
+      <Link>resource\fonts\NotoSansTamil-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansTC-Regular.ttf">
+      <Link>resource\fonts\NotoSansTC-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansTelugu-Regular.ttf">
+      <Link>resource\fonts\NotoSansTelugu-Regular.ttf</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\resource\fonts\NotoSansThai-Regular.ttf">
+      <Link>resource\fonts\NotoSansThai-Regular.ttf</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />

@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace ComPDFKit_Conversion_Demo
+namespace ComPDF_Conversion_Demo
 {
     /// <summary>
     /// Wraps System.Windows.Forms.OpenFileDialog to make it present
