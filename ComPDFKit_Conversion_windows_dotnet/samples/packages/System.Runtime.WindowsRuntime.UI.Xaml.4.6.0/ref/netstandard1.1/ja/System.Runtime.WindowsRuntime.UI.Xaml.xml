@@ -1,0 +1,940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.WindowsRuntime.UI.Xaml</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.UI.Xaml.CornerRadius">
+      <summary>Windows.UI.Xaml.Controls.Border に適用できるなど、丸い角の特性を示します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.#ctor(System.Double)">
+      <summary>新しい <see cref="T:Windows.UI.Xaml.CornerRadius" /> 構造体を初期化し、均一の半径をそのすべての角に適用します。</summary>
+      <param name="uniformRadius">4 つすべての <see cref="T:Windows.UI.Xaml.CornerRadius" /> プロパティ (<see cref="P:Windows.UI.Xaml.CornerRadius.TopLeft" />、<see cref="P:Windows.UI.Xaml.CornerRadius.TopRight" />、<see cref="P:Windows.UI.Xaml.CornerRadius.BottomRight" />、および <see cref="P:Windows.UI.Xaml.CornerRadius.BottomLeft" />) に適用する均一の半径。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> 構造体の新しいインスタンスを初期化し、特定の均一半径をその角に適用します。</summary>
+      <param name="topLeft">
+        <see cref="P:Windows.UI.Xaml.CornerRadius.TopLeft" /> の初期値を設定します。</param>
+      <param name="topRight">
+        <see cref="P:Windows.UI.Xaml.CornerRadius.TopRight" /> の初期値を設定します。</param>
+      <param name="bottomRight">
+        <see cref="P:Windows.UI.Xaml.CornerRadius.BottomLeft" /> の初期値を設定します。</param>
+      <param name="bottomLeft">
+        <see cref="P:Windows.UI.Xaml.CornerRadius.BottomRight" /> の初期値を設定します。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.BottomLeft">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> が適用されるオブジェクトの左下隅の弧の半径 (ピクセル単位) を取得または設定します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> が適用されるオブジェクトの左下隅の弧の半径 (ピクセル単位) を表す <see cref="T:System.Double" />。既定値は 0 です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.BottomRight">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> が適用されるオブジェクトの右下隅の弧の半径 (ピクセル単位) を取得または設定します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> が適用されるオブジェクトの右下隅の弧の半径 (ピクセル単位) を表す <see cref="T:System.Double" />。既定値は 0 です。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.Equals(System.Object)">
+      <summary>この <see cref="T:Windows.UI.Xaml.CornerRadius" /> 構造体を別のオブジェクトと比較して、等しいかどうかを確認します。</summary>
+      <returns>2 つのオブジェクトが等しい場合は true。それ以外の場合は false。</returns>
+      <param name="obj">比較対象のオブジェクト。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.Equals(Windows.UI.Xaml.CornerRadius)">
+      <summary>この <see cref="T:Windows.UI.Xaml.CornerRadius" /> 構造体を別の <see cref="T:Windows.UI.Xaml.CornerRadius" /> 構造体と比較して、等しいかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> の 2 つのインスタンスが等しい場合は true。それ以外の場合は false。</returns>
+      <param name="cornerRadius">等価であることを比較する <see cref="T:Windows.UI.Xaml.CornerRadius" /> のインスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.GetHashCode">
+      <summary>構造体のハッシュ コードを返します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.CornerRadius" /> のハッシュ コード。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.op_Equality(Windows.UI.Xaml.CornerRadius,Windows.UI.Xaml.CornerRadius)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.CornerRadius" /> 構造体の値を比較し、等しいかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> の 2 つのインスタンスが等しい場合は true。それ以外の場合は false。</returns>
+      <param name="cr1">比較する最初の構造体。</param>
+      <param name="cr2">比較する、もう一方の構造体。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.op_Inequality(Windows.UI.Xaml.CornerRadius,Windows.UI.Xaml.CornerRadius)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.CornerRadius" /> 構造体を比較し、等しくないかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> の 2 つのインスタンスが等しくない場合は true。それ以外の場合は false。</returns>
+      <param name="cr1">比較する最初の構造体。</param>
+      <param name="cr2">比較する、もう一方の構造体。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.TopLeft">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> が適用されるオブジェクトの左上隅の弧の半径 (ピクセル単位) を取得または設定します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> が適用されるオブジェクトの左上隅の弧の半径 (ピクセル単位) を表す <see cref="T:System.Double" />。既定値は 0 です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.TopRight">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> が適用されるオブジェクトの右上隅の弧の半径 (ピクセル単位) を取得または設定します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> が適用されるオブジェクトの右上隅の弧の半径 (ピクセル単位) を表す <see cref="T:System.Double" />。既定値は 0 です。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.ToString">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> 構造体の文字列表現を返します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.CornerRadius" /> 値を表す <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Duration">
+      <summary>Windows.UI.Xaml.Media.Animation.Timeline がアクティブである期間を表します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.#ctor(System.TimeSpan)">
+      <summary>指定した <see cref="T:System.TimeSpan" /> 値を使用して、<see cref="T:Windows.UI.Xaml.Duration" /> 構造体の新しいインスタンスを初期化します。</summary>
+      <param name="timeSpan">この期間の初期時間間隔を表します。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="timeSpan" /> が <see cref="F:System.TimeSpan.Zero" /> 未満として評価されています。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Add(Windows.UI.Xaml.Duration)">
+      <summary>指定した <see cref="T:Windows.UI.Xaml.Duration" /> の値をこの <see cref="T:Windows.UI.Xaml.Duration" /> に加算します。</summary>
+      <returns>関連するそれぞれの <see cref="T:Windows.UI.Xaml.Duration" /> が値を持つ場合は、結合された値を表す <see cref="T:Windows.UI.Xaml.Duration" /> になります。それ以外の場合、このメソッドは null を返します。</returns>
+      <param name="duration">現在のインスタンスに <paramref name="duration" /> を加えた値を表す <see cref="T:Windows.UI.Xaml.Duration" /> のインスタンス。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.Automatic">
+      <summary>自動的に決定される <see cref="T:Windows.UI.Xaml.Duration" /> 値を取得します。</summary>
+      <returns>自動値に初期化された <see cref="T:Windows.UI.Xaml.Duration" />。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Compare(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>一方の <see cref="T:Windows.UI.Xaml.Duration" /> 値をもう一方の値と比較します。</summary>
+      <returns>
+        <paramref name="t1" /> が <paramref name="t2" /> より小さい場合は、その差を表す負の値です。<paramref name="t1" /> が <paramref name="t2" /> に等しい場合は、値 0。<paramref name="t1" /> が <paramref name="t2" /> より大きい場合は、その差を表す正の値です。</returns>
+      <param name="t1">比較対象の <see cref="T:Windows.UI.Xaml.Duration" /> の第 1 インスタンス。</param>
+      <param name="t2">比較対象の <see cref="T:Windows.UI.Xaml.Duration" /> の第 2 インスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(System.Object)">
+      <summary>指定したオブジェクトが <see cref="T:Windows.UI.Xaml.Duration" /> と等しいかどうかを判断します。</summary>
+      <returns>値がこの <see cref="T:Windows.UI.Xaml.Duration" /> と等しい場合は true。それ以外の場合は false。</returns>
+      <param name="value">等しいかどうかをチェックするオブジェクト。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(Windows.UI.Xaml.Duration)">
+      <summary>指定した <see cref="T:Windows.UI.Xaml.Duration" /> が、この <see cref="T:Windows.UI.Xaml.Duration" /> と等しいかどうかを判断します。</summary>
+      <returns>
+        <paramref name="duration" /> がこの <see cref="T:Windows.UI.Xaml.Duration" /> と等しい場合は true。それ以外の場合は false。</returns>
+      <param name="duration">等しいかどうかを確認する <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Duration" /> 値が等しいかどうかを判断します。</summary>
+      <returns>
+        <paramref name="t1" /> が <paramref name="t2" /> に等しい場合は true。それ以外の場合は false。</returns>
+      <param name="t1">比較する最初の <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">比較対象の第 2 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.Forever">
+      <summary>無限の間隔を表す <see cref="T:Windows.UI.Xaml.Duration" /> 値を取得します。</summary>
+      <returns>永久値に初期化された <see cref="T:Windows.UI.Xaml.Duration" />。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.GetHashCode">
+      <summary>このオブジェクトのハッシュ コードを取得します。</summary>
+      <returns>ハッシュ コード識別子。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.HasTimeSpan">
+      <summary>この <see cref="T:Windows.UI.Xaml.Duration" /> が <see cref="T:System.TimeSpan" /> 値を表すかどうかを示す値を取得します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Duration" /> が <see cref="T:System.TimeSpan" /> の場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Addition(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Duration" /> 値を加算します。</summary>
+      <returns>両方の <see cref="T:Windows.UI.Xaml.Duration" /> 値が <see cref="T:System.TimeSpan" /> 値を持つ場合、このメソッドはこれら 2 つの値の合計を返します。いずれかの値が <see cref="P:Windows.UI.Xaml.Duration.Automatic" /> に設定されている場合、メソッドは <see cref="P:Windows.UI.Xaml.Duration.Automatic" /> を返します。いずれかの値が <see cref="P:Windows.UI.Xaml.Duration.Forever" /> に設定されている場合、メソッドは <see cref="P:Windows.UI.Xaml.Duration.Forever" /> を返します。<paramref name="t1" /> または <paramref name="t2" /> のいずれかが値を持たない場合、このメソッドは null を返します。</returns>
+      <param name="t1">最初に加算する <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">2 番目に加算する <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Equality(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Duration" /> の大文字と小文字が等しいかどうかを判断します。</summary>
+      <returns>両方の <see cref="T:Windows.UI.Xaml.Duration" /> 値が同じプロパティ値を持つ場合、またはすべての <see cref="T:Windows.UI.Xaml.Duration" /> 値が null の場合は true。それ以外の場合、このメソッドは false を返します。</returns>
+      <param name="t1">比較対象となる、最初の <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">比較対象となる、もう 1 つの <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_GreaterThan(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>一方の <see cref="T:Windows.UI.Xaml.Duration" /> が、もう一方を超えるかどうかを判断します。</summary>
+      <returns>
+        <paramref name="t1" /> および <paramref name="t2" /> の両方が値を持ち、<paramref name="t1" /> が <paramref name="t2" /> より大きい場合は true。それ以外の場合は false。</returns>
+      <param name="t1">比較する <see cref="T:Windows.UI.Xaml.Duration" /> 値。</param>
+      <param name="t2">2 番目に比較する <see cref="T:Windows.UI.Xaml.Duration" /> の値。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_GreaterThanOrEqual(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Duration" /> がもう一方を超えるかまたは等しいかどうかを判断します。</summary>
+      <returns>
+        <paramref name="t1" /> および <paramref name="t2" /> の両方が値を持ち、<paramref name="t1" /> が <paramref name="t2" /> 以上の場合は true。それ以外の場合は false。</returns>
+      <param name="t1">比較対象の <see cref="T:Windows.UI.Xaml.Duration" /> の第 1 インスタンス。</param>
+      <param name="t2">比較対象の <see cref="T:Windows.UI.Xaml.Duration" /> の第 2 インスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Implicit(System.TimeSpan)~Windows.UI.Xaml.Duration">
+      <summary>指定した <see cref="T:System.TimeSpan" /> から <see cref="T:Windows.UI.Xaml.Duration" /> を暗黙に作成します。</summary>
+      <returns>作成した <see cref="T:Windows.UI.Xaml.Duration" />。</returns>
+      <param name="timeSpan">
+        <see cref="T:Windows.UI.Xaml.Duration" /> の暗黙の作成元となる <see cref="T:System.TimeSpan" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="timeSpan" /> が <see cref="F:System.TimeSpan.Zero" /> 未満として評価されています。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Inequality(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Duration" /> の大文字と小文字が等しくないかどうかを判断します。</summary>
+      <returns>
+        <paramref name="t1" /> または <paramref name="t2" /> のいずれか 1 つだけが値を表す場合、または両方が値を表し、その値が異なる場合は true。それ以外の場合は false。</returns>
+      <param name="t1">比較対象となる、最初の <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">比較対象となる、もう 1 つの <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_LessThan(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Duration" /> が、もう一方のインスタンスの値を下回るかどうかを判断します。</summary>
+      <returns>
+        <paramref name="t1" /> および <paramref name="t2" /> の両方が値を持ち、<paramref name="t1" /> が <paramref name="t2" /> より小さい場合は true。それ以外の場合は false。</returns>
+      <param name="t1">比較対象となる、最初の <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">比較対象となる、もう 1 つの <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_LessThanOrEqual(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Duration" /> がもう一方を下回るかまたは等しいかどうかを判断します。</summary>
+      <returns>
+        <paramref name="t1" /> および <paramref name="t2" /> の両方が値を持ち、<paramref name="t1" /> が <paramref name="t2" /> 以下の場合は true。それ以外の場合は false。</returns>
+      <param name="t1">比較対象の <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">比較対象の <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Subtraction(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>一方の <see cref="T:Windows.UI.Xaml.Duration" /> の値をもう一方の値から減算します。</summary>
+      <returns>それぞれの <see cref="T:Windows.UI.Xaml.Duration" /> が値を持つ場合は、<paramref name="t1" /> から <paramref name="t2" /> を減算した値を表す <see cref="T:Windows.UI.Xaml.Duration" /> になります。<paramref name="t1" /> が <see cref="P:Windows.UI.Xaml.Duration.Forever" /> の値を持ち、<paramref name="t2" /> が <see cref="P:Windows.UI.Xaml.Duration.TimeSpan" /> の値を持つ場合、このメソッドは <see cref="P:Windows.UI.Xaml.Duration.Forever" /> を返します。それ以外の場合、このメソッドは null を返します。</returns>
+      <param name="t1">最初の <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">減算する <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_UnaryPlus(Windows.UI.Xaml.Duration)">
+      <summary>指定された <see cref="T:Windows.UI.Xaml.Duration" /> を返します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Duration" /> の操作の結果。</returns>
+      <param name="duration">取得する <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Subtract(Windows.UI.Xaml.Duration)">
+      <summary>この <see cref="T:Windows.UI.Xaml.Duration" /> から、指定した <see cref="T:Windows.UI.Xaml.Duration" /> を減算します。</summary>
+      <returns>減算された <see cref="T:Windows.UI.Xaml.Duration" />。</returns>
+      <param name="duration">この <see cref="T:Windows.UI.Xaml.Duration" /> から減算する <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.TimeSpan">
+      <summary>この <see cref="T:Windows.UI.Xaml.Duration" /> が表す <see cref="T:System.TimeSpan" /> 値を取得します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Duration" /> が表す <see cref="T:System.TimeSpan" /> 値。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:Windows.UI.Xaml.Duration" /> が <see cref="T:System.TimeSpan" /> を表していません。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.ToString">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Duration" /> を <see cref="T:System.String" /> 表現に変換します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Duration" /> の <see cref="T:System.String" /> 表現。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.DurationType">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Duration" /> に Automatic または Forever という特別な値があるか、あるいは <see cref="T:System.TimeSpan" /> コンポーネントに有効な情報があるかを指定します。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.Automatic">
+      <summary>特殊値 "Automatic" を持ちます。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.Forever">
+      <summary>特殊値 "Forever" を持ちます。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.TimeSpan">
+      <summary>
+        <see cref="T:System.TimeSpan" /> コンポーネントに有効な情報があります。</summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.GridLength">
+      <summary>
+        <see cref="F:Windows.UI.Xaml.GridUnitType.Star" /> 単位型を明示的にサポートする要素の長さを表します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.#ctor(System.Double)">
+      <summary>指定した絶対値 (ピクセル単位) を使用して、<see cref="T:Windows.UI.Xaml.GridLength" /> 構造体の新しいインスタンスを初期化します。</summary>
+      <param name="pixels">値として設定される絶対ピクセル数。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.#ctor(System.Double,Windows.UI.Xaml.GridUnitType)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> 構造体の新しいインスタンスを初期化して、保持する値の種類を指定します。</summary>
+      <param name="value">
+        <see cref="T:Windows.UI.Xaml.GridLength" /> のこのインスタンスの初期値。</param>
+      <param name="type">
+        <see cref="T:Windows.UI.Xaml.GridLength" /> のこのインスタンスに保持された <see cref="T:Windows.UI.Xaml.GridUnitType" />。</param>
+      <exception cref="T:System.ArgumentException">値が 0 より小さいか、数値ではありません。または型が有効な <see cref="T:Windows.UI.Xaml.GridUnitType" /> ではありません。</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.Auto">
+      <summary>サイズがコンテンツ オブジェクトのサイズ プロパティによって決まる値を保持する <see cref="T:Windows.UI.Xaml.GridLength" /> のインスタンスを取得します。</summary>
+      <returns>
+        <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> プロパティが <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" /> に設定された <see cref="T:Windows.UI.Xaml.GridLength" /> のインスタンス。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.Equals(System.Object)">
+      <summary>指定したオブジェクトが現在の <see cref="T:Windows.UI.Xaml.GridLength" /> インスタンスと等しいかどうかを判断します。</summary>
+      <returns>指定したオブジェクトが現在のインスタンスと同じ値および <see cref="T:Windows.UI.Xaml.GridUnitType" /> を保持している場合は true。それ以外の場合は false。</returns>
+      <param name="oCompare">現在のインスタンスと比較するオブジェクト。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.Equals(Windows.UI.Xaml.GridLength)">
+      <summary>指定した <see cref="T:Windows.UI.Xaml.GridLength" /> が、現在の <see cref="T:Windows.UI.Xaml.GridLength" /> と等しいかどうかを判断します。</summary>
+      <returns>指定した <see cref="T:Windows.UI.Xaml.GridLength" /> が現在のインスタンスと同じ値および <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> を保持している場合は true。それ以外の場合は false。</returns>
+      <param name="gridLength">現在のインスタンスと比較する <see cref="T:Windows.UI.Xaml.GridLength" /> 構造体。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.GetHashCode">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> のハッシュ コードを取得します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> のハッシュ コード。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.GridUnitType">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> の関連付けられている <see cref="T:Windows.UI.Xaml.GridUnitType" /> を取得します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.GridUnitType" /> 値のいずれか。既定値は、<see cref="F:Windows.UI.Xaml.GridUnitType.Auto" /> です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsAbsolute">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> がピクセルで表される値を保持するかどうかを示す値を取得します。</summary>
+      <returns>
+        <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> プロパティが <see cref="F:Windows.UI.Xaml.GridUnitType.Pixel" /> の場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsAuto">
+      <summary>サイズがコンテンツ オブジェクトのサイズ プロパティによって決まる値を <see cref="T:Windows.UI.Xaml.GridLength" /> が保持するかどうかを示す値を取得します。</summary>
+      <returns>
+        <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> プロパティが <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" /> の場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsStar">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> が使用可能なスペースの加重比率で表される値を保持するかどうかを示す値を取得します。</summary>
+      <returns>
+        <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> プロパティが <see cref="F:Windows.UI.Xaml.GridUnitType.Star" /> の場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.op_Equality(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.GridLength" /> 構造体を比較し、等しいかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> の 2 つのインスタンスが同じ値を持ち、<see cref="T:Windows.UI.Xaml.GridUnitType" /> を持つ場合は true。それ以外の場合は false。</returns>
+      <param name="gl1">比較対象の <see cref="T:Windows.UI.Xaml.GridLength" /> の第 1 インスタンス。</param>
+      <param name="gl2">比較対象の <see cref="T:Windows.UI.Xaml.GridLength" /> の第 2 インスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.op_Inequality(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.GridLength" /> 構造体を比較し、それらが等しくないかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> の 2 つのインスタンスが同じ値を持たず、<see cref="T:Windows.UI.Xaml.GridUnitType" /> を持たない場合は true。それ以外の場合は false。</returns>
+      <param name="gl1">比較対象の <see cref="T:Windows.UI.Xaml.GridLength" /> の第 1 インスタンス。</param>
+      <param name="gl2">比較対象の <see cref="T:Windows.UI.Xaml.GridLength" /> の第 2 インスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.ToString">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> の <see cref="T:System.String" /> 表現を返します。</summary>
+      <returns>現在の <see cref="T:Windows.UI.Xaml.GridLength" /> 構造体の <see cref="T:System.String" /> 表現。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.Value">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> の値を表す <see cref="T:System.Double" /> を取得します</summary>
+      <returns>現在のインスタンスの値を表す <see cref="T:System.Double" />。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.GridUnitType">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> オブジェクトが保持している値の種類について説明します。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Auto">
+      <summary>サイズは、コンテンツ オブジェクトのサイズ プロパティによって決まります。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Pixel">
+      <summary>値は、ピクセルで表されます。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Star">
+      <summary>値は、使用可能なスペースの加重比率で表されます。</summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.LayoutCycleException">
+      <summary>レイアウト サイクルによってスローされる例外。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> クラスの新しいインスタンスを既定値で初期化します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して、<see cref="T:Windows.UI.Xaml.LayoutCycleException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラー メッセージ。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージと、この例外の原因である内部例外への参照を使用して、<see cref="T:Windows.UI.Xaml.LayoutCycleException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラー メッセージ。</param>
+      <param name="innerException">現在の例外の原因である例外。または、内部例外を指定しない場合は null。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Thickness">
+      <summary>四角形の枠の太さを示します。4 つの <see cref="T:System.Double" /> 値は、それぞれ四角形の 4 つの辺 (<see cref="P:Windows.UI.Xaml.Thickness.Left" />、<see cref="P:Windows.UI.Xaml.Thickness.Top" />、<see cref="P:Windows.UI.Xaml.Thickness.Right" />、<see cref="P:Windows.UI.Xaml.Thickness.Bottom" />) を示します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.#ctor(System.Double)">
+      <summary>各辺に均一な長さを指定して <see cref="T:Windows.UI.Xaml.Thickness" /> 構造体を初期化します。</summary>
+      <param name="uniformLength">外接する四角形の 4 つの辺すべてに均一に適用される長さ。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>四角形の各辺に対して特定の長さ (<see cref="T:System.Double" /> として指定) が適用される <see cref="T:Windows.UI.Xaml.Thickness" /> 構造体を初期化します。</summary>
+      <param name="left">四角形の左辺の太さ。</param>
+      <param name="top">四角形の上辺の太さ。</param>
+      <param name="right">四角形の右辺の太さ。</param>
+      <param name="bottom">四角形の底辺の太さ。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Bottom">
+      <summary>外接する四角形の底辺の幅 (ピクセル単位) を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Thickness" /> のインスタンスについて、外接する四角形の底辺の幅 (ピクセル単位) を表す <see cref="T:System.Double" />。既定値は 0 です。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.Equals(System.Object)">
+      <summary>この <see cref="T:Windows.UI.Xaml.Thickness" /> 構造体を別の <see cref="T:System.Object" /> と比較して、等しいかどうかを確認します。</summary>
+      <returns>2 つのオブジェクトが等しい場合は true。それ以外の場合は false。</returns>
+      <param name="obj">比較対象のオブジェクト。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.Equals(Windows.UI.Xaml.Thickness)">
+      <summary>この <see cref="T:Windows.UI.Xaml.Thickness" /> 構造体を別の <see cref="T:Windows.UI.Xaml.Thickness" /> 構造体と比較して、等しいかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Thickness" /> の 2 つのインスタンスが等しい場合は true。それ以外の場合は false。</returns>
+      <param name="thickness">等価であることを比較する <see cref="T:Windows.UI.Xaml.Thickness" /> のインスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.GetHashCode">
+      <summary>構造体のハッシュ コードを返します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Thickness" /> のインスタンスのハッシュ コード。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Left">
+      <summary>外接する四角形の左辺の幅 (ピクセル単位) を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Thickness" /> のインスタンスについて、外接する四角形の左辺の幅 (ピクセル単位) を表す <see cref="T:System.Double" />。既定値は 0 です。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.op_Equality(Windows.UI.Xaml.Thickness,Windows.UI.Xaml.Thickness)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Thickness" /> 構造体の値を比較し、等しいかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Thickness" /> の 2 つのインスタンスが等しい場合は true。それ以外の場合は false。</returns>
+      <param name="t1">比較する最初の構造体。</param>
+      <param name="t2">比較する、もう一方の構造体。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.op_Inequality(Windows.UI.Xaml.Thickness,Windows.UI.Xaml.Thickness)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Thickness" /> 構造体を比較し、等しくないかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Thickness" /> の 2 つのインスタンスが等しくない場合は true。それ以外の場合は false。</returns>
+      <param name="t1">比較する最初の構造体。</param>
+      <param name="t2">比較する、もう一方の構造体。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Right">
+      <summary>外接する四角形の右辺の幅 (ピクセル単位) を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Thickness" /> のインスタンスについて、外接する四角形の右辺の幅 (ピクセル単位) を表す <see cref="T:System.Double" />。既定値は 0 です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Top">
+      <summary>外接する四角形の上辺の幅 (ピクセル単位) を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Thickness" /> のインスタンスについて、外接する四角形の上辺の幅 (ピクセル単位) を表す <see cref="T:System.Double" />。既定値は 0 です。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.ToString">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Thickness" /> 構造体の文字列表現を返します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Thickness" /> 値を表す <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Automation.ElementNotAvailableException">
+      <summary>ユーザー インターフェイスの一部が既に使用できなくなっているとき、その部分に対応する UI オートメーション要素にアクセスしようとすると、この例外がスローされます。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> クラスの新しいインスタンスを既定値で初期化します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor(System.String)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> クラスの新しいインスタンスを、指定されたエラー メッセージを使用して初期化します。</summary>
+      <param name="message">エラーを説明するメッセージ。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージと、この例外の原因である内部例外への参照を使用して、<see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">エラーを説明するメッセージ。</param>
+      <param name="innerException">現在の例外の原因である例外。または、内部例外を指定しない場合は null。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Automation.ElementNotEnabledException">
+      <summary>有効でないコントロールを UI オートメーションを通じて操作しようとしたときにスローされる例外です。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> クラスの新しいインスタンスを既定値で初期化します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して、<see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">エラーを説明するメッセージ。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージと、この例外の原因である内部例外への参照を使用して、<see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">エラーを説明するメッセージ。</param>
+      <param name="innerException">現在の例外の原因である例外。または、内部例外を指定しない場合は null。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> は、Windows.UI.Xaml.Controls.ItemContainerGenerator によって管理される項目の位置を表すために使用されます。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.#ctor(System.Int32,System.Int32)">
+      <summary>インデックスおよびオフセットを指定して、<see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> の新しいインスタンスを初期化します。</summary>
+      <param name="index">生成 (実現された) 項目に対する <see cref="T:System.Int32" /> インデックス。-1 は項目一覧の先頭または末尾にある架空の項目を参照する特殊な値です。</param>
+      <param name="offset">インデックス付けされた項目の近くにある未生成 (実現されていない) 項目に対する <see cref="T:System.Int32" /> オフセット。オフセット 0 はインデックス付けされた要素自体、オフセット 1 は次の未生成 (実現されていない) 項目、オフセット -1 は前の項目を参照します。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Equals(System.Object)">
+      <summary>指定したインスタンスと <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> の現在のインスタンスを比較し、値が等しいかどうかを確認します。</summary>
+      <returns>
+        <paramref name="o" /> および <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> のこのインスタンスが同じ値を持つ場合は true。</returns>
+      <param name="o">比較対象の <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> インスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.GetHashCode">
+      <summary>この <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> のハッシュ コードを返します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> のハッシュ コード。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Index">
+      <summary>生成 (実現された) 項目に対する <see cref="T:System.Int32" /> インデックスを取得または設定します。</summary>
+      <returns>生成 (実現された) 項目に対する <see cref="T:System.Int32" /> インデックス。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Offset">
+      <summary>インデックス付けされた項目の近くにある未生成 (実現されていない) 項目に対する <see cref="T:System.Int32" /> オフセットを取得または設定します。</summary>
+      <returns>インデックス付けされた項目の近くにある未生成 (実現されていない) 項目に対する <see cref="T:System.Int32" /> オフセット。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.op_Equality(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition,Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> オブジェクトを比較し、値が等しいかどうかを確認します。</summary>
+      <returns>2 つのオブジェクトが等しい場合は true。それ以外の場合は false。</returns>
+      <param name="gp1">比較する 1 番目のインスタンス。</param>
+      <param name="gp2">比較する 2 番目のインスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.op_Inequality(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition,Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> オブジェクトを比較し、値が等しくないかどうかを確認します。</summary>
+      <returns>値が等しくない場合は true。それ以外の場合は false。</returns>
+      <param name="gp1">比較する 1 番目のインスタンス。</param>
+      <param name="gp2">比較する 2 番目のインスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.ToString">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> のこのインスタンスの文字列表現を返します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> のこのインスタンスの文字列表現。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Markup.XamlParseException">
+      <summary>Xaml を解析するときにエラーが発生するとスローされる例外。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> クラスの新しいインスタンスを既定値で初期化します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して、<see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラー メッセージ。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージと、この例外の原因である内部例外への参照を使用して、<see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を説明するエラー メッセージ。</param>
+      <param name="innerException">現在の例外の原因である例外。または、内部例外を指定しない場合は null。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Matrix">
+      <summary> 2 次元空間での変換に使用される 3 x 3 アフィン変換行列を表します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体を初期化します。</summary>
+      <param name="m11">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" /> 係数。</param>
+      <param name="m12">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の <see cref="P:Windows.UI.Xaml.Media.Matrix.M12" /> 係数。</param>
+      <param name="m21">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の <see cref="P:Windows.UI.Xaml.Media.Matrix.M21" /> 係数。</param>
+      <param name="m22">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の <see cref="P:Windows.UI.Xaml.Media.Matrix.M22" /> 係数。</param>
+      <param name="offsetX">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" /> 係数。</param>
+      <param name="offsetY">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> 係数。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Equals(System.Object)">
+      <summary>指定した <see cref="T:System.Object" /> が、この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> と同じ <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体であるかどうかを判断します。</summary>
+      <returns>
+        <paramref name="o" /> が、この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体と同じ <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の場合は true。それ以外の場合は false。</returns>
+      <param name="o">比較対象の <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Equals(Windows.UI.Xaml.Media.Matrix)">
+      <summary>指定した <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体がこのインスタンスと同一であるかどうかを判断します。</summary>
+      <returns>インスタンスが等しい場合は true。それ以外の場合は false。</returns>
+      <param name="value">このインスタンスと比較する <see cref="T:Windows.UI.Xaml.Media.Matrix" /> のインスタンス。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.GetHashCode">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体のハッシュ コードを返します。</summary>
+      <returns>対象のインスタンスのハッシュ コード。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.Identity">
+      <summary>恒等 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> を取得します。</summary>
+      <returns>恒等行列。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.IsIdentity">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体が恒等行列かどうかを示す値を取得します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体が恒等行列の場合は true。それ以外の場合は false。既定値は、true です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M11">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の第 1 行、第 1 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> の第 1 行、第 1 列の値。既定値は 1 です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M12">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の第 1 行、第 2 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> の第 1 行、第 2 列の値。既定値は 0 です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M21">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の第 2 行、第 1 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> の第 2 行、第 1 列の値。既定値は 0 です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M22">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> の第 2 行、第 2 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の第 2 行、第 2 列の値。既定値は 1 です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.OffsetX">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の第 3 行、第 1 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の第 3 行、第 1 列の値。既定値は 0 です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.OffsetY">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の第 3 行、第 2 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の第 3 行、第 2 列の値。既定値は 0 です。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.op_Equality(Windows.UI.Xaml.Media.Matrix,Windows.UI.Xaml.Media.Matrix)">
+      <summary>指定した 2 つの <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体が同一かどうかを判断します。</summary>
+      <returns>
+        <paramref name="matrix1" /> と <paramref name="matrix2" /> が同一である場合は true。それ以外の場合は false。</returns>
+      <param name="matrix1">最初に比較する <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体。</param>
+      <param name="matrix2">2 番目に比較する <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.op_Inequality(Windows.UI.Xaml.Media.Matrix,Windows.UI.Xaml.Media.Matrix)">
+      <summary>指定した 2 つの <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体が異なるかどうかを判断します。</summary>
+      <returns>
+        <paramref name="matrix1" /> と <paramref name="matrix2" /> が異なる場合は true。それ以外の場合は false。</returns>
+      <param name="matrix1">最初に比較する <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体。</param>
+      <param name="matrix2">2 番目に比較する <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>このメンバーの説明については、<see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" /> を参照してください。</summary>
+      <returns>指定した書式で現在のインスタンスの値が格納されている文字列。</returns>
+      <param name="format">使用する書式を指定する文字列。またはIFormattable 実装の型に対して定義されている既定の書式を使用する場合は、null。</param>
+      <param name="provider">値の書式付けに使用する IFormatProvider。またはオペレーティング システムの現在のロケール設定から数値の書式情報を取得する場合は null。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.ToString">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の <see cref="T:System.String" /> 表現を作成します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> の <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M12" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M21" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M22" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" />、および <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> の各値を格納する <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.ToString(System.IFormatProvider)">
+      <summary>カルチャ固有の書式設定情報を使用して、この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 構造体の <see cref="T:System.String" /> 表現を作成します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> の <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M12" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M21" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M22" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" />、および <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> の各値を格納する <see cref="T:System.String" />。</returns>
+      <param name="provider">カルチャ固有の書式設定情報。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Transform(Windows.Foundation.Point)">
+      <summary>指定した点を <see cref="T:Windows.UI.Xaml.Media.Matrix" /> で変換し、その結果を返します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Matrix" /> によって <paramref name="point" /> を変換した結果。</returns>
+      <param name="point">変換する点。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.KeyTime">
+      <summary>アニメーションの中で特定のキー フレームを再生するタイミングを指定します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(System.Object)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> が、この <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> と等しいかどうかを示します。</summary>
+      <returns>
+        <paramref name="value" /> が、この <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> と同じ時間を表す <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> である場合は true。それ以外の場合は false。</returns>
+      <param name="value">この <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> と比較する <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>指定した <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> が、この <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> と等しいかどうかを示します。</summary>
+      <returns>
+        <paramref name="value" /> がこの <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> と等しい場合は true。それ以外の場合は false。</returns>
+      <param name="value">この <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> と比較する <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> の値が等しいかどうかを示します。</summary>
+      <returns>
+        <paramref name="keyTime1" /> の値と <paramref name="keyTime2" /> の値が等しい場合は true。それ以外の場合は false。</returns>
+      <param name="keyTime1">比較する最初の値です。</param>
+      <param name="keyTime2">比較する 2 番目の値です。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.FromTimeSpan(System.TimeSpan)">
+      <summary>指定した <see cref="T:System.TimeSpan" /> を使用して、新しい <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> を作成します。</summary>
+      <returns>
+        <paramref name="timeSpan" /> の値に初期化された、新しい <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</returns>
+      <param name="timeSpan">新しい <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> の値。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">指定された <paramref name="timeSpan" /> が、許容範囲を超えています。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.GetHashCode">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> を表すハッシュ コードを返します。</summary>
+      <returns>ハッシュ コード識別子。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Equality(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> の値が等しいかどうかを比較します。</summary>
+      <returns>
+        <paramref name="keyTime1" /> および <paramref name="keyTime2" /> が等しい場合は true。それ以外の場合は false。</returns>
+      <param name="keyTime1">比較する最初の値です。</param>
+      <param name="keyTime2">比較する 2 番目の値です。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Implicit(System.TimeSpan)~Windows.UI.Xaml.Media.Animation.KeyTime">
+      <summary>
+        <see cref="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan" /> を <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> に暗黙的に変換します。</summary>
+      <returns>作成された <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</returns>
+      <param name="timeSpan">変換する <see cref="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan" /> 値。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Inequality(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> の値が異なるかどうかを比較します。</summary>
+      <returns>
+        <paramref name="keyTime1" /> と <paramref name="keyTime2" /> が等しくない場合は true。それ以外の場合は false。</returns>
+      <param name="keyTime1">比較する最初の値です。</param>
+      <param name="keyTime2">比較する 2 番目の値です。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan">
+      <summary>アニメーションの先頭からの相対的な時間で表される、キー フレームの終了時間を取得します。</summary>
+      <returns>アニメーションの先頭からの相対的な時間で表される、キー フレームの終了時間。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.ToString">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> の文字列表現を返します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> の文字列表現。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior">
+      <summary>Windows.UI.Xaml.Media.Animation.Timeline が、その継続時間を単に繰り返す方法について説明します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.#ctor(System.Double)">
+      <summary>反復カウントを指定して、<see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 構造体の新しいインスタンスを初期化します。</summary>
+      <param name="count">アニメーションの反復回数を指定する 0 以上の数。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="count" /> は、無限大、数値でない値、または負の値に評価されます。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.#ctor(System.TimeSpan)">
+      <summary>繰り返し期間を指定して、<see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 構造体の新しいインスタンスを初期化します。</summary>
+      <param name="duration">Windows.UI.Xaml.Media.Animation.Timeline を再生する時間の長さの合計 (アクティブな継続時間)。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="duration" /> は負の値に評価されます。</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Count">
+      <summary>Windows.UI.Xaml.Media.Animation.Timeline が繰り返す回数を取得します。</summary>
+      <returns>繰り返す回数。</returns>
+      <exception cref="T:System.InvalidOperationException">この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> は、反復カウントではなく、繰り返し期間を記述しています。</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Duration">
+      <summary>Windows.UI.Xaml.Media.Animation.Timeline を再生する時間の長さの合計を取得します。</summary>
+      <returns>タイムラインを再生する時間の長さの合計。</returns>
+      <exception cref="T:System.InvalidOperationException">この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> は、繰り返し期間ではなく、反復カウントを記述しています。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(System.Object)">
+      <summary>指定したオブジェクトが、この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> と等しいかどうかを示します。</summary>
+      <returns>
+        <paramref name="value" /> が、この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> と同じ繰り返し動作を表す <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> である場合は true。それ以外の場合は false。</returns>
+      <param name="value">この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> と比較するオブジェクト。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>指定した <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> が、この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> と等しいかどうかを示す値を返します。</summary>
+      <returns>
+        <paramref name="repeatBehavior" /> の型と繰り返し動作の両方が、この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> と等しい場合は true。それ以外の場合は false。</returns>
+      <param name="repeatBehavior">この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> と比較する値。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>指定した 2 つの <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> の値が等しいかどうかを示します。</summary>
+      <returns>
+        <paramref name="repeatBehavior1" /> と <paramref name="repeatBehavior2" /> の型と繰り返し動作の両方が同一である場合は true。それ以外の場合は false。</returns>
+      <param name="repeatBehavior1">比較する最初の値です。</param>
+      <param name="repeatBehavior2">比較する 2 番目の値です。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Forever">
+      <summary>無限数の反復回数を指定する <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> を取得します。</summary>
+      <returns>無限数の反復回数を指定する <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.GetHashCode">
+      <summary>このインスタンスのハッシュ コードを返します。</summary>
+      <returns>ハッシュ コード。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.HasCount">
+      <summary>繰り返し動作に反復カウントが指定されているかどうかを示す値を取得します。</summary>
+      <returns>インスタンスが反復カウントを表す場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.HasDuration">
+      <summary>繰り返し動作に繰り返し期間が指定されているかどうかを示す値を取得します。</summary>
+      <returns>インスタンスが繰り返し期間を表す場合は true。それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.op_Equality(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>指定した 2 つの <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> の値が等しいかどうかを示します。</summary>
+      <returns>
+        <paramref name="repeatBehavior1" /> と <paramref name="repeatBehavior2" /> の型と繰り返し動作の両方が同一である場合は true。それ以外の場合は false。</returns>
+      <param name="repeatBehavior1">比較する最初の値です。</param>
+      <param name="repeatBehavior2">比較する 2 番目の値です。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.op_Inequality(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> の値が異なるかどうかを示します。</summary>
+      <returns>
+        <paramref name="repeatBehavior1" /> と <paramref name="repeatBehavior2" /> の型または繰り返し動作のプロパティが同一でない場合は true。それ以外の場合は false。</returns>
+      <param name="repeatBehavior1">比較する最初の値です。</param>
+      <param name="repeatBehavior2">比較する 2 番目の値です。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>このメンバーの説明については、<see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" /> を参照してください。</summary>
+      <returns>指定した書式で現在のインスタンスの値が格納されている文字列。</returns>
+      <param name="format">使用する書式を指定する文字列。IFormattable 実装の型に対して定義されている既定の書式を使用する場合は、null。</param>
+      <param name="formatProvider">値の書式設定に使用する IFormatProvider。オペレーティング システムの現在のロケール設定から数値書式情報を取得する場合は null。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.ToString">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> の文字列表現を返します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> の文字列表現。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.ToString(System.IFormatProvider)">
+      <summary>指定した形式で、この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> の文字列表現を返します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> の文字列表現。</returns>
+      <param name="formatProvider">戻り値の構成に使用する形式。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Type">
+      <summary>動作を繰り返す方法を説明する <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType" /> 値のいずれかを取得または設定します。</summary>
+      <returns>繰り返し動作の型。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> の未処理の値が表す繰り返しモードを指定します。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Count">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> は、実行が一定の回数完了するまでタイムラインを繰り返す必要がある場合を表します。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Duration">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> は、タイムラインを特定の期間繰り返す必要がある場合を表します。これにより、アニメーションが途中で終了することがあります。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Forever">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> は、タイムラインを無制限に繰り返す必要がある場合を表します。</summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Media3D.Matrix3D">
+      <summary>3 次元 (3-D) 空間の変換に使用される 4 × 4 行列を表します。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="m11">新しい行列の (1,1) フィールドの値。</param>
+      <param name="m12">新しい行列の (1,2) フィールドの値。</param>
+      <param name="m13">新しい行列の (1,3) フィールドの値。</param>
+      <param name="m14">新しい行列の (1,4) フィールドの値。</param>
+      <param name="m21">新しい行列の (2,1) フィールドの値。</param>
+      <param name="m22">新しい行列の (2,2) フィールドの値。</param>
+      <param name="m23">新しい行列の (2,3) フィールドの値。</param>
+      <param name="m24">新しい行列の (2,4) フィールドの値。</param>
+      <param name="m31">新しい行列の (3,1) フィールドの値。</param>
+      <param name="m32">新しい行列の (3,2) フィールドの値。</param>
+      <param name="m33">新しい行列の (3,3) フィールドの値。</param>
+      <param name="m34">新しい行列の (3,4) フィールドの値。</param>
+      <param name="offsetX">新しい行列の X オフセット フィールドの値。</param>
+      <param name="offsetY">新しい行列の Y オフセット フィールドの値。</param>
+      <param name="offsetZ">新しい行列の Z オフセット フィールドの値。</param>
+      <param name="m44">新しい行列の (4,4) フィールドの値。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Equals(System.Object)">
+      <summary>2 つの行列が等しいかどうかをテストします。</summary>
+      <returns>行列が等しい場合は true。それ以外の場合は false。</returns>
+      <param name="o">同じかどうかを確認する対象のオブジェクト。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Equals(Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>2 つの行列が等しいかどうかをテストします。</summary>
+      <returns>行列が等しい場合は true。それ以外の場合は false。</returns>
+      <param name="value">比較する <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.GetHashCode">
+      <summary>この行列のハッシュ コードを返します。</summary>
+      <returns>この行列のハッシュ コードを指定する整数。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.HasInverse">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> が反転可能かどうかを示す値を取得します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の逆が存在する場合は true。それ以外の場合は false。既定値は true です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.Identity">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 構造体を恒等 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> に変更します。</summary>
+      <returns>ID を表す <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Invert">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 構造体を反転します。</summary>
+      <exception cref="T:System.InvalidOperationException">行列は反転できません。</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.IsIdentity">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 構造体が恒等 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> であるかどうかを確認します。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> が恒等 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> である場合は true。それ以外の場合は false。既定値は true です。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M11">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 1 行、第 1 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 構造体の第 1 行、第 1 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M12">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 1 行、第 2 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 1 行、第 2 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M13">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 1 行、第 3 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 1 行、第 3 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M14">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 1 行、第 4 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 1 行、第 4 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M21">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 2 行、第 1 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 2 行、第 1 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M22">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 2 行、第 2 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 2 行、第 2 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M23">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 2 行、第 3 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 2 行、第 3 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M24">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 2 行、第 4 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 2 行、第 4 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M31">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 3 行、第 1 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 3 行、第 1 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M32">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 3 行、第 2 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 3 行、第 2 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M33">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 3 行、第 3 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 3 行、第 3 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M34">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 3 行、第 4 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 3 行、第 4 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M44">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 4 行、第 4 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 4 行、第 4 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetX">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 4 行、第 1 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 4 行、第 1 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetY">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 4 行、第 2 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 4 行、第 2 列の値。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetZ">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 4 行、第 3 列の値を取得または設定します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の第 4 行、第 3 列の値。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Equality(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> インスタンスを比較し、完全に等しいかどうかを確認します。</summary>
+      <returns>行列が等しい場合は true。それ以外の場合は false。</returns>
+      <param name="matrix1">比較対象の 1 番目の行列。</param>
+      <param name="matrix2">比較対象の 2 番目の行列。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Inequality(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>2 つの <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> インスタンスを比較し、等しくないかどうかを判断します。</summary>
+      <returns>行列が異なる場合は true。それ以外の場合は false。</returns>
+      <param name="matrix1">比較対象の 1 番目の行列。</param>
+      <param name="matrix2">比較対象の 2 番目の行列。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Multiply(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>指定した行列を乗算します。</summary>
+      <returns>乗算の結果である <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />。</returns>
+      <param name="matrix1">乗算する行列。</param>
+      <param name="matrix2">最初の行列に乗算する行列。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>このメンバーの説明については、<see cref="M:System.IFormattable.ToString" /> のトピックを参照してください。</summary>
+      <returns>指定された書式での現在のインスタンスの値。</returns>
+      <param name="format">使用する書式。</param>
+      <param name="provider">使用するプロバイダー。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.ToString">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の文字列形式を作成します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の文字列表現。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.ToString(System.IFormatProvider)">
+      <summary>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の文字列形式を作成します。</summary>
+      <returns>この <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> の文字列表現。</returns>
+      <param name="provider">カルチャ固有の書式設定情報。</param>
+    </member>
+  </members>
+</doc>

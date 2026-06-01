@@ -56,6 +56,11 @@
                 <CheckBox x:Name="EnableAiLayout" Margin="0,0,0,0"/>
             </StackPanel>
 
+            <StackPanel x:Name="IsEnableAiTableRecognitionPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="AI Table Recognition : " Width="140" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="EnableAiTableRecognition" Margin="0,0,0,0"/>
+            </StackPanel>
+
             <StackPanel x:Name="IsAutoCreateFolderPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
                 <TextBlock Text="Auto Create Folder : " Width="220" Height="30" TextAlignment="Center"/>
                 <CheckBox x:Name="AutoCreateFolder" IsEnabled="True" Margin="0,0,0,0"/>
@@ -71,9 +76,19 @@
                 <CheckBox x:Name="EnableOCR" Margin="0,0,0,0"/>
             </StackPanel>
 
+            <StackPanel x:Name="IsUseWindowsOCRPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Use Windows OCR : " Width="120" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="UseWindowsOCR" Margin="0,0,0,0"/>
+            </StackPanel>
+
             <StackPanel x:Name="IsContainPageBackgroundImagePanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
                 <TextBlock Text="Contain Page Background Image : " Width="220" Height="30" TextAlignment="Center"/>
                 <CheckBox x:Name="ContainPageBackgroundImage" IsEnabled="False" Margin="0,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel x:Name="IsTransparentTextPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-120,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Transparent Text : " Width="220" Height="30" TextAlignment="Center"/>
+                <CheckBox x:Name="TransparentText" IsEnabled="False" Margin="0,0,0,0"/>
             </StackPanel>
 
             <StackPanel x:Name="OCROptionsPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-60,0,0,0" Visibility="Collapsed">
@@ -160,8 +175,18 @@
             </StackPanel>
 
             <StackPanel x:Name="ImageRatioPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-46,0,0,0" Visibility="Collapsed">
-                <TextBlock Text="Image Ratio : " Width="110" Height="30" TextAlignment="Center" />
-                <TextBox x:Name="ImageRatio" Text="200" Width="80" Height="30" TextAlignment="Center"/>
+                <TextBlock Text="Image Ratio : " Width="110" Height="30" TextAlignment="Center" />
+                <TextBox x:Name="ImageRatio" Text="200" Width="80" Height="30" TextAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel x:Name="FontNamePanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-46,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Font Name : " Width="110" Height="30" TextAlignment="Center" />
+                <TextBox x:Name="FontName" Text="" Width="120" Height="30" TextAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel x:Name="PageRangesPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="-46,0,0,0" Visibility="Collapsed">
+                <TextBlock Text="Page Ranges : " Width="110" Height="30" TextAlignment="Center" />
+                <TextBox x:Name="PageRanges" Text="" Width="120" Height="30" TextAlignment="Center"/>
             </StackPanel>
 
             <Button Content="OK" Width="70" Height="25" Margin="20" Click="Button_Click"/>

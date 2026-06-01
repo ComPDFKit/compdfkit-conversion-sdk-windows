@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Sms.LegacySmsApiContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Devices.Sms.DeleteSmsMessageOperation">
+      <summary>Enables start, track, and end an asynchronous message delete operation for a single message.</summary>
+      <deprecated type="deprecate">DeleteSmsMessageOperation may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Completed">
+      <summary>Specifies whether the asynchronous SMS message delete operation has completed or not.</summary>
+      <returns>A handler for the completed event of an asynchronous action.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.ErrorCode">
+      <summary>Specifies the error code for the asynchronous SMS message delete operation.</summary>
+      <returns>The result value of the asynchronous operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Id">
+      <summary>Specifies the ID of the asynchronous SMS message delete operation.</summary>
+      <returns>An integer that uniquely represents the asynchronous SMS message delete operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.DeleteSmsMessageOperation.Status">
+      <summary>Specifies the status of the asynchronous SMS message delete operation.</summary>
+      <returns>An enumerated value representing the status of the asynchronous SMS message delete operation.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Cancel">
+      <summary>Cancels the asynchronous SMS message delete operation.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.Close">
+      <summary>Closes the asynchronous SMS message delete operation.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.DeleteSmsMessageOperation.GetResults">
+      <summary>Retrieves the result of the asynchronous SMS message delete operation.</summary>
+    </member>
+    <member name="T:Windows.Devices.Sms.DeleteSmsMessagesOperation">
+      <summary>Enables start, track, and end asynchronous SMS message delete operations for multiple messages.</summary>
+      <deprecated type="deprecate">DeleteSmsMessagesOperation may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Completed">
+      <summary>Specifies whether the asynchronous SMS message delete operations have completed or not.</summary>
+      <returns>A handler for the completed event of an asynchronous SMS message delete operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.ErrorCode">
+      <summary>Specifies the error code for the asynchronous SMS message delete operations.</summary>
+      <returns>The result value of the asynchronous SMS message delete operations.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Id">
+      <summary>Specifies the ID of the asynchronous SMS message delete operations.</summary>
+      <returns>An integer that uniquely represents the asynchronous SMS message delete operations.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.DeleteSmsMessagesOperation.Status">
+      <summary>Specifies the status of the asynchronous SMS message delete operations.</summary>
+      <returns>An enumerated value representing the status of the asynchronous SMS message delete operations.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Cancel">
+      <summary>Cancels the asynchronous SMS message delete operations.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.Close">
+      <summary>Closes the asynchronous SMS message delete operations.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.DeleteSmsMessagesOperation.GetResults">
+      <summary>Retrieves the result of the asynchronous message operations.</summary>
+    </member>
+    <member name="T:Windows.Devices.Sms.GetSmsDeviceOperation">
+      <summary>Retrieves an SmsDevice object asynchronously.</summary>
+      <deprecated type="deprecate">GetSmsDeviceOperation may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Completed">
+      <summary>Specifies whether the asynchronous SmsDevice object retrieval operation has completed or not.</summary>
+      <returns>A handler for the completed event of an asynchronous action.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.ErrorCode">
+      <summary>Specifies the error code for the asynchronous SmsDevice object retrieval operation</summary>
+      <returns>The result value of the asynchronous operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Id">
+      <summary>Specifies the ID of the asynchronous SmsDevice object retrieval operation.</summary>
+      <returns>An integer that uniquely represents the asynchronous SmsDevice object retrieval operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsDeviceOperation.Status">
+      <summary>Specifies the status of the asynchronous SmsDevice object retrieval operation.</summary>
+      <returns>An enumerated value representing the status of an asynchronous SmsDevice object retrieval operation.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Cancel">
+      <summary>Cancels the asynchronous SmsDevice object retrieval.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.Close">
+      <summary>Closes the asynchronous SmsDevice object retrieval operation.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsDeviceOperation.GetResults">
+      <summary>Gets the results of the asynchronous SmsDevice object retrieval operation.</summary>
+      <returns>A reference to an SmsDevice object.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.GetSmsMessageOperation">
+      <summary>Supports the retrieval of a message from the SMS message store.</summary>
+      <deprecated type="deprecate">GetSmsMessageOperation may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Completed">
+      <summary>A handler for the completed event of an asynchronous SMS message retrieval operation.</summary>
+      <returns>A handler for the completed event of an asynchronous SMS message retrieval operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessageOperation.ErrorCode">
+      <summary>Specifies the error code for the asynchronous SMS message retrieval operation.</summary>
+      <returns>The result value of the asynchronous SMS message retrieval operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Id">
+      <summary>Specifies the ID of the asynchronous SMS message retrieval operation.</summary>
+      <returns>An integer uniquely representing the asynchronous SMS message retrieval operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessageOperation.Status">
+      <summary>Specifies the status of the asynchronous SMS message retrieval operation.</summary>
+      <returns>An enumerated value representing the status of an asynchronous SMS message retrieval operation.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Cancel">
+      <summary>Cancels the asynchronous SMS message retrieval operation.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsMessageOperation.Close">
+      <summary>Closes the asynchronous SMS message retrieval operation.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsMessageOperation.GetResults">
+      <summary>Retrieves the result of the asynchronous SMS message retrieval operation.</summary>
+      <returns>An interface that accesses the retrieved message.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.GetSmsMessagesOperation">
+      <summary>Supports the retrieval of messages.</summary>
+      <deprecated type="deprecate">GetSmsMessagesOperation may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Completed">
+      <summary>Specifies whether the asynchronous message retrieval operation has completed or not.</summary>
+      <returns>Specifies whether the asynchronous message operation has completed or not.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.ErrorCode">
+      <summary>Specifies the error code for the asynchronous message operation.</summary>
+      <returns>The result value of the asynchronous operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Id">
+      <summary>Indicates the ID of the asynchronous message operation.</summary>
+      <returns>An integer uniquely representing the asynchronous operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Progress">
+      <summary>Specifies the progress status of the asynchronous message operation.</summary>
+      <returns>A handler for progress update events of an asynchronous operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.GetSmsMessagesOperation.Status">
+      <summary>Specifies the status of the asynchronous message operations.</summary>
+      <returns>An enumerated value representing the status of an asynchronous operation.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Cancel">
+      <summary>Cancels the asynchronous operations.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.Close">
+      <summary>Closes the asynchronous operations.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.GetSmsMessagesOperation.GetResults">
+      <summary>Retrieves the result of the asynchronous message retrieval operation.</summary>
+      <returns>A reference to the SMS messages retrieved.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.ISmsBinaryMessage">
+      <summary>This interface provides access to the raw binary format of an SMS message. The message is stored in the industry standard protocol description unit (PDU) format (see the SMS specification GSM 03.40).</summary>
+      <deprecated type="deprecate">SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsBinaryMessage.Format">
+      <summary>Retrieves the detected protocol description unit (PDU) format of this message.</summary>
+      <returns>An enumerated value describing the SMS data format.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.ISmsBinaryMessage.GetData">
+      <summary>Returns the raw buffer of the message in binary protocol description unit (PDU) format as a byte array.</summary>
+      <deprecated type="deprecate">SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.</deprecated>
+      <returns>A byte array representing message data. If there is no message data, the returned array is empty.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.ISmsBinaryMessage.SetData(System.Byte[])">
+      <summary>Specifies the raw binary payload of the SMS message. It should be formatted according to the protocol description unit (PDU) standard.</summary>
+      <deprecated type="deprecate">SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.</deprecated>
+      <param name="value">A byte array representing message data, formatted according to the protocol description unit (PDU) standard.</param>
+    </member>
+    <member name="T:Windows.Devices.Sms.ISmsDevice">
+      <summary>This interface controls a mobile broadband SMS device. It is the primary entry point to SMS services on the device.</summary>
+      <deprecated type="deprecate">SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsDevice.AccountPhoneNumber">
+      <summary>Returns the phone number associated with the SMS device. The phone number can be used to associate incoming messages with the account and possibly an external storage mechanism such as an account inbox.</summary>
+      <returns>A string representation of the account phone number.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsDevice.CellularClass">
+      <summary>Returns the cellular class of the SMS device. The class can be used to determine which encodings are appropriate or which device limitations are in effect.</summary>
+      <returns>An enumerated value indicating the device's cellular class.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsDevice.DeviceStatus">
+      <summary>Returns the SMS device's status, which indicates whether the device is ready, or not. It also indcates what type of problem exists if the device is not ready.</summary>
+      <returns>An enumerated value that indicates the readiness of an SMS device to engage in cellular network traffic operations.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsDevice.MessageStore">
+      <summary>Accesses the on-device message store. The store holds messages until a client can retrieve them. On some devices, for example, the store may correspond to the SIM storage for SMS messages.</summary>
+      <returns>A reference to an SmsMessageStore object.</returns>
+    </member>
+    <member name="E:Windows.Devices.Sms.ISmsDevice.SmsDeviceStatusChanged">
+      <summary>Sets an event handler to be called when the status of the SMS device changes.</summary>
+    </member>
+    <member name="E:Windows.Devices.Sms.ISmsDevice.SmsMessageReceived">
+      <summary>Sets an event handler to be called when the device receives a new text message.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.ISmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>Estimates the transmitted message length of the specified text message. The estimate can be useful to clients who want to give an indication of how many messages will be sent on the network to carry the text of the full message.</summary>
+      <deprecated type="deprecate">SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.</deprecated>
+      <param name="message">A reference to the SMS text message to measure.</param>
+      <returns>A reference to an SmsEncodedLength structure that is populated with the length information.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.ISmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>Asynchronously sends a message using the SMS device. The method is asynchronous because the send operation might not occur instantaneously. The asynchronous operation object is returned immediately.</summary>
+      <deprecated type="deprecate">SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.</deprecated>
+      <param name="message">A reference to an SmsMessage object. The message can be in text or binary format.</param>
+      <returns>A reference to an SendSmsMessageOperation object that supports asynchronous message sending.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.ISmsMessage">
+      <summary>This interface is implemented by all types of SMS messages that are supported.</summary>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsMessage.Id">
+      <summary>Retrieves an ID for the message, which can later be specified in calling message store methods in order to get or delete the message.</summary>
+      <returns>An integer ID for the message.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsMessage.MessageClass">
+      <summary>Returns the message class, as determined by the operator's message network. The two most common classes are None (normal message) or Class0 (special operator message, such as a roaming warning that must be shown immediately to the user). A typical client for end-user messages ignores Class0 messages.</summary>
+      <returns>A value from the SmsMessageClass enumeration.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.ISmsTextMessage">
+      <summary>This interface manipulates a decoded SMS text message. It provides direct access to the plain text body of the message, as well as key header properties, such as time stamp.</summary>
+      <deprecated type="deprecate">SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsTextMessage.Body">
+      <summary>Specifies the plain text body of the message.</summary>
+      <returns>A string representing the body of the text message. If there were decoding problems, some characters in the original message can be represented by a wildcard character, typically a question mark: '?'.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsTextMessage.Encoding">
+      <summary>Specifies the encoding type that has been set to use when sending this message.</summary>
+      <returns>A value from the SmsEncoding enumeration.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsTextMessage.From">
+      <summary>Specifies the phone number of the sender of the message.</summary>
+      <returns>A string representation of the phone number of the sender of this message. It should be in the format preferred by the device and the network it is registered on.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsTextMessage.PartCount">
+      <summary>Retrieves the total number of parts in the original message if the message is part of a multi-part message.</summary>
+      <returns>An unsigned integer. If the message is standalone, the value is 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsTextMessage.PartNumber">
+      <summary>Retrieves the part number of a multi-part message if this message is part of a multi-part message. It can be used to reconstruct the original message by joining the parts together, in conjunction with the PartReferenceId and PartCount properties.</summary>
+      <returns>An unsigned integer. It is one-based. It will not exceed PartCount + 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsTextMessage.PartReferenceId">
+      <summary>Indicates a reference value that can be used if the message is part of a multi-part message. If this message belongs to a multi-part message, the PartNumber value can be used to reconstruct the full original message, and each part of that message will have the same value for PartReferenceId.</summary>
+      <returns>An unsigned integer determined by the sending network; it cannot be manipulated through this interface. If the network has its own policy on the lifetime of a multi-part message, this reference number might not be valid indefinitely.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsTextMessage.Timestamp">
+      <summary>Retrieves the timestamp of the message. It is determined locally for a constructed message instance or from the service center timestamp of a received message.</summary>
+      <returns>A value of the DateTime type.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.ISmsTextMessage.To">
+      <summary>Specifies the recipient phone number of this message.</summary>
+      <returns>A string representation of the phone number, formatted in the phone number format favored by the device and the network that the device is registered on.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.ISmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>Reads a message in the specified format and places the results in a new instance of a binary message.</summary>
+      <deprecated type="deprecate">SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.</deprecated>
+      <param name="format">A value from the SmsDataFormat enumeration.</param>
+      <returns>The new binary message that holds the result of this method call.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.LegacySmsApiContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Devices.Sms.SendSmsMessageOperation">
+      <summary>Enables the sending of a message.</summary>
+      <deprecated type="deprecate">SendSmsMessageOperation may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Completed">
+      <summary>A handler for the completed event of an asynchronous action.</summary>
+      <returns>A handler for the completed event of an asynchronous action.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SendSmsMessageOperation.ErrorCode">
+      <summary>Specifies the error code for the asynchronous message operation.</summary>
+      <returns>The result value of the asynchronous operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Id">
+      <summary>Indicates the ID of the asynchronous message operation.</summary>
+      <returns>An integer uniquely representing the asynchronous operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SendSmsMessageOperation.Status">
+      <summary>Specifies the status of the asynchronous message operation.</summary>
+      <returns>An enumerated value representing the status of an asynchronous operation.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Cancel">
+      <summary>Cancels the asynchronous operation.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.SendSmsMessageOperation.Close">
+      <summary>Closes the asynchronous operation.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.SendSmsMessageOperation.GetResults">
+      <summary>Retrieves the result of the asynchronous operation.</summary>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsBinaryMessage">
+      <summary>Represents an SMS message in raw PDU format. The data format differs depending on whether the message format (indicated by the value of the Format property) is GSM or CDMA.</summary>
+      <deprecated type="deprecate">SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.</deprecated>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsBinaryMessage.#ctor">
+      <summary>Creates an instance of the SmsBinaryMessage class.</summary>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsBinaryMessage.Format">
+      <summary>Retrieves the detected protocol description unit (PDU) format of this message.</summary>
+      <returns>An enumerated value describing the SMS data format.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsBinaryMessage.Id">
+      <summary>Indicates the ID of the asynchronous message operation.</summary>
+      <returns>An integer uniquely representing the asynchronous operation.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsBinaryMessage.MessageClass">
+      <summary>Returns the message class, as determined by the operator's message network. The two most common classes are None (normal message) or Class0 (special operator message, such as a roaming warning that must be shown immediately to the user). A typical client for end-user messages ignores Class0 messages.</summary>
+      <returns>A value from the SmsMessageClass enumeration.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsBinaryMessage.GetData">
+      <summary>Returns the raw buffer of the message in binary protocol description unit (PDU) format as a byte array.</summary>
+      <deprecated type="deprecate">SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.</deprecated>
+      <returns>A byte array representing message data. If there is no message data, the returned array is empty.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsBinaryMessage.SetData(System.Byte[])">
+      <summary>Specifies the raw binary payload of the SMS message. It should be formatted according to the protocol description unit (PDU) standard.</summary>
+      <deprecated type="deprecate">SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.</deprecated>
+      <param name="value">A byte array representing message data. If there is no message data, the returned array is empty.</param>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsDevice">
+      <summary>Supports the operation of a mobile broadband SMS device.</summary>
+      <deprecated type="deprecate">SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsDevice.AccountPhoneNumber">
+      <summary>Returns the phone number associated with the SMS device. The phone number can be used to associate incoming messages with the account and possibly an external storage mechanism such as an account inbox.</summary>
+      <returns>A string representation of the account phone number.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsDevice.CellularClass">
+      <summary>Returns the cellular class of the SMS device. The class can be used to determine which encodings are appropriate or which device limitations are in effect.</summary>
+      <returns>An enumerated value indicating the device's cellular class.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsDevice.DeviceStatus">
+      <summary>Returns the SMS device's status, which indicates whether the device is ready, or not. It also indicates what type of problem exists if the device is not ready.</summary>
+      <returns>An enumerated value that indicates the readiness of an SMS device to engage in cellular network traffic operations.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsDevice.MessageStore">
+      <summary>Accesses the on-device message store. The store holds messages until a client can retrieve them. On some devices, for example, the store may correspond to the SIM storage for SMS messages.</summary>
+      <returns>A reference to an SmsDeviceMessageStore object.</returns>
+    </member>
+    <member name="E:Windows.Devices.Sms.SmsDevice.SmsDeviceStatusChanged">
+      <summary>Sets an event handler to be called when the status of the SMS device changes.</summary>
+    </member>
+    <member name="E:Windows.Devices.Sms.SmsDevice.SmsMessageReceived">
+      <summary>Sets an event handler to be called when the device receives a new text message.</summary>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDevice.CalculateLength(Windows.Devices.Sms.SmsTextMessage)">
+      <summary>Estimates the transmitted message length of the specified text message. The estimate can be useful to clients who want to give an indication of how many messages will be sent on the network to carry the text of the full message.</summary>
+      <deprecated type="deprecate">SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.</deprecated>
+      <param name="message">A reference to the SMS text message to measure.</param>
+      <returns>A reference to an SmsEncodedLength structure that is populated with the length information.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDevice.FromIdAsync(System.String)">
+      <summary>Creates an instance of SmsDevice for the device that received the SMS message.</summary>
+      <deprecated type="deprecate">ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="deviceId">A string representation of the DeviceInformation ID of the SMS device that received the SMS message.</param>
+      <returns>The SMS device operation object.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDevice.FromNetworkAccountIdAsync(System.String)">
+      <summary>Creates an instance of SmsDevice for the specified Mobile Broadband network account ID.</summary>
+      <deprecated type="deprecate">ISmsDeviceStatics2 may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="networkAccountId">The Mobile Broadband network account ID to use to select the corresponding mobile broadband device to use for the SMS device</param>
+      <returns>When this method completes, it returns the SmsDevice for the specified Mobile Broadband network account ID.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDevice.GetDefaultAsync">
+      <summary>Creates an instance of an SmsDevice object associated with the default SMS device. Because the device might be busy, the operation executes asynchronously. The asynchronous operation object returns immediately.</summary>
+      <deprecated type="deprecate">ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.</deprecated>
+      <returns>A reference to an IAsyncOperation(SmsDevice) object that supports asynchronous SmsDevice object retrieval.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDevice.GetDeviceSelector">
+      <summary>Retrieves the class selection string that can be used to enumerate SMS devices.</summary>
+      <deprecated type="deprecate">ISmsDeviceStatics may be altered or unavailable for releases after Windows 10.</deprecated>
+      <returns>A reference to an Advanced Query Syntax (AQS) string that identifies an SMS device.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDevice.SendMessageAsync(Windows.Devices.Sms.ISmsMessage)">
+      <summary>Asynchronously sends a message using the SMS device. The method is asynchronous because the send operation might not occur instantaneously. The message operation object is returned immediately.</summary>
+      <deprecated type="deprecate">SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.</deprecated>
+      <param name="message">A reference to an ISmsMessage object. The message can be in text or binary format.</param>
+      <returns>The message operation object.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsDeviceMessageStore">
+      <summary>Provides access to the messages stored on an SMS Device and information about the message store.</summary>
+      <deprecated type="deprecate">SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsDeviceMessageStore.MaxMessages">
+      <summary>Indicates the maximum number of messages that can be stored in the device store. The client can use this value to determine how to maintain enough space in the device store to receive new messages from the network.</summary>
+      <returns>An integer value representing the maximum number of messages for the device store.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessageAsync(System.UInt32)">
+      <summary>Deletes the message with the specified ID. Because the device might be busy, the operation executes asynchronously. The asynchronous operation object returns immediately.</summary>
+      <deprecated type="deprecate">SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="messageId">Integer ID of the message to delete, which was previously read from an SmsTextMessage object obtained from the device message store.</param>
+      <returns>A new message operation object that is used to start and track the asynchronous operation.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.DeleteMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>Deletes the messages to which the filter applies. The filter can be used to delete all messages, or only messages that are read, unread, sent, or in a draft state. Because the operation might not be instantaneous, it executes asynchronously. The asynchronous operation object returns immediately.</summary>
+      <deprecated type="deprecate">SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="messageFilter">A search filter that specifies which messages to delete.</param>
+      <returns>A new message operation object that is used to start and track the asynchronous operation.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessageAsync(System.UInt32)">
+      <summary>Retrieves the message with the specified ID. The device might be busy, so the method executes asynchronously. The asynchronous operation object returns immediately.</summary>
+      <deprecated type="deprecate">SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="messageId">ID of the message to retrieve.</param>
+      <returns>Returns a new message operation object that is used to start and track the asynchronous operation.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsDeviceMessageStore.GetMessagesAsync(Windows.Devices.Sms.SmsMessageFilter)">
+      <summary>Retrieves a list of messages that match the conditions specified in a filter. The messages can be filtered as read, unread, sent, or in the draft state.</summary>
+      <deprecated type="deprecate">SmsDeviceMessageStore may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="messageFilter">ID of the message to retrieve.</param>
+      <returns>Returns a new message operation object that is used to start and track the asynchronous operation.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsDeviceStatusChangedEventHandler">
+      <summary>This handler is called when the status on the SMS device changes. Callers should implement this when they want to be notified when a significant state change occurs on the device. For example, the caller might want to know when the device is ready to send and receive messages.</summary>
+      <deprecated type="deprecate">SmsDeviceStatusChangedEventHandler may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="sender">A reference to the device object that sent the event.</param>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsMessageFilter">
+      <summary>This enumerated type specifies which messages in the device message store an operation is performed on.</summary>
+      <deprecated type="deprecate">SmsMessageFilter may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="F:Windows.Devices.Sms.SmsMessageFilter.All">
+      <summary>All messages in the device message store.</summary>
+    </member>
+    <member name="F:Windows.Devices.Sms.SmsMessageFilter.Draft">
+      <summary>All unsent and saved messages.</summary>
+    </member>
+    <member name="F:Windows.Devices.Sms.SmsMessageFilter.Read">
+      <summary>All read received messages.</summary>
+    </member>
+    <member name="F:Windows.Devices.Sms.SmsMessageFilter.Sent">
+      <summary>All sent and saved messages.</summary>
+    </member>
+    <member name="F:Windows.Devices.Sms.SmsMessageFilter.Unread">
+      <summary>All unread received messages.</summary>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsMessageReceivedEventArgs">
+      <summary>Provides data for ISmsBinaryMessage event handlers.</summary>
+      <deprecated type="deprecate">SmsMessageReceivedEventArgs may be altered or unavailable for releases after Windows 10.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.BinaryMessage">
+      <summary>Retrieves an object that holds the binary representation of the message. This is of interest only to clients who want to pass binary messages on directly or do their own interpretation of the binary message contents.</summary>
+      <returns>A reference to an SmsBinaryMessage object.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsMessageReceivedEventArgs.TextMessage">
+      <summary>Retrieves an object that holds the text representation of the message. If the message is not successfully decoded, an error is returned.</summary>
+      <returns>A new SmsTextMessage object.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsMessageReceivedEventHandler">
+      <summary>This event handler is called when a new binary message is received. Callers should implement this when they want to handle new binary messages from a given SMS device.</summary>
+      <deprecated type="deprecate">SmsMessageReceivedEventHandler may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="sender">A reference to the SMS device object that sent the message.</param>
+      <param name="e">An object that holds the binary and text representations of the message.</param>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsReceivedEventDetails">
+      <summary>Presents the details of SMS message events to the background work item that handles messages while your app is suspended.</summary>
+      <deprecated type="deprecate">SmsReceivedEventDetails may be altered or unavailable for releases after Windows 10. Instead, use SmsMessageReceivedTriggerDetails.</deprecated>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.BinaryMessage">
+      <summary>Gets the binary message object for the SMS message received by the background task.</summary>
+      <returns>The binary message object for the SMS message received by the background task.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.DeviceId">
+      <summary>Returns the DeviceInformation ID of the network interface that received the SMS message. This ID can be passed to SmsDevice.FromIdAsync to activate the device and retrieve additional message details.</summary>
+      <returns>A string containing the DeviceInformation ID of the SMS network interface (device). This value is typically used to retrieve details such as the sender and the body of the message. For example, you might use the ID to display a popup telling the user that a new message from a particular person has arrived. The combination of DeviceId and MessageIndex is sufficient to retrieve the new message from the SMS device.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageClass">
+      <summary>Gets the message class for the SMS message received by the background task.</summary>
+      <returns>The message class for the SMS message received by the background task.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsReceivedEventDetails.MessageIndex">
+      <summary>Returns the index of the new message that raised the event. You can pass this to SmsDevice.GetMessageAsync to retrieve the new message itself.</summary>
+      <returns>An integer index of the new message.</returns>
+    </member>
+    <member name="T:Windows.Devices.Sms.SmsTextMessage">
+      <summary>Manages a decoded SMS text message, providing direct access to the plain text body of the message, as well as key header properties, such as time stamp.</summary>
+      <deprecated type="deprecate">SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.</deprecated>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsTextMessage.#ctor">
+      <summary>Creates an instance of the SmsTextMessage class.</summary>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.Body">
+      <summary>Specifies the plain text body of the message.</summary>
+      <returns>A string representing the body of the text message. If there were decoding problems, some characters in the original message can be represented by a wildcard character, typically a question mark ('?').</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.Encoding">
+      <summary>Specifies the encoding type that has been set to use when sending this message.</summary>
+      <returns>A value from the SmsEncoding enumeration.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.From">
+      <summary>Specifies the phone number of the sender of the message.</summary>
+      <returns>A string representation of the phone number of the sender of this message. It should be in the format preferred by the device and the network it is registered on.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.Id">
+      <summary>Indicates the ID of the SMS text message.</summary>
+      <returns>An integer ID for the message.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.MessageClass">
+      <summary>Specifies the message class of a message. This message class typically originates on the network, not the mobile device.</summary>
+      <returns>A value from the SmsMessageClass enumeration.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.PartCount">
+      <summary>Indicates the total number of parts in the original message if the message is part of a multi-part message.</summary>
+      <returns>An unsigned integer. If the message is standalone, the value is 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.PartNumber">
+      <summary>Indicates the part number of a multi-part message if this message is part of a multi-part message. It can be used to reconstruct the original message by joining the parts together, in conjunction with the PartReferenceId and PartCount properties.</summary>
+      <returns>An unsigned integer. It is one-based. It will not exceed PartCount + 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.PartReferenceId">
+      <summary>Indicates a reference value that can be used if the message is part of a multi-part message. If this message belongs to a multi-part message, the PartNumber value can be used to reconstruct the full original message, and each part of that message will have the same value for PartReferenceId.</summary>
+      <returns>An unsigned integer determined by the sending network; it cannot be manipulated through this interface. If the network has its own policy on the lifetime of a multi-part message, this reference number might not be valid indefinitely.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.Timestamp">
+      <summary>Indicates the timestamp of the message. It is determined locally for a constructed message instance or from the service center timestamp of a received message.</summary>
+      <returns>A value of the DateTime type.</returns>
+    </member>
+    <member name="P:Windows.Devices.Sms.SmsTextMessage.To">
+      <summary>Indicates the recipient phone number of this message.</summary>
+      <returns>A string representation of the phone number, formatted in the phone number format favored by the device and the network that the device is registered on.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryData(Windows.Devices.Sms.SmsDataFormat,System.Byte[])">
+      <summary>Decodes a binary message and places the results in a new instance of a text message. This method represents the binary message as a reference to a buffer of bytes and a selection of how the buffer is encoded. Therefore, it can be used when the message did not originate directly from the device or as an instance of an SmsBinaryMessage class.</summary>
+      <deprecated type="deprecate">ISmsTextMessageStatics may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="format">An SmsDataFormat enumerated value that identifies the format of a particular protocol description unit (PDU) buffer.</param>
+      <param name="value">An array of bytes containing the binary data to decode.</param>
+      <returns>A new SmsTextMessage object if the decoding was successful.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsTextMessage.FromBinaryMessage(Windows.Devices.Sms.SmsBinaryMessage)">
+      <summary>Reads a binary message and decodes it. The results are placed in a new instance of a text message.</summary>
+      <deprecated type="deprecate">ISmsTextMessageStatics may be altered or unavailable for releases after Windows 10.</deprecated>
+      <param name="binaryMessage">An instance of a binary message to decode.</param>
+      <returns>A new SmsTextMessage object.</returns>
+    </member>
+    <member name="M:Windows.Devices.Sms.SmsTextMessage.ToBinaryMessages(Windows.Devices.Sms.SmsDataFormat)">
+      <summary>Reads a message in the specified format and places the results in a new instance of a binary message.</summary>
+      <deprecated type="deprecate">SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.</deprecated>
+      <param name="format">A value from the SmsDataFormat enumeration.</param>
+      <returns>The new binary message that holds the result of this method call.</returns>
+    </member>
+  </members>
+</doc>

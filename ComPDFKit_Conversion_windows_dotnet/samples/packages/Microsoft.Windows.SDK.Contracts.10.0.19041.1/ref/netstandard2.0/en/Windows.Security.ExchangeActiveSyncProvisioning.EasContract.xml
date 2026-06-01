@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Security.ExchangeActiveSyncProvisioning.EasContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy">
+      <summary>Modern mail apps evaluate and apply the EAS security policies. An EasClientSecurityPolicy object is constructed by the caller app to set policies received from the Exchange server or application.</summary>
+    </member>
+    <member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.#ctor">
+      <summary>Creates an instance of an object that allows the caller app to set policies received from the Exchange server for evaluation or application.</summary>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.DisallowConvenienceLogon">
+      <summary> Gets or sets the ability to prevent convenience logons.  DisallowConvenienceLogon is not defined in MS-ASPROV. It is mapped from MS-ASPROV AllowSimplePassword with respect to the Windows password policies.</summary>
+      <returns>TRUE prevents convenience logons.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxInactivityTimeLock">
+      <summary>Gets or sets the maximum length of time the computer can remain inactive before it is locked. The MS-ASPROV name is MaxInactivityTimeDeviceLock.</summary>
+      <returns>The length of time allows for inactivity before the computer is locked.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MaxPasswordFailedAttempts">
+      <summary>Gets or sets the maximum number of failed password attempts for logging on. The MS-ASPROV name is MaxDevicePasswordFailedAttempts.</summary>
+      <returns>The range is between 4 and 16.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordComplexCharacters">
+      <summary>Gets or sets the minimum number of complex characters that are required for a password. The MS-ASPROV name is MinDevicePasswordComplexCharacters.</summary>
+      <returns>The range is between 1 and 4.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.MinPasswordLength">
+      <summary>Gets or set the minimum length of password allowed. The MS-ASPROV name is MinPasswordLength.</summary>
+      <returns>The range is between 1 and 16.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordExpiration">
+      <summary>Gets or set the length of time that a password is valid. The MS-ASPROV name is DevicePasswordExpiration.</summary>
+      <returns>The length of time before the password expires and must be reset.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.PasswordHistory">
+      <summary>Gets or set the password information previously used. The MS-ASPROV name is DevicePasswordHistory.</summary>
+      <returns>The password information that was previously used.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.RequireEncryption">
+      <summary>Gets or sets whether encryption is required. The MS-ASPROV name is RequireDeviceEncryption.</summary>
+      <returns>TRUE means encryption is required.</returns>
+    </member>
+    <member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.ApplyAsync">
+      <summary>Applies the EAS policies in asynchronous mode once the user consents.ApplyAsync is called by a UWP app for mail any time the app wants to make the local computer compliant.</summary>
+      <returns>Returns the evaluation of the callback results, in asynchronous mode, back to the calling app.</returns>
+    </member>
+    <member name="M:Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy.CheckCompliance">
+      <summary>Evaluates the EAS policies.CheckCompliance is called by a UWP app for mail any time the app wants to evaluate whether the local computer is compliant to the given EAS policies. Because this call doesn't involve any UI interactions, it is a synchronous call.</summary>
+      <returns>Returns the results of the compliance check, in synchronous mode.</returns>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults">
+      <summary>Provides the mail app with the results of the evaluation of the EAS security policies. Every policy being evaluated returns an enumerated value indicating the evaluation results against the policy. The evaluations results are encapsulated in the EasComplianceResults object for the caller app to retrieve.</summary>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.Compliant">
+      <summary>Returns the result of whether the computer is compliant with the EAS policies.</summary>
+      <returns>The result of whether the computer is compliant with the EAS policies. The Compliant property is set to TRUE if all of the policies being evaluated are compliant. Otherwise, it is set to FALSE.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.DisallowConvenienceLogonResult">
+      <summary>Returns the result of whether convenience logons are disallowed.</summary>
+      <returns>The result of whether convenience logons are disallowed.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.EncryptionProviderType">
+      <summary>Gets the type of the Exchange ActiveSync encryption provider.</summary>
+      <returns>The type of the Exchange ActiveSync encryption provider.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxInactivityTimeLockResult">
+      <summary>Returns the result of the maximum time of inactivity allowed before the computer is locked.</summary>
+      <returns>The result of the maximum time of inactivity allowed before the computer is locked.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MaxPasswordFailedAttemptsResult">
+      <summary>Returns the result of the maximum number of failed password attempts allowed.</summary>
+      <returns>The result of the maximum number of failed password attempts allowed.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordComplexCharactersResult">
+      <summary>Returns the result of the minimum number of complex password characters required.</summary>
+      <returns>The result of the minimum number of complex password characters required.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.MinPasswordLengthResult">
+      <summary>Returns the result of the minimum length of the password required.</summary>
+      <returns>The result of the minimum length of the password required.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordExpirationResult">
+      <summary>Returns the result of whether the password is expired.</summary>
+      <returns>The result of whether the password is expired.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.PasswordHistoryResult">
+      <summary>Returns the result of the history of passwords.</summary>
+      <returns>The result of the history of passwords.</returns>
+    </member>
+    <member name="P:Windows.Security.ExchangeActiveSyncProvisioning.EasComplianceResults.RequireEncryptionResult">
+      <summary>Returns the result of whether encryption is required.</summary>
+      <returns>The result of whether encryption is required.</returns>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult">
+      <summary>Results of whether the logon can occur. These values are mapped against the HRESULT codes returned from the EAS policy engine.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.CanBeCompliant">
+      <summary>This computer can be compliant by using the ApplyAsync method.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.Compliant">
+      <summary>This computer is compliant to the policy.HRESULT: S_OK and the user is controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.NotEvaluated">
+      <summary>The policy is not set for evaluation.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasDisallowConvenienceLogonResult.RequestedPolicyIsStricter">
+      <summary>The requested policy is stricter than the computer policies.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is not an admin.</summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType">
+      <summary>Describes the type of Exchange ActiveSync encryption provider.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.NotEvaluated">
+      <summary>The encryption provider type has not yet been determined.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.OtherEncryption">
+      <summary>The encryption provider is a non-Windows provider.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasEncryptionProviderType.WindowsEncryption">
+      <summary>The encryption provider is a Windows provider.</summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult">
+      <summary>Represents the maximum length of time result before locking the computer. These values are mapped against the HRESULT codes returned from the EAS policy engine.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.CanBeCompliant">
+      <summary>This computer can be compliant by using the ApplyAsync method.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.Compliant">
+      <summary>This computer is compliant to the policy.HRESULT: S_OK and the user is controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.InvalidParameter">
+      <summary>The policy value is not in a valid range.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.NotEvaluated">
+      <summary>The policy is not set for evaluation.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxInactivityTimeLockResult.RequestedPolicyIsStricter">
+      <summary>The requested policy is stricter than the computer policies.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is not an admin.</summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult">
+      <summary>Represents the maximum number of password attempts results. These values are mapped against the HRESULT codes returned from the EAS policy engine.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.CanBeCompliant">
+      <summary>This computer can be compliant by using the ApplyAsync method.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.Compliant">
+      <summary>This computer is compliant to the policy.HRESULT: S_OK and the user is controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.InvalidParameter">
+      <summary>The policy value is not in a valid range.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.NotEvaluated">
+      <summary>The policy is not set for evaluation.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMaxPasswordFailedAttemptsResult.RequestedPolicyIsStricter">
+      <summary>The requested policy is stricter than the computer policies.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is not an admin.</summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult">
+      <summary>Represents the minimum complexity result for passwords. These values are mapped against the HRESULT codes returned from the EAS policy engine.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsCannotChangePassword">
+      <summary>One or more admins are not allowed to change their passwords. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.AdminsHaveBlankPassword">
+      <summary>The EAS password policies cannot be evaluated as one or more admins have blank passwords. HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CanBeCompliant">
+      <summary>This computer can be compliant by using the ApplyAsync method.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedAdminsPassword">
+      <summary>There is at least one administrator whose connected account password must be changed for EAS password policy compliance.HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ChangeConnectedUserPassword">
+      <summary>The connected account password for the current user must be changed for EAS password policy compliance.HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.Compliant">
+      <summary>This computer is compliant to the policy.HRESULT: S_OK and the user is controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>The EAS password policy cannot be enforced by the connected account provider of at least one administrator.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>The EAS password policy cannot be enforced by the connected account provider of the current user.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.CurrentUserHasBlankPassword">
+      <summary>The EAS password policies for the user cannot be evaluated as the user has a blank password.HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.InvalidParameter">
+      <summary>The policy value is not in a valid range.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.LocalControlledUsersCannotChangePassword">
+      <summary>There are other standard users present who are not allowed to change their passwords. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.NotEvaluated">
+      <summary>The policy is not set for evaluation.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyIsStricter">
+      <summary>The requested policy is stricter than the computer policies.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is not an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.RequestedPolicyNotEnforceable">
+      <summary>The EAS policy being evaluated cannot be enforced by the system.HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordComplexCharactersResult.UserCannotChangePassword">
+      <summary>The user is not allowed to change the password. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult">
+      <summary>Represents the minimum length result for passwords. These values are mapped against the HRESULT codes returned from the EAS policy engine.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsCannotChangePassword">
+      <summary>One or more admins are not allowed to change their passwords. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.AdminsHaveBlankPassword">
+      <summary>The EAS password policies cannot be evaluated as one or more admins have blank passwords. HRESULT: EAS_E_ADMINS_HAVE_BLANK_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CanBeCompliant">
+      <summary>This computer can be compliant by using the ApplyAsync method.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is not an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedAdminsPassword">
+      <summary>There is at least one administrator whose connected account password must be changed for EAS password policy compliance.HRESULT: EAS_E_CONNECTED_ADMINS_NEED_TO_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ChangeConnectedUserPassword">
+      <summary>The connected account password for the current user must be changed for EAS password policy compliance.HRESULT: EAS_E_CURRENT_CONNECTED_USER_NEED_TO_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.Compliant">
+      <summary>This computer is compliant to the policy.HRESULT: S_OK and the user is controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedAdminsProviderPolicyIsWeak">
+      <summary>The EAS password policy cannot be enforced by the connected account provider of at least one administrator.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CONNECTED_ADMINS</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.ConnectedUserProviderPolicyIsWeak">
+      <summary>The EAS password policy cannot be enforced by the connected account provider of the current user.HRESULT: EAS_E_PASSWORD_POLICY_NOT_ENFORCEABLE_FOR_CURRENT_CONNECTED_USER</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.CurrentUserHasBlankPassword">
+      <summary>The EAS password policies for the user cannot be evaluated as the user has a blank password.HRESULT: EAS_E_CURRENT_USER_HAS_BLANK_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.InvalidParameter">
+      <summary>The policy value is not in a valid range.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.LocalControlledUsersCannotChangePassword">
+      <summary>There are other standard users present who are not allowed to change their passwords. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.NotEvaluated">
+      <summary>The policy is not set for evaluation.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyIsStricter">
+      <summary>The requested policy is stricter than the computer policies.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is not an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.RequestedPolicyNotEnforceable">
+      <summary>The EAS policy being evaluated cannot be enforced by the system.HRESULT: EAS_E_REQUESTED_POLICY_NOT_ENFORCEABLE</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasMinPasswordLengthResult.UserCannotChangePassword">
+      <summary>The user is not allowed to change the password. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult">
+      <summary>Results of querying on the password expiration information. These values are mapped against the HRESULT codes returned from the EAS policy engine.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.AdminsCannotChangePassword">
+      <summary>One or more admins are not allowed to change their passwords. HRESULT: EAS_E_ADMINS_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.CanBeCompliant">
+      <summary>The computer can be compliant using the ApplyAsync method.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.Compliant">
+      <summary>The computer is compliant to the policy.HRESULT: S_OK and the user is controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.InvalidParameter">
+      <summary>The policy value is not in a valid range.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.LocalControlledUsersCannotChangePassword">
+      <summary>There are other standard users present who are not allowed to change their passwords. HRESULT: EAS_E_LOCAL_CONTROLLED_USERS_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.NotEvaluated">
+      <summary>The policy is not set for evaluation.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedExpirationIncompatible">
+      <summary>The EAS password expiration policy cannot be met as the password expiration interval is less than the minimum password interval for the system.HRESULT: EAS_E_REQUESTED_POLICY_PASSWORD_EXPIRATION_INCOMPATIBLE</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.RequestedPolicyIsStricter">
+      <summary>The requested policy is stricter than the computer policies.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is not an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordExpirationResult.UserCannotChangePassword">
+      <summary>The user is not allowed to change the password. HRESULT: EAS_E_USER_CANNOT_CHANGE_PASSWORD</summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult">
+      <summary>Represents the password history. These values are mapped against the HRESULT codes returned from the EAS policy engine.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.CanBeCompliant">
+      <summary>The computer can be compliant using the ApplyAsync method.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is an admin.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.Compliant">
+      <summary>The computer is compliant to the policy.HRESULT: S_OK and the user is controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.InvalidParameter">
+      <summary>The policy value is not in a valid range.HRESULT: HRESULT_FROM_WIN32(ERROR_INVALID_PARAMETER)</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.NotEvaluated">
+      <summary>The policy is not set for evaluation.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasPasswordHistoryResult.RequestedPolicyIsStricter">
+      <summary>The requested policy is stricter than the computer policies.HRESULT: EAS_E_POLICY_COMPLIANT_WITH_ACTIONS and the user is not an admin.</summary>
+    </member>
+    <member name="T:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult">
+      <summary>Represents the type of encryption required. These values are mapped against the HRESULT codes returned from the EAS policy engine.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.CanBeCompliant">
+      <summary>This computer can be compliant by using the ApplyAsync method.HRESULT: S_OK but the user is not controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.Compliant">
+      <summary>This computer is already DeviceProtected.HRESULT: S_OK and the user is controlled.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeFixedDataNotSupported">
+      <summary>This value is no longer supported. Starting with Windows 8.1, use **FixedDataNotSupported**.</summary>
+      <deprecated type="deprecate">DeFixedDataNotSupported may be altered or unavailable for releases after Windows 8.1. Instead, use FixedDataNotSupported.</deprecated>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeHardwareNotCompliant">
+      <summary>This value is no longer supported. Starting with Windows 8.1, use **HardwareNotCompliant**.</summary>
+      <deprecated type="deprecate">DeHardwareNotCompliant may be altered or unavailable for releases after Windows 8.1. Instead, use HardwareNotCompliant.</deprecated>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeOsVolumeNotProtected">
+      <summary>This value is no longer supported. Starting with Windows 8.1, use **OsVolumeNotProtected**.</summary>
+      <deprecated type="deprecate">DeOsVolumeNotProtected may be altered or unavailable for releases after Windows 8.1. Instead, use OsVolumeNotProtected.</deprecated>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionNotYetEnabled">
+      <summary>This value is no longer supported. Starting with Windows 8.1, use **ProtectionNotYetEnabled**.</summary>
+      <deprecated type="deprecate">DeProtectionNotYetEnabled may be altered or unavailable for releases after Windows 8.1. Instead, use ProtectionNotYetEnabled.</deprecated>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeProtectionSuspended">
+      <summary>This value is no longer supported. Starting with Windows 8.1, use **ProtectionSuspended**.</summary>
+      <deprecated type="deprecate">DeProtectionSuspended may be altered or unavailable for releases after Windows 8.1. Instead, use ProtectionSuspended.</deprecated>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.DeWinReNotConfigured">
+      <summary>This value is no longer supported. Starting with Windows 8.1, use **LockNotConfigured**.</summary>
+      <deprecated type="deprecate">DeWinReNotConfigured may be altered or unavailable for releases after Windows 8.1. Instead, use LockNotConfigured.</deprecated>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.FixedDataNotSupported">
+      <summary>This computer cannot support device encryption because unencrypted fixed data volumes are present.HRESULT: FVE_E_DE_FIXED_DATA_NOT_SUPPORTED</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.HardwareNotCompliant">
+      <summary>This computer does not meet the hardware requirements to support device encryption.HRESULT: FVE_E_DE_HARDWARE_NOT_COMPLIANT</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.LockNotConfigured">
+      <summary>This computer cannot support device encryption because WinRE is not properly configured.HRESULT: FVE_E_DE_WINRE_NOT_CONFIGURED</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NoFeatureLicense">
+      <summary>This computer does not have a feature license.HRESULT: FVE_E_NO_FEATURE_LICENSE</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotEvaluated">
+      <summary>The policy is not set for evaluation.</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.NotProvisionedOnAllVolumes">
+      <summary>This computer is not provisioned to support device encryption. Enable BitLocker on all volumes to comply with device encryption policy. HRESULT: FVE_E_NOT_PROVISIONED_ON_ALL_VOLUMES</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsNotProtected">
+      <summary>The operating system drive is not protected by BitLocker drive encryption.HRESULT: FVE_E_OS_NOT_PROTECTED</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.OsVolumeNotProtected">
+      <summary>This computer is not provisioned with device encryption. Enable Device encryption on all volumes to comply with device encryption policy if it is supported. HRESULT: FVE_E_DE_OS_VOLUME_NOT_PROTECTED</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionNotYetEnabled">
+      <summary>Protection has not been enabled on the volume. Enabling protection requires a connected account. If you already have a connected account and are seeing this error, refer to the event log for more information.HRESULT: FVE_E_DE_PROTECTION_NOT_YET_ENABLED</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.ProtectionSuspended">
+      <summary>Protection is enabled on this volume but has been suspended. This is most likely due to an update of your computer. Reboot and try again.HRESULT: FVE_E_DE_PROTECTION_SUSPENDED</summary>
+    </member>
+    <member name="F:Windows.Security.ExchangeActiveSyncProvisioning.EasRequireEncryptionResult.UnexpectedFailure">
+      <summary>An unexpected failure occurred.</summary>
+    </member>
+  </members>
+</doc>

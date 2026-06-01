@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Capture.AppCaptureContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Media.Capture.AppCaptureAlternateShortcutKeys">
+      <summary>Defines alternate shortcut keys for app capture.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.SaveHistoricalVideoKey">
+      <summary>Gets or sets the save historical video shortcut key.</summary>
+      <returns>The save historical video shortcut key.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.SaveHistoricalVideoKeyModifiers">
+      <summary>Gets or sets the save historical video shortcut key modifiers.</summary>
+      <returns>The save historical video shortcut key modifiers.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.TakeScreenshotKey">
+      <summary>Gets or sets the take screenshot shortcut key.</summary>
+      <returns>The take screenshot shortcut key.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.TakeScreenshotKeyModifiers">
+      <summary>Gets or sets the take screenshot shortcut key modifiers.</summary>
+      <returns>The take screenshot shortcut key modifiers.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleBroadcastKey">
+      <summary>Gets or sets the toggle broadcast shortcut key.</summary>
+      <returns>The toggle broadcast shortcut key.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleBroadcastKeyModifiers">
+      <summary>Gets or sets the toggle broadcast shortcut key modifiers.</summary>
+      <returns>The toggle broadcast shortcut key modifiers.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleCameraCaptureKey">
+      <summary>Gets or sets the toggle camera capture shortcut key.</summary>
+      <returns>The toggle camera capture shortcut key.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleCameraCaptureKeyModifiers">
+      <summary>Gets or sets the toggle camera capture shortcut key modifiers.</summary>
+      <returns>The toggle camera capture shortcut key modifiers.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleGameBarKey">
+      <summary>Gets or sets the toggle game bar shortcut key.</summary>
+      <returns>The toggle game bar shortcut key.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleGameBarKeyModifiers">
+      <summary>Gets or sets the toggle game bar shortcut key modifiers.</summary>
+      <returns>The toggle game bar shortcut key modifiers.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleMicrophoneCaptureKey">
+      <summary>Gets or sets the toggle microphone capture shortcut key.</summary>
+      <returns>The toggle microphone capture shortcut key.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleMicrophoneCaptureKeyModifiers">
+      <summary>Gets or sets the toggle microphone capture shortcut key modifiers.</summary>
+      <returns>The toggle microphone capture shortcut key modifiers.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingIndicatorKey">
+      <summary>Gets or sets the toggle recording indicator shortcut key.</summary>
+      <returns>The toggle recoding indicator shortcut key.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingIndicatorKeyModifiers">
+      <summary>Gets or sets the toggle recording indicator shortcut key modifiers.</summary>
+      <returns>The toggle recording indicator shortcut key modifiers.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingKey">
+      <summary>Gets or sets the toggle recording shortcut key.</summary>
+      <returns>The toggle recording shortcut key.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureAlternateShortcutKeys.ToggleRecordingKeyModifiers">
+      <summary>Gets or sets the toggle recording shortcut key modifiers.</summary>
+      <returns>The toggle recording shortcut key modifiers.</returns>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs">
+      <summary>Provides data for the AppCaptureRecordOperation.DurationGenerated event.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureDurationGeneratedEventArgs.Duration">
+      <summary>Gets the duration associated with the event.</summary>
+      <returns>The duration associated with the event.</returns>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureFileGeneratedEventArgs">
+      <summary>Provides data for the AppCaptureRecordOperation.FileGenerated event.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureFileGeneratedEventArgs.File">
+      <summary>Gets the file associated with the event.</summary>
+      <returns>The file associated with the event.</returns>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit">
+      <summary>Specifies the units of the app capture historical buffer.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit.Megabytes">
+      <summary>Megabytes</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureHistoricalBufferLengthUnit.Seconds">
+      <summary>Seconds</summary>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureManager">
+      <summary>Provides access to app capture settings.</summary>
+    </member>
+    <member name="M:Windows.Media.Capture.AppCaptureManager.ApplySettings(Windows.Media.Capture.AppCaptureSettings)">
+      <summary>Applies app capture settings.</summary>
+      <param name="appCaptureSettings">The settings to apply.</param>
+    </member>
+    <member name="M:Windows.Media.Capture.AppCaptureManager.GetCurrentSettings">
+      <summary>Gets the current app capture settings.</summary>
+      <returns>The current app capture settings.</returns>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureMicrophoneCaptureState">
+      <summary>Specifies the state of microphone capture for app capture.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureMicrophoneCaptureState.Failed">
+      <summary>Microphone capture has failed.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureMicrophoneCaptureState.Started">
+      <summary>Microphone capture has been started.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureMicrophoneCaptureState.Stopped">
+      <summary>Microphone capture is stopped.</summary>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs">
+      <summary>Provides data for the AppCaptureState.MicrophoneCaptureStateChanged event.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs.ErrorCode">
+      <summary>Gets the error code associated with the event.</summary>
+      <returns>The error code associated with the event.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs.State">
+      <summary>Gets the new state of microphone capture for app capture.</summary>
+      <returns>The new state of microphone capture for app capture.</returns>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureRecordingState">
+      <summary>Specifies the state of an app capture recording.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureRecordingState.Completed">
+      <summary>The app capture recording has completed.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureRecordingState.Failed">
+      <summary>The app capture recording failed.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureRecordingState.InProgress">
+      <summary>The app capture recording is in progress.</summary>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs">
+      <summary>Provides data for the AppCaptureRecordOperation.StateChanged event.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs.ErrorCode">
+      <summary>Gets the error code associated with the event.</summary>
+      <returns>The error code associated with the event.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureRecordingStateChangedEventArgs.State">
+      <summary>Gets the new state of the app capture recording operation.</summary>
+      <returns>The new state of the app capture recording operation.</returns>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureRecordOperation">
+      <summary>Represents an app capture record operation.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureRecordOperation.Duration">
+      <summary>Gets the duration of the recording operation.</summary>
+      <returns>The duration of the recording operation.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureRecordOperation.ErrorCode">
+      <summary>Gets the error code associated with the recording operation.</summary>
+      <returns>The error code associated with the recording operation.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureRecordOperation.File">
+      <summary>Gets the file associated with the recording operation.</summary>
+      <returns>The file associated with the recording operation.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureRecordOperation.IsFileTruncated">
+      <summary>Gets a value indicating whether the file associated with the recording operation is truncated.</summary>
+      <returns>True if the file is truncated; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureRecordOperation.State">
+      <summary>Gets a value specifying the current state of the app capture record operation.</summary>
+      <returns>A value specifying the current state of the app capture record operation.</returns>
+    </member>
+    <member name="E:Windows.Media.Capture.AppCaptureRecordOperation.DurationGenerated">
+      <summary>Occurs when the recording state changes due to the duration of the recording operation.</summary>
+    </member>
+    <member name="E:Windows.Media.Capture.AppCaptureRecordOperation.FileGenerated">
+      <summary>Occurs when the recording state changes due to the file associated with the recording operation.</summary>
+    </member>
+    <member name="E:Windows.Media.Capture.AppCaptureRecordOperation.StateChanged">
+      <summary>Occurs when the state of the app capture record operation changes.</summary>
+    </member>
+    <member name="M:Windows.Media.Capture.AppCaptureRecordOperation.StopRecording">
+      <summary>Stops the app capture record operation.</summary>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureServices">
+      <summary>Manages the state of app captures.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureServices.CanCapture">
+      <summary>Gets a value specifying whether app capture can be performed.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureServices.State">
+      <summary>Gets a value specifying the current state of the app capture services.</summary>
+      <returns>A value specifying the current state of the app capture services.</returns>
+    </member>
+    <member name="M:Windows.Media.Capture.AppCaptureServices.Record">
+      <summary>Initiates an app capture record operation.</summary>
+      <returns>An object representing the record operation.</returns>
+    </member>
+    <member name="M:Windows.Media.Capture.AppCaptureServices.RecordTimeSpan(Windows.Foundation.DateTime,Windows.Foundation.TimeSpan)">
+      <summary>Initiates an app capture record operation beginning at the specified time, for the specified duration.</summary>
+      <param name="startTime">The time at which the app capture record operation is initiated.</param>
+      <param name="duration">The duration of the app capture record operation.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureSettings">
+      <summary>Represents app capture settings.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.AlternateShortcutKeys">
+      <summary>Gets the alternate shortcut key settings.</summary>
+      <returns>The alternate shortcut key settings.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.AppCaptureDestinationFolder">
+      <summary>Gets or sets the app capture destination folder.</summary>
+      <returns>The app capture destination folder.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.AudioEncodingBitrate">
+      <summary>Gets or sets the audio encoding bitrate.</summary>
+      <returns>The audio encoding bitrate.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingBitrate">
+      <summary>Gets or sets the custom video encoding bitrate.</summary>
+      <returns>The custom video encoding bitrate.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingHeight">
+      <summary>Gets or sets the custom video encoding height.</summary>
+      <returns>The custom video encoding height.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.CustomVideoEncodingWidth">
+      <summary>Gets the custom video encoding width.</summary>
+      <returns>The custom video encoding width.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.HasHardwareEncoder">
+      <summary>Gets a value indicating if the device has a hardware encoder.</summary>
+      <returns>True if the device has a hardware encoder; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.HistoricalBufferLength">
+      <summary>Gets or sets the historical buffer length.</summary>
+      <returns>The historical buffer length.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.HistoricalBufferLengthUnit">
+      <summary>Gets or sets the units of the historical buffer length.</summary>
+      <returns>The units of the historical buffer length.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsAppCaptureEnabled">
+      <summary>Gets or sets a value indicating if app capture is enabled.</summary>
+      <returns>True if app capture is enabled; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsAudioCaptureEnabled">
+      <summary>Gets or sets a value indicating whether audio capture is enabled.</summary>
+      <returns>True if audio capture is enabled; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsCpuConstrained">
+      <summary>Gets a value indicating if app capture is CPU-constrained.</summary>
+      <returns>True if app capture is CPU-constrained; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsCursorImageCaptureEnabled">
+      <summary>Gets a value indicating whether the cursor image is captured.</summary>
+      <returns>True if the cursor image is captured; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsDisabledByPolicy">
+      <summary>Gets a value indicating if app capture is disabled by policy.</summary>
+      <returns>True if app capture is disabled by policy; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsEchoCancellationEnabled">
+      <summary>Gets a value indicating whether echo cancellation is enabled for app capture.</summary>
+      <returns>True if echo cancellation is enabled for app capture; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsGpuConstrained">
+      <summary>Gets a value indicating if app capture is GPU-constrained.</summary>
+      <returns>True if app capture is GPU-constrained; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureEnabled">
+      <summary>Gets or sets a value indicating if historical capture is enabled.</summary>
+      <returns>True if historical capture is enabled; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureOnBatteryAllowed">
+      <summary>Gets or sets a value indicating whether historical capture is allowed while the device is on battery power.</summary>
+      <returns>True if historical capture is allowed while the device is on battery power; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsHistoricalCaptureOnWirelessDisplayAllowed">
+      <summary>Gets or sets a value indicating whether historical capture is allowed on wireless displays.</summary>
+      <returns>True if historical capture is allowed on wireless displays; otherwise, true.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsMemoryConstrained">
+      <summary>Gets a value indicating whether the device is memory-constrained.</summary>
+      <returns>True if the device is memory-constrained; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsMicrophoneCaptureEnabled">
+      <summary>Gets or sets a value indicating if microphone capture is enabled.</summary>
+      <returns>True if microphone capture is enabled; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.IsMicrophoneCaptureEnabledByDefault">
+      <summary>Gets or sets a value indicating if microphone capture is enabled by default.</summary>
+      <returns>True if microphone capture is enabled by default; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.MaximumRecordLength">
+      <summary>Gets or sets the maximum recording length.</summary>
+      <returns>The maximum recording length.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.MicrophoneGain">
+      <summary>Gets or sets a value specifying the gain applied to the microphone audio.</summary>
+      <returns>The gain applied to the microphone audio.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.ScreenshotDestinationFolder">
+      <summary>Gets or sets the screenshot destination folder.</summary>
+      <returns>The screenshot destination folder.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.SystemAudioGain">
+      <summary>Gets or sets a value specifying the gain applied to the system audio.</summary>
+      <returns>The gain applied to the system audio.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingBitrateMode">
+      <summary>Gets or sets the video encoding bitrate.</summary>
+      <returns>The video encoding bitrate.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingFrameRateMode">
+      <summary>Gets or sets a value indicating the video encoding frame rate mode.</summary>
+      <returns>The video encoding frame rate mode.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureSettings.VideoEncodingResolutionMode">
+      <summary>Gets or sets the video encoding resolution mode.</summary>
+      <returns>The video encoding resolution mode.</returns>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureState">
+      <summary>Represents the state of app capture.</summary>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureState.IsHistoricalCaptureEnabled">
+      <summary>Gets a value specifying whether historical app capture is enabled.</summary>
+      <returns>True if the historical app capture is enabled; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureState.IsTargetRunning">
+      <summary>Gets a value indicating whether the app capture target is currently running.</summary>
+      <returns>True if the app capture target is currently running; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureState.MicrophoneCaptureError">
+      <summary>Gets an error code associated with microphone capture for app capture.</summary>
+      <returns>An error code associated with microphone capture for app capture.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureState.MicrophoneCaptureState">
+      <summary>Gets the current microphone capture state.</summary>
+      <returns>The current microphone capture state.</returns>
+    </member>
+    <member name="P:Windows.Media.Capture.AppCaptureState.ShouldCaptureMicrophone">
+      <summary>Gets a value specifying whether the microphone should be captured.</summary>
+      <returns>True if the microphone should be captured; otherwise, false.</returns>
+    </member>
+    <member name="E:Windows.Media.Capture.AppCaptureState.CaptureTargetClosed">
+      <summary>Occurs when the capture target is closed.</summary>
+    </member>
+    <member name="E:Windows.Media.Capture.AppCaptureState.MicrophoneCaptureStateChanged">
+      <summary>Occurs when the state of microphone capture for app capture changes.</summary>
+    </member>
+    <member name="M:Windows.Media.Capture.AppCaptureState.RestartMicrophoneCapture">
+      <summary>Restarts microphone capture for app capture.</summary>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode">
+      <summary>Specifies the app capture video encoding bitrate mode.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.Custom">
+      <summary>Custom bitrate.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.High">
+      <summary>High bitrate.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureVideoEncodingBitrateMode.Standard">
+      <summary>Standard bitrate.</summary>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode">
+      <summary>Specifies the video encoding frame rate mode.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode.High">
+      <summary>Video is encoded with a high frame rate.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode.Standard">
+      <summary>Video is encoded with the standard frame rate.</summary>
+    </member>
+    <member name="T:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode">
+      <summary>Specifies the app capture video encoding resolution mode.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.Custom">
+      <summary>Custom resolution.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.High">
+      <summary>High resolution.</summary>
+    </member>
+    <member name="F:Windows.Media.Capture.AppCaptureVideoEncodingResolutionMode.Standard">
+      <summary>Standard resolution.</summary>
+    </member>
+  </members>
+</doc>

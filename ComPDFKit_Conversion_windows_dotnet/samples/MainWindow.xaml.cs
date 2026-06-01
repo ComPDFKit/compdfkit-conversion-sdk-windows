@@ -1,11 +1,11 @@
 ﻿using ComPDF_Conversion.Common;
 using ComPDF_Conversion.Conversion;
-using ComPDF_Conversion.DocumentAI;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Pipes;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,25 +25,30 @@ namespace ComPDF_Conversion_Demo
     public bool OneTablePerSheet = true;
     public bool ContainImages = true;
     public bool ContainPageBackgroundImage = true;
-    public bool AutoCreateFolder = false;
+    public bool TransparentText = true;
+    public bool AutoCreateFolder = true;
     public bool OutputDocumentPerPage = false;
     public bool EnableAiLayout = true;
+    public bool EnableAiTableRecognition = true;
     public bool EnableOCR = false;
     public bool TxtTableFormat = true;
-    public bool FormulaToImage = false;
-    public bool ImagePathEnhance = true;
+    public bool FormulaToImage = true;
+    public bool ImagePathEnhance = false;
     public bool ContainTables = true;
-    public float ImageRatio = 1.0f;
+    public float ImageRatio = 4.0f;
     public PageLayoutMode LayoutMode = PageLayoutMode.e_Flow;
     public ExcelWorksheetOption WorksheetOption = ExcelWorksheetOption.e_ForTable;
     public HtmlPageOption htmlOption = HtmlPageOption.e_SinglePage;
-    public ImageType ImageFormat = ImageType.PNG;
+    public ImageType ImageFormat = ImageType.JPG;
     public ImageColorMode ImageMode = ImageColorMode.Color;
     public OCROption OcrOption = OCROption.e_All;
+    public bool UseWindowsOCR = false;
+    public string FontName = "";
+    public string PageRanges = "";
   }
 
   /// <summary>
-  /// Copyright © 2014-2025 PDF Technologies, Inc. All Rights Reserved.
+  /// Copyright © 2014-2026 PDF Technologies, Inc. All Rights Reserved.
   ///
   /// THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
   /// AND MAY NOT BE RESOLD OR REDISTRIBUTED.USAGE IS BOUND TO THE ComPDFKit LICENSE AGREEMENT.
@@ -55,13 +60,21 @@ namespace ComPDF_Conversion_Demo
   public partial class MainWindow : Window
   {
     private OnProgress getPorgress = null;
+    private OnCancel getCancel = null;
+    private OnOCR getOCR = null;
+    private OnGetOCRResult getOCRResult = null;
+    private WindowsOcrHelper ocrHelper = new WindowsOcrHelper();
     private ErrorCode err;
+    private bool cancel = false;
     public ConvertOptions Options;
     private List<string> selectedFiles;
     public MainWindow()
     {
       InitializeComponent();
       getPorgress = GetProgress;
+      getCancel = GetCancel;
+      getOCR = GetOCR;
+      getOCRResult = GetOCRResultUtf8;
       Options = new ConvertOptions();
     }
 
@@ -76,6 +89,54 @@ namespace ComPDF_Conversion_Demo
           Progress.Text += " Conversion to complete.";
         }
       });
+    }
+
+    private bool GetOCR(string imagePath)
+    {
+      if (!ocrHelper.SetLanguage(WindowsOcrHelper.MapLanguageTag(Options.OCRLanguage)))
+      {
+        return false;
+      }
+      return ocrHelper.RunOcr(imagePath);
+    }
+
+    private string GetOCRResult()
+    {
+      return ocrHelper.GetOcrResult();
+    }
+
+    private IntPtr GetOCRResultUtf8()
+    {
+      return ocrHelper.GetOcrResultUtf8Ptr();
+    }
+
+    private ConvertCallback BuildCallback()
+    {
+      ConvertCallback callback = new ConvertCallback();
+      callback.progress = Marshal.GetFunctionPointerForDelegate(getPorgress);
+      callback.cancel = Marshal.GetFunctionPointerForDelegate(getCancel);
+      if (Options.UseWindowsOCR)
+      {
+        callback.ocr = Marshal.GetFunctionPointerForDelegate(getOCR);
+        callback.get_ocr_result = Marshal.GetFunctionPointerForDelegate(getOCRResult);
+      }
+      else
+      {
+        callback.ocr = IntPtr.Zero;
+        callback.get_ocr_result = IntPtr.Zero;
+      }
+      return callback;
+    }
+
+
+    private bool GetCancel()
+    {
+      return cancel;
+    }
+
+    private bool ShouldEnableOCR()
+    {
+      return Options.EnableOCR || Options.UseWindowsOCR;
     }
 
     private void ShowErrorMessage(ErrorCode error)
@@ -145,16 +206,21 @@ namespace ComPDF_Conversion_Demo
         wordOptions.ContainAnnotation = Options.ContainAnnotations;
         wordOptions.FormulaToImage = Options.FormulaToImage;
         wordOptions.EnableAiLayout = Options.EnableAiLayout;
-        wordOptions.EnableOCR = Options.EnableOCR;
+        wordOptions.EnableAiTableRecognition = Options.EnableAiTableRecognition;
+        wordOptions.EnableOCR = ShouldEnableOCR();
         wordOptions.LayoutMode = Options.LayoutMode;
         wordOptions.ContainPageBackgroundImage = Options.ContainPageBackgroundImage;
         wordOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
         wordOptions.OcrOption = Options.OcrOption;
+        wordOptions.FontName = Options.FontName;
+        wordOptions.PageRanges = Options.PageRanges;
+        wordOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToWord(input, "", outputFolder, wordOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToWord(input, "", outputFolder, wordOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -177,16 +243,21 @@ namespace ComPDF_Conversion_Demo
         excelOptions.AllContent = Options.AllContent;
         excelOptions.CsvFormat = Options.CsvFormat;
         excelOptions.EnableAiLayout = Options.EnableAiLayout;
-        excelOptions.EnableOCR = Options.EnableOCR;
+        excelOptions.EnableAiTableRecognition = Options.EnableAiTableRecognition;
+        excelOptions.EnableOCR = ShouldEnableOCR();
         excelOptions.WorksheetOption = Options.WorksheetOption;
         excelOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
         excelOptions.AutoCreateFolder = Options.AutoCreateFolder;
         excelOptions.OcrOption = Options.OcrOption;
+        excelOptions.FontName = Options.FontName;
+        excelOptions.PageRanges = Options.PageRanges;
+        excelOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToExcel(input, "", outputFolder, excelOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToExcel(input, "", outputFolder, excelOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -207,15 +278,20 @@ namespace ComPDF_Conversion_Demo
         pptOptions.ContainAnnotation = Options.ContainAnnotations;
         pptOptions.FormulaToImage = Options.FormulaToImage;
         pptOptions.EnableAiLayout = Options.EnableAiLayout;
-        pptOptions.EnableOCR = Options.EnableOCR;
+        pptOptions.EnableAiTableRecognition = Options.EnableAiTableRecognition;
+        pptOptions.EnableOCR = ShouldEnableOCR();
         pptOptions.ContainPageBackgroundImage = Options.ContainPageBackgroundImage;
         pptOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
         pptOptions.OcrOption = Options.OcrOption;
+        pptOptions.FontName = Options.FontName;
+        pptOptions.PageRanges = Options.PageRanges;
+        pptOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToPpt(input, "", outputFolder, pptOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToPpt(input, "", outputFolder, pptOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -236,16 +312,20 @@ namespace ComPDF_Conversion_Demo
         htmlOptions.ContainAnnotation = Options.ContainAnnotations;
         htmlOptions.FormulaToImage = Options.FormulaToImage;
         htmlOptions.EnableAiLayout = Options.EnableAiLayout;
-        htmlOptions.EnableOCR = Options.EnableOCR;
+        htmlOptions.EnableAiTableRecognition = Options.EnableAiTableRecognition;
+        htmlOptions.EnableOCR = ShouldEnableOCR();
         htmlOptions.LayoutMode = Options.LayoutMode;
         htmlOptions.HtmlOption = Options.htmlOption;
         htmlOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
         htmlOptions.OcrOption = Options.OcrOption;
+        htmlOptions.PageRanges = Options.PageRanges;
+        htmlOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToHtml(input, "", outputFolder, htmlOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToHtml(input, "", outputFolder, htmlOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -266,14 +346,18 @@ namespace ComPDF_Conversion_Demo
         rtfOptions.ContainAnnotation = Options.ContainAnnotations;
         rtfOptions.FormulaToImage = Options.FormulaToImage;
         rtfOptions.EnableAiLayout = Options.EnableAiLayout;
-        rtfOptions.EnableOCR = Options.EnableOCR;
+        rtfOptions.EnableAiTableRecognition = Options.EnableAiTableRecognition;
+        rtfOptions.EnableOCR = ShouldEnableOCR();
         rtfOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
         rtfOptions.OcrOption = Options.OcrOption;
+        rtfOptions.PageRanges = Options.PageRanges;
+        rtfOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToRtf(input, "", outputFolder, rtfOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToRtf(input, "", outputFolder, rtfOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -293,13 +377,18 @@ namespace ComPDF_Conversion_Demo
         pdfOptions.ContainImage = Options.ContainImages;
         pdfOptions.ContainPageBackgroundImage = Options.ContainPageBackgroundImage;
         pdfOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
-        pdfOptions.OcrOption = OCROption.e_All;
+        pdfOptions.OcrOption = Options.OcrOption;
+        pdfOptions.TransparentText = Options.TransparentText;
+        pdfOptions.FormulaToImage = Options.FormulaToImage;
         pdfOptions.EnableOCR = true;
+        pdfOptions.PageRanges = Options.PageRanges;
+        pdfOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToSearchablePDF(input, "", outputFolder, pdfOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToSearchablePDF(input, "", outputFolder, pdfOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -318,14 +407,18 @@ namespace ComPDF_Conversion_Demo
         TxtOptions txtOptions = new TxtOptions();
         txtOptions.TableFormat = Options.TxtTableFormat;
         txtOptions.EnableAiLayout = Options.EnableAiLayout;
-        txtOptions.EnableOCR = Options.EnableOCR;
+        txtOptions.EnableAiTableRecognition = Options.EnableAiTableRecognition;
+        txtOptions.EnableOCR = ShouldEnableOCR();
         txtOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
         txtOptions.OcrOption = Options.OcrOption;
+        txtOptions.PageRanges = Options.PageRanges;
+        txtOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToTxt(input, "", outputFolder, txtOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToTxt(input, "", outputFolder, txtOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -346,11 +439,13 @@ namespace ComPDF_Conversion_Demo
         imageOptions.PathEnhance = Options.ImagePathEnhance;
         imageOptions.ImageType = Options.ImageFormat;
         imageOptions.ImageColorMode = Options.ImageMode;
+        imageOptions.PageRanges = Options.PageRanges;
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToImage(input, "", Path.Combine(outputFolder, outputFileName), imageOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToImage(input, "", Path.Combine(outputFolder, outputFileName), imageOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -370,14 +465,18 @@ namespace ComPDF_Conversion_Demo
         jsonOptions.ContainImage = Options.ContainImages;
         jsonOptions.ContainTable = Options.ContainTables;
         jsonOptions.EnableAiLayout = Options.EnableAiLayout;
-        jsonOptions.EnableOCR = Options.EnableOCR;
+        jsonOptions.EnableAiTableRecognition = Options.EnableAiTableRecognition;
+        jsonOptions.EnableOCR = ShouldEnableOCR();
         jsonOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
         jsonOptions.OcrOption = Options.OcrOption;
+        jsonOptions.PageRanges = Options.PageRanges;
+        jsonOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToJson(input, "", outputFolder, jsonOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToJson(input, "", outputFolder, jsonOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -397,14 +496,46 @@ namespace ComPDF_Conversion_Demo
         markdownOptions.ContainImage = Options.ContainImages;
         markdownOptions.ContainAnnotation = Options.ContainAnnotations;
         markdownOptions.EnableAiLayout = Options.EnableAiLayout;
-        markdownOptions.EnableOCR = Options.EnableOCR;
+        markdownOptions.EnableAiTableRecognition = Options.EnableAiTableRecognition;
+        markdownOptions.EnableOCR = ShouldEnableOCR();
         markdownOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
         markdownOptions.OcrOption = Options.OcrOption;
+        markdownOptions.PageRanges = Options.PageRanges;
+        markdownOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
 
         string outputFolder = OutputPath.Text;
         string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
         string input = InputPath.Text;
-        err = await Task.Run(() => CPDFConversion.StartPDFToMarkdown(input, "", outputFolder, markdownOptions));
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToMarkdown(input, "", outputFolder, markdownOptions, callback));
+        if (err != ErrorCode.e_ErrSuccess)
+        {
+          ShowErrorMessage(err);
+        }
+      }
+      catch (Exception ex)
+      {
+        return;
+      }
+    }
+
+    private async Task OfdConvert()
+    {
+      try
+      {
+        OfdOptions ofdOptions = new OfdOptions();
+        ofdOptions.TransparentText = Options.TransparentText;
+        ofdOptions.OutputDocumentPerPage = Options.OutputDocumentPerPage;
+        ofdOptions.OcrOption = Options.OcrOption;
+        ofdOptions.EnableOCR = true;
+        ofdOptions.PageRanges = Options.PageRanges;
+        ofdOptions.Languages = new List<OCRLanguage> { Options.OCRLanguage };
+
+        string outputFolder = OutputPath.Text;
+        string outputFileName = Path.GetFileNameWithoutExtension(InputPath.Text);
+        string input = InputPath.Text;
+        ConvertCallback callback = BuildCallback();
+        err = await Task.Run(() => CPDFConversion.StartPDFToOfd(input, "", outputFolder, ofdOptions, callback));
         if (err != ErrorCode.e_ErrSuccess)
         {
           ShowErrorMessage(err);
@@ -426,10 +557,8 @@ namespace ComPDF_Conversion_Demo
       if (LibraryManager.InitLibrary(Path.Combine(resPath, "x64")))
       {
         LibraryManager.Initialize(Path.Combine(resPath, "resource"));
-        LibraryManager.SetProgress(Marshal.GetFunctionPointerForDelegate(getPorgress));
         ErrorCode result = LibraryManager.LicenseVerify(Path.Combine(resPath, "license.xml"));
-        LibraryManager.SetDocumentAIModel(Path.Combine(resPath, "resource", "models", "documentai.model"), new List<OCRLanguage> { OCRLanguage.e_ENGLISH });
-
+        LibraryManager.SetDocumentAIModel(Path.Combine(resPath, "resource", "models", "documentai.model"));
         if (result != ErrorCode.e_ErrSuccess)
         {
           MessageBox.Show("ComPDFKit Conversion SDK Load Failed!");
@@ -444,7 +573,7 @@ namespace ComPDF_Conversion_Demo
     private void Input_Click(object sender, RoutedEventArgs e)
     {
       var dlg = new Microsoft.Win32.OpenFileDialog();
-      dlg.Filter = "PDF Image Files (*.pdf;*.bmp;*.jpg;*.jpeg;*.png;*.tiff;*.webp)|*.pdf;*.bmp;*.jpg;*.jpeg;*.png;*.tiff;*.webp";
+      dlg.Filter = "PDF Image Files (*.pdf;*.bmp;*.jpg;*.jpeg;*.png;*.tiff;*.webp;*.jp2;*.tif)|*.pdf;*.bmp;*.jpg;*.jpeg;*.png;*.tiff;*.webp;*.jp2;*.tif";
       dlg.Multiselect = true;
 
       if (dlg.ShowDialog() == true)
@@ -471,6 +600,8 @@ namespace ComPDF_Conversion_Demo
 
     private async void Convert_Click(object sender, RoutedEventArgs e)
     {
+      cancel = false;
+
       if (selectedFiles == null || selectedFiles.Count == 0)
       {
         MessageBox.Show("Invalid input path!");
@@ -487,8 +618,6 @@ namespace ComPDF_Conversion_Demo
       Convert.IsEnabled = false;
       ConvertType.IsEnabled = false;
       ConverterOptions.IsEnabled = false;
-      if (Options.EnableOCR)
-        LibraryManager.SetOCRLanguage(new List<OCRLanguage> { Options.OCRLanguage });
 
       foreach (string filePath in selectedFiles)
       {
@@ -516,7 +645,6 @@ namespace ComPDF_Conversion_Demo
             break;
 
           case "SearchablePDF":
-            LibraryManager.SetOCRLanguage(new List<OCRLanguage> { Options.OCRLanguage });
             await PdfConvert();
             break;
 
@@ -536,6 +664,10 @@ namespace ComPDF_Conversion_Demo
             await MarkdownConvert();
             break;
 
+          case "Ofd":
+            await OfdConvert();
+            break;
+
           default:
             break;
         }
@@ -552,7 +684,7 @@ namespace ComPDF_Conversion_Demo
 
     private void Cancel_Click(object sender, RoutedEventArgs e)
     {
-      CPDFConversion.Cancel();
+      cancel = true;
     }
 
     private void ConverterOptions_Click(object sender, RoutedEventArgs e)

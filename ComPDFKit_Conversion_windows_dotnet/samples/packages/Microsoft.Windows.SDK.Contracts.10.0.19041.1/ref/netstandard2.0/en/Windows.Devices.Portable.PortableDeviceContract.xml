@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Portable.PortableDeviceContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Devices.Portable.PortableDeviceContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Devices.Portable.ServiceDevice">
+      <summary>Provides methods for identifying a device service for a portable device that supports WPD (Windows Portable Devices) for device enumeration.</summary>
+    </member>
+    <member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelector(Windows.Devices.Portable.ServiceDeviceType)">
+      <summary>Returns an Advanced Query Syntax (AQS) string that is used to enumerate device services of the specified ServiceDeviceType. This string is passed to the FindAllAsync or CreateWatcher method.</summary>
+      <param name="serviceType">The type of service to identify.</param>
+      <returns>The AQS string.</returns>
+    </member>
+    <member name="M:Windows.Devices.Portable.ServiceDevice.GetDeviceSelectorFromServiceId(System.Guid)">
+      <summary>An Advanced Query Syntax (AQS) string for identifying a device service by its GUIDs. This string is passed to the FindAllAsync or CreateWatcher method.</summary>
+      <param name="serviceId">The service identifier.</param>
+      <returns>The AQS string.</returns>
+    </member>
+    <member name="T:Windows.Devices.Portable.ServiceDeviceType">
+      <summary>Indicates the type of a portable device service.</summary>
+    </member>
+    <member name="F:Windows.Devices.Portable.ServiceDeviceType.CalendarService">
+      <summary>A service that provides calendar information.</summary>
+    </member>
+    <member name="F:Windows.Devices.Portable.ServiceDeviceType.ContactsService">
+      <summary>A service that tracks contacts.</summary>
+    </member>
+    <member name="F:Windows.Devices.Portable.ServiceDeviceType.DeviceStatusService">
+      <summary>A device status service.</summary>
+    </member>
+    <member name="F:Windows.Devices.Portable.ServiceDeviceType.NotesService">
+      <summary>A note-taking service.</summary>
+    </member>
+    <member name="F:Windows.Devices.Portable.ServiceDeviceType.RingtonesService">
+      <summary>A service that provides ringtones for a phone.</summary>
+    </member>
+    <member name="F:Windows.Devices.Portable.ServiceDeviceType.SmsService">
+      <summary>An short message service (SMS) messaging service.</summary>
+    </member>
+    <member name="F:Windows.Devices.Portable.ServiceDeviceType.TasksService">
+      <summary>A service for tracking tasks.</summary>
+    </member>
+    <member name="T:Windows.Devices.Portable.StorageDevice">
+      <summary>Provides methods for accessing the storage functionality of a portable device that supports WPD. Removable storage devices include:</summary>
+    </member>
+    <member name="M:Windows.Devices.Portable.StorageDevice.FromId(System.String)">
+      <summary>Gets a StorageFolder object from a DeviceInformation Id for a removable storage device.</summary>
+      <param name="deviceId">The DeviceInformation ID that identifies the removable storage device. This id can be retrieved from Windows.Devices.Enumeration or the DeviceInformationId property of the AutoPlay device event arguments. For more information, see [Quickstart: Register an app for an AutoPlay device](https://docs.microsoft.com/previous-versions/windows/apps/jj160497(v=win.10)). For more information, see the Removable Storage sample.</param>
+      <returns>The storage folder object that represents the removable storage device and provides access to content on the device.</returns>
+    </member>
+    <member name="M:Windows.Devices.Portable.StorageDevice.GetDeviceSelector">
+      <summary>An Advanced Query Syntax (AQS) string for identifying removable storage devices. This string is passed to the FindAllAsync or CreateWatcher method.</summary>
+      <returns>An AQS string for identifying storage devices.</returns>
+    </member>
+  </members>
+</doc>

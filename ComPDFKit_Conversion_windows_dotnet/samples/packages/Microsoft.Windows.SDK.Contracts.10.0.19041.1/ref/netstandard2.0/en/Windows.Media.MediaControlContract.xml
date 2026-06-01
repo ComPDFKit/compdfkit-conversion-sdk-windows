@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.MediaControlContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Media.MediaControl">
+      <summary>Describes the object that applications register with, to receive media focus and transport control notifications.</summary>
+      <deprecated type="deprecate">MediaControl may be altered or unavailable for releases after Windows 8.1. Instead, use SystemMediaTransportControls.</deprecated>
+    </member>
+    <member name="P:Windows.Media.MediaControl.AlbumArt">
+      <summary>Gets or sets the path to the artwork for the album cover.</summary>
+      <returns>Path to the artwork for the album cover.</returns>
+    </member>
+    <member name="P:Windows.Media.MediaControl.ArtistName">
+      <summary>Gets or sets the name of the artist.</summary>
+      <returns>The name of the artist.</returns>
+    </member>
+    <member name="P:Windows.Media.MediaControl.IsPlaying">
+      <summary>Gets or sets the state of the Play button.</summary>
+      <returns>The state of the Play button.</returns>
+    </member>
+    <member name="P:Windows.Media.MediaControl.SoundLevel">
+      <summary>Gets the current sound level.</summary>
+      <returns>The current sound level.</returns>
+    </member>
+    <member name="P:Windows.Media.MediaControl.TrackName">
+      <summary>Gets or sets the track name.</summary>
+      <returns>The name of the track.</returns>
+    </member>
+    <member name="E:Windows.Media.MediaControl.ChannelDownPressed">
+      <summary>Event raised when a **ChannelDown** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.ChannelUpPressed">
+      <summary>Event raised when a **ChannelUp** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.FastForwardPressed">
+      <summary>Event raised when a **FastForward** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.NextTrackPressed">
+      <summary>Event raised when a **NextTrack** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.PausePressed">
+      <summary>Event raised when a **Pause** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.PlayPauseTogglePressed">
+      <summary>Event raised when a **PlayPauseToggle** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.PlayPressed">
+      <summary>Event raised when a **Play** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.PreviousTrackPressed">
+      <summary>Event raised when a **PreviousTrack** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.RecordPressed">
+      <summary>Event raised when a **Record** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.RewindPressed">
+      <summary>Event raised when a **Rewind** command is issued to the application.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.SoundLevelChanged">
+      <summary>Event raised when the sound level changes.</summary>
+    </member>
+    <member name="E:Windows.Media.MediaControl.StopPressed">
+      <summary>Event raised when a **Stop** command is issued to the application.</summary>
+    </member>
+    <member name="T:Windows.Media.MediaControlContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

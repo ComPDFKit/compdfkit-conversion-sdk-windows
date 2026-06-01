@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Globalization.GlobalizationJapanesePhoneticAnalyzerContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Globalization.JapanesePhoneme">
+      <summary>Represents a single Japanese word (a "reading") that has been extracted from a Japanese string by JapanesePhoneticAnalyzer.</summary>
+    </member>
+    <member name="P:Windows.Globalization.JapanesePhoneme.DisplayText">
+      <summary>Gets the text to display for this Japanese word.</summary>
+      <returns>The display text of this Japanese word. It is a sub-string of the Japanese string originally analyzed by JapanesePhoneticAnalyzer.</returns>
+    </member>
+    <member name="P:Windows.Globalization.JapanesePhoneme.IsPhraseStart">
+      <summary>Gets a Boolean that indicates if this Japanese word is the start of a phrase.</summary>
+      <returns>**true** if this Japanese word is the start of a phrase, otherwise **false**.</returns>
+    </member>
+    <member name="P:Windows.Globalization.JapanesePhoneme.YomiText">
+      <summary>Gets the "reading" (the pronunciation of DisplayText ) for this Japanese word.</summary>
+      <returns>The "reading" (the pronunciation of DisplayText, represented by a sequence of Hiragana characters).</returns>
+    </member>
+    <member name="T:Windows.Globalization.JapanesePhoneticAnalyzer">
+      <summary>Reads a Japanese string that is a combination of Kanji characters and Hiragana characters, and returns a collection of proper readings from the string with word breaks.</summary>
+    </member>
+    <member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String)">
+      <summary>Reads a Japanese string that is a combination of Kanji characters and Hiragana characters, and returns a collection of proper readings from the string with word breaks.</summary>
+      <param name="input">A Japanese string that is a combination of Kanji characters and Hiragana characters.</param>
+      <returns>A collection of JapanesePhoneme objects that represent proper readings from the string with word breaks.</returns>
+    </member>
+    <member name="M:Windows.Globalization.JapanesePhoneticAnalyzer.GetWords(System.String,System.Boolean)">
+      <summary>Reads a Japanese string that is a combination of Kanji characters and Hiragana characters, and returns a collection of proper readings from the string with word breaks. Optionally uses the "Mono Ruby" strategy in breaking multi-Kanji words into multiple Kanji words.</summary>
+      <param name="input">A Japanese string that is a combination of Kanji characters and Hiragana characters.</param>
+      <param name="monoRuby">Specifies the use of the word-breaking strategy "Mono Ruby". If **true**, the word-breaking strategy "Mono Ruby" is used. "Mono Ruby" more aggressively attempts to break multi-Kanji words into multiple Kanji words.</param>
+      <returns>A collection of JapanesePhoneme objects that represent proper readings from the string with word breaks.</returns>
+    </member>
+  </members>
+</doc>

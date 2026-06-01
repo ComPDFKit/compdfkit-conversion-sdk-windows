@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.AppBroadcasting.AppBroadcastingContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Media.AppBroadcasting.AppBroadcastingContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Media.AppBroadcasting.AppBroadcastingMonitor">
+      <summary>Allows an app to determine if it is currently being broadcast and to receive an event when the app starts or stops broadcasting.</summary>
+    </member>
+    <member name="M:Windows.Media.AppBroadcasting.AppBroadcastingMonitor.#ctor">
+      <summary>Initializes a new instance of the **AppBroadcastingMonitor** class.</summary>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingMonitor.IsCurrentAppBroadcasting">
+      <summary>Gets a value indicating whether the current app is currently broadcasting.</summary>
+      <returns>True if the current app is broadcasting; otherwise, false.</returns>
+    </member>
+    <member name="E:Windows.Media.AppBroadcasting.AppBroadcastingMonitor.IsCurrentAppBroadcastingChanged">
+      <summary>Occurs when the current broadcasting state of the current app changes.</summary>
+    </member>
+    <member name="T:Windows.Media.AppBroadcasting.AppBroadcastingStatus">
+      <summary>Allows an app to determine if it can currently begin broadcasting and, if not, obtain details about the reason that broadcasting can't be initiated.</summary>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatus.CanStartBroadcast">
+      <summary>Gets a value indicating whether the current app can begin broadcasting.</summary>
+      <returns>True if the app can begin broadcasting; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatus.Details">
+      <summary>Gets an AppBroadcastingStatusDetails object that provides detailed information indicating why the current app can't currently begin broadcasting.</summary>
+      <returns>An object that provides detailed information indicating why the current app can't currently begin broadcasting.</returns>
+    </member>
+    <member name="T:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails">
+      <summary>Provides detailed information indicating why the current app can't currently begin broadcasting.</summary>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.IsAnyAppBroadcasting">
+      <summary>Gets a value that indicates whether another app is currently broadcasting.</summary>
+      <returns>True if another app is currently broadcasting; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.IsAppInactive">
+      <summary>Gets a value specifying if the current app's window is inactive.</summary>
+      <returns>True is the current app's window is inactive; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.IsBlockedForApp">
+      <summary>Gets a value indicating whether broadcasting is blocked for the current app.</summary>
+      <returns>True if broadcasting is blocked for the current app; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.IsCaptureResourceUnavailable">
+      <summary>Gets a value indicating whether the capture resource is currently unavailable.</summary>
+      <returns>True if the capture resource is currently unavailable; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.IsDisabledBySystem">
+      <summary>Gets a value indicating whether app broadcasting is disabled by the system.</summary>
+      <returns>True if app broadcasting is disabled by the system; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.IsDisabledByUser">
+      <summary>Gets a value indicating if app broadcasting has been disabled by the user.</summary>
+      <returns>True if app broadcasting has been disabled by the user; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.IsGameStreamInProgress">
+      <summary>Gets a value that indicates if a game stream is currently in progress.</summary>
+      <returns>True if a game stream is currently in progress; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.Media.AppBroadcasting.AppBroadcastingStatusDetails.IsGpuConstrained">
+      <summary>Gets a value that indicates whether app broadcasting is unavailable because the GPU is constrained.</summary>
+      <returns>True if app broadcasting is unavailable because the GPU is constrained; otherwise, false.</returns>
+    </member>
+    <member name="T:Windows.Media.AppBroadcasting.AppBroadcastingUI">
+      <summary>Enables an app to launch the app broadcasting system setup UI.</summary>
+    </member>
+    <member name="M:Windows.Media.AppBroadcasting.AppBroadcastingUI.GetDefault">
+      <summary>Gets an instance of the **AppBroadcastingUI** class that is associated with the user currently signed in to the device.</summary>
+      <returns>An instance of the **AppBroadcastingUI** class.</returns>
+    </member>
+    <member name="M:Windows.Media.AppBroadcasting.AppBroadcastingUI.GetForUser(Windows.System.User)">
+      <summary>Gets an instance of the **AppBroadcastingUI** class that is associated with the specified user.</summary>
+      <param name="user">The user for which the **AppBroadcastingUI** instance is created.</param>
+      <returns>An instance of the **AppBroadcastingUI** class.</returns>
+    </member>
+    <member name="M:Windows.Media.AppBroadcasting.AppBroadcastingUI.GetStatus">
+      <summary>Gets an object that allows an app to determine if it can currently begin broadcasting and, if not, obtain details about the reason that broadcasting can't be initiated.</summary>
+      <returns>An object that allows an app to determine if it can currently begin broadcasting.</returns>
+    </member>
+    <member name="M:Windows.Media.AppBroadcasting.AppBroadcastingUI.ShowBroadcastUI">
+      <summary>Shows the app broadcasting system setup UI.</summary>
+    </member>
+  </members>
+</doc>

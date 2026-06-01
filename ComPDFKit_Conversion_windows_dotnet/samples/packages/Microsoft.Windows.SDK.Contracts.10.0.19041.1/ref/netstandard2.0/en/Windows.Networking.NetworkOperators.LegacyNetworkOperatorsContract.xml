@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Networking.NetworkOperators.LegacyNetworkOperatorsContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails">
+      <summary>Provides details for a network operator notification.</summary>
+    </member>
+    <member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.EncodingType">
+      <summary>Gets the data-coding scheme (DCS) of the received message.</summary>
+      <returns>The data-coding scheme (DCS) of the received message.</returns>
+    </member>
+    <member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.Message">
+      <summary>Gets the message for the network operator notification.</summary>
+      <returns>The message for the network operator notification.</returns>
+    </member>
+    <member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NetworkAccountId">
+      <summary>Gets a unique identifier for the mobile broadband account that received the notification.</summary>
+      <returns>A unique identifier for a mobile broadband account.</returns>
+    </member>
+    <member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.NotificationType">
+      <summary>Gets the type of the network notification.</summary>
+      <returns>The type of the network notification.</returns>
+    </member>
+    <member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.RuleId">
+      <summary>Gets the identifier of the provisioned rule that matched and triggered the notification.</summary>
+      <returns>The provisioned rule identifier.</returns>
+    </member>
+    <member name="P:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.SmsMessage">
+      <summary>Gets an SMS message for the mobile broadband account that received the notification.</summary>
+      <returns>If the network operator notification is triggered by a new mobile network operator SMS, it contains the SMS message object for the network operator notification. **NULL** if no SMS message was received as part of the notification.</returns>
+    </member>
+    <member name="M:Windows.Networking.NetworkOperators.NetworkOperatorNotificationEventDetails.AuthorizeTethering(System.Boolean,System.String)">
+      <summary>Used to indicate if tethering is permitted for a device. If it is not, a reason can be provided.</summary>
+      <param name="allow">true if tethering is permitted; otherwise, false.</param>
+      <param name="entitlementFailureReason">The reason tethering is not permitted.</param>
+    </member>
+  </members>
+</doc>

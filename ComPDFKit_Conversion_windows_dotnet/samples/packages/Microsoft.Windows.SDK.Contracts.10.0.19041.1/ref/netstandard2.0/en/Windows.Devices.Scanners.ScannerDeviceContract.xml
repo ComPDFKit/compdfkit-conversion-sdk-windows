@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Scanners.ScannerDeviceContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Devices.Scanners.IImageScannerFormatConfiguration">
+      <summary>Configures the file format when a scanner input source transfers acquired image data to the app.</summary>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.DefaultFormat">
+      <summary>Gets the default file format for the scan source at the beginning of a new scan session.</summary>
+      <returns>The file type.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerFormatConfiguration.Format">
+      <summary>Gets or sets the current file transfer format for image data acquisition from the device to the client app.</summary>
+      <returns>The file type.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.IImageScannerFormatConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Determines whether the input scanner supports the specified file format or not.</summary>
+      <param name="value">The file type.</param>
+      <returns>True if the specified file type is supported; otherwise False.</returns>
+    </member>
+    <member name="T:Windows.Devices.Scanners.IImageScannerSourceConfiguration">
+      <summary>Queries and configures scan settings that are common to both Flatbed and Feeder sources.</summary>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ActualResolution">
+      <summary>Gets the actual horizontal and vertical scan resolution for the scan source, in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.AutoCroppingMode">
+      <summary>Gets or sets the automatic crop mode.</summary>
+      <returns>The automatic crop mode for the scan.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Brightness">
+      <summary>Configures the current brightness level for capturing image data from the scan source. On a new scan session, the value of this property is the DefaultBrightness property.</summary>
+      <returns>The brightness level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.BrightnessStep">
+      <summary>Gets the step size at which the brightness levels of the data source can be increased or decreased between the minimum and maximum values.</summary>
+      <returns>The step size to increment or decrement. A typical value is 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ColorMode">
+      <summary>Gets or sets the color mode for the scan source. When a new scan session starts, this property is the same as the DefaultColorMode property.</summary>
+      <returns>The color mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.Contrast">
+      <summary>Sets or gets the current contrast level for capturing image data from the scan source. At the beginning of a new scan session this property is set to the DefaultContrast property.</summary>
+      <returns>The contrast level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.ContrastStep">
+      <summary>Gets the step size at which the contrast levels of the data source can increase or decrease between the minimum and maximum values.</summary>
+      <returns>The step size to increment or decrement. The typical value is 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultBrightness">
+      <summary>Gets the default brightness level for the scan source.</summary>
+      <returns>The default brightness level for the scanner.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultColorMode">
+      <summary>Gets the default color mode for this scan source.</summary>
+      <returns>The color mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DefaultContrast">
+      <summary>Gets the default contrast level for the scan source.</summary>
+      <returns>The default contrast level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.DesiredResolution">
+      <summary>Gets or sets the horizontal and vertical scan resolution for the scan source that the app requests, in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxBrightness">
+      <summary>Gets the maximum brightness level supported by the scan source.</summary>
+      <returns>The maximum brightness level, typically 1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxContrast">
+      <summary>Gets the maximum contrast level supported by the scan source.</summary>
+      <returns>The maximum contrast level, typically 1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxResolution">
+      <summary>Gets the maximum horizontal and vertical scan resolution of the scan source in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MaxScanArea">
+      <summary>Gets the maximum scan area dimensions in inches. The maximum scan width is the longest width a document can have in order for the Feeder and Flatbed to scan it.</summary>
+      <returns>The width and height of the area.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinBrightness">
+      <summary>Gets the minimum brightness level supported by the scan source.</summary>
+      <returns>The minimum brightness level, typically -1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinContrast">
+      <summary>Gets the minimum contrast level supported by the scan source.</summary>
+      <returns>The minimum contrast level, typically -1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinResolution">
+      <summary>Gets the minimum horizontal and vertical scan resolution of the scan source in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.MinScanArea">
+      <summary>Gets the minimum scan area in inches. The minimum scan area is the smallest size a document can have in order for a Flatbed or Feeder to scan it.</summary>
+      <returns>The width and height of the area.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.OpticalResolution">
+      <summary>Gets the optical horizontal and vertical scan resolution of the scan source in DPI.</summary>
+      <returns>The horizontal and vertical scan resolution in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.IImageScannerSourceConfiguration.SelectedScanRegion">
+      <summary>Gets or sets the origin coordinates (horizontal and vertical) and dimensions (width and height) of the selected scan area, in inches. This property is ignored when the AutoCroppingMode property is not set to **Disabled**.</summary>
+      <returns>The location and size of a rectangle.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Determines if the scan source supports the specified ImageScannerAutoCroppingMode.</summary>
+      <param name="value">The auto crop mode of the image to scan.</param>
+      <returns>True if the device supports the *value* mode; otherwise False.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.IImageScannerSourceConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Determines if the scan source can scan and transfer images in the specified color mode.</summary>
+      <param name="value">The color mode.</param>
+      <returns>True if the scanner can scan images in *value* mode; otherwise False.</returns>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScanner">
+      <summary>Represents the properties of images to scan.</summary>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScanner.AutoConfiguration">
+      <summary>Gets and sets the scan settings of the auto-configured scan unit, like the file format, including compression to deliver the scanned data in. This property is ignored if the scanner is not capable of auto-configuration.</summary>
+      <returns>The scan configuration. Null if the scanner is not capable of auto-configuration.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScanner.DefaultScanSource">
+      <summary>Gets the default scan source chosen for this scanner device.</summary>
+      <returns>The type of scan source.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScanner.DeviceId">
+      <summary>Gets the PnP device identifier of this scanner device.</summary>
+      <returns>The PnP device identifier.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScanner.FeederConfiguration">
+      <summary>Gets or sets the scan settings of the Feeder scan unit, like page size, orientation, and scan resolution.</summary>
+      <returns>The scanner's Feeder configuration. Null if there is no Feeder.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScanner.FlatbedConfiguration">
+      <summary>Gets and sets the scan settings of the Flatbed scan unit, like scan resolution and color mode.</summary>
+      <returns>The scan configuration of the scanner's Flatbed. Null if there is no Flatbed.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScanner.FromIdAsync(System.String)">
+      <summary>Creates an instance of a ImageScanner object based on a scanners device information ID. This method is required for broker device enumeration.</summary>
+      <param name="deviceId">The device information ID. See DeviceInformation.Id property.</param>
+      <returns>The ImageScanner object.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScanner.GetDeviceSelector">
+      <summary>Returns the class selection string that apps can use to enumerate scanner devices. This method is required for the brokered device enumeration.</summary>
+      <returns>The class selection.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScanner.IsPreviewSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>Determines if the specified scan source supports scan preview.</summary>
+      <param name="scanSource">The scan source.</param>
+      <returns>Returns True if the specified scan source supports preview; otherwise False.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScanner.IsScanSourceSupported(Windows.Devices.Scanners.ImageScannerScanSource)">
+      <summary>Determines if the specified scan source is available on the scanner.</summary>
+      <param name="value">The scan source.</param>
+      <returns>True if the scan source, Flatbed or Feeder, is available; otherwise False.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScanner.ScanFilesToFolderAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.StorageFolder)">
+      <summary>Starts a scan job with the specified scan source and writes one or multiple images to one multi-page file like TIFF, XPS, and PDF; or one or multiple single-page files like DIB, PNG, JPG, and TIFF to the specified folder location. Returns the progress of the scan.</summary>
+      <param name="scanSource">The image scan source.</param>
+      <param name="storageFolder">The target folder location of the scanned file.</param>
+      <returns>The list of scanned image files from ImageScannerScanResult and the progress of the WIA scan job from UInt32, which indicates how many files were transferred to the target folder.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScanner.ScanPreviewToStreamAsync(Windows.Devices.Scanners.ImageScannerScanSource,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Scans one image from the specified scan source and applies the lowest scan resolution with the selected image file format.</summary>
+      <param name="scanSource">The image scan source.</param>
+      <param name="targetStream">The scanned image file.</param>
+      <returns>The progress of the scan and the scanned file format.</returns>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerAutoConfiguration">
+      <summary>Represents the auto-configured scan source of the scanner.</summary>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.DefaultFormat">
+      <summary>The default file format for the scan source at the beginning of a new scan session.</summary>
+      <returns>The file type.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerAutoConfiguration.Format">
+      <summary>Gets or sets the current file transfer format for image data acquisition from the device to the client app.</summary>
+      <returns>The file type.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScannerAutoConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Determines if the input scanner supports the specified file format.</summary>
+      <param name="value">The file type.</param>
+      <returns>True if the specified file type is supported; otherwise False.</returns>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerAutoCroppingMode">
+      <summary>Specifies the automatic crop mode of the scanning device.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.Disabled">
+      <summary>Automatic detection is disabled. At the beginning of a new scan session, the AutoCroppingMode property is set to this value by default.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.MultipleRegion">
+      <summary>Scan multiple scan regions into individual, separate images.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerAutoCroppingMode.SingleRegion">
+      <summary>Scan a single scan region into individual, separate images.</summary>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerColorMode">
+      <summary>Specifies the color modes for the scan source.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerColorMode.AutoColor">
+      <summary>The device automatically detects the right color mode based on the scan content. In this case the decision between color, grayscale and black and white for example relies on the device, and not the app.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Color">
+      <summary>24-bit RGB color (3 channels at 8 bits per channel).</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Grayscale">
+      <summary>8 bit or 4 bit grayscale (1 channel at 8 or 4 bits per channel). If the device supports both 4 and 8 bit grayscale the DefaultColorMode property will use 8 bit.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerColorMode.Monochrome">
+      <summary>1 bit bi-tonal, also called monochrome or ‘black and white’ (1 channel at 1 bit per channel).</summary>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerFeederConfiguration">
+      <summary>Represents the Feeder scan source of the scanner.</summary>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ActualResolution">
+      <summary>Gets the actual horizontal and vertical scan resolution for the scanner's Feeder, in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoCroppingMode">
+      <summary>Gets or sets the automatic crop mode.</summary>
+      <returns>The automatic crop mode for the scan.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.AutoDetectPageSize">
+      <summary>Gets or sets the page size automatic detection feature for the scanner's Feeder.</summary>
+      <returns>True if the page size automatic detection feature is enabled; otherwise False.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Brightness">
+      <summary>Gets or sets the current brightness level for capturing image data from the scanner's Feeder. At the beginning of a new scan session, this property is set to the DefaultBrightness property.</summary>
+      <returns>The current brightness level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.BrightnessStep">
+      <summary>Gets the step size at which the brightness levels of the data source can be increased or decreased between the minimum and maximum values.</summary>
+      <returns>The step size to increment or decrement. A typical value is 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanAutoDetectPageSize">
+      <summary>Returns True if the device can automatically detect at scan time the size of the document pages scanned through the Feeder; otherwise returns False.</summary>
+      <returns>True if the device can automatically detect at scan time the size of the document pages scanned through the Feeder; otherwise False.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanAhead">
+      <summary>Gets whether the scanner device is capable of scanning ahead from its Feeder.</summary>
+      <returns>Indicates whether or not the scanner's Feeder can scan ahead.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.CanScanDuplex">
+      <summary>Gets whether the scanner's Feeder is capable of duplex scanning (scanning both document page sides, front and back). When scanning in duplex mode the same scan settings (such as color mode and scan resolution) are applied to scan both page sides.</summary>
+      <returns>Indicates whether duplex scanning is available.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ColorMode">
+      <summary>Gets or sets the color mode for the scanner's Feeder.</summary>
+      <returns>The color mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Contrast">
+      <summary>Sets or gets the current contrast level for capturing image data from the scanner's Feeder. At the beginning of a new scan session this property is set to the DefaultContrast property.</summary>
+      <returns>The contrast level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ContrastStep">
+      <summary>Gets the step size at which the contrast levels of the data source can increase or decrease between the minimum and maximum values.</summary>
+      <returns>The step size to increment or decrement. The typical value is 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultBrightness">
+      <summary>Gets the default brightness level for the scanner's Feeder.</summary>
+      <returns>The default brightness level for the scanner.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultColorMode">
+      <summary>Gets the default color mode for the scanner's Feeder.</summary>
+      <returns>The color mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultContrast">
+      <summary>Gets the default contrast level for the scanner's Feeder.</summary>
+      <returns>The default contrast level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DefaultFormat">
+      <summary>Gets the default file format for the scanner's Feeder at the beginning of a new scan session.</summary>
+      <returns>The file type.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.DesiredResolution">
+      <summary>Gets or sets the horizontal and vertical scan resolution for the scanner's Feeder that the app requests, in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Duplex">
+      <summary>Indicates whether the scanner's Feeder can scan both document page sides.</summary>
+      <returns>Returns True if the Feeder can scan both page sides.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.Format">
+      <summary>Gets or sets the current file transfer format for image data acquisition from the scanner's Feeder to the client app.</summary>
+      <returns>The file type.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxBrightness">
+      <summary>Gets the maximum brightness level supported by the scanner's Feeder.</summary>
+      <returns>The maximum brightness level, typically 1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxContrast">
+      <summary>Gets the maximum contrast level supported by the scanner's Feeder.</summary>
+      <returns>The maximum contrast level, typically 1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxNumberOfPages">
+      <summary>Gets or sets the maximum number of pages-not images, the app can scan in one scan job, before the scanner stops.</summary>
+      <returns>The number of pages.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxResolution">
+      <summary>Gets the maximum horizontal and vertical scan resolution of the scanner's Feeder in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MaxScanArea">
+      <summary>Gets the maximum scan area dimensions in inches. The maximum scan width is the widest a document can be in order for the scanner's Feeder to scan it.</summary>
+      <returns>The width and height of the area.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinBrightness">
+      <summary>Gets the minimum brightness level supported by the scanner's Feeder.</summary>
+      <returns>The minimum brightness level, typically -1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinContrast">
+      <summary>Gets the minimum contrast level supported by the scanner's Feeder.</summary>
+      <returns>The minimum contrast level, typically -1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinResolution">
+      <summary>Gets the minimum horizontal and vertical scan resolution of the scanner's Feeder in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.MinScanArea">
+      <summary>Gets the minimum scan area in inches. The minimum scan area is the smallest size a document can have in order for a Feeder to scan it.</summary>
+      <returns>The width and height of the area.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.OpticalResolution">
+      <summary>Gets the optical horizontal and vertical scan resolution of the scanner's Feeder in DPI.</summary>
+      <returns>The horizontal and vertical scan resolution in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageOrientation">
+      <summary>Gets or sets the currently selected page orientation that tells how to place the documents in the scanner's Feeder input tray.</summary>
+      <returns>The orientation of the page.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSize">
+      <summary>Gets or sets the currently selected page size to scan from the Feeder.</summary>
+      <returns>The page size.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.PageSizeDimensions">
+      <summary>Gets the dimensions (width and height) and orientation of the selected page size, in mil units (1/1000").</summary>
+      <returns>The page size.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.ScanAhead">
+      <summary>Indicates whether or not to scan ahead.</summary>
+      <returns>True to scan ahead.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFeederConfiguration.SelectedScanRegion">
+      <summary>Gets or sets the origin coordinates (horizontal and vertical) and dimensions (width and height) of the selected scan area, in inches. This property is ignored when the AutoCroppingMode property is not **Disabled**.</summary>
+      <returns>The scan region, in inches.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Returns whether the scanner's Feeder supports the specified ImageScannerAutoCroppingMode.</summary>
+      <param name="value">The auto crop mode of the image to scan.</param>
+      <returns>Indicates whether the device supports *value* mode.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Returns whether the scanner's Feeder can scan and transfer images in the specified color mode.</summary>
+      <param name="value">The color mode.</param>
+      <returns>Indicates whether the scanner can scan images in *value* mode.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Determines whether the scanner's Feeder supports the specified file format or not.</summary>
+      <param name="value">The file type.</param>
+      <returns>Indicates whether the specified file type is supported.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScannerFeederConfiguration.IsPageSizeSupported(Windows.Graphics.Printing.PrintMediaSize,Windows.Graphics.Printing.PrintOrientation)">
+      <summary>Returns whether the Feeder can scan documents in the specified page size and orientation.</summary>
+      <param name="pageSize">The page size.</param>
+      <param name="pageOrientation">The page orientation.</param>
+      <returns>Indicates the scanner can scan with *pageSize* and *pageOrientation* values.</returns>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration">
+      <summary>Represents the Flatbed scan source of the scanner.</summary>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ActualResolution">
+      <summary>Gets the actual horizontal and vertical scan resolution for the Flatbed scanner, in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.AutoCroppingMode">
+      <summary>Gets or sets the automatic crop mode.</summary>
+      <returns>The automatic crop mode for the scan.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Brightness">
+      <summary>Gets or sets the current brightness level for capturing image data from the scanner's Flatbed. At the beginning of a new scan session, this property is set to the DefaultBrightness property.</summary>
+      <returns>The current brightness level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.BrightnessStep">
+      <summary>Gets the step size at which the brightness levels of the data source can be increased or decreased between the minimum and maximum values.</summary>
+      <returns>The step size to increment or decrement. A typical value is 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ColorMode">
+      <summary>Gets or sets the color mode for the Flatbed scanner.</summary>
+      <returns>The color mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Contrast">
+      <summary>Sets or gets the current contrast level for capturing image data from the scan source. At the beginning of a new scan session this property is set to the DefaultContrast property.</summary>
+      <returns>The contrast level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.ContrastStep">
+      <summary>Gets the step size at which the contrast levels of the data source can increase or decrease between the minimum and maximum values.</summary>
+      <returns>The step size to increment or decrement. The typical value is 1.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultBrightness">
+      <summary>Gets the default brightness level for the scanner's Flatbed.</summary>
+      <returns>The default brightness level for the scanner.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultColorMode">
+      <summary>Gets the default color mode for the scanner's Flatbed.</summary>
+      <returns>The color mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultContrast">
+      <summary>Gets the default contrast level for the scanner's Flatbed.</summary>
+      <returns>The default contrast level.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DefaultFormat">
+      <summary>Gets the default file format for the scanner's Flatbed at the beginning of a new scan session.</summary>
+      <returns>The file type.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.DesiredResolution">
+      <summary>Gets or sets the horizontal and vertical scan resolution for the scanner's Flatbed that the app requests, in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.Format">
+      <summary>Gets or sets the current file transfer format for image data acquisition from the scanner's Flatbed to the client app.</summary>
+      <returns>The file type.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxBrightness">
+      <summary>Gets the maximum brightness level supported by the scanner's Flatbed.</summary>
+      <returns>The maximum brightness level, typically 1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxContrast">
+      <summary>Gets the maximum contrast level supported by the scanner's Flatbed.</summary>
+      <returns>The maximum contrast level, typically 1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxResolution">
+      <summary>Gets the maximum horizontal and vertical scan resolution of the scanner's Flatbed in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MaxScanArea">
+      <summary>Gets the maximum scan area dimensions in inches. The maximum scan width is the widest a document can be in order for the scanner's Flatbed to scan it.</summary>
+      <returns>The width and height of the area.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinBrightness">
+      <summary>Gets the minimum brightness level supported by the scanner's Flatbed.</summary>
+      <returns>The minimum brightness level, typically -1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinContrast">
+      <summary>Gets the minimum contrast level supported by the scanner's Flatbed.</summary>
+      <returns>The minimum contrast level, typically -1000.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinResolution">
+      <summary>Gets the minimum horizontal and vertical scan resolution of the scanner's Flatbed in DPI.</summary>
+      <returns>The horizontal and vertical resolution, in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.MinScanArea">
+      <summary>Gets the minimum scan area in inches. The minimum scan area is the smallest size a document can have in order for a Flatbed to scan it.</summary>
+      <returns>The width and height of the area.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.OpticalResolution">
+      <summary>Gets the optical scan resolution of the Flatbed scanner in DPI.</summary>
+      <returns>The horizontal and vertical scan resolution in pixels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.SelectedScanRegion">
+      <summary>Gets or sets the origin coordinates (horizontal and vertical) and dimensions (width and height) of the selected scan area, in inches. This property is ignored when the AutoCroppingMode property is not **Disabled**.</summary>
+      <returns>The location and size of a rectangle.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsAutoCroppingModeSupported(Windows.Devices.Scanners.ImageScannerAutoCroppingMode)">
+      <summary>Returns whether the scanner's Flatbed supports the specified ImageScannerAutoCroppingMode.</summary>
+      <param name="value">The auto crop mode of the image to scan.</param>
+      <returns>Indicates whether the device supports *value* mode.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsColorModeSupported(Windows.Devices.Scanners.ImageScannerColorMode)">
+      <summary>Returns whether the scanner's Flatbed can scan and transfer images in the specified color mode.</summary>
+      <param name="value">The color mode.</param>
+      <returns>Indicates whether the scanner can scan images in *value* mode.</returns>
+    </member>
+    <member name="M:Windows.Devices.Scanners.ImageScannerFlatbedConfiguration.IsFormatSupported(Windows.Devices.Scanners.ImageScannerFormat)">
+      <summary>Determines whether the scanner's Flatbed supports the specified file format or not.</summary>
+      <param name="value">The file type.</param>
+      <returns>Indicates whether the specified file type is supported.</returns>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerFormat">
+      <summary>The type of files to scan to.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerFormat.DeviceIndependentBitmap">
+      <summary>Windows Device Independent Bitmap (DIB) This value supports any color mode, with single page and uncompressed. This is the only format that is supported by all compatible WIA 2.0 scanner devices.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerFormat.Jpeg">
+      <summary>Exchangeable image file format/EXIF or JPEG file interchange format/JFIF Use these files only in color or grayscale modes (8 bits per channel/sample), with single page and compressed (lossy JPEG compression).</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerFormat.OpenXps">
+      <summary>Open XML Paper Specification (OpenXPS) document file format These files can contain image data in any color mode supported by this API, compressed at the choice of the device, either single or multi-page.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerFormat.Pdf">
+      <summary>Portable Document Format PDF/A (PDF/A is an ISO-standardized version of the Portable Document Format/PDF specialized for the digital preservation of electronic documents) document file format These files can contain image data in any color mode supported by this API, compressed at the choice of the device, either single or multi-page.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerFormat.Png">
+      <summary>Portable Network Graphics (PNG) image file format This value supports any color mode, with single page and compressed (loseless PNG compression).</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerFormat.Tiff">
+      <summary>Uncompressed Tagged Image File Format (TIFF) compatible with the TIFF 6.0 specification, either single and/or multi-page These files can be in any color mode supported by this API, always uncompressed and either single page (if only one image has to be transferred) or multi-page (if multiple images have to be transferred and the device supports this multi-page file format).</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerFormat.Xps">
+      <summary>Microsoft XML Paper Specification (XPS) document file format These files can contain image data in any color mode supported by this API, compressed at the choice of the device, either single or multi-page.</summary>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerPreviewResult">
+      <summary>Represents the result of a preview scan job.</summary>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Format">
+      <summary>Gets the format of the data for the scan preview. After preview this property is restored to the value before preview.</summary>
+      <returns>The scan format.</returns>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerPreviewResult.Succeeded">
+      <summary>Gets whether the scan preview was successful.</summary>
+      <returns>True if scan preview was successful; otherwise False.</returns>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerResolution">
+      <summary>Specifies the scan resolution.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiX">
+      <summary>The horizontal size.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerResolution.DpiY">
+      <summary>The vertical size.</summary>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerScanResult">
+      <summary>Represents the result of a scan job.</summary>
+    </member>
+    <member name="P:Windows.Devices.Scanners.ImageScannerScanResult.ScannedFiles">
+      <summary>Gets the list of scanned image files that was produced by the completed scan job.</summary>
+      <returns>A list of scanned image files from the completed scan job. If there is no scanned file, the IVectorView&lt;T&gt;.Size property will be 0.</returns>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ImageScannerScanSource">
+      <summary>The types of scan source for the scanning device.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerScanSource.AutoConfigured">
+      <summary>The scan source is automatically configured.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Default">
+      <summary>The default source.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Feeder">
+      <summary>A Feeder scan source.</summary>
+    </member>
+    <member name="F:Windows.Devices.Scanners.ImageScannerScanSource.Flatbed">
+      <summary>A Flatbed scan source.</summary>
+    </member>
+    <member name="T:Windows.Devices.Scanners.ScannerDeviceContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

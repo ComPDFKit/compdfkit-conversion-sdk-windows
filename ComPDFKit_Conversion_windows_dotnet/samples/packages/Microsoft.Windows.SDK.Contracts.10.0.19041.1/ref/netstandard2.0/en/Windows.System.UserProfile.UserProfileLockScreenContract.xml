@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileLockScreenContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.System.UserProfile.LockScreen">
+      <summary>Provides properties and methods to manage the full-screen image used as the lock screen background.</summary>
+    </member>
+    <member name="P:Windows.System.UserProfile.LockScreen.OriginalImageFile">
+      <summary>Gets the current lock screen image.</summary>
+      <returns>The Uniform Resource Identifier (URI) of the lock screen image.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.LockScreen.GetImageStream">
+      <summary>Gets the current lock screen image as a data stream.</summary>
+      <returns>The stream that contains the lock screen image data.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.LockScreen.RequestSetImageFeedAsync(Windows.Foundation.Uri)">
+      <summary>Registers an RSS image feed to be used as a lock screen slideshow. (Windows 8.1 only)</summary>
+      <param name="syndicationFeedUri">The Uniform Resource Identifier (URI) of the RSS image feed.</param>
+      <returns>One of the SetImageFeedResult values.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.LockScreen.SetImageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>Sets the lock screen image from a StorageFile object.</summary>
+      <param name="value">The StorageFile object that contains the new image for the lock screen.</param>
+      <returns>The object used to set the image for the lock screen.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.LockScreen.SetImageStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Sets the lock screen image from a data stream.</summary>
+      <param name="value">The stream that contains the image data.</param>
+      <returns>The object used to set the lock screen image.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.LockScreen.TryRemoveImageFeed">
+      <summary>Unregisters the image feed being used in the lock screen slideshow, stopping the slideshow. (Windows 8.1 only)</summary>
+      <returns>**true** if the image feed was disabled; otherwise, **false**.</returns>
+    </member>
+    <member name="T:Windows.System.UserProfile.UserProfileLockScreenContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

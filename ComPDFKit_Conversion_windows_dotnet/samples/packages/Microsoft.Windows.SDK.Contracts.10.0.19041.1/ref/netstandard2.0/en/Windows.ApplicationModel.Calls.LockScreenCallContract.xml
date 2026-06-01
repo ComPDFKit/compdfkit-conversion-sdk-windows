@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.LockScreenCallContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Calls.LockScreenCallContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral">
+      <summary>The LockScreenCallEndCallDeferral object signals when the app no longer needs to defer the removal of itself from the lock screen.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral.Complete">
+      <summary>Completes the deferral of the removal of the app from the lock screen, which causes the app to be removed from the lock screen if it hasn't already been removed by other means.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs">
+      <summary>Controls the removal of an app from the lock screen.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.Deadline">
+      <summary>Gets the deadline by which the app must complete the deferral.</summary>
+      <returns>The deadline by which the app must complete the deferral.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs.GetDeferral">
+      <summary>Requests to defer the default behavior of removing the app from the lock screen.</summary>
+      <returns>When this method completes, it returns a LockScreenCallEndCallDeferral object that signals when the app no longer needs to defer the removal of itself from the lock screen.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.LockScreenCallUI">
+      <summary>**Deprecated.** Handles communication to and from the lock screen.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.LockScreenCallUI.CallTitle">
+      <summary>**Deprecated.** Gets and sets a brief description of the nature of the call. This brief description is also called the call's accessible name; its form is "Video call with Jane Doe."</summary>
+      <returns>A brief description of the nature of the call, for example, "Video call with Jane Doe."</returns>
+    </member>
+    <member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.Closed">
+      <summary>**Deprecated.** Occurs when the lock screen interaction is complete.</summary>
+    </member>
+    <member name="E:Windows.ApplicationModel.Calls.LockScreenCallUI.EndRequested">
+      <summary>**Deprecated.** Occurs when the lock screen wants to end the call.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.LockScreenCallUI.Dismiss">
+      <summary>**Deprecated.** Removes the app from the lock screen UI.</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ApplicationSettings.ApplicationsSettingsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.UI.ApplicationSettings.ApplicationsSettingsContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.UI.ApplicationSettings.SettingsEdgeLocation">
+      <summary>Specifies the edge of the screen where the Settings charms appear.</summary>
+      <deprecated type="deprecate">SettingsEdgeLocation is deprecated and might not work on all platforms. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Left">
+      <summary>The Settings charm appears on the left edge of the screen.</summary>
+    </member>
+    <member name="F:Windows.UI.ApplicationSettings.SettingsEdgeLocation.Right">
+      <summary>The Settings charm appears on the right edge of the screen.</summary>
+    </member>
+    <member name="T:Windows.UI.ApplicationSettings.SettingsPane">
+      <summary>A static class that enables the app to control the Settings Charm pane. The app can add or remove commands, receive a notification when the user opens the pane, or open the pane programmatically.</summary>
+      <deprecated type="deprecate">SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.UI.ApplicationSettings.SettingsPane.Edge">
+      <summary>Gets a value indicating whether the Settings charm appears on the left or right edge of the screen.</summary>
+      <returns>The location of the Settings charm.</returns>
+    </member>
+    <member name="E:Windows.UI.ApplicationSettings.SettingsPane.CommandsRequested">
+      <summary>Occurs when the user opens the settings pane. Listening for this event lets the app initialize the setting commands and pause its UI until the user closes the pane.</summary>
+    </member>
+    <member name="M:Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView">
+      <summary>Gets a SettingsPane object that is associated with the current app view (that is, with CoreWindow ).</summary>
+      <deprecated type="deprecate">SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.</deprecated>
+      <returns>The settings pane.</returns>
+    </member>
+    <member name="M:Windows.UI.ApplicationSettings.SettingsPane.Show">
+      <summary>Displays the Settings Charm pane to the user.</summary>
+      <deprecated type="deprecate">SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest">
+      <summary>Contains properties that are only available during the CommandsRequested event.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequest is deprecated and might not work on all platforms. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequest.ApplicationCommands">
+      <summary>A vector that is available during the CommandsRequested event. Append SettingsCommand objects to it to make them available to the SettingsPane UI.</summary>
+      <returns>The vector of SettingsCommand objects.</returns>
+    </member>
+    <member name="T:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs">
+      <summary>Contains arguments that are available from the event object during the CommandsRequested event.</summary>
+      <deprecated type="deprecate">SettingsPaneCommandsRequestedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs.Request">
+      <summary>An instance of SettingsPaneCommandsRequest that is made available during the CommandsRequested event.</summary>
+      <returns>The commands request object.</returns>
+    </member>
+  </members>
+</doc>

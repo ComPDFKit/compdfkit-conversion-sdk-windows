@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.Background.CallsBackgroundContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Background.PhoneTrigger">
+      <summary>Represents a phone event that triggers a background task.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Background.PhoneTrigger.#ctor(Windows.ApplicationModel.Calls.Background.PhoneTriggerType,System.Boolean)">
+      <summary>Initializes a new instance of the PhoneTrigger class.</summary>
+      <param name="type">Specifies the type of phone event.</param>
+      <param name="oneShot">Indicates if the trigger is a one-shot notification. If you weren't subscribed when a one-shot notification was sent, you get nothing. If you weren't connected when you fired a one-shot notification, nothing happens.</param>
+    </member>
+    <member name="P:Windows.ApplicationModel.Background.PhoneTrigger.OneShot">
+      <summary>Gets a Boolean value indicating if the trigger is a one-shot notification.</summary>
+      <returns>A Boolean value indicating if the trigger is a one-shot notification.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Background.PhoneTrigger.TriggerType">
+      <summary>Gets the type of phone event indicated by the trigger.</summary>
+      <returns>The type of phone event indicated by the trigger.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.CallsBackgroundContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason">
+      <summary>Provides the reason why a phone call was rejected.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.InCallBlockingList">
+      <summary>The call was rejected because it was in the blocking list.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.PrivateNumber">
+      <summary>The call was rejected because it was a private number and private numbers are blocked.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedReason.UnknownNumber">
+      <summary>The call was rejected because it was an unknown number and unknown numbers are blocked.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails">
+      <summary>Used to provide the details about a call that was just blocked.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.CallBlockedReason">
+      <summary>Gets the reason why a phone call was blocked.</summary>
+      <returns>The reason for blocking the phone call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.LineId">
+      <summary>Gets the ID of the phone call that was just blocked.</summary>
+      <returns>The ID of the blocked phone call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallBlockedTriggerDetails.PhoneNumber">
+      <summary>Gets the phone number of the blocked call.</summary>
+      <returns>The phone number of the call that was blocked.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails">
+      <summary>Used to provide the origin details of the phone call.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.PhoneNumber">
+      <summary>Gets the phone number for the origin of the phone call.</summary>
+      <returns>The phone number of the phone call origin.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneCallOriginDataRequestTriggerDetails.RequestId">
+      <summary>Gets the unique identifier for this phone call.</summary>
+      <returns>The unique identifier for this phone call.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason">
+      <summary>Indicates the reason for IncomingCallDismissed trigger.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason.CallRejected">
+      <summary>Incoming call is being dismissed due to rejection by the user.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason.ConnectionLost">
+      <summary>Incoming call is being dismissed due to a lost connection.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason.TextReply">
+      <summary>Incoming call is being dismissed due to text reply response by the user.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedReason.Unknown">
+      <summary>Incoming call is being dismissed unexpectedly. Reason is unknown.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails">
+      <summary>The trigger details for the IncomingCallDismissed trigger.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.DismissalTime">
+      <summary>The time when the incoming call was dismissed.</summary>
+      <returns>**DateTime** representing the time the incoming call was dismissed.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.DisplayName">
+      <summary>The name of the caller (if available).</summary>
+      <returns>String representing the name of the caller.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.LineId">
+      <summary>The LineId for the incoming call being dismissed.</summary>
+      <returns>GUID that identifies a line.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.PhoneNumber">
+      <summary>The phone number for the incoming call being dismissed.</summary>
+      <returns>String representing the phone number.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.Reason">
+      <summary>The reason why the incoming call is dismissed.</summary>
+      <returns>PhoneIncomingCallDismissedReason representing why the incoming call is dismissed.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneIncomingCallDismissedTriggerDetails.TextReplyMessage">
+      <summary>The text message of the reply (if available).</summary>
+      <returns>String representing the text message of the reply.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails">
+      <summary>Used to provide the details about a change to the properties of a phone line.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.ChangeType">
+      <summary>Gets a PhoneLineChangeKind value that indicates if the phone line was added, removed, or changed.</summary>
+      <returns>A PhoneLineChangeKind value that indicates if the phone line was added, removed, or changed.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.LineId">
+      <summary>Gets the ID of the phone line that was added, removed, or changed.</summary>
+      <returns>The ID of the phone line that was added, removed, or changed.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails.HasLinePropertyChanged(Windows.ApplicationModel.Calls.Background.PhoneLineProperties)">
+      <summary>Checks a phone line against a set of flags to see if any of the specified properties of the phone line have changed.</summary>
+      <param name="lineProperty">A set of flags which indicate the phone line properties to query for changes.</param>
+      <returns>Returns true if any of the properties indicated by the *lineProperty* parameter have changed on the phone line.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind">
+      <summary>Indicates the type of change for a background phone line change trigger.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Added">
+      <summary>A new phone line was added.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.PropertiesChanged">
+      <summary>A phone line has updated properties.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineChangeKind.Removed">
+      <summary>A phone line was removed.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneLineProperties">
+      <summary>Indicates a set of property flags that are part of a phone line changed trigger. Multiple properties can be set at one time.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.BrandingOptions">
+      <summary>The branding options for the phone line.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CanDial">
+      <summary>The ability to dial outgoing calls on the phone line.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.CellularDetails">
+      <summary>The cellular details for the phone line.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayColor">
+      <summary>The preferred display color for the phone line.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.DisplayName">
+      <summary>The user assigned friendly name of the phone line.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkName">
+      <summary>The name of the current network that is being used by the phone line.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.NetworkState">
+      <summary>The current network status of the phone line.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.None">
+      <summary>No property.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Transport">
+      <summary>The transport (cellular or voice over IP) for the phone line.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneLineProperties.Voicemail">
+      <summary>The voice mail account associated with the phone line.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails">
+      <summary>Used to provide the details about a new voice mail message on a phone line.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.LineId">
+      <summary>Gets the ID of the phone line for which the new voice mail arrived.</summary>
+      <returns>The ID of the phone line for the new voice mail.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.OperatorMessage">
+      <summary>Gets the optional voice mail changed message set by an operator when they send a voice mail changed SMS.</summary>
+      <returns>The optional voice mail changed message set by an operator when they send a voice mail changed SMS. If the message exists, it is displayed on the voice mail toast if the toast is displayed.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.Background.PhoneNewVoicemailMessageTriggerDetails.VoicemailCount">
+      <summary>Gets the new count of voice mail messages for the phone line.</summary>
+      <returns>The current count of voice mail messages.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.Background.PhoneTriggerType">
+      <summary>Indicates a type of event for a phone trigger.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.AirplaneModeDisabledForEmergencyCall">
+      <summary>Airplane mode on a phone line was disabled so the phone could make an emergency call.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallBlocked">
+      <summary>The call was blocked.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallHistoryChanged">
+      <summary>The call history has changed.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.CallOriginDataRequest">
+      <summary>A request was made for the origin of the phone call.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.IncomingCallDismissed">
+      <summary>The incoming call was dismissed. Currently limited to first party use only.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.LineChanged">
+      <summary>The PhoneLineProperties have changed.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.Background.PhoneTriggerType.NewVoicemailMessage">
+      <summary>The system received a new voice mail message or the voice mail count went to 0.</summary>
+    </member>
+  </members>
+</doc>

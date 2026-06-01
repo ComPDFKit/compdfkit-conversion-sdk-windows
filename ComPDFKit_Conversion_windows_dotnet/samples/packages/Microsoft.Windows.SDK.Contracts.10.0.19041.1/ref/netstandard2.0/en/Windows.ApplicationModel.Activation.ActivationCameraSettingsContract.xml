@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ActivationCameraSettingsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Activation.ActivationCameraSettingsContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs">
+      <summary>Enables a camera settings app to handle the activation parameters for the app.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.VideoDeviceController">
+      <summary>Gets the object that controls device settings on the camera.</summary>
+      <returns>The object that controls device settings on the camera.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs.VideoDeviceExtension">
+      <summary>Gets the object that implements additional extended settings for the camera.</summary>
+      <returns>An object implementing extended settings for the camera.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs">
+      <summary>Enables a camera settings app to handle the activation parameters for the app.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs.VideoDeviceController">
+      <summary>Gets the object that controls device settings on the camera.</summary>
+      <returns>The object that controls device settings on the camera.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ICameraSettingsActivatedEventArgs.VideoDeviceExtension">
+      <summary>Gets the object that implements additional extended settings for the camera.</summary>
+      <returns>An object implementing extended settings for the camera.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs">
+      <summary>Enables a camera settings app to handle the activation parameters for the app.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object that provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.VideoDeviceController">
+      <summary>Gets the object that controls device settings on the camera.</summary>
+      <returns>The object that controls device settings on the camera.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUICameraSettingsActivatedEventArgs.VideoDeviceExtension">
+      <summary>Gets the object that implements additional extended settings for the camera.</summary>
+      <returns>An object implementing extended settings for the camera.</returns>
+    </member>
+  </members>
+</doc>

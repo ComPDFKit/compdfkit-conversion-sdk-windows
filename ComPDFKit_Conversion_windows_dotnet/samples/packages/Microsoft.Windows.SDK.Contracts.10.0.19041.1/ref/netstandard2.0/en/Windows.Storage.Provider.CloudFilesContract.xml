@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Storage.Provider.CloudFilesContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Storage.Provider.CloudFilesContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Storage.Provider.IStorageProviderItemPropertySource">
+      <summary>Provides access to storage provider item properties from the sync root.</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.IStorageProviderItemPropertySource.GetItemProperties(System.String)">
+      <summary>Gets a list of item properties for a storage provider.</summary>
+      <param name="itemPath">A path to the storage item.</param>
+      <returns>A list of item properties from the storage provider.</returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.IStorageProviderPropertyCapabilities">
+      <summary>Provides access to the property capabilities supported by the sync root.</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.IStorageProviderPropertyCapabilities.IsPropertySupported(System.String)">
+      <summary>Determines whether a property is supported by the sync root.</summary>
+      <param name="propertyCanonicalName">The name of the property. E.g., "System.Photo.DateTaken"</param>
+      <returns>**True** if the property is supported by the sync root; **False** otherwise</returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.IStorageProviderUriSource">
+      <summary>An interface for getting a content URI path and information.</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.IStorageProviderUriSource.GetContentInfoForPath(System.String,Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult)">
+      <summary>Gets information about a storage provider URI given the path of the URI.</summary>
+      <param name="path">The path of the storage provider URI.</param>
+      <param name="result">Content information about the provided storage provider URI.</param>
+    </member>
+    <member name="M:Windows.Storage.Provider.IStorageProviderUriSource.GetPathForContentUri(System.String,Windows.Storage.Provider.StorageProviderGetPathForContentUriResult)">
+      <summary>Gets the path of content URI given the name of the URI.</summary>
+      <param name="contentUri">The string name of the content URI.</param>
+      <param name="result">The path of the provided content URI.</param>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderFileTypeInfo">
+      <summary>
+      </summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderFileTypeInfo.#ctor(System.String,System.String)">
+      <summary>
+      </summary>
+      <param name="fileExtension">
+      </param>
+      <param name="iconResource">
+      </param>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderFileTypeInfo.FileExtension">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderFileTypeInfo.IconResource">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult">
+      <summary>Provides methods to get additional information about a content URI path.</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult.#ctor">
+      <summary>A StorageProviderGetContentInfoForPathResult default constructor.</summary>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult.ContentId">
+      <summary>Gets or sets the content ID associated with the StorageProviderGetContentInfoForPathResult.</summary>
+      <returns>The content ID value.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult.ContentUri">
+      <summary>Gets or sets the content URI associated with the StorageProviderGetContentInfoForPathResult.</summary>
+      <returns>The content URI value.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderGetContentInfoForPathResult.Status">
+      <summary>The status of a storage provider associated with the StorageProviderGetContentInfoForPathResult.</summary>
+      <returns>A StorageProviderUriSourceStatus enum value.</returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderGetPathForContentUriResult">
+      <summary>Provides methods to get additional information about a content URI result.</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderGetPathForContentUriResult.#ctor">
+      <summary>A StorageProviderGetPathForContentUriResult default constructor.</summary>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderGetPathForContentUriResult.Path">
+      <summary>Gets the path of the StorageProviderGetPathForContentUriResult object.</summary>
+      <returns>The content URI path.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderGetPathForContentUriResult.Status">
+      <summary>The status of a storage provider associated with the StorageProviderGetPathForContentUriResult.</summary>
+      <returns>A StorageProviderUriSourceStatus enum value.</returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderHardlinkPolicy">
+      <summary>Specifies whether hard links are permitted on a placeholder file or folder. By default, hard links are not allowed on a placeholder.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHardlinkPolicy.Allowed">
+      <summary>Hard links are allowed on a placeholder within the same sync root.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHardlinkPolicy.None">
+      <summary>No hard links are allowed.</summary>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderHydrationPolicy">
+      <summary>An enumeration of file hydration policy values for a placeholder file. The hydration policy allows a sync root to customize behavior for retrieving data for a placeholder file.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHydrationPolicy.AlwaysFull">
+      <summary>If this is selected and a placeholder cannot be fully hydrated, the platform will fail with: ERROR_CLOUD_FILE_INVALID_REQUEST.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHydrationPolicy.Full">
+      <summary>Full hydration is performed. Ensures that the placeholder is available locally before completing a request.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHydrationPolicy.Partial">
+      <summary>Hydration is performed at the user's request. Hydration does not continue in the background.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHydrationPolicy.Progressive">
+      <summary>On demand hyrdration is performed. If hydration has not finished, it will continue in the background.</summary>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderHydrationPolicyModifier">
+      <summary>Provides policy modifiers to be used with the primary StorageProviderHydrationPolicy.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHydrationPolicyModifier.AutoDehydrationAllowed">
+      <summary>Automatic file dehydration is allowed.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHydrationPolicyModifier.None">
+      <summary>No modifiers.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHydrationPolicyModifier.StreamingAllowed">
+      <summary>This modifier does not allow the platform to store any data on disk returned by a sync provider.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderHydrationPolicyModifier.ValidationRequired">
+      <summary>Once the data is hydrated into the file, it will be validated.</summary>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderInSyncPolicy">
+      <summary>Contains the file and directory attributes supported by the sync root.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.Default">
+      <summary>The default sync policy value.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.DirectoryCreationTime">
+      <summary>The directory creation time.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.DirectoryHiddenAttribute">
+      <summary>Hidden attribute of a directory.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.DirectoryLastWriteTime">
+      <summary>The last write time on a directory.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.DirectoryReadOnlyAttribute">
+      <summary>Read-only attribute of a directory.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.DirectorySystemAttribute">
+      <summary>System attribute of a file.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.FileCreationTime">
+      <summary>The file creation time.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.FileHiddenAttribute">
+      <summary>Hidden attribute of a file.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.FileLastWriteTime">
+      <summary>The last write time on a file.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.FileReadOnlyAttribute">
+      <summary>Read-only attribute of a file.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.FileSystemAttribute">
+      <summary>System attribute of a file.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderInSyncPolicy.PreserveInsyncForSyncEngine">
+      <summary>Value reserved for the sync engine.</summary>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderItemProperties">
+      <summary>Provides access to the properties of a Cloud Storage Provider storage item (like a file or folder).</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderItemProperties.SetAsync(Windows.Storage.IStorageItem,Windows.Foundation.Collections.IIterable{Windows.Storage.Provider.StorageProviderItemProperty})">
+      <summary>Sets custom property values of a storage item.</summary>
+      <param name="item">The storage item.</param>
+      <param name="itemProperties">An iterable list of the StorageProviderItemProperty states for the storage item.</param>
+      <returns>An asynchronous action. If you use Asynchronous programming, the return type is void.</returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderItemProperty">
+      <summary>Defines a Cloud Storage Provider property for a storage item (like a file or folder).</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderItemProperty.#ctor">
+      <summary>A StorageProviderItemProperty default constructor.</summary>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderItemProperty.IconResource">
+      <summary>A reference to an icon resource for a Cloud Storage provider property.</summary>
+      <returns>A string value of a reference to an icon resource. E.g., "SyncProviderResources.dll, -1234"</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderItemProperty.Id">
+      <summary>The Id for a storage item provided by the Cloud Storage Provider.</summary>
+      <returns>The Id for the storage item.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderItemProperty.Value">
+      <summary>Descriptive text for the state of a storage provider storage item.</summary>
+      <returns>The string value of the text.</returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderItemPropertyDefinition">
+      <summary>Defines the properties of an item from a Cloud Storage Provider.</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderItemPropertyDefinition.#ctor">
+      <summary>A StorageProviderItemPropertyDefinition default constructor.</summary>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderItemPropertyDefinition.DisplayNameResource">
+      <summary>Gets or sets the display name of a Cloud Storage Provider state.</summary>
+      <returns>A string value for the state display name.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderItemPropertyDefinition.Id">
+      <summary>An Id for a storage item provided by the Cloud Storage Provider when the sync root is registered.</summary>
+      <returns>The Id number for the storage item.</returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderPopulationPolicy">
+      <summary>Allows a sync provider to control how a placeholder file or directory</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderPopulationPolicy.AlwaysFull">
+      <summary>The platform will assume that placeholder files and directories are always available locally.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderPopulationPolicy.Full">
+      <summary>If the placeholder files or directories are not fully populated, the platform will request that the sync provider populate them before completing a user request.</summary>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderProtectionMode">
+      <summary>Indicates the type of data contained in the sync root.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderProtectionMode.Personal">
+      <summary>The sync root should only contain personal files, not encrypted or business related files.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderProtectionMode.Unknown">
+      <summary>The sync root can contain any type of file.</summary>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderSyncRootInfo">
+      <summary>Contains the properties of a Cloud Storage Provider's sync root to be registered with the operating system.</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderSyncRootInfo.#ctor">
+      <summary>A StorageProviderSyncRootInfo default constructor.</summary>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.AllowPinning">
+      <summary>Enables or disables the ability for files to be made available offline.</summary>
+      <returns>**True** if pinning is enabled; **False** otherwise</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.Context">
+      <summary>Contains the sync root identity information.</summary>
+      <returns>A buffer containing the sync root identity.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.DisplayNameResource">
+      <summary>An optional display name that maps to the existing sync root registration.</summary>
+      <returns>The display name.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.FallbackFileTypeInfo">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.HardlinkPolicy">
+      <summary>The hard link policy of the sync root.</summary>
+      <returns>The defined StorageProviderHardlinkPolicy.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.HydrationPolicy">
+      <summary>The hydration policy of the sync root registration.</summary>
+      <returns>A storage provider hydration policy enum value.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.HydrationPolicyModifier">
+      <summary>The hydration policy modifier of the sync root registration.</summary>
+      <returns>A storage provider hydration policy modifier enum value.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.IconResource">
+      <summary>A path to an icon resource for the custom state of a file or folder.</summary>
+      <returns>The path to the icon resource, for example, "SyncProvider.dll,-100", or "SyncProvider.dll,-101"</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.Id">
+      <summary>An identifier for the sync root.</summary>
+      <returns>An identifier in the form: [Storage Provider ID]![Windows SID]![Account ID]</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.InSyncPolicy">
+      <summary>Provides access to the sync policy for the Cloud Storage Provider.</summary>
+      <returns>The sync policy value.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.Path">
+      <summary>A storage folder that represents the path to the root of the cloud based folder system.</summary>
+      <returns>A storage folder.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.PopulationPolicy">
+      <summary>The population policy of the sync root registration.</summary>
+      <returns>A population policy enum value.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.ProtectionMode">
+      <summary>The protection mode of the sync root registration.</summary>
+      <returns>A protection mode enum value.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.ProviderId">
+      <summary>Gets or sets a GUID that represents the ID of the storage provider.</summary>
+      <returns>A GUID that represents the ID of the storage provider.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.RecycleBinUri">
+      <summary>A Uri to a cloud storage recycle bin.</summary>
+      <returns>The Uri to the recycle bin.</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.ShowSiblingsAsGroup">
+      <summary>Shows sibling sync roots listed under the main sync root in the File Explorer.</summary>
+      <returns>**True** if the sibling sync roots are shown, **False** otherwise</returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.StorageProviderItemPropertyDefinitions">
+      <summary>Gets the StorageProviderItemPropertyDefinition information for a sync root.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Storage.Provider.StorageProviderSyncRootInfo.Version">
+      <summary>The version number of the sync root.</summary>
+      <returns>A string value for the version number. E.g., "1.0"</returns>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderSyncRootManager">
+      <summary>Provides the ability to register or unregister a Cloud Storage Provider sync root with the operating system.</summary>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderSyncRootManager.GetCurrentSyncRoots">
+      <summary>Gets all of the currently registered sync roots.</summary>
+      <returns>A collection of currently registered sync roots.</returns>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderSyncRootManager.GetSyncRootInformationForFolder(Windows.Storage.IStorageFolder)">
+      <summary>Returns the properties of a Cloud Storage Provider's sync root given a storage folder.</summary>
+      <param name="folder">The storage folder for the sync root.</param>
+      <returns>The properties of a Cloud Storage Provider's sync root for the given storage folder.</returns>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderSyncRootManager.GetSyncRootInformationForId(System.String)">
+      <summary>Returns the properties of a Cloud Storage Provider's sync root given a sync root Id.</summary>
+      <param name="id">A string value of the sync root Id.</param>
+      <returns>The properties for the specified sync root.</returns>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderSyncRootManager.IsSupported">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderSyncRootManager.Register(Windows.Storage.Provider.StorageProviderSyncRootInfo)">
+      <summary>Registers a sync root with the operating system.</summary>
+      <param name="syncRootInformation">The sync root to register.</param>
+    </member>
+    <member name="M:Windows.Storage.Provider.StorageProviderSyncRootManager.Unregister(System.String)">
+      <summary>Unregisters a sync root from the operating system.</summary>
+      <param name="id">The Id of the sync root to unregister.</param>
+    </member>
+    <member name="T:Windows.Storage.Provider.StorageProviderUriSourceStatus">
+      <summary>Enumeration of the status of a storage provider URI.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderUriSourceStatus.FileNotFound">
+      <summary>The URI is not recognized by the sync provider.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderUriSourceStatus.NoSyncRoot">
+      <summary>There is no sync root registered with the URI source.</summary>
+    </member>
+    <member name="F:Windows.Storage.Provider.StorageProviderUriSourceStatus.Success">
+      <summary>The storage provider ID exists.</summary>
+    </member>
+  </members>
+</doc>

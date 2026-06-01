@@ -126,6 +126,19 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="System.Runtime.WindowsRuntime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.WindowsRuntime.4.6.0\lib\netstandard2.0\System.Runtime.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows">
+      <HintPath>packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\ref\netstandard2.0\Windows.WinMD</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+    </Reference>
+    <Reference Include="Windows.Foundation.FoundationContract">
+      <HintPath>packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\ref\netstandard2.0\Windows.Foundation.FoundationContract.winmd</HintPath>
+    </Reference>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>packages\Microsoft.Windows.SDK.Contracts.10.0.19041.1\ref\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -148,6 +161,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FolderSelectDialog.cs" />
+    <Compile Include="WindowsOcrHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -197,50 +211,6 @@
     </Content>
     <Content Include="..\resource\models\documentai.model">
       <Link>resource\models\documentai.model</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSans-Regular.ttf">
-      <Link>resource\fonts\NotoSans-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansArabic-Regular.ttf">
-      <Link>resource\fonts\NotoSansArabic-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansDevanagari-Regular.ttf">
-      <Link>resource\fonts\NotoSansDevanagari-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansJP-Regular.ttf">
-      <Link>resource\fonts\NotoSansJP-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansKannada-Regular.ttf">
-      <Link>resource\fonts\NotoSansKannada-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansKR-Regular.ttf">
-      <Link>resource\fonts\NotoSansKR-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansSC-Regular.ttf">
-      <Link>resource\fonts\NotoSansSC-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansTamil-Regular.ttf">
-      <Link>resource\fonts\NotoSansTamil-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansTC-Regular.ttf">
-      <Link>resource\fonts\NotoSansTC-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansTelugu-Regular.ttf">
-      <Link>resource\fonts\NotoSansTelugu-Regular.ttf</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\resource\fonts\NotoSansThai-Regular.ttf">
-      <Link>resource\fonts\NotoSansThai-Regular.ttf</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />

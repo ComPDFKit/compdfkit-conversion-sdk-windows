@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.WindowsRuntime.UI.Xaml</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.UI.Xaml.CornerRadius">
+      <summary>描述圓角的特性，如此便可套用到 Windows.UI.Xaml.Controls.Border。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.#ctor(System.Double)">
+      <summary>將相同的統一半徑套用到所有角，藉此初始化新的 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 結構。</summary>
+      <param name="uniformRadius">套用到所有四個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 屬性 (<see cref="P:Windows.UI.Xaml.CornerRadius.TopLeft" />、<see cref="P:Windows.UI.Xaml.CornerRadius.TopRight" />、<see cref="P:Windows.UI.Xaml.CornerRadius.BottomRight" />、<see cref="P:Windows.UI.Xaml.CornerRadius.BottomLeft" />) 的統一半徑。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>將特定的半徑值套用到其邊角，藉此初始化 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 結構的新執行個體。</summary>
+      <param name="topLeft">設定初始 <see cref="P:Windows.UI.Xaml.CornerRadius.TopLeft" />。</param>
+      <param name="topRight">設定初始 <see cref="P:Windows.UI.Xaml.CornerRadius.TopRight" />。</param>
+      <param name="bottomRight">設定初始 <see cref="P:Windows.UI.Xaml.CornerRadius.BottomLeft" />。</param>
+      <param name="bottomLeft">設定初始 <see cref="P:Windows.UI.Xaml.CornerRadius.BottomRight" />。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.BottomLeft">
+      <summary>取得或設定物件左下角邊角 (<see cref="T:Windows.UI.Xaml.CornerRadius" /> 套用其中) 的圓弧半徑，以像素為單位。</summary>
+      <returns>
+        <see cref="T:System.Double" />，表示物件左下角邊角 (<see cref="T:Windows.UI.Xaml.CornerRadius" /> 套用其中) 的圓弧半徑，以像素為單位。預設值為 0。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.BottomRight">
+      <summary>取得或設定物件右下角邊角 (<see cref="T:Windows.UI.Xaml.CornerRadius" />  套用其中) 的圓弧半徑，以像素為單位。</summary>
+      <returns>
+        <see cref="T:System.Double" />，表示物件右下角邊角 (<see cref="T:Windows.UI.Xaml.CornerRadius" /> 套用其中) 的圓弧半徑，以像素為單位。預設值為 0。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.Equals(System.Object)">
+      <summary>比較這個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 結構與另一個物件是否相等。</summary>
+      <returns>如果兩個物件相等則為 true，否則為 false。</returns>
+      <param name="obj">要比較的物件。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.Equals(Windows.UI.Xaml.CornerRadius)">
+      <summary>比較這個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 結構與另一個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 結構是否相等。</summary>
+      <returns>如果 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 的兩個執行個體相等則為 true，否則為 false。</returns>
+      <param name="cornerRadius">要比較是否相等的 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.GetHashCode">
+      <summary>傳回結構的雜湊碼。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 的雜湊程式碼。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.op_Equality(Windows.UI.Xaml.CornerRadius,Windows.UI.Xaml.CornerRadius)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 結構的值是否相等。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 執行個體相等則為 true，否則為 false。</returns>
+      <param name="cr1">要比較的第一個結構。</param>
+      <param name="cr2">要比較的另一個結構。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.op_Inequality(Windows.UI.Xaml.CornerRadius,Windows.UI.Xaml.CornerRadius)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 結構是否相等。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 執行個體相等則為 true，否則為 false。</returns>
+      <param name="cr1">要比較的第一個結構。</param>
+      <param name="cr2">要比較的另一個結構。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.TopLeft">
+      <summary>取得或設定物件左上角邊角 (<see cref="T:Windows.UI.Xaml.CornerRadius" /> 套用其中) 的圓弧半徑，以像素為單位。</summary>
+      <returns>
+        <see cref="T:System.Double" />，表示物件左上角邊角 (<see cref="T:Windows.UI.Xaml.CornerRadius" /> 套用其中) 的圓弧半徑，以像素為單位。預設值為 0。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.TopRight">
+      <summary>取得或設定物件右下角邊角 (<see cref="T:Windows.UI.Xaml.CornerRadius" /> 套用其中) 的圓弧半徑，以像素為單位。</summary>
+      <returns>
+        <see cref="T:System.Double" />，表示物件右上角邊角 (<see cref="T:Windows.UI.Xaml.CornerRadius" /> 套用其中) 的圓弧半徑，以像素為單位。預設值為 0。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.ToString">
+      <summary>傳回 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 結構的字串表示。</summary>
+      <returns>表示 <see cref="T:Windows.UI.Xaml.CornerRadius" /> 值的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Duration">
+      <summary>表示 Windows.UI.Xaml.Media.Animation.Timeline 處於使用中的持續期間。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.#ctor(System.TimeSpan)">
+      <summary>使用提供的 <see cref="T:System.TimeSpan" /> 值，初始化 <see cref="T:Windows.UI.Xaml.Duration" /> 結構的新執行個體 (Instance)。</summary>
+      <param name="timeSpan">表示這個持續期間的初始時間間隔。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="timeSpan" /> 評估為小於 <see cref="F:System.TimeSpan.Zero" />。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Add(Windows.UI.Xaml.Duration)">
+      <summary>將指定 <see cref="T:Windows.UI.Xaml.Duration" /> 的值加入至這個 <see cref="T:Windows.UI.Xaml.Duration" />。</summary>
+      <returns>如果每一個包含的 <see cref="T:Windows.UI.Xaml.Duration" /> 都具有值，則為表示合併值的 <see cref="T:Windows.UI.Xaml.Duration" />。否則，這個方法就會傳回 null。</returns>
+      <param name="duration">
+        <see cref="T:Windows.UI.Xaml.Duration" /> 的執行個體，表示目前執行個體的值加上 <paramref name="duration" />。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.Automatic">
+      <summary>取得自動決定的 <see cref="T:Windows.UI.Xaml.Duration" /> 值。</summary>
+      <returns>初始化為自動值的 <see cref="T:Windows.UI.Xaml.Duration" />。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Compare(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>將一個 <see cref="T:Windows.UI.Xaml.Duration" /> 值與另一個值比較。</summary>
+      <returns>如果 <paramref name="t1" /> 小於 <paramref name="t2" />，則為表示差異的負值。如果 <paramref name="t1" /> 等於 <paramref name="t2" />，則為 0 的值。如果 <paramref name="t1" /> 大於 <paramref name="t2" />，則為表示差異的正值。</returns>
+      <param name="t1">要比較之 <see cref="T:Windows.UI.Xaml.Duration" /> 的第一個執行個體。</param>
+      <param name="t2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Duration" /> 執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(System.Object)">
+      <summary>判斷指定的物件是否等於 <see cref="T:Windows.UI.Xaml.Duration" />。</summary>
+      <returns>如果值等於這個 <see cref="T:Windows.UI.Xaml.Duration" />，則為 true，否則為 false。</returns>
+      <param name="value">要檢查是否相等的物件。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(Windows.UI.Xaml.Duration)">
+      <summary>判斷指定的 <see cref="T:Windows.UI.Xaml.Duration" /> 是否等於這個 <see cref="T:Windows.UI.Xaml.Duration" />。</summary>
+      <returns>如果 <paramref name="duration" /> 等於這個 <see cref="T:Windows.UI.Xaml.Duration" /> 則為 true，否則為 false。</returns>
+      <param name="duration">要檢查是否相等的 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>判斷兩個 <see cref="T:Windows.UI.Xaml.Duration" /> 值是否相等。</summary>
+      <returns>如果 <paramref name="t1" /> 等於 <paramref name="t2" />，則為 true，否則為 false。</returns>
+      <param name="t1">要比較的第一個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.Forever">
+      <summary>取得 <see cref="T:Windows.UI.Xaml.Duration" /> 值，這個值表示無限間隔。</summary>
+      <returns>初始化為永久值的 <see cref="T:Windows.UI.Xaml.Duration" />。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.GetHashCode">
+      <summary>取得這個物件的雜湊碼。</summary>
+      <returns>雜湊碼識別項。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.HasTimeSpan">
+      <summary>取得值，這個值指出這個 <see cref="T:Windows.UI.Xaml.Duration" /> 是否表示 <see cref="T:System.TimeSpan" /> 值。</summary>
+      <returns>如果這個 <see cref="T:Windows.UI.Xaml.Duration" /> 為 <see cref="T:System.TimeSpan" /> 值，則為 true，否則為 false。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Addition(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>相加兩個 <see cref="T:Windows.UI.Xaml.Duration" /> 值。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.Duration" /> 值都有<see cref="T:System.TimeSpan" /> 值，則這個方法會傳回那兩個值的總和。如果其中一個值設定為 <see cref="P:Windows.UI.Xaml.Duration.Automatic" />，則方法會傳回 <see cref="P:Windows.UI.Xaml.Duration.Automatic" />。如果其中一個值設定為 <see cref="P:Windows.UI.Xaml.Duration.Forever" />，則方法會傳回 <see cref="P:Windows.UI.Xaml.Duration.Forever" />。如果 <paramref name="t1" /> 或 <paramref name="t2" /> 沒有值，則這個方法會傳回 null。</returns>
+      <param name="t1">要相加的第一個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">要相加的第二個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Equality(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>判斷兩個 <see cref="T:Windows.UI.Xaml.Duration" /> 案例是否相等。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.Duration" /> 值有相等的屬性值，或者如果所有的 <see cref="T:Windows.UI.Xaml.Duration" /> 值都為 null，則為 true。否則，這個方法就會傳回 false。</returns>
+      <param name="t1">要比較的第一個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_GreaterThan(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>判斷一個 <see cref="T:Windows.UI.Xaml.Duration" /> 是否大於另外一個。</summary>
+      <returns>如果 <paramref name="t1" /> 和 <paramref name="t2" /> 都有值且 <paramref name="t1" /> 大於 <paramref name="t2" /> 則為 true，否則為 false。</returns>
+      <param name="t1">要比較的 <see cref="T:Windows.UI.Xaml.Duration" /> 值。</param>
+      <param name="t2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Duration" /> 值。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_GreaterThanOrEqual(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>判斷 <see cref="T:Windows.UI.Xaml.Duration" /> 是否大於或等於另外一個。</summary>
+      <returns>如果 <paramref name="t1" /> 和 <paramref name="t2" /> 都有值且 <paramref name="t1" /> 大於或等於 <paramref name="t2" /> 則為 true，否則為 false。</returns>
+      <param name="t1">要比較之 <see cref="T:Windows.UI.Xaml.Duration" /> 的第一個執行個體。</param>
+      <param name="t2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Duration" /> 執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Implicit(System.TimeSpan)~Windows.UI.Xaml.Duration">
+      <summary>從指定的 <see cref="T:System.TimeSpan" /> 隱含地建立 <see cref="T:Windows.UI.Xaml.Duration" />。</summary>
+      <returns>已建立的 <see cref="T:Windows.UI.Xaml.Duration" />。</returns>
+      <param name="timeSpan">
+        <see cref="T:Windows.UI.Xaml.Duration" /> 是從其中隱含建立的 <see cref="T:System.TimeSpan" />。</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="timeSpan" /> 評估為小於 <see cref="F:System.TimeSpan.Zero" />。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Inequality(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>判斷兩個 <see cref="T:Windows.UI.Xaml.Duration" /> 案例是否不相等。</summary>
+      <returns>如果恰好 <paramref name="t1" /> 或 <paramref name="t2" /> 其中一個代表值，或它們代表不相等的值則為 true，否則為 false。</returns>
+      <param name="t1">要比較的第一個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_LessThan(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>判斷一個 <see cref="T:Windows.UI.Xaml.Duration" /> 是否小於另外一個執行個體的值。</summary>
+      <returns>如果 <paramref name="t1" /> 和 <paramref name="t2" /> 都有值且 <paramref name="t1" /> 小於 <paramref name="t2" /> 則為 true，否則為 false。</returns>
+      <param name="t1">要比較的第一個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_LessThanOrEqual(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>判斷 <see cref="T:Windows.UI.Xaml.Duration" /> 是否小於或等於另外一個。</summary>
+      <returns>如果 <paramref name="t1" /> 和 <paramref name="t2" /> 都有值且 <paramref name="t1" /> 小於或等於 <paramref name="t2" /> 則為 true，否則為 false。</returns>
+      <param name="t1">要比較的 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">要比較的 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Subtraction(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>從 <see cref="T:Windows.UI.Xaml.Duration" /> 的一個值減去另一個值。</summary>
+      <returns>如果每一個 <see cref="T:Windows.UI.Xaml.Duration" /> 都有值，則 <see cref="T:Windows.UI.Xaml.Duration" /> 表示 <paramref name="t1" /> 減去 <paramref name="t2" /> 所得的值。如果 <paramref name="t1" /> 的值為 <see cref="P:Windows.UI.Xaml.Duration.Forever" />，並且 <paramref name="t2" /> 的值為 <see cref="P:Windows.UI.Xaml.Duration.TimeSpan" />，則這個方法會傳回 <see cref="P:Windows.UI.Xaml.Duration.Forever" />。否則，這個方法就會傳回 null。</returns>
+      <param name="t1">第一個 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+      <param name="t2">要減去的 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_UnaryPlus(Windows.UI.Xaml.Duration)">
+      <summary>傳回指定的 <see cref="T:Windows.UI.Xaml.Duration" />。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Duration" /> 運算結果。</returns>
+      <param name="duration">要取得的 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Subtract(Windows.UI.Xaml.Duration)">
+      <summary>將指定 <see cref="T:Windows.UI.Xaml.Duration" /> 從這個 <see cref="T:Windows.UI.Xaml.Duration" /> 減去。</summary>
+      <returns>經過減法的 <see cref="T:Windows.UI.Xaml.Duration" />。</returns>
+      <param name="duration">要從這個 <see cref="T:Windows.UI.Xaml.Duration" /> 減去的 <see cref="T:Windows.UI.Xaml.Duration" />。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.TimeSpan">
+      <summary>取得這個 <see cref="T:Windows.UI.Xaml.Duration" /> 表示的 <see cref="T:System.TimeSpan" /> 值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Duration" /> 表示的 <see cref="T:System.TimeSpan" /> 值。</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:Windows.UI.Xaml.Duration" /> 並不代表 <see cref="T:System.TimeSpan" />。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.ToString">
+      <summary>將 <see cref="T:Windows.UI.Xaml.Duration" /> 轉換為 <see cref="T:System.String" /> 表示。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Duration" /> 的 <see cref="T:System.String" /> 表示。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.DurationType">
+      <summary>指定 <see cref="T:Windows.UI.Xaml.Duration" /> 是否具有 Automatic 或 Forever 的特殊值，或者其 <see cref="T:System.TimeSpan" /> 元件中是否包含有效的資訊。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.Automatic">
+      <summary>具有 "Automatic" 特殊值。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.Forever">
+      <summary>具有 "Forever" 特殊值。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.TimeSpan">
+      <summary>
+        <see cref="T:System.TimeSpan" /> 元件中包含有效資訊。</summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.GridLength">
+      <summary>表示明確支援 <see cref="F:Windows.UI.Xaml.GridUnitType.Star" /> 單位型別的項目的長度。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.#ctor(System.Double)">
+      <summary>使用指定的絕對值 (以像素為單位)，初始化 <see cref="T:Windows.UI.Xaml.GridLength" /> 結構的新執行個體。</summary>
+      <param name="pixels">要以值建立的絕對像素計數。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.#ctor(System.Double,Windows.UI.Xaml.GridUnitType)">
+      <summary>初始化 <see cref="T:Windows.UI.Xaml.GridLength" /> 結構的新執行個體，並指定要包含何種值。</summary>
+      <param name="value">這個 <see cref="T:Windows.UI.Xaml.GridLength" /> 執行個體的初始值。</param>
+      <param name="type">這個 <see cref="T:Windows.UI.Xaml.GridLength" /> 執行個體包含的 <see cref="T:Windows.UI.Xaml.GridUnitType" />。</param>
+      <exception cref="T:System.ArgumentException">值小於 0 或不是數字。-或-型別不是有效的 <see cref="T:Windows.UI.Xaml.GridUnitType" />。</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.Auto">
+      <summary>取得 <see cref="T:Windows.UI.Xaml.GridLength" /> 的執行個體，這個執行個體所含值的大小是由內容物件的大小屬性決定。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> 的執行個體，其 <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> 屬性已設為 <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" />。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.Equals(System.Object)">
+      <summary>判斷指定的物件和目前的 <see cref="T:Windows.UI.Xaml.GridLength" /> 執行個體是否相等。</summary>
+      <returns>如果指定的物件與目前執行個體具有相同的值和 <see cref="T:Windows.UI.Xaml.GridUnitType" /> 則為 true，否則為 false。</returns>
+      <param name="oCompare">要與目前執行個體比較的物件。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.Equals(Windows.UI.Xaml.GridLength)">
+      <summary>判斷指定的 <see cref="T:Windows.UI.Xaml.GridLength" /> 和目前的 <see cref="T:Windows.UI.Xaml.GridLength" /> 是否相等。</summary>
+      <returns>如果指定的 <see cref="T:Windows.UI.Xaml.GridLength" /> 與目前執行個體具有相同的值和 <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" />，則為 true，否則為 false。</returns>
+      <param name="gridLength">要與目前執行個體比較的 <see cref="T:Windows.UI.Xaml.GridLength" /> 結構。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.GetHashCode">
+      <summary>取得 <see cref="T:Windows.UI.Xaml.GridLength" /> 的雜湊程式碼。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.GridLength" /> 的雜湊程式碼。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.GridUnitType">
+      <summary>取得 <see cref="T:Windows.UI.Xaml.GridLength" /> 的相關 <see cref="T:Windows.UI.Xaml.GridUnitType" />。</summary>
+      <returns>其中一個 <see cref="T:Windows.UI.Xaml.GridUnitType" /> 值。預設為 <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" />。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsAbsolute">
+      <summary>取得值，這個值指出 <see cref="T:Windows.UI.Xaml.GridLength" /> 是否包含以像素表示的值。</summary>
+      <returns>如果 <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> 屬性是 <see cref="F:Windows.UI.Xaml.GridUnitType.Pixel" />，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsAuto">
+      <summary>取得值，這個值表示 <see cref="T:Windows.UI.Xaml.GridLength" /> 所含值的大小是否由內容物件的大小屬性決定。</summary>
+      <returns>如果 <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> 屬性是 <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" />，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsStar">
+      <summary>取得值，這個值表示 <see cref="T:Windows.UI.Xaml.GridLength" /> 是否包含以可用空間的加權比例表示的值。</summary>
+      <returns>如果 <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> 屬性是 <see cref="F:Windows.UI.Xaml.GridUnitType.Star" />，則為 true，否則為 false。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.op_Equality(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.GridLength" /> 結構是否相等。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.GridLength" /> 執行個體具有相同值和 <see cref="T:Windows.UI.Xaml.GridUnitType" /> 則為 true，否則為 false。</returns>
+      <param name="gl1">要比較之 <see cref="T:Windows.UI.Xaml.GridLength" /> 的第一個執行個體。</param>
+      <param name="gl2">要比較的第二個 <see cref="T:Windows.UI.Xaml.GridLength" /> 執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.op_Inequality(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.GridLength" /> 結構，判斷它們是否不相等。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.GridLength" /> 執行個體沒有相同值和 <see cref="T:Windows.UI.Xaml.GridUnitType" />，則為 true，否則為 false。</returns>
+      <param name="gl1">要比較之 <see cref="T:Windows.UI.Xaml.GridLength" /> 的第一個執行個體。</param>
+      <param name="gl2">要比較的第二個 <see cref="T:Windows.UI.Xaml.GridLength" /> 執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.ToString">
+      <summary>傳回 <see cref="T:Windows.UI.Xaml.GridLength" /> 的 <see cref="T:System.String" /> 表示。</summary>
+      <returns>目前 <see cref="T:Windows.UI.Xaml.GridLength" /> 結構的 <see cref="T:System.String" /> 表示。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.Value">
+      <summary>取得 <see cref="T:System.Double" />，它表示 <see cref="T:Windows.UI.Xaml.GridLength" /> 的值。</summary>
+      <returns>
+        <see cref="T:System.Double" />，表示目前執行個體的值。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.GridUnitType">
+      <summary>描述 <see cref="T:Windows.UI.Xaml.GridLength" /> 物件所含的值種類。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Auto">
+      <summary>大小是由內容物件的大小屬性決定。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Pixel">
+      <summary>此值是以像素表示。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Star">
+      <summary>此值是以可用空間的加權比例表示。</summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.LayoutCycleException">
+      <summary>配置週期擲回的例外狀況。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor">
+      <summary>使用預設值，初始化 <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor(System.String)">
+      <summary>使用指定的錯誤訊息，初始化 <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> 類別的新執行個體。</summary>
+      <param name="message">解釋例外狀況原因的錯誤訊息。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的錯誤訊息和造成這個例外狀況原因的內部例外狀況參考，初始化 <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> 類別的新執行個體。</summary>
+      <param name="message">解釋例外狀況原因的錯誤訊息。</param>
+      <param name="innerException">導致目前例外狀況發生的例外狀況；如果沒有指定任何的內部例外狀況，則為 null。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Thickness">
+      <summary>描述矩形周圍框架的粗細。有四個 <see cref="T:System.Double" /> 值分別描述矩形的 <see cref="P:Windows.UI.Xaml.Thickness.Left" />、<see cref="P:Windows.UI.Xaml.Thickness.Top" />、<see cref="P:Windows.UI.Xaml.Thickness.Right" /> 和 <see cref="P:Windows.UI.Xaml.Thickness.Bottom" /> 端。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.#ctor(System.Double)">
+      <summary>初始化 <see cref="T:Windows.UI.Xaml.Thickness" /> 結構，它在每邊都統一指定長度。</summary>
+      <param name="uniformLength">統一套用至週框四邊的長度。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>初始化 <see cref="T:Windows.UI.Xaml.Thickness" /> 結構，它在矩形的每邊都套用特定長度 (以 <see cref="T:System.Double" /> 的格式提供)。</summary>
+      <param name="left">矩形左邊的粗細。</param>
+      <param name="top">矩形上邊的粗細。</param>
+      <param name="right">矩形右邊的粗細。</param>
+      <param name="bottom">矩形下邊的粗細。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Bottom">
+      <summary>取得或設定週框下邊的寬度 (以像素為單位)。</summary>
+      <returns>
+        <see cref="T:System.Double" />，表示這個 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體指定的週框下邊寬度 (以像素為單位)。預設值為 0。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.Equals(System.Object)">
+      <summary>比較這個 <see cref="T:Windows.UI.Xaml.Thickness" /> 結構與其他 <see cref="T:System.Object" /> 是否相等。</summary>
+      <returns>如果兩個物件相等則為 true，否則為 false。</returns>
+      <param name="obj">要比較的物件。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.Equals(Windows.UI.Xaml.Thickness)">
+      <summary>比較這個 <see cref="T:Windows.UI.Xaml.Thickness" /> 結構與另一個 <see cref="T:Windows.UI.Xaml.Thickness" /> 結構是否相等。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體相等則為 true，否則為 false。</returns>
+      <param name="thickness">要比較是否相等的 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.GetHashCode">
+      <summary>傳回結構的雜湊碼。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體的雜湊程式碼。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Left">
+      <summary>取得或設定週框左邊的寬度 (以像素為單位)。</summary>
+      <returns>
+        <see cref="T:System.Double" />，表示這個 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體指定的週框左邊寬度 (以像素為單位)。預設值為 0。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.op_Equality(Windows.UI.Xaml.Thickness,Windows.UI.Xaml.Thickness)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.Thickness" /> 結構的值是否相等。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體相等則為 true，否則為 false。</returns>
+      <param name="t1">要比較的第一個結構。</param>
+      <param name="t2">要比較的另一個結構。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.op_Inequality(Windows.UI.Xaml.Thickness,Windows.UI.Xaml.Thickness)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.Thickness" /> 結構是否相等。</summary>
+      <returns>如果兩個 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體相等則為 true，否則為 false。</returns>
+      <param name="t1">要比較的第一個結構。</param>
+      <param name="t2">要比較的另一個結構。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Right">
+      <summary>取得或設定週框右邊的寬度 (以像素為單位)。</summary>
+      <returns>
+        <see cref="T:System.Double" />，表示這個 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體指定的週框右邊寬度 (以像素為單位)。預設值為 0。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Top">
+      <summary>取得或設定週框上邊的寬度 (以像素為單位)。</summary>
+      <returns>一個 <see cref="T:System.Double" />，表示這個 <see cref="T:Windows.UI.Xaml.Thickness" /> 執行個體指定的週框上邊寬度 (以像素為單位)。預設值為 0。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.ToString">
+      <summary>傳回 <see cref="T:Windows.UI.Xaml.Thickness" /> 結構的字串表示。</summary>
+      <returns>表示 <see cref="T:Windows.UI.Xaml.Thickness" /> 值的 <see cref="T:System.String" />。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Automation.ElementNotAvailableException">
+      <summary>嘗試存取使用者介面自動化項目 (對應於已無法使用的使用者介面部分) 時，會擲回例外狀況。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor">
+      <summary>使用預設值，初始化 <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor(System.String)">
+      <summary>使用指定的錯誤訊息，初始化 <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> 類別的新執行個體。</summary>
+      <param name="message">描述錯誤的訊息。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的錯誤訊息和造成這個例外狀況原因的內部例外狀況參考，初始化 <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> 類別的新執行個體。</summary>
+      <param name="message">描述錯誤的訊息。</param>
+      <param name="innerException">導致目前例外狀況發生的例外狀況；如果沒有指定任何的內部例外狀況，則為 null。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Automation.ElementNotEnabledException">
+      <summary>嘗試透過使用者介面自動化來操作未啟用的控制項時，所擲回的例外狀況。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor">
+      <summary>使用預設值，初始化 <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor(System.String)">
+      <summary>使用指定的錯誤訊息，初始化 <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> 類別的新執行個體。</summary>
+      <param name="message">描述錯誤的訊息。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的錯誤訊息和造成這個例外狀況原因的內部例外狀況參考，初始化 <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> 類別的新執行個體。</summary>
+      <param name="message">描述錯誤的訊息。</param>
+      <param name="innerException">導致目前例外狀況發生的例外狀況；如果沒有指定任何的內部例外狀況，則為 null。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 可用來描述由 Windows.UI.Xaml.Controls.ItemContainerGenerator 管理之項目的位置。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.#ctor(System.Int32,System.Int32)">
+      <summary>使用指定的索引和位移，初始化 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 的新執行個體。</summary>
+      <param name="index">
+        <see cref="T:System.Int32" /> 索引，相對於產生的 (實現的) 項目。-1 是一個參考項目清單開端或尾端之虛構項目的特殊值。</param>
+      <param name="offset">
+        <see cref="T:System.Int32" /> 位移與索引項目附近之未產生的 (未實現的) 項目相關。0 的位移會參考索引項目本身，1 的位移會參考下一個未產生的 (未實現的) 項目，而 -1 的位移則會參考前一個項目。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Equals(System.Object)">
+      <summary>比較 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 之指定執行個體和目前執行個體的值是否相等。</summary>
+      <returns>如果 <paramref name="o" /> 和 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 的執行個體具有相同的值，則為 true。</returns>
+      <param name="o">要比較的 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.GetHashCode">
+      <summary>傳回這個 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 的雜湊程式碼。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 的雜湊程式碼。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Index">
+      <summary>取得或設定與產生的 (實現的) 項目相關的 <see cref="T:System.Int32" /> 索引。</summary>
+      <returns>
+        <see cref="T:System.Int32" /> 索引，相對於產生的 (實現的) 項目。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Offset">
+      <summary>取得或設定與索引項目附近之未產生的 (未實現的) 項目相關的 <see cref="T:System.Int32" /> 位移。</summary>
+      <returns>
+        <see cref="T:System.Int32" /> 位移與索引項目附近之未產生的 (未實現的) 項目相關。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.op_Equality(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition,Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 物件的值是否相等。</summary>
+      <returns>如果兩個物件相等則為 true，否則為 false。</returns>
+      <param name="gp1">要比較的第一個執行個體。</param>
+      <param name="gp2">要比較的第二個執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.op_Inequality(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition,Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 物件的值是否不相等。</summary>
+      <returns>如果值不相等則為 true，否則為 false。</returns>
+      <param name="gp1">要比較的第一個執行個體。</param>
+      <param name="gp2">要比較的第二個執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.ToString">
+      <summary>傳回這個 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 之執行個體的字串表示。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> 之執行個體的字串表示。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Markup.XamlParseException">
+      <summary>剖析 Xaml 期間發生錯誤時所擲回的例外狀況。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor">
+      <summary>使用預設值，初始化 <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor(System.String)">
+      <summary>使用指定的錯誤訊息，初始化 <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> 類別的新執行個體。</summary>
+      <param name="message">解釋例外狀況原因的錯誤訊息。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor(System.String,System.Exception)">
+      <summary>使用指定的錯誤訊息和造成這個例外狀況原因的內部例外狀況參考，初始化 <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> 類別的新執行個體。</summary>
+      <param name="message">解釋例外狀況原因的錯誤訊息。</param>
+      <param name="innerException">導致目前例外狀況發生的例外狀況；如果沒有指定任何的內部例外狀況，則為 null。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Matrix">
+      <summary> 表示 3x3 仿射轉換矩陣，用於二維空間中的轉換。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>初始化 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構。</summary>
+      <param name="m11">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的 <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" /> 係數。</param>
+      <param name="m12">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的 <see cref="P:Windows.UI.Xaml.Media.Matrix.M12" /> 係數。</param>
+      <param name="m21">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的 <see cref="P:Windows.UI.Xaml.Media.Matrix.M21" /> 係數。</param>
+      <param name="m22">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的 <see cref="P:Windows.UI.Xaml.Media.Matrix.M22" /> 係數。</param>
+      <param name="offsetX">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的 <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" /> 係數。</param>
+      <param name="offsetY">
+        <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的 <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> 係數。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Equals(System.Object)">
+      <summary>判斷所指定 <see cref="T:System.Object" /> 的 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構是否與這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 相同。</summary>
+      <returns>如果 <paramref name="o" /> 的 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構與這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構相同則為 true，否則為 false。</returns>
+      <param name="o">要比較的 <see cref="T:System.Object" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Equals(Windows.UI.Xaml.Media.Matrix)">
+      <summary>判斷指定的 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構是否與這個執行個體相同。</summary>
+      <returns>如果執行個體相等，則為 true，否則為 false。</returns>
+      <param name="value">要與這個執行個體 (Instance) 比較的 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 執行個體。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.GetHashCode">
+      <summary>傳回這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的雜湊程式碼。</summary>
+      <returns>這個執行個體的雜湊碼。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.Identity">
+      <summary>取得單位 <see cref="T:Windows.UI.Xaml.Media.Matrix" />。</summary>
+      <returns>單位矩陣。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.IsIdentity">
+      <summary>取得值，這個值表示這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構是否為單位矩陣。</summary>
+      <returns>如果 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構是單位矩陣則為 true，否則為 false。預設為 true。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M11">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 之結構第一列第一行的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 之第一列第一行的值。預設值為 1。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M12">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構之第一列第二行的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 之第一列第二行的值。預設值為 0。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M21">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構之第二列第一行的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 之第二列第一行的值。預設值為 0。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M22">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構之第二列第二行的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構之第二列第二行的值。預設值為 1。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.OffsetX">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構之第三列第一行的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構之第三列第一行的值。預設值為 0。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.OffsetY">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構之第三列第二行的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構之第三列第二行的值。預設值為 0。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.op_Equality(Windows.UI.Xaml.Media.Matrix,Windows.UI.Xaml.Media.Matrix)">
+      <summary>判斷兩個指定的 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構是否相同。</summary>
+      <returns>如果 <paramref name="matrix1" /> 和 <paramref name="matrix2" /> 相同則為 true，否則為 false。</returns>
+      <param name="matrix1">要比較的第一個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構。</param>
+      <param name="matrix2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.op_Inequality(Windows.UI.Xaml.Media.Matrix,Windows.UI.Xaml.Media.Matrix)">
+      <summary>判斷兩個指定的 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構是否不同。</summary>
+      <returns>如果 <paramref name="matrix1" /> 和 <paramref name="matrix2" /> 不同則為 true，否則為 false。</returns>
+      <param name="matrix1">要比較的第一個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構。</param>
+      <param name="matrix2">要比較的第二個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>如需這個成員的說明，請參閱 <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />。</summary>
+      <returns>字串，包含目前執行個體的值，且該值採用指定的格式。</returns>
+      <param name="format">指定要使用之格式的字串。-或-null，使用定義給 IFormattable 實作 (Implementation) 類型的預設格式。</param>
+      <param name="provider">IFormatProvider，用來格式化數值。-或-null，用來從作業系統的目前地區設定 (Locale) 取得數值格式資訊。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.ToString">
+      <summary>建立這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的 <see cref="T:System.String" /> 表示。</summary>
+      <returns>
+        <see cref="T:System.String" />，包含這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 的 <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M12" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M21" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M22" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" /> 和 <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> 值。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.ToString(System.IFormatProvider)">
+      <summary>使用文化特性特定格式資訊，建立這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 結構的 <see cref="T:System.String" /> 表示。</summary>
+      <returns>
+        <see cref="T:System.String" />，包含這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 的 <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M12" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M21" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.M22" />、<see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" /> 和 <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> 值。</returns>
+      <param name="provider">特定文化特性的格式資訊。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Transform(Windows.Foundation.Point)">
+      <summary>依 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 轉換指定的點，然後傳回結果。</summary>
+      <returns>依這個 <see cref="T:Windows.UI.Xaml.Media.Matrix" /> 轉換 <paramref name="point" /> 的結果。</returns>
+      <param name="point">要轉換的點。</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.KeyTime">
+      <summary>指定動畫期間特定主要畫面格應該出現的時間。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(System.Object)">
+      <summary>表示某個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 是否等於這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</summary>
+      <returns>如果 <paramref name="value" /> 是表示與這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 時間長度相同的 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />，則為 true，否則為 false。</returns>
+      <param name="value">要和這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 比較的 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>表示指定的 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 是否等於這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</summary>
+      <returns>如果 <paramref name="value" /> 等於這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 則為 true，否則為 false。</returns>
+      <param name="value">要和這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 比較的 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>表示兩個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 值是否相等。</summary>
+      <returns>如果 <paramref name="keyTime1" /> 和 <paramref name="keyTime2" /> 的值相等，則為 true，否則為 false。</returns>
+      <param name="keyTime1">要比較的第一個值。</param>
+      <param name="keyTime2">要比較的第二個值。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.FromTimeSpan(System.TimeSpan)">
+      <summary>使用提供的 <see cref="T:System.TimeSpan" />，建立新的 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</summary>
+      <returns>新 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />，初始化為 <paramref name="timeSpan" /> 的值。</returns>
+      <param name="timeSpan">新 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 的值。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">指定的 <paramref name="timeSpan" /> 位於允許範圍之外。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.GetHashCode">
+      <summary>傳回表示這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 的雜湊程式碼。</summary>
+      <returns>雜湊碼識別項。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Equality(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 值是否相等。</summary>
+      <returns>如果 <paramref name="keyTime1" /> 和 <paramref name="keyTime2" /> 相等，則為 true，否則為 false。</returns>
+      <param name="keyTime1">要比較的第一個值。</param>
+      <param name="keyTime2">要比較的第二個值。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Implicit(System.TimeSpan)~Windows.UI.Xaml.Media.Animation.KeyTime">
+      <summary>將 <see cref="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan" /> 隱含轉換為 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</summary>
+      <returns>建立的 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />。</returns>
+      <param name="timeSpan">要轉換的 <see cref="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan" /> 值。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Inequality(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 值是否不相等。</summary>
+      <returns>如果 <paramref name="keyTime1" /> 和 <paramref name="keyTime2" /> 不相等，則為 true，否則為 false。</returns>
+      <param name="keyTime1">要比較的第一個值。</param>
+      <param name="keyTime2">要比較的第二個值。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan">
+      <summary>取得主要畫面格結束的時間，以相對於動畫開始的時間表示。</summary>
+      <returns>主要畫面格結束的時間，以相對於動畫開始的時間表示。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.ToString">
+      <summary>傳回這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 的字串表示。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> 的字串表示。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior">
+      <summary>描述 Windows.UI.Xaml.Media.Animation.Timeline 如何重複其簡單的持續時間。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.#ctor(System.Double)">
+      <summary>使用指定的反覆運算計數初始化 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 結構的新執行個體。</summary>
+      <param name="count">大於或等於 0 的數字，用來指定動畫的反覆次數。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="count" /> 評估為無限，即不是數字的值或者是負值。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.#ctor(System.TimeSpan)">
+      <summary>使用指定的重複持續時間初始化 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 結構的新執行個體。</summary>
+      <param name="duration">Windows.UI.Xaml.Media.Animation.Timeline 應該作用 (其作用中持續時間) 的時間總長度。</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="duration" /> 評估為負數。</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Count">
+      <summary>取得 Windows.UI.Xaml.Media.Animation.Timeline 應該重複的次數。</summary>
+      <returns>要重複的反覆項目次數。</returns>
+      <exception cref="T:System.InvalidOperationException">這個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 描述重複的持續時間，而不是反覆計數。</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Duration">
+      <summary>取得 Windows.UI.Xaml.Media.Animation.Timeline 應該作用的時間總長度。</summary>
+      <returns>時刻表應該作用的時間總長度。</returns>
+      <exception cref="T:System.InvalidOperationException">這個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 描述反覆計數，而不是重複的持續時間。</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(System.Object)">
+      <summary>表示指定的物件是否等於此 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />。</summary>
+      <returns>如果 <paramref name="value" /> 是 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> (表示與此 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 相同的重複行為) 則為 true，否則為 false。</returns>
+      <param name="value">要與這個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 比較的物件。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>傳回值，這個值表示指定的 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 是否等於此 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />。</summary>
+      <returns>如果 <paramref name="repeatBehavior" /> 的型別和重複行為都等於此 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 則為 true，否則為 false。</returns>
+      <param name="repeatBehavior">要與此 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 比較的值。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>表示兩個指定的 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 值是否相等。</summary>
+      <returns>如果 <paramref name="repeatBehavior1" /> 和 <paramref name="repeatBehavior2" /> 的型別與重複行為都相等則為 true，否則為 false。</returns>
+      <param name="repeatBehavior1">要比較的第一個值。</param>
+      <param name="repeatBehavior2">要比較的第二個值。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Forever">
+      <summary>取得 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />，指定無限的重複次數。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />，指定無限的重複次數。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.GetHashCode">
+      <summary>傳回這個執行個體的雜湊碼。</summary>
+      <returns>雜湊碼。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.HasCount">
+      <summary>取得值，這個值指出重複行為是否具有指定的反覆計數。</summary>
+      <returns>如果執行個體表示反覆計數，則為 true，否則為 false。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.HasDuration">
+      <summary>取得值，這個值指出重複行為是否具有指定之重複的持續時間。</summary>
+      <returns>如果執行個體表示重複的持續時間，則為 true，否則為 false。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.op_Equality(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>表示兩個指定的 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 值是否相等。</summary>
+      <returns>如果 <paramref name="repeatBehavior1" /> 和 <paramref name="repeatBehavior2" /> 的型別與重複行為都相等則為 true，否則為 false。</returns>
+      <param name="repeatBehavior1">要比較的第一個值。</param>
+      <param name="repeatBehavior2">要比較的第二個值。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.op_Inequality(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>表示兩個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 值是否不相等。</summary>
+      <returns>如果 <paramref name="repeatBehavior1" /> 和 <paramref name="repeatBehavior2" /> 具有不同的型別或是不相等的重複行為屬性，則為 true，否則為 false。</returns>
+      <param name="repeatBehavior1">要比較的第一個值。</param>
+      <param name="repeatBehavior2">要比較的第二個值。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>如需這個成員的說明，請參閱 <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />。</summary>
+      <returns>字串，包含目前執行個體的值，且該值採用指定的格式。</returns>
+      <param name="format">指定要使用之格式的字串，若要使用針對 IFormattable 實作 (Implementation) 之型別定義的預設格式，則為 null。</param>
+      <param name="formatProvider">用來格式化值的 IFormatProvider，若要取得作業系統之目前地區設定 (Locale) 的數值格式資訊，則為 null。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.ToString">
+      <summary>傳回這個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 的字串表示。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 的字串表示。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.ToString(System.IFormatProvider)">
+      <summary>以指定的格式傳回這個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 的字串表示。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 的字串表示。</returns>
+      <param name="formatProvider">用於建構傳回值的格式。</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Type">
+      <summary>取得或設定其中一個 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType" /> 值，這個值描述行為重複的方式。</summary>
+      <returns>重複行為的型別。</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType">
+      <summary>指定 <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 原始值所表示的重複模式。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Count">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 表示時間軸應重複固定次數之完整回合的案例。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Duration">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 表示時間軸應重複一段持續時間的案例，這可能導致動畫中途結束。</summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Forever">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> 表示時間軸應無期限重複的案例。</summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Media3D.Matrix3D">
+      <summary>表示 4 × 4 矩陣，用於三維 (3-D) 空間中的轉換。</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>初始化 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 類別的新執行個體。</summary>
+      <param name="m11">新矩陣的 (1,1) 欄位值。</param>
+      <param name="m12">新矩陣的 (1,2) 欄位值。</param>
+      <param name="m13">新矩陣的 (1,3) 欄位值。</param>
+      <param name="m14">新矩陣的 (1,4) 欄位值。</param>
+      <param name="m21">新矩陣的 (2,1) 欄位值。</param>
+      <param name="m22">新矩陣的 (2,2) 欄位值。</param>
+      <param name="m23">新矩陣的 (2,3) 欄位值。</param>
+      <param name="m24">新矩陣的 (2,4) 欄位值。</param>
+      <param name="m31">新矩陣的 (3,1) 欄位值。</param>
+      <param name="m32">新矩陣的 (3,2) 欄位值。</param>
+      <param name="m33">新矩陣的 (3,3) 欄位值。</param>
+      <param name="m34">新矩陣的 (3,4) 欄位值。</param>
+      <param name="offsetX">新矩陣的 X 位移 (Offset) 欄位值。</param>
+      <param name="offsetY">新矩陣的 Y 位移欄位值。</param>
+      <param name="offsetZ">新矩陣的 Z 位移欄位值。</param>
+      <param name="m44">新矩陣的 (4,4) 欄位值。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Equals(System.Object)">
+      <summary>測試兩個矩陣之間是否相等。</summary>
+      <returns>如果兩個矩陣相等則為 true，否則為 false。</returns>
+      <param name="o">要測試是否相等的物件。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Equals(Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>測試兩個矩陣之間是否相等。</summary>
+      <returns>如果兩個矩陣相等則為 true，否則為 false。</returns>
+      <param name="value">要比較的 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.GetHashCode">
+      <summary>傳回這個矩陣的雜湊碼。</summary>
+      <returns>整數，用於指定這個矩陣的雜湊碼。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.HasInverse">
+      <summary>取得值，這個值表示這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 是否可以反轉。</summary>
+      <returns>如果 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 具有反轉則為 true，否則為 false。預設值是 true。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.Identity">
+      <summary>將 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 結構變更為單位 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 識別。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Invert">
+      <summary>反轉這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 結構。</summary>
+      <exception cref="T:System.InvalidOperationException">無法反轉矩陣。</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.IsIdentity">
+      <summary>判斷這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 結構是否為單位 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />。</summary>
+      <returns>如果 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 為單位 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />，則為 true；否則為 false。預設值是 true。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M11">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第一列第一欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 結構之第一列第一欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M12">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第一列第二欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第一列第二行的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M13">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第一列第三欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第一列第三欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M14">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第一列第四欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第一列第四欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M21">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第二列第一欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第二列第一行的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M22">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第二列第二欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第二列第二欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M23">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第二列第三欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第二列第三欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M24">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第二列第四欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 中第二列第四欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M31">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第三列第一欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第三列第一欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M32">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第三列第二欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第三列第二欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M33">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第三列第三欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第三列第三欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M34">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第三列第四欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第三列第四欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M44">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第四列第四欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 中第四列第四欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetX">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第四列第一欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第四列第一欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetY">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第四列第二欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 中第四列第二欄的值。</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetZ">
+      <summary>取得或設定這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第四列第三欄的值。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 之第四列第三欄的值。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Equality(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 執行個體是否完全相等。</summary>
+      <returns>如果兩個矩陣相等則為 true，否則為 false。</returns>
+      <param name="matrix1">要比較的第一個矩陣。</param>
+      <param name="matrix2">要比較的第二個矩陣。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Inequality(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>比較兩個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 執行個體是否不相等。</summary>
+      <returns>如果矩陣不同則為 true，否則為 false。</returns>
+      <param name="matrix1">要比較的第一個矩陣。</param>
+      <param name="matrix2">要比較的第二個矩陣。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Multiply(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>將指定的矩陣相乘。</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />，為乘法的結果。</returns>
+      <param name="matrix1">要相乘的矩陣。</param>
+      <param name="matrix2">第一個矩陣乘以的矩陣。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>如需這個成員的說明，請參閱 <see cref="M:System.IFormattable.ToString" />。</summary>
+      <returns>目前執行個體的值，使用指定的格式。</returns>
+      <param name="format">要使用的格式。</param>
+      <param name="provider">要使用的提供者。</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.ToString">
+      <summary>建立這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 的字串表示。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 的字串表示。</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.ToString(System.IFormatProvider)">
+      <summary>建立這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 的字串表示。</summary>
+      <returns>這個 <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> 的字串表示。</returns>
+      <param name="provider">指定了文化特性 (Culture) 的格式資訊。</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Management.Deployment.Preview.DeploymentPreviewContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Management.Deployment.Preview.ClassicAppManager">
+      <summary>A static class that is used to find installed classic desktop apps.</summary>
+    </member>
+    <member name="M:Windows.Management.Deployment.Preview.ClassicAppManager.FindInstalledApp(System.String)">
+      <summary>Finds and returns info for an installed classic desktop app.</summary>
+      <param name="appUninstallKey">The uninstall registry key for the app.</param>
+      <returns>Info for the app.</returns>
+    </member>
+    <member name="T:Windows.Management.Deployment.Preview.DeploymentPreviewContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Management.Deployment.Preview.InstalledClassicAppInfo">
+      <summary>Provides display info for an installed classic desktop app.</summary>
+    </member>
+    <member name="P:Windows.Management.Deployment.Preview.InstalledClassicAppInfo.DisplayName">
+      <summary>Gets the display name for an installed classic desktop app.</summary>
+      <returns>The name of the app as a String that can be displayed.</returns>
+    </member>
+    <member name="P:Windows.Management.Deployment.Preview.InstalledClassicAppInfo.DisplayVersion">
+      <summary>Gets the display version for an installed classic desktop app.</summary>
+      <returns>The version of the app as a String that can be displayed.</returns>
+    </member>
+  </members>
+</doc>

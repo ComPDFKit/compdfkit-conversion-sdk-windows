@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComPDF_Conversion_Demo"
         mc:Ignorable="d"
-        Title="ComPDF Conversion SDK V3.2.0" Height="450" Width="800"
+        Title="ComPDF Conversion SDK V4.1.0" Height="450" Width="800"
         WindowStartupLocation ="CenterScreen"
         Loaded="Window_Loaded">
     <Grid>
@@ -21,7 +21,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="Convert Type : " Width="90" Height="30" TextAlignment="Center"/>
+                <TextBlock Text="Convert Type : " Width="90" Height="30" TextAlignment="Center"/>
                 <ComboBox x:Name="ConvertType" Width="193" Height="30" SelectedIndex="0" Margin="10">
                     <ComboBoxItem x:Name="Word" Content="Word" />
                     <ComboBoxItem x:Name="Excel" Content="Excel" />
@@ -29,6 +29,7 @@
                     <ComboBoxItem x:Name="Html" Content="HTML" />
                     <ComboBoxItem x:Name="Rtf" Content="RTF" />
                     <ComboBoxItem x:Name="SearchablePDF" Content="Searchable PDF" />
+                    <ComboBoxItem x:Name="Ofd" Content="Searchable OFD"/>
                     <ComboBoxItem x:Name="Txt" Content="TXT"/>
                     <ComboBoxItem x:Name="Image" Content="Image"/>
                     <ComboBoxItem x:Name="Json" Content="JSON"/>
@@ -38,7 +39,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="Progress : " Width="80" Height="30" TextAlignment="Center"/>
+                <TextBlock Text="Progress : " Width="80" Height="30" TextAlignment="Center"/>
                 <TextBlock x:Name="Progress" Width="300" Height="30"/>
             </StackPanel>
 

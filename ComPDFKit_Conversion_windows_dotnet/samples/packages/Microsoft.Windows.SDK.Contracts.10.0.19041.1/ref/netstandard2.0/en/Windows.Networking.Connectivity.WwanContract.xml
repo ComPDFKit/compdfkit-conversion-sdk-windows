@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.Connectivity.WwanContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Networking.Connectivity.WwanConnectionProfileDetails">
+      <summary>Used to access information specific to a WWAN connection.</summary>
+    </member>
+    <member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.AccessPointName">
+      <summary>Indicates the name of the access point used to establish the WWAN connection.</summary>
+      <returns>The access point name.</returns>
+    </member>
+    <member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.HomeProviderId">
+      <summary>Indicates the Home Network Provider ID.</summary>
+      <returns>The Home Network Provider ID.</returns>
+    </member>
+    <member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.IPKind">
+      <summary>Gets a value that describes a level of supported IP.</summary>
+      <returns>A value that describes a level of supported IP.</returns>
+    </member>
+    <member name="P:Windows.Networking.Connectivity.WwanConnectionProfileDetails.PurposeGuids">
+      <summary>Gets a list of purpose group GUIDs.</summary>
+      <returns>A list of purpose group GUIDs.</returns>
+    </member>
+    <member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetCurrentDataClass">
+      <summary>Indicates the class of data service offered by the network currently in use for the WWAN connection.</summary>
+      <returns>The class of data service currently provided.</returns>
+    </member>
+    <member name="M:Windows.Networking.Connectivity.WwanConnectionProfileDetails.GetNetworkRegistrationState">
+      <summary>Retrieves the current network registration state for the WWAN connection.</summary>
+      <returns>The current network registration state.</returns>
+    </member>
+    <member name="T:Windows.Networking.Connectivity.WwanContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Networking.Connectivity.WwanDataClass">
+      <summary>Defines values used to indicate the class of data service provided by a WWAN network connection.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdo">
+      <summary>This network provides CDMA Evolution-Data Optimized (originally Data Only, 1xEDVO, also known as CDMA2000 1x EV-DO, or 1x EVDO) data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevA">
+      <summary>The network provides 1xEVDO RevA data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdoRevB">
+      <summary>The network provides 1xEVDO RevB data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xEvdv">
+      <summary>The network provides CDMA Evolution-Data/Voice (also known as CDMA 2000 1x EV-DV, or 1x EVDV) data service is supported.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma1xRtt">
+      <summary>The network provides CDMA 1x Radio Transmission Technology (1xRTT) data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Cdma3xRtt">
+      <summary>The network provides CDMA 3x Radio Transmission Technology (3xRTT) data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.CdmaUmb">
+      <summary>The network provides UMB data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Custom">
+      <summary>The network provides a data service not listed in this table.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Edge">
+      <summary>The network provides Enhanced Data for Global Evolution (EDGE).</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Gprs">
+      <summary>The network provides General Packet Radio Service (GPRS) data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsdpa">
+      <summary>The network provides High-Speed Downlink Packet Access (HSDPA) data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Hsupa">
+      <summary>The network provides High-Speed Uplink Packet Access (HSUPA) data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.LteAdvanced">
+      <summary>The network provides LTE Advanced data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.None">
+      <summary>The network does not provide a data service.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanDataClass.Umts">
+      <summary>The network provides Universal Mobile Telecommunications System (UMTS) data service.</summary>
+    </member>
+    <member name="T:Windows.Networking.Connectivity.WwanNetworkIPKind">
+      <summary>Defines constants that describe a level of supported IP. The values reflect the WWAN_IP_TYPE enumeration. You can use these values to determine which cellular profile to use (for example, to choose between IMS and SUPL).</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkIPKind.Ipv4">
+      <summary>Indicates support for IPv4.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkIPKind.Ipv4v6">
+      <summary>Indicates support for IPv4 with IPv6.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkIPKind.Ipv4v6v4Xlat">
+      <summary>Indicates support for 464XLAT (which allows clients on IPv6-only networks to access IPv4-only Internet services).</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkIPKind.Ipv6">
+      <summary>Indicates support for IPv6.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkIPKind.None">
+      <summary>Default support; indicates no specific level of support.</summary>
+    </member>
+    <member name="T:Windows.Networking.Connectivity.WwanNetworkRegistrationState">
+      <summary>Defines the network registration states for a WWAN connection.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Denied">
+      <summary>Registration of the connection with all available networks is denied. However, emergency voice calls may still be made. This value applies only to voice connections, and not to data connections.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Deregistered">
+      <summary>The connection is not registered with a network.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Home">
+      <summary>The connection is registered with a home network.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.None">
+      <summary>No networks found for this connection.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Partner">
+      <summary>The connection is registered with a roaming network partner.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Roaming">
+      <summary>The connection is registered with a roaming network.</summary>
+    </member>
+    <member name="F:Windows.Networking.Connectivity.WwanNetworkRegistrationState.Searching">
+      <summary>Searching for available networks.</summary>
+    </member>
+  </members>
+</doc>

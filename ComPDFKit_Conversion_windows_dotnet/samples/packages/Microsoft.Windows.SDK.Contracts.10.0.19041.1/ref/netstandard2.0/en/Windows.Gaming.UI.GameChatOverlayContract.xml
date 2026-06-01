@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Gaming.UI.GameChatOverlayContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Gaming.UI.GameChatMessageReceivedEventArgs">
+      <summary>Contains the event arguments for the MessageReceived event. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameChatMessageReceivedEventArgs.AppDisplayName">
+      <summary>The display name for the app that triggered the event. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>The display name for the app that triggered the event.</returns>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameChatMessageReceivedEventArgs.AppId">
+      <summary>The **Package Family Name (PFN)** of the app that triggered the event. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>The **Package Family Name (PFN)** of the app that triggered the event. Use this to identify the app.</returns>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameChatMessageReceivedEventArgs.Message">
+      <summary>The contents of the message. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>The contents of the message.</returns>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameChatMessageReceivedEventArgs.Origin">
+      <summary>The origin of the message (voice or text). This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>The origin of the message (voice or text).</returns>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameChatMessageReceivedEventArgs.SenderName">
+      <summary>The sender of the message (the *sender* parameter passed to the GameChatOverlay.AddMessage method). This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>The sender of the message (the *sender* parameter passed to the GameChatOverlay.AddMessage method).</returns>
+    </member>
+    <member name="T:Windows.Gaming.UI.GameChatOverlayContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Gaming.UI.GameChatOverlayMessageSource">
+      <summary>Provides an event that is raised every time the game chat receives a message, as well as a method to set the delay before the game chat overlay closes after receiving a message. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+    </member>
+    <member name="M:Windows.Gaming.UI.GameChatOverlayMessageSource.#ctor">
+      <summary>Constructor for the **GameChatOverlayMessageSource** class. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+    </member>
+    <member name="E:Windows.Gaming.UI.GameChatOverlayMessageSource.MessageReceived">
+      <summary>Event raised every time a message is received. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+    </member>
+    <member name="M:Windows.Gaming.UI.GameChatOverlayMessageSource.SetDelayBeforeClosingAfterMessageReceived(Windows.Foundation.TimeSpan)">
+      <summary>Sets the delay before the game chat overlay closes after receiving a message. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <param name="value">The delay before the game chat overlay closes.</param>
+    </member>
+  </members>
+</doc>

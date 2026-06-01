@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileHardwareTokenContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.System.Profile.HardwareIdentification">
+      <summary>Provides the ability to obtain a hardware identifier that represents the current hardware.</summary>
+    </member>
+    <member name="M:Windows.System.Profile.HardwareIdentification.GetPackageSpecificToken(Windows.Storage.Streams.IBuffer)">
+      <summary>Gets a hardware identifier (**ASHWID**) that represents the current hardware. The returned **ASHWID** will be different for each application package. In other words, this API will return different identifiers when called by two apps from different packages. It will return the same identifier when called by two apps that are part of the same package.</summary>
+      <param name="nonce">The cryptographic *nonce* is optional. The *nonce* is recommended when **ASHWID** needs to be verified on the cloud against replay attacks. In the scenarios where nonce is desired, the remote server should generate a random nonce and pass it to the client app, and then verify that the signature has the expected nonce once the **ASHWID** is received from the client system.</param>
+      <returns>The hardware Id information.</returns>
+    </member>
+    <member name="T:Windows.System.Profile.HardwareToken">
+      <summary>Represents a token that contains a hardware based identification that is sufficiently unique.</summary>
+    </member>
+    <member name="P:Windows.System.Profile.HardwareToken.Certificate">
+      <summary>Gets the certificate that is used to sign the Id and is used to help verify the authenticity of the Id.</summary>
+      <returns>The certificate used to sign the Id.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.HardwareToken.Id">
+      <summary>Gets the hardware identifier that identifies the device.</summary>
+      <returns>The id that identifies the device. This byte buffer contains a set of identifiers that represent the various hardware components found in the device.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.HardwareToken.Signature">
+      <summary>Gets the digital signature of hardware Id that helps verify the authenticity of returned Id.</summary>
+      <returns>The digital signature of Id.</returns>
+    </member>
+    <member name="T:Windows.System.Profile.ProfileHardwareTokenContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

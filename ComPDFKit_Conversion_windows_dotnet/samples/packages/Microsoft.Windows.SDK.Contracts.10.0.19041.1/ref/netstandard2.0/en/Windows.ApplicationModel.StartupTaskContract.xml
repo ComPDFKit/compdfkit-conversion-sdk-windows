@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.StartupTaskContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.StartupTask">
+      <summary>Represents a UWP app or a desktop application background task that runs at system startup or when the user logs in to their device.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.StartupTask.State">
+      <summary>Gets the state (enabled, disabled, or disabled by user) of the startup task.</summary>
+      <returns>The state of the startup task.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.StartupTask.TaskId">
+      <summary>Gets the Id of the startup task.</summary>
+      <returns>The Id of the startup task.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.StartupTask.Disable">
+      <summary>Disables the startup task.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.StartupTask.GetAsync(System.String)">
+      <summary>Gets a startup task by Id.</summary>
+      <param name="taskId">The Id of the startup task to get.</param>
+      <returns>When this method completes, it returns the startup task with the given Id.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.StartupTask.GetForCurrentPackageAsync">
+      <summary>Gets all startup tasks for the current app package.</summary>
+      <returns>When this method completes, it returns all startup tasks for the current app package.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.StartupTask.RequestEnableAsync">
+      <summary>Requests that the startup task be enabled. If the task was disabled by the user using Task Manager, this method will not override their choice and the user must re-enable the task manually.</summary>
+      <returns>When this method completes, it returns the state of the startup task.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.StartupTaskContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.StartupTaskState">
+      <summary>Represents the state (enabled, disabled, or disabled by user) of a startup task.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.StartupTaskState.Disabled">
+      <summary>The task is disabled.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.StartupTaskState.DisabledByPolicy">
+      <summary>The task is disabled by the administrator or group policy. Platforms that don't support startup tasks also report **DisabledByPolicy**.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.StartupTaskState.DisabledByUser">
+      <summary>The task was disabled by the user. It can only be re-enabled by the user.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.StartupTaskState.Enabled">
+      <summary>The task is enabled.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.StartupTaskState.EnabledByPolicy">
+      <summary>The task is enabled by the administrator or group policy.</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.WindowsRuntime.UI.Xaml</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.UI.Xaml.CornerRadius">
+      <summary>Описывает характеристик закругленного угла, например те, которые могут быть применены к Windows.UI.Xaml.Controls.Border.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.#ctor(System.Double)">
+      <summary>Инициализирует новую структуру <see cref="T:Windows.UI.Xaml.CornerRadius" />, применяя ко всем углам одинаковый радиус.</summary>
+      <param name="uniformRadius">Одинаковый радиус применяется ко всем четырем свойствам <see cref="T:Windows.UI.Xaml.CornerRadius" /> (<see cref="P:Windows.UI.Xaml.CornerRadius.TopLeft" />, <see cref="P:Windows.UI.Xaml.CornerRadius.TopRight" />, <see cref="P:Windows.UI.Xaml.CornerRadius.BottomRight" />, <see cref="P:Windows.UI.Xaml.CornerRadius.BottomLeft" />).</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>Инициализирует новый экземпляр структуры <see cref="T:Windows.UI.Xaml.CornerRadius" />, применяя к углам определенные значения радиуса.</summary>
+      <param name="topLeft">Задает начальное свойство <see cref="P:Windows.UI.Xaml.CornerRadius.TopLeft" />.</param>
+      <param name="topRight">Задает начальное свойство <see cref="P:Windows.UI.Xaml.CornerRadius.TopRight" />.</param>
+      <param name="bottomRight">Задает начальное свойство <see cref="P:Windows.UI.Xaml.CornerRadius.BottomLeft" />.</param>
+      <param name="bottomLeft">Задает начальное свойство <see cref="P:Windows.UI.Xaml.CornerRadius.BottomRight" />.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.BottomLeft">
+      <summary>Получает или задает радиус изгиба (в пикселях) левого нижнего угла объекта, для которого применен <see cref="T:Windows.UI.Xaml.CornerRadius" />.</summary>
+      <returns>Значение типа <see cref="T:System.Double" />, представляющее радиус изгиба (в пикселях) левого нижнего угла объекта, для которого применен <see cref="T:Windows.UI.Xaml.CornerRadius" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.BottomRight">
+      <summary>Получает или задает радиус изгиба (в пикселях) правого нижнего угла объекта, для которого применен <see cref="T:Windows.UI.Xaml.CornerRadius" />.</summary>
+      <returns>Значение типа <see cref="T:System.Double" />, представляющее радиус изгиба (в пикселях) правого нижнего угла объекта, для которого применен <see cref="T:Windows.UI.Xaml.CornerRadius" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.Equals(System.Object)">
+      <summary>Сравнивает данную структуру <see cref="T:Windows.UI.Xaml.CornerRadius" /> с другим объектом на предмет их равенства.</summary>
+      <returns>true, если два объекта равны; в противном случае false.</returns>
+      <param name="obj">Сравниваемый объект.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.Equals(Windows.UI.Xaml.CornerRadius)">
+      <summary>Сравнивает данную структуру <see cref="T:Windows.UI.Xaml.CornerRadius" /> с другой структурой <see cref="T:Windows.UI.Xaml.CornerRadius" /> для определения равенства.</summary>
+      <returns>Значение true если два экземпляра <see cref="T:Windows.UI.Xaml.CornerRadius" /> равны; в противном случае — значение false.</returns>
+      <param name="cornerRadius">Экземпляр <see cref="T:Windows.UI.Xaml.CornerRadius" /> для сравнения на предмет их равенства.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.GetHashCode">
+      <summary>Возвращает  хэш-код  данной структуры.</summary>
+      <returns>Хэш-код для данного объекта <see cref="T:Windows.UI.Xaml.CornerRadius" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.op_Equality(Windows.UI.Xaml.CornerRadius,Windows.UI.Xaml.CornerRadius)">
+      <summary>Сравнивает значение двух структур <see cref="T:Windows.UI.Xaml.CornerRadius" />, на предмет равенства.</summary>
+      <returns>true если два экземпляра <see cref="T:Windows.UI.Xaml.CornerRadius" /> равны, в противном случае — false.</returns>
+      <param name="cr1">Первая сравниваемая структура.</param>
+      <param name="cr2">Вторая сравниваемая структура.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.op_Inequality(Windows.UI.Xaml.CornerRadius,Windows.UI.Xaml.CornerRadius)">
+      <summary>Сравнивает две структуры <see cref="T:Windows.UI.Xaml.CornerRadius" />, чтобы выявить различие. </summary>
+      <returns>true если два экземпляра <see cref="T:Windows.UI.Xaml.CornerRadius" /> не равны; в противном случае — значение false.</returns>
+      <param name="cr1">Первая сравниваемая структура.</param>
+      <param name="cr2">Вторая сравниваемая структура.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.TopLeft">
+      <summary>Получает или задает радиус изгиба (в пикселях) левого верхнего угла объекта, для которого применен <see cref="T:Windows.UI.Xaml.CornerRadius" />.</summary>
+      <returns>Значение типа <see cref="T:System.Double" />, представляющее радиус изгиба (в пикселях) левого верхнего угла объекта, для которого применен <see cref="T:Windows.UI.Xaml.CornerRadius" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.TopRight">
+      <summary>Получает или задает радиус изгиба (в пикселях) правого верхнего угла объекта, для которого применен <see cref="T:Windows.UI.Xaml.CornerRadius" />.</summary>
+      <returns>Значение типа <see cref="T:System.Double" />, представляющее радиус изгиба (в пикселях) правого верхнего угла объекта, для которого применен <see cref="T:Windows.UI.Xaml.CornerRadius" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.ToString">
+      <summary>Возвращает строковое представление структуры <see cref="T:Windows.UI.Xaml.CornerRadius" />.</summary>
+      <returns>
+        <see cref="T:System.String" />, предоставляющее, <see cref="T:Windows.UI.Xaml.CornerRadius" /> значение.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Duration">
+      <summary>Представляет продолжительность периода нахождения Windows.UI.Xaml.Media.Animation.Timeline в активном состоянии.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.#ctor(System.TimeSpan)">
+      <summary>Выполняет инициализацию нового экземпляра структуры <see cref="T:Windows.UI.Xaml.Duration" /> с использованием предоставленного <see cref="T:System.TimeSpan" />.</summary>
+      <param name="timeSpan">Представляет первоначальный интервал времени.</param>
+      <exception cref="T:System.ArgumentException">Значение параметра <paramref name="timeSpan" /> оценивается меньше, чем значение <see cref="F:System.TimeSpan.Zero" />.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Add(Windows.UI.Xaml.Duration)">
+      <summary>Суммирует значение указанного объекта <see cref="T:Windows.UI.Xaml.Duration" /> со значением данного объекта <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Если участвующие объекты <see cref="T:Windows.UI.Xaml.Duration" /> имеют значения, возвращается объект <see cref="T:Windows.UI.Xaml.Duration" />, представляющий суммарное значение.В противном случае метод возвращает значение null.</returns>
+      <param name="duration">Экземпляр <see cref="T:Windows.UI.Xaml.Duration" />, представляющий значение текущего экземпляра плюс <paramref name="duration" />.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.Automatic">
+      <summary>Получает значение <see cref="T:Windows.UI.Xaml.Duration" />, которое определяется автоматически.</summary>
+      <returns>Объект <see cref="T:Windows.UI.Xaml.Duration" />, инициализируемый с автоматическим значением.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Compare(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Сравнивает одно значение <see cref="T:Windows.UI.Xaml.Duration" /> с другим.</summary>
+      <returns>Если <paramref name="t1" /> меньше <paramref name="t2" />, разница представлена отрицательным значением.Если значение параметра <paramref name="t1" /> равно значению <paramref name="t2" /> — значение 0.Если значение параметра <paramref name="t1" /> больше значения <paramref name="t2" /> — положительное значение, представляющее разность.</returns>
+      <param name="t1">Первый экземпляр <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+      <param name="t2">Второй экземпляр <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(System.Object)">
+      <summary>Определяет, равен ли заданный объект объекту <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Значение true, если объект, заданный параметром value, равен данному объекту <see cref="T:Windows.UI.Xaml.Duration" />; в противном случае — значение false.</returns>
+      <param name="value">Объект для проверки на равенство.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(Windows.UI.Xaml.Duration)">
+      <summary>Определяет, равен ли указанный объект <see cref="T:Windows.UI.Xaml.Duration" /> данному объекту <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>true если <paramref name="duration" /> идентичен <see cref="T:Windows.UI.Xaml.Duration" />; в противном случае — значение false.</returns>
+      <param name="duration">Объект <see cref="T:Windows.UI.Xaml.Duration" /> для проверки на равенство.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Определяет, равны ли два значения <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Значение true, если значения параметров <paramref name="t1" /> и <paramref name="t2" /> равны; в противном случае — значение false.</returns>
+      <param name="t1">Первый объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+      <param name="t2">Второй объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.Forever">
+      <summary>Получает значение <see cref="T:Windows.UI.Xaml.Duration" />, которое представляет неограниченный интервал.</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Duration" /> инициализируется вечным значением.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.GetHashCode">
+      <summary>Получает хэш-код для данного объекта.</summary>
+      <returns>Идентификатор хэш-кода.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.HasTimeSpan">
+      <summary>Получает значение, указывающее, представляет ли данный объект <see cref="T:Windows.UI.Xaml.Duration" /> значение <see cref="T:System.TimeSpan" />.</summary>
+      <returns>Значение true, если данный объект <see cref="T:Windows.UI.Xaml.Duration" /> имеет значение <see cref="T:System.TimeSpan" />; в противном случае — значение false.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Addition(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Суммирует два значения <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Если оба значения <see cref="T:Windows.UI.Xaml.Duration" /> имеют значения <see cref="T:System.TimeSpan" />, данный метод возвращает сумму этих двух значений.Если одно из значений равняется <see cref="P:Windows.UI.Xaml.Duration.Automatic" />, данный метод возвращает <see cref="P:Windows.UI.Xaml.Duration.Automatic" />.Если одно из значений равняется <see cref="P:Windows.UI.Xaml.Duration.Forever" />, данный метод возвращает <see cref="P:Windows.UI.Xaml.Duration.Forever" />.Если <paramref name="t1" /> или <paramref name="t2" /> не имеет значения, данный метод возвращает null.</returns>
+      <param name="t1">Первый прибавляемый размер <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+      <param name="t2">Второй прибавляемый размер <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Equality(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Определяет, равны ли два экземпляра <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Значение true, если оба значения <see cref="T:Windows.UI.Xaml.Duration" /> имеют одинаковые значения свойств, или все значения <see cref="T:Windows.UI.Xaml.Duration" /> имеют значение null.В противном случае данный метод возвращает значение false.</returns>
+      <param name="t1">Первый объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+      <param name="t2">Второй объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_GreaterThan(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Определяет, превышает ли значение одного объекта <see cref="T:Windows.UI.Xaml.Duration" /> значение другого.</summary>
+      <returns>Значение true, если параметры <paramref name="t1" /> и <paramref name="t2" /> имеют значения и при этом значение параметра <paramref name="t1" /> больше значения параметра <paramref name="t2" />; в противном случае — значение false.</returns>
+      <param name="t1">Значение <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+      <param name="t2">Второе значение <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_GreaterThanOrEqual(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Определяет, является ли значение объекта <see cref="T:Windows.UI.Xaml.Duration" /> больше или равным значению другого объекта.</summary>
+      <returns>Значение true, если <paramref name="t1" /> и <paramref name="t2" /> имеют значения и при этом <paramref name="t1" /> больше или равен <paramref name="t2" />; в противном случае —false.</returns>
+      <param name="t1">Первый экземпляр <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+      <param name="t2">Второй экземпляр <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Implicit(System.TimeSpan)~Windows.UI.Xaml.Duration">
+      <summary>Неявно создает объект <see cref="T:Windows.UI.Xaml.Duration" /> из заданного объекта <see cref="T:System.TimeSpan" />.</summary>
+      <returns>Созданный объект <see cref="T:Windows.UI.Xaml.Duration" />.</returns>
+      <param name="timeSpan">Объект <see cref="T:System.TimeSpan" />, из которого неявно создается объект <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+      <exception cref="T:System.ArgumentException">Значение параметра <paramref name="timeSpan" /> оценивается меньше, чем значение <see cref="F:System.TimeSpan.Zero" />.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Inequality(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Определяет, являются ли два экземпляра <see cref="T:Windows.UI.Xaml.Duration" /> неравными.</summary>
+      <returns>Значение true, если один из <paramref name="t1" /> или <paramref name="t2" /> представляет значение, или если они оба представляют неравные значения; в противном случае — false.</returns>
+      <param name="t1">Первый объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+      <param name="t2">Второй объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_LessThan(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Определяет, является ли значение экземпляра <see cref="T:Windows.UI.Xaml.Duration" /> меньше значения другого экземпляра.</summary>
+      <returns>Значение true, если <paramref name="t1" /> и <paramref name="t2" /> имеют значения и при этом <paramref name="t1" /> меньше <paramref name="t2" />; в противном случае —false.</returns>
+      <param name="t1">Первый объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+      <param name="t2">Второй объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_LessThanOrEqual(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Определяет, является ли значение объекта <see cref="T:Windows.UI.Xaml.Duration" /> меньше или равным значению другого объекта.</summary>
+      <returns>Значение true, если параметры <paramref name="t1" /> и <paramref name="t2" /> имеют значения и при этом значение параметра <paramref name="t1" /> меньше или равно значению параметра <paramref name="t2" />; в противном случае — значение false.</returns>
+      <param name="t1">Объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+      <param name="t2">Объект <see cref="T:Windows.UI.Xaml.Duration" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Subtraction(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Вычитает значение одного объекта <see cref="T:Windows.UI.Xaml.Duration" /> из значения другого.</summary>
+      <returns>Если оба объекта <see cref="T:Windows.UI.Xaml.Duration" /> имеют значения, возвращается объект <see cref="T:Windows.UI.Xaml.Duration" />, представляющий разность значений параметров <paramref name="t1" /> и <paramref name="t2" />.Если параметр <paramref name="t1" /> имеет значение <see cref="P:Windows.UI.Xaml.Duration.Forever" />, а параметр <paramref name="t2" /> — значение <see cref="P:Windows.UI.Xaml.Duration.TimeSpan" />, данный метод возвращает значение <see cref="P:Windows.UI.Xaml.Duration.Forever" />.В противном случае метод возвращает значение null.</returns>
+      <param name="t1">Первая коллекция <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+      <param name="t2">Вычитаемый объект <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_UnaryPlus(Windows.UI.Xaml.Duration)">
+      <summary>Возвращает указанный объект <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Результат операции <see cref="T:Windows.UI.Xaml.Duration" />.</returns>
+      <param name="duration">Получаемый объект <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Subtract(Windows.UI.Xaml.Duration)">
+      <summary>Вычитает указанный объект <see cref="T:Windows.UI.Xaml.Duration" /> из данного объекта <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Объект <see cref="T:Windows.UI.Xaml.Duration" />, получившийся в результате вычитания.</returns>
+      <param name="duration">Объект <see cref="T:Windows.UI.Xaml.Duration" />, вычитаемый из данного объекта <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.TimeSpan">
+      <summary>Получает значение <see cref="T:System.TimeSpan" />, представляемое данным объектом <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Значение <see cref="T:System.TimeSpan" />, представляемое данным объектом <see cref="T:Windows.UI.Xaml.Duration" />.</returns>
+      <exception cref="T:System.InvalidOperationException">Объект <see cref="T:Windows.UI.Xaml.Duration" /> не представляет диапазон <see cref="T:System.TimeSpan" />.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.ToString">
+      <summary>Преобразует объект <see cref="T:Windows.UI.Xaml.Duration" /> в представление <see cref="T:System.String" />.</summary>
+      <returns>Представление <see cref="T:System.String" /> для данного объекта <see cref="T:Windows.UI.Xaml.Duration" />.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.DurationType">
+      <summary>Задает, имеет ли <see cref="T:Windows.UI.Xaml.Duration" /> специальное значение Automatic или Forever или имеет допустимую информацию в своем компоненте <see cref="T:System.TimeSpan" />. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.Automatic">
+      <summary>Имеет специальное значение "Автоматически". </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.Forever">
+      <summary>Имеет специальное значение "Всегда". </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.TimeSpan">
+      <summary>Имеет допустимую информацию в компоненте <see cref="T:System.TimeSpan" />. </summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.GridLength">
+      <summary>Представляет длину элементов, явно поддерживающих типы единиц <see cref="F:Windows.UI.Xaml.GridUnitType.Star" />. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.#ctor(System.Double)">
+      <summary>Инициализирует новый экземпляр структуры <see cref="T:Windows.UI.Xaml.GridLength" /> с использованием заданного абсолютного значения в пикселях. </summary>
+      <param name="pixels">Абсолютное число пикселей, которое следует установить как значение.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.#ctor(System.Double,Windows.UI.Xaml.GridUnitType)">
+      <summary>Инициализирует новый экземпляр структуры <see cref="T:Windows.UI.Xaml.GridLength" /> и указывает вид содержащегося в ней значения. </summary>
+      <param name="value">Первоначальное значение данного экземпляра <see cref="T:Windows.UI.Xaml.GridLength" />.</param>
+      <param name="type">
+        <see cref="T:Windows.UI.Xaml.GridUnitType" />, содержащийся в данном экземпляре <see cref="T:Windows.UI.Xaml.GridLength" />.</param>
+      <exception cref="T:System.ArgumentException">значение меньше 0 или не является числом.- или -тип не является допустимым типом <see cref="T:Windows.UI.Xaml.GridUnitType" />.</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.Auto">
+      <summary>Получает экземпляр <see cref="T:Windows.UI.Xaml.GridLength" />, содержащий значение, размер которого определяется свойствами размера объекта содержимого.</summary>
+      <returns>Экземпляр <see cref="T:Windows.UI.Xaml.GridLength" /> со свойством <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" />, имеющим значение <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" />. </returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.Equals(System.Object)">
+      <summary>Определяет, равен ли указанный объект текущему экземпляру <see cref="T:Windows.UI.Xaml.GridLength" />. </summary>
+      <returns>Значение true, если заданный объект имеет одно значение и <see cref="T:Windows.UI.Xaml.GridUnitType" /> в качестве текущего экземпляра; в противном случае — false.</returns>
+      <param name="oCompare">Объект для сравнения с текущим экземпляром.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.Equals(Windows.UI.Xaml.GridLength)">
+      <summary>Определяет, равен ли указанный объект <see cref="T:Windows.UI.Xaml.GridLength" /> текущему объекту <see cref="T:Windows.UI.Xaml.GridLength" />.</summary>
+      <returns>Значение true, если заданный <see cref="T:Windows.UI.Xaml.GridLength" /> имеет одно значение и <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> в качестве текущего экземпляра; в противном случае —false.</returns>
+      <param name="gridLength">Структура <see cref="T:Windows.UI.Xaml.GridLength" /> для сравнения с ткущим экземпляром.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.GetHashCode">
+      <summary>Получает хэш-код для объекта <see cref="T:Windows.UI.Xaml.GridLength" />. </summary>
+      <returns>Хэш-код для <see cref="T:Windows.UI.Xaml.GridLength" />. </returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.GridUnitType">
+      <summary>Получает связанный <see cref="T:Windows.UI.Xaml.GridUnitType" /> для <see cref="T:Windows.UI.Xaml.GridLength" />. </summary>
+      <returns>Одно из значений <see cref="T:Windows.UI.Xaml.GridUnitType" />.Значение по умолчанию — <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsAbsolute">
+      <summary>Получает значение, указывающее, содержит ли <see cref="T:Windows.UI.Xaml.GridLength" /> значение выражаемое в пикселях. </summary>
+      <returns>Значение true, если свойство <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> является <see cref="F:Windows.UI.Xaml.GridUnitType.Pixel" />; в противном случае — false.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsAuto">
+      <summary>Получает значение, указывающее, содержит ли <see cref="T:Windows.UI.Xaml.GridLength" /> значение, размер которого определяется свойствами размера объекта содержимого. </summary>
+      <returns>Значение true, если свойство <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> является <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" />; в противном случае — false. </returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsStar">
+      <summary>Получает значение, указывающее, содержит ли <see cref="T:Windows.UI.Xaml.GridLength" /> значение, выражаемое в качестве пропорции доступного пространства. </summary>
+      <returns>Значение true, если свойство <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> является <see cref="F:Windows.UI.Xaml.GridUnitType.Star" />; в противном случае — false. </returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.op_Equality(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)">
+      <summary>Сравнивает две структуры <see cref="T:Windows.UI.Xaml.GridLength" /> на равенство.</summary>
+      <returns>Значение true, если два экземпляра <see cref="T:Windows.UI.Xaml.GridLength" /> имеют одно значение и <see cref="T:Windows.UI.Xaml.GridUnitType" />; в противном случае — false.</returns>
+      <param name="gl1">Первый экземпляр <see cref="T:Windows.UI.Xaml.GridLength" /> для сравнения.</param>
+      <param name="gl2">Второй экземпляр <see cref="T:Windows.UI.Xaml.GridLength" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.op_Inequality(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)">
+      <summary>Сравнивает две структуры <see cref="T:Windows.UI.Xaml.GridLength" />, чтобы определить, что они не равны.</summary>
+      <returns>Значение true, если два экземпляра <see cref="T:Windows.UI.Xaml.GridLength" /> не имеют одно значение и <see cref="T:Windows.UI.Xaml.GridUnitType" />; в противном случае — false.</returns>
+      <param name="gl1">Первый экземпляр <see cref="T:Windows.UI.Xaml.GridLength" /> для сравнения.</param>
+      <param name="gl2">Второй экземпляр <see cref="T:Windows.UI.Xaml.GridLength" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.ToString">
+      <summary>Возвращает представление <see cref="T:System.String" /> для <see cref="T:Windows.UI.Xaml.GridLength" />.</summary>
+      <returns>Представление <see cref="T:System.String" /> текущей структуры <see cref="T:Windows.UI.Xaml.GridLength" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.Value">
+      <summary>Получает <see cref="T:System.Double" />, представляющее значение <see cref="T:Windows.UI.Xaml.GridLength" />.</summary>
+      <returns>
+        <see cref="T:System.Double" />, представляющий значение текущего экземпляра. </returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.GridUnitType">
+      <summary>Описывает тип значения объекта <see cref="T:Windows.UI.Xaml.GridLength" />. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Auto">
+      <summary>Размер определяется свойствами размера объекта содержимого. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Pixel">
+      <summary>Значение выражается в пикселях. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Star">
+      <summary>Значение выражается как взвешенная пропорция доступного пространства. </summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.LayoutCycleException">
+      <summary>Исключение, вызываемое циклом макета.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> значениями по умолчанию. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor(System.String)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> с указанным сообщением об ошибке.</summary>
+      <param name="message">Сообщение об ошибке с объяснением причин исключения. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor(System.String,System.Exception)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> с указанным сообщением об ошибке и ссылкой на внутреннее исключение, вызвавшее это исключение. </summary>
+      <param name="message">Сообщение об ошибке с объяснением причин исключения. </param>
+      <param name="innerException">Исключение, вызвавшее текущее исключение, или значение null, если внутреннее исключение не задано.</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Thickness">
+      <summary>Определяет толщину рамки вокруг прямоугольника.Четыре <see cref="T:System.Double" /> значения определяют соответственно <see cref="P:Windows.UI.Xaml.Thickness.Left" />, <see cref="P:Windows.UI.Xaml.Thickness.Top" />, <see cref="P:Windows.UI.Xaml.Thickness.Right" />, и <see cref="P:Windows.UI.Xaml.Thickness.Bottom" /> сторон прямоугольника.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.#ctor(System.Double)">
+      <summary>Инициализирует структуру <see cref="T:Windows.UI.Xaml.Thickness" />, для которой с каждой стороны задана одинаковая длина. </summary>
+      <param name="uniformLength">Единое значение длины для всех четырех сторон обрамляющего прямоугольника.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>Инициализирует новую структуру <see cref="T:Windows.UI.Xaml.Thickness" />, имеющую указанные значения длины (заданные как <see cref="T:System.Double" />), и применяющиеся для каждой из сторон прямоугольника. </summary>
+      <param name="left">Толщина левой стороны прямоугольника.</param>
+      <param name="top">Толщина верхней стороны прямоугольника.</param>
+      <param name="right">Толщина правой стороны прямоугольника.</param>
+      <param name="bottom">Толщина нижней стороны прямоугольника.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Bottom">
+      <summary>Получает или задает ширину (в пикселях) нижней стороны обрамляющего прямоугольника.</summary>
+      <returns>Значение <see cref="T:System.Double" />, представляющее в пикселях ширину нижней стороны обрамляющего прямоугольника для данного экземпляра <see cref="T:Windows.UI.Xaml.Thickness" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.Equals(System.Object)">
+      <summary>Сравнивает данную структуру <see cref="T:Windows.UI.Xaml.Thickness" /> с другой структурой <see cref="T:System.Object" /> для определения равенства.</summary>
+      <returns>true, если два объекта равны; в противном случае false.</returns>
+      <param name="obj">Сравниваемый объект.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.Equals(Windows.UI.Xaml.Thickness)">
+      <summary>Сравнивает данную структуру <see cref="T:Windows.UI.Xaml.Thickness" /> с другой структурой <see cref="T:Windows.UI.Xaml.Thickness" /> для определения равенства.</summary>
+      <returns>true если два экземпляра <see cref="T:Windows.UI.Xaml.Thickness" /> равны, в противном случае — false.</returns>
+      <param name="thickness">Экземпляр <see cref="T:Windows.UI.Xaml.Thickness" /> для сравнения на предмет их равенства.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.GetHashCode">
+      <summary>Возвращает  хэш-код  данной структуры.</summary>
+      <returns>Хэш-код для данного экземпляра <see cref="T:Windows.UI.Xaml.Thickness" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Left">
+      <summary>Получает или задает ширину (в пикселях) левой стороны обрамляющего прямоугольника. </summary>
+      <returns>Значение типа <see cref="T:System.Double" />, представляющее ширину в пикселях левой стороны обрамляющего прямоугольника для данного экземпляра <see cref="T:Windows.UI.Xaml.Thickness" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.op_Equality(Windows.UI.Xaml.Thickness,Windows.UI.Xaml.Thickness)">
+      <summary>Сравнивает значение двух структур <see cref="T:Windows.UI.Xaml.Thickness" />, на предмет равенства.</summary>
+      <returns>true если два экземпляра <see cref="T:Windows.UI.Xaml.Thickness" /> равны, в противном случае — false.</returns>
+      <param name="t1">Первая сравниваемая структура.</param>
+      <param name="t2">Вторая сравниваемая структура.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.op_Inequality(Windows.UI.Xaml.Thickness,Windows.UI.Xaml.Thickness)">
+      <summary>Сравнивает две структуры <see cref="T:Windows.UI.Xaml.Thickness" />, чтобы выявить различие. </summary>
+      <returns>true если два экземпляра <see cref="T:Windows.UI.Xaml.Thickness" /> не равны; в противном случае — значение false.</returns>
+      <param name="t1">Первая сравниваемая структура.</param>
+      <param name="t2">Вторая сравниваемая структура.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Right">
+      <summary>Получает или задает ширину (в пикселях) правой стороны обрамляющего прямоугольника. </summary>
+      <returns>Значение <see cref="T:System.Double" />, представляющее в пикселях ширину правой стороны обрамляющего прямоугольника для данного экземпляра <see cref="T:Windows.UI.Xaml.Thickness" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Top">
+      <summary>Получает или задает ширину (в пикселях) верхней стороны обрамляющего прямоугольника.</summary>
+      <returns>Значение <see cref="T:System.Double" />, представляющее в пикселях ширину верхней стороны обрамляющего прямоугольника для данного экземпляра <see cref="T:Windows.UI.Xaml.Thickness" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.ToString">
+      <summary>Возвращает строковое представление структуры <see cref="T:Windows.UI.Xaml.Thickness" />.</summary>
+      <returns>
+        <see cref="T:System.String" />, предоставляющее, <see cref="T:Windows.UI.Xaml.Thickness" /> значение.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Automation.ElementNotAvailableException">
+      <summary>Исключение, которое создается при попытке доступа к элементу автоматизации пользовательского интерфейса, который соответствует недоступному элементу пользовательского интерфейса.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> значениями по умолчанию. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor(System.String)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> с указанным сообщением об ошибке. </summary>
+      <param name="message">Сообщение, описывающее ошибку. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor(System.String,System.Exception)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> с указанным сообщением об ошибке и ссылкой на внутреннее исключение, вызвавшее это исключение. </summary>
+      <param name="message">Сообщение, описывающее ошибку. </param>
+      <param name="innerException">Исключение, вызвавшее текущее исключение, или значение null, если внутреннее исключение не задано. </param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Automation.ElementNotEnabledException">
+      <summary>Исключение, которое создается при попытке управлять отключенным элементом управления через автоматизацию пользовательского интерфейса. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> значениями по умолчанию. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor(System.String)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> с указанным сообщением об ошибке.</summary>
+      <param name="message">Сообщение, описывающее ошибку. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor(System.String,System.Exception)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> с указанным сообщением об ошибке и ссылкой на внутреннее исключение, вызвавшее это исключение.</summary>
+      <param name="message">Сообщение, описывающее ошибку. </param>
+      <param name="innerException">Исключение, вызвавшее текущее исключение, или значение null, если внутреннее исключение не задано. </param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> используется для описания позиции элемента, которым управляет Windows.UI.Xaml.Controls.ItemContainerGenerator.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.#ctor(System.Int32,System.Int32)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> указанным индексом и смещением.</summary>
+      <param name="index">Индекс <see cref="T:System.Int32" /> относительно созданных (реализованных) элементов.-1 является особым значением, указывающим на фиктивный элемент в начале или в конце списка элементов.</param>
+      <param name="offset">Смещение <see cref="T:System.Int32" /> относительно несгенерированных (нереализованных) элементов возле индексированного элемента.Смещение 0 указывает на сам индексированный элемент, 1 — на следующий несозданный (нереализованный) элемент, а -1 — на предыдущий элемент.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Equals(System.Object)">
+      <summary>Сравнивает заданный экземпляр с текущим экземпляром объекта <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />, проверяя равенство значений.</summary>
+      <returns>true, если <paramref name="o" /> и этот экземпляр <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> имеют одинаковые значения.</returns>
+      <param name="o">Экземпляр <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.GetHashCode">
+      <summary>Возвращает хэш-код для этого <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />.</summary>
+      <returns>Хэш-код для данного объекта <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Index">
+      <summary>Возвращает или задает индекс <see cref="T:System.Int32" /> относительно сгенерированных элементов.</summary>
+      <returns>Индекс <see cref="T:System.Int32" /> относительно созданных (реализованных) элементов.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Offset">
+      <summary>Возвращает или задает смещение <see cref="T:System.Int32" /> относительно несгенерированных (нереализованных) элементов возле индексированного элемента.</summary>
+      <returns>Смещение <see cref="T:System.Int32" /> относительно несгенерированных (нереализованных) элементов возле индексированного элемента.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.op_Equality(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition,Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)">
+      <summary>Сравнивает два объекта <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> на равенство значений.</summary>
+      <returns>true, если два объекта равны; в противном случае false.</returns>
+      <param name="gp1">Первый экземпляр для сравнения.</param>
+      <param name="gp2">Второй экземпляр для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.op_Inequality(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition,Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)">
+      <summary>Сравнивает два объекта <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> на неравенство значений.</summary>
+      <returns>true, если значения не равны; в противном случае false.</returns>
+      <param name="gp1">Первый экземпляр для сравнения.</param>
+      <param name="gp2">Второй экземпляр для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.ToString">
+      <summary>Возвращает строковое представление данного экземпляра <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />.</summary>
+      <returns>Строковое представление данного экземпляра объекта <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Markup.XamlParseException">
+      <summary>Исключение, создаваемое в случае возникновения ошибки при синтаксическом анализе Xaml. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> значениями по умолчанию. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor(System.String)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> с указанным сообщением об ошибке. </summary>
+      <param name="message">Сообщение об ошибке с объяснением причин исключения. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor(System.String,System.Exception)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> с указанным сообщением об ошибке и ссылкой на внутреннее исключение, вызвавшее это исключение.</summary>
+      <param name="message">Сообщение об ошибке с объяснением причин исключения. </param>
+      <param name="innerException">Исключение, вызвавшее текущее исключение, или значение null, если внутреннее исключение не задано. </param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Matrix">
+      <summary> Представляет матрицу аффинного преобразования 3х3, используемую для преобразований в двухмерном пространстве. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Инициализирует структуру <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <param name="m11">Коэффициент <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" /> структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="m12">Коэффициент <see cref="P:Windows.UI.Xaml.Media.Matrix.M12" /> структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="m21">Коэффициент <see cref="P:Windows.UI.Xaml.Media.Matrix.M21" /> структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="m22">Коэффициент <see cref="P:Windows.UI.Xaml.Media.Matrix.M22" /> структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="offsetX">Коэффициент <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" /> структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="offsetY">Коэффициент <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Equals(System.Object)">
+      <summary>Определяет, является ли указанный <see cref="T:System.Object" /> структурой <see cref="T:Windows.UI.Xaml.Media.Matrix" />, идентичной данной структуре <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>true, если <paramref name="o" /> является структурой <see cref="T:Windows.UI.Xaml.Media.Matrix" />, идентичной структуре <see cref="T:Windows.UI.Xaml.Media.Matrix" />; в противном случае — false.</returns>
+      <param name="o">Объект <see cref="T:System.Object" /> для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Equals(Windows.UI.Xaml.Media.Matrix)">
+      <summary>Определяет, идентична ли указанная структура <see cref="T:Windows.UI.Xaml.Media.Matrix" /> данному экземпляру. </summary>
+      <returns>Значение true, если экземпляры равны; в противном случае — значение false. </returns>
+      <param name="value">Экземпляр объекта <see cref="T:Windows.UI.Xaml.Media.Matrix" /> для сравнения с данным экземпляром.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.GetHashCode">
+      <summary>Возвращает хэш-код данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Хэш-код данного экземпляра.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.Identity">
+      <summary>Получает единичную <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Единичная матрица.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.IsIdentity">
+      <summary>Получает значение, указывающее, является ли эта структура <see cref="T:Windows.UI.Xaml.Media.Matrix" /> единичной матрицей. </summary>
+      <returns>true, если структура <see cref="T:Windows.UI.Xaml.Media.Matrix" /> является единичной матрицей; в противном случае — false.Значение по умолчанию — true.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M11">
+      <summary>Получает или задает значение в первой строке и первом столбце данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Значение первой строки и первого столбца этой матрицы <see cref="T:Windows.UI.Xaml.Media.Matrix" />.Значение по умолчанию — 1.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M12">
+      <summary>Получает или задает значение в первой строке и втором столбце данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Значение первой строки и второго столбца этой матрицы <see cref="T:Windows.UI.Xaml.Media.Matrix" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M21">
+      <summary>Получает или задает значение во второй строке и первом столбце данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</summary>
+      <returns>Значение второй строки и первого столбца этой матрицы <see cref="T:Windows.UI.Xaml.Media.Matrix" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M22">
+      <summary>Получает или задает значение во второй строке и втором столбце данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Значение во второй строке и втором столбце данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.Значение по умолчанию — 1.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.OffsetX">
+      <summary>Получает или задает значение в третьей строке и первом столбце данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.  </summary>
+      <returns>Значение в третьей строке и первом столбце этой структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.OffsetY">
+      <summary>Получает или задает значение в третьей строке и втором столбце данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Значение в третьей строке и втором столбце этой структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.Значение по умолчанию — 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.op_Equality(Windows.UI.Xaml.Media.Matrix,Windows.UI.Xaml.Media.Matrix)">
+      <summary>Определяет, совпадают ли две указанные структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</summary>
+      <returns>true, если <paramref name="matrix1" /> и <paramref name="matrix2" /> идентичны; в противном случае — false.</returns>
+      <param name="matrix1">Первая сравниваемая структура <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="matrix2">Вторая сравниваемая структура <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.op_Inequality(Windows.UI.Xaml.Media.Matrix,Windows.UI.Xaml.Media.Matrix)">
+      <summary>Проверяет, являются ли две заданные структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" /> не идентичными.</summary>
+      <returns>true, если <paramref name="matrix1" /> и <paramref name="matrix2" /> не идентичны; в противном случае — false.</returns>
+      <param name="matrix1">Первая сравниваемая структура <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="matrix2">Вторая сравниваемая структура <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>Описание этого члена см. в разделе <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+      <returns>Строка, содержащая значение текущего экземпляра в заданном формате.</returns>
+      <param name="format">Строка, задающая используемый формат. – или – Значение null для использования формата по умолчанию, определенного для типа реализации IFormattable. </param>
+      <param name="provider">Объект IFormatProvider, используемый для форматирования значения. – или – Значение null для получения сведений о форматировании чисел на основе текущего значения параметра языкового стандарта операционной системы. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.ToString">
+      <summary>Создает представление <see cref="T:System.String" /> для данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Объект <see cref="T:System.String" />, содержащий значения <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M12" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M21" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M22" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" /> и <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.ToString(System.IFormatProvider)">
+      <summary>Создает представление в виде <see cref="T:System.String" /> данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" /> с использованием сведений о форматировании, связанных с языком и региональными параметрами. </summary>
+      <returns>Объект <see cref="T:System.String" />, содержащий значения <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M12" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M21" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M22" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" /> и <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</returns>
+      <param name="provider">Сведения о форматировании, связанные с языком и региональными параметрами.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Transform(Windows.Foundation.Point)">
+      <summary>Преобразует заданную точку с использованием <see cref="T:Windows.UI.Xaml.Media.Matrix" /> и возвращает результат.</summary>
+      <returns>Результат преобразования объекта <paramref name="point" /> посредством данной структуры <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</returns>
+      <param name="point">Точка для преобразования.</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.KeyTime">
+      <summary>Определяет, когда определенный опорный кадр должен быть отображен во время анимации. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(System.Object)">
+      <summary>Указывает, равен ли объект <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> данному объекту <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>Значение true, если параметр <paramref name="value" /> является объектом <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />, представляющим такой же промежуток времени, что и данный объект <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />; в противном случае — значение false.</returns>
+      <param name="value">Объект <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> для сравнения с данным объектом <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>Определяет, равен ли указанный объект <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> данному объекту <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>true если <paramref name="value" /> идентичен <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />; в противном случае — значение false.</returns>
+      <param name="value">Объект <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> для сравнения с данным объектом <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>Указывает, равны ли два значения <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>Значение true, если значения параметров <paramref name="keyTime1" /> и <paramref name="keyTime2" /> равны; в противном случае — значение false.</returns>
+      <param name="keyTime1">Первое сравниваемое значение.</param>
+      <param name="keyTime2">Второе сравниваемое значение.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.FromTimeSpan(System.TimeSpan)">
+      <summary>Создает новый объект <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />, используя предоставленный промежуток времени <see cref="T:System.TimeSpan" />.</summary>
+      <returns>Новый экземпляр <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />, инициализированный значением <paramref name="timeSpan" />.</returns>
+      <param name="timeSpan">Значение нового объекта <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">Указанный <paramref name="timeSpan" /> находится за пределами допустимого диапазона.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.GetHashCode">
+      <summary>Возвращает хэш-код, представляющий данный объект <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>Идентификатор хэш-кода.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Equality(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>Сравнивает два значения <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> на предмет их равенства.</summary>
+      <returns>Значение true если <paramref name="keyTime1" /> и <paramref name="keyTime2" /> равны; в противном случае — значение false.</returns>
+      <param name="keyTime1">Первое сравниваемое значение.</param>
+      <param name="keyTime2">Второе сравниваемое значение.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Implicit(System.TimeSpan)~Windows.UI.Xaml.Media.Animation.KeyTime">
+      <summary>Неявно преобразует объект <see cref="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan" /> в объект <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>Созданный <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</returns>
+      <param name="timeSpan">Преобразуемое значение <see cref="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Inequality(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>Сравнивает два значения <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> на предмет их неравенства.</summary>
+      <returns>Значение true если <paramref name="keyTime1" /> и <paramref name="keyTime2" /> не равны; в противном случае — значение false. </returns>
+      <param name="keyTime1">Первое сравниваемое значение.</param>
+      <param name="keyTime2">Второе сравниваемое значение.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan">
+      <summary>Получает время окончания опорного кадра, указанное как время с начала анимации.</summary>
+      <returns>Время окончания опорного кадра, указанное как время с начала анимации.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.ToString">
+      <summary>Возвращает строковое представление данного объекта <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />. </summary>
+      <returns>Строковое представление данного объекта <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior">
+      <summary>Описывает поведение объекта Windows.UI.Xaml.Media.Animation.Timeline при повторе своей простой длительности.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.#ctor(System.Double)">
+      <summary>Инициализирует новый экземпляр структуры <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> с указанным числом итераций. </summary>
+      <param name="count">Неотрицательное число, указывающее количество итераций для анимации. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">Значение <paramref name="count" /> считается бесконечным, не являющимся числом или отрицательным.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.#ctor(System.TimeSpan)">
+      <summary>Инициализирует новый экземпляр структуры <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> с указанной длительностью повтора. </summary>
+      <param name="duration">Общая продолжительность времени, в течение которого будет воспроизводиться объект Windows.UI.Xaml.Media.Animation.Timeline (активная длительность). </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">Параметр <paramref name="duration" /> является отрицательным числом.</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Count">
+      <summary>Возвращает число повторов Windows.UI.Xaml.Media.Animation.Timeline. </summary>
+      <returns>Число повторяемых итераций.</returns>
+      <exception cref="T:System.InvalidOperationException">Это свойство <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> указывает длительность повтора, а не число итераций.</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Duration">
+      <summary>Возвращает общее время воспроизведения Windows.UI.Xaml.Media.Animation.Timeline. </summary>
+      <returns>Общее время воспроизведения шкалы времени. </returns>
+      <exception cref="T:System.InvalidOperationException">Этот объект <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> указывает, число итераций, а не длительность повтора.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(System.Object)">
+      <summary>Указывает, равен ли заданный объект этому объекту <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+      <returns>Значение true, если параметр <paramref name="value" /> является объектом <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />, представляющим то же поведение при повторе, что и данный объект <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />, в противном случае — значение false.</returns>
+      <param name="value">Объект, который требуется сравнить с данным объектом <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>Возвращает значение, указывающее, равен ли указанный объект <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> этому объекту <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+      <returns>Значение true, если как тип, так и поведение при повторе <paramref name="repeatBehavior" /> совпадают с этим объектом <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />; в противном случае – значение false.</returns>
+      <param name="repeatBehavior">Значение, сравниваемое с этим объектом <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>Указывает, равны ли два заданных значения <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+      <returns>Значение true, если как тип, так и поведение при повторе <paramref name="repeatBehavior1" /> соответствуют аналогичным параметрам <paramref name="repeatBehavior2" />; в обратном случае – значение false.</returns>
+      <param name="repeatBehavior1">Первое сравниваемое значение.</param>
+      <param name="repeatBehavior2">Второе сравниваемое значение.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Forever">
+      <summary>Возвращает значение <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />, которое указывает бесконечное число повторов.  </summary>
+      <returns>Значение <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />, которое указывает бесконечное число повторов.   </returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.GetHashCode">
+      <summary>Возвращает хэш-код данного экземпляра.</summary>
+      <returns>Хэш-код.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.HasCount">
+      <summary>Возвращает значение, которое указывает, задано ли для поведения при повторе число итераций.</summary>
+      <returns>Значение true, если экземпляр представляет число итераций; в противном случае — значение false. </returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.HasDuration">
+      <summary>Возвращает значение, которое указывает, задана ли для поведения при повторе длительность повтора. </summary>
+      <returns>Значение true, если экземпляр представляет длительность повтора; в противном случае — значение false.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.op_Equality(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>Указывает, равны ли два заданных значения <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+      <returns>Значение true, если как тип, так и поведение при повторе <paramref name="repeatBehavior1" /> соответствуют аналогичным параметрам <paramref name="repeatBehavior2" />; в обратном случае – значение false.</returns>
+      <param name="repeatBehavior1">Первое сравниваемое значение.</param>
+      <param name="repeatBehavior2">Второе сравниваемое значение.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.op_Inequality(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>Указывает, действительно ли два значения <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> не равны. </summary>
+      <returns>Значение true, если параметры <paramref name="repeatBehavior1" /> и <paramref name="repeatBehavior2" /> представляют разные типы или свойства поведения при повторе не равны; в обратном случае – значение false.</returns>
+      <param name="repeatBehavior1">Первое сравниваемое значение.</param>
+      <param name="repeatBehavior2">Второе сравниваемое значение.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>Описание этого члена см. в разделе <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+      <returns>Строка, содержащая значение текущего экземпляра в заданном формате.</returns>
+      <param name="format">Строка, задающая используемый формат, или значение null для использования формата по умолчанию, определенного для типа реализации IFormattable. </param>
+      <param name="formatProvider">Объект IFormatProvider, используемый для форматирования значения, или значение null для получения числового формата из текущей настройки языкового стандарта в операционной системе. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.ToString">
+      <summary>Возвращает строковое представление данного объекта <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+      <returns>Строковое представление данного объекта <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.ToString(System.IFormatProvider)">
+      <summary>Возвращает строковое представление данного экземпляра <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> с указанным форматом. </summary>
+      <returns>Строковое представление данного объекта <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />.</returns>
+      <param name="formatProvider">Формат, используемый для формирования возвращаемого значения.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Type">
+      <summary>Получает или задает одно из значений <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType" />, описывающих способ повторения поведения. </summary>
+      <returns>Тип поведения повтора. </returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType">
+      <summary>Задает режим повторения, представляемый простым значением <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Count">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> представляет случай, когда временная шкала должна повторяться для фиксированного количества полных запусков. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Duration">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> представляет случай, когда временная шкала должна повторяться для определенного времени, что может привести к тому, что анимация не будет воспроизведена до конца. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Forever">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> представляет случай, когда временная шкала должна повторяться бесконечно. </summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Media3D.Matrix3D">
+      <summary>Представляет матрицу 4х4, используемую для преобразований в трехмерном пространстве.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />. </summary>
+      <param name="m11">Значение поля (1,1) новой матрицы.</param>
+      <param name="m12">Значение поля (1,2) новой матрицы.</param>
+      <param name="m13">Значение поля (1,3) новой матрицы.</param>
+      <param name="m14">Значение поля (1,4) новой матрицы.</param>
+      <param name="m21">Значение поля (2,1) новой матрицы.</param>
+      <param name="m22">Значение поля (2,2) новой матрицы.</param>
+      <param name="m23">Значение поля (2,3) новой матрицы.</param>
+      <param name="m24">Значение поля (2,4) новой матрицы.</param>
+      <param name="m31">Значение поля (3,1) новой матрицы.</param>
+      <param name="m32">Значение поля (3,2) новой матрицы.</param>
+      <param name="m33">Значение поля (3,3) новой матрицы.</param>
+      <param name="m34">Значение поля (3,4) новой матрицы.</param>
+      <param name="offsetX">Значение поля смещения X новой матрицы.</param>
+      <param name="offsetY">Значение поля смещения Y новой матрицы.</param>
+      <param name="offsetZ">Значение поля смещения Z новой матрицы.</param>
+      <param name="m44">Значение поля (4,4) новой матрицы.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Equals(System.Object)">
+      <summary>Проверяет равенство двух матриц.</summary>
+      <returns>Значение true, если матрицы равны; в противном случае — значение false.</returns>
+      <param name="o">Объект для проверки на равенство.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Equals(Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>Проверяет равенство двух матриц.</summary>
+      <returns>Значение true, если матрицы равны; в противном случае — значение false.</returns>
+      <param name="value">Матрица <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />, с которой выполняется сравнение.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.GetHashCode">
+      <summary>Возвращает хэш-код для этой матрицы.</summary>
+      <returns>Целочисленное значение, определяющее хэш-код для этой матрицы.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.HasInverse">
+      <summary>Получает значение, определяющее, является ли этот объект <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> обратимым.</summary>
+      <returns>true, если <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> обратима; в противном случае — false.Значение по умолчанию — true.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.Identity">
+      <summary>Изменяет эту структуру <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />, получая единичную матрицу <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Идентификация <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Invert">
+      <summary>Преобразует данную структуру <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <exception cref="T:System.InvalidOperationException">Матрица не является обратимой.</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.IsIdentity">
+      <summary>Определяет, является ли эта структура <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> единичной матрицей <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение true, если структура <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> является единичной матрицей <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />; в противном случае — значение false.Значение по умолчанию — true.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M11">
+      <summary>Получает или задает значение в первой строке и первом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в первой строке и первом столбце этой структуры <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M12">
+      <summary>Получает или задает значение в первой строке и втором столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение первой строки и второго столбца этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M13">
+      <summary>Получает или задает значение в первой строке и третьем столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в первой строке и третьем столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M14">
+      <summary>Получает или задает значение в первой строке и четвертом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в первой строке и четвертом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M21">
+      <summary>Получает или задает значение во второй строке и первом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение второй строки и первого столбца этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M22">
+      <summary>Получает или задает значение во второй строке и втором столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение во второй строке и втором столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M23">
+      <summary>Получает или задает значение во второй строке и третьем столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение во второй строке и третьем столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M24">
+      <summary>Получает или задает значение во второй строке и четвертом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение во второй строке и четвертом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M31">
+      <summary>Получает или задает значение в третьей строке и первом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в третьей строке и первом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M32">
+      <summary>Получает или задает значение в третьей строке и втором столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в третьей строке и втором столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M33">
+      <summary>Получает или задает значение в третьей строке и третьем столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в третьей строке и третьем столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M34">
+      <summary>Получает или задает значение в третьей строке и четвертом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в третьей строке и четвертом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M44">
+      <summary>Получает или задает значение в четвертой строке и четвертом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в четвертой строке и четвертом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetX">
+      <summary>Получает или задает значение в четвертой строке и первом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение во четвертой строке и первом столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetY">
+      <summary>Получает или задает значение в четвертой строке и втором столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в четвертой строке и втором столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetZ">
+      <summary>Получает или задает значение в четвертой строке и третьем столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Значение в четвертой строке и третьем столбце этой матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Equality(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>Сравнивает два экземпляра <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> на строгое равенство.</summary>
+      <returns>Значение true, если матрицы равны; в противном случае — значение false.</returns>
+      <param name="matrix1">Первая матрица для сравнения.</param>
+      <param name="matrix2">Вторая матрица для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Inequality(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>Сравнивает два экземпляра <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> на неравенство.</summary>
+      <returns>Значение true, если матрицы не равны; в противном случае — значение false.</returns>
+      <param name="matrix1">Первая матрица для сравнения.</param>
+      <param name="matrix2">Вторая матрица для сравнения.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Multiply(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>Умножает заданные матрицы.</summary>
+      <returns>Матрица <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />, являющаяся результатом умножения.</returns>
+      <param name="matrix1">Умножаемая матрица.</param>
+      <param name="matrix2">Матрица, на которую умножается первая матрица.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>Описание этого члена см. в разделе <see cref="M:System.IFormattable.ToString" />.</summary>
+      <returns>Значение текущего экземпляра в указанном формате.</returns>
+      <param name="format">Используемый формат.</param>
+      <param name="provider">Используемый поставщик.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.ToString">
+      <summary>Создает строковое представление данной матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Строковое представление данного объекта <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.ToString(System.IFormatProvider)">
+      <summary>Создает строковое представление данной матрицы <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Строковое представление данного объекта <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+      <param name="provider">Сведения о форматировании, связанные с языком и региональными параметрами.</param>
+    </member>
+  </members>
+</doc>

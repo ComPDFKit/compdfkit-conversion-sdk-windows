@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ContactActivatedEventsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Activation.ContactActivatedEventsContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs">
+      <summary>Provides data when an app is activated to call a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Contact">
+      <summary>Gets the contact for the call.</summary>
+      <returns>The contact for the call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>A ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the call.</summary>
+      <returns>The identifier of the service used for the call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the call.</summary>
+      <returns>The user identifier of the service used for the call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs">
+      <summary>Provides data when an app is activated to map a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Address">
+      <summary>Gets the address of a contact for the mapping operation.</summary>
+      <returns>The address of a contact for the mapping operation.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Contact">
+      <summary>Gets the contact for the mapping operation.</summary>
+      <returns>The contact for the mapping operation.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>A ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs">
+      <summary>Provides data when an app is activated to send a message to a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Contact">
+      <summary>Gets the contact for the message.</summary>
+      <returns>The contact for the message.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>A ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the message.</summary>
+      <returns>The identifier of the service used for the message.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the message.</summary>
+      <returns>The user identifier of the service used for the message.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs">
+      <summary>Provides data when an app is activated because it uses the Contact Picker.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Gets the letterbox UI of the contact picker that is displayed when the user wants to pick contacts that are provided by the app.</summary>
+      <returns>Gets the letterbox UI of the contact picker that is displayed when the user wants to pick contacts that are provided by the app.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs">
+      <summary>Provides data when an app is activated to post a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Contact">
+      <summary>Gets the contact for the post.</summary>
+      <returns>The contact for the post.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>A ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the post.</summary>
+      <returns>The identifier of the service used for the post.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the post.</summary>
+      <returns>The user identifier of the service used for the post.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs">
+      <summary>Provides data when an app is activated to video call a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Contact">
+      <summary>Gets the contact for the video call.</summary>
+      <returns>The contact for the video call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>A ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the video call.</summary>
+      <returns>The identifier of the service used for the video call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the video call.</summary>
+      <returns>The user identifier of the service used for the video call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IContactActivatedEventArgs">
+      <summary>Provides information about an activated event that is raised when the user manages a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactActivatedEventArgs.Verb">
+      <summary>Gets the action that is associated with the activated contact.</summary>
+      <returns>The action that is associated with the activated contact.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs">
+      <summary>Provides data when an app is activated to call a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.Contact">
+      <summary>Gets the contact for the call.</summary>
+      <returns>The contact for the call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the call.</summary>
+      <returns>The identifier of the service used for the call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the call.</summary>
+      <returns>The user identifier of the service used for the call.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs">
+      <summary>Provides data when an app is activated to map a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Address">
+      <summary>Gets the address of a contact for the mapping operation.</summary>
+      <returns>Represents the address of a contact for the mapping operation.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactMapActivatedEventArgs.Contact">
+      <summary>Gets the contact for the mapping operation.</summary>
+      <returns>The contact for the mapping operation.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs">
+      <summary>Provides data when an app is activated to send a message a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.Contact">
+      <summary>Gets the contact for the message.</summary>
+      <returns>The contact for the message.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the message.</summary>
+      <returns>The identifier of the service used for the message.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the message.</summary>
+      <returns>The user identifier of the service used for the message.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs">
+      <summary>Provides data when an app is activated because it uses the Contact Picker.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>The letterbox UI of the contact picker that is displayed when the user wants to pick files or folders that are provided by the app.</summary>
+      <returns>The letterbox UI of the contact picker that is displayed when the user wants to pick files or folders that are provided by the app.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs">
+      <summary>Provides data when an app is activated to post a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.Contact">
+      <summary>Gets the contact for the post.</summary>
+      <returns>The contact for the post.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the post.</summary>
+      <returns>The identifier of the service used for the post.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the post.</summary>
+      <returns>The user identifier of the service used for the post.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs">
+      <summary>Provides information about an activated event that fires when the user manages a contact that is provided by the app.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactsProviderActivatedEventArgs.Verb">
+      <summary>Gets the action that is associated with the activated contacts provider.</summary>
+      <returns>The action that is associated with the activated contacts provider.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs">
+      <summary>Provides data when an app is activated to video call a contact.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.Contact">
+      <summary>Gets the contact for the video call.</summary>
+      <returns>The contact for the video call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the video call.</summary>
+      <returns>The identifier of the service used for the video call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the video call.</summary>
+      <returns>The user identifier of the service used for the video call.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs">
+      <summary>Provides data when an app is activated to call a contact.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Contact">
+      <summary>Gets the contact for the call.</summary>
+      <returns>The contact for the call.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>An ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the call.</summary>
+      <returns>The identifier of the service used for the call.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the call.</summary>
+      <returns>The user identifier of the service used for the call.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactCallActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs">
+      <summary>Provides data when an app is activated to map a contact.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Address">
+      <summary>Gets the address of a contact for the mapping operation.</summary>
+      <returns>The address of a contact for the mapping operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Contact">
+      <summary>Gets the contact for the mapping operation.</summary>
+      <returns>The contact for the mapping operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>An ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMapActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs">
+      <summary>Provides data when an app is activated to message a contact.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Contact">
+      <summary>Gets the contact for the message.</summary>
+      <returns>The contact for the message.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>An ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the message.</summary>
+      <returns>The identifier of the service used for the message.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the message.</summary>
+      <returns>The user identifier of the service used for the message.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactMessageActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs">
+      <summary>Provides data when an app is activated because it uses the Contact Picker.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.ContactPickerUI">
+      <summary>Gets the letterbox UI of the contact picker that is displayed when the user wants to pick contacts that are provided by the app.</summary>
+      <returns>Gets the letterbox UI of the contact picker that is displayed when the user wants to pick contacts that are provided by the app.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPickerActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object that provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs">
+      <summary>Provides data when an app is activated to post a contact.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Contact">
+      <summary>Gets the contact for the post.</summary>
+      <returns>The contact for the post.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>An ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the post.</summary>
+      <returns>The identifier of the service used for the post.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the post.</summary>
+      <returns>The user identifier of the service used for the post.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactPostActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs">
+      <summary>Provides data when an app is activated to video call a contact.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Contact">
+      <summary>Gets the contact for the video call.</summary>
+      <returns>The contact for the video call.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Contact enumeration value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>An ApplicationExecutionState -typed value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceId">
+      <summary>Gets the identifier of the service used for the video call.</summary>
+      <returns>The identifier of the service used for the video call.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.ServiceUserId">
+      <summary>Gets the user identifier of the service used for the video call.</summary>
+      <returns>The user identifier of the service used for the video call.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIContactVideoCallActivatedEventArgs.Verb">
+      <summary>Gets the action to be performed.</summary>
+      <returns>The action to be performed.</returns>
+    </member>
+  </members>
+</doc>

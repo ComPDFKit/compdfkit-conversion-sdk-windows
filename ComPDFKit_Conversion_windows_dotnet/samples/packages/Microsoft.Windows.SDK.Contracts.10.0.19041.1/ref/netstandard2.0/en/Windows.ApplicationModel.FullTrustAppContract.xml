@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.FullTrustAppContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.FullTrustAppContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.FullTrustProcessLauncher">
+      <summary>Activate the full-trust Win32 component of an application from a Universal Windows app component in the same application package.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync(System.String)">
+      <summary>Launch the full-trust process for the specified application ID.</summary>
+      <param name="fullTrustPackageRelativeAppId">The process relative application identifier of the app whose full trust process component the caller wants to launch. The full-trust process can parse this to determine which app invoked it.</param>
+      <returns>The IAsyncAction to await.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync(System.String,System.String)">
+      <summary>Launch the full-trust process for the specified application ID, with parameters.</summary>
+      <param name="fullTrustPackageRelativeAppId">The process relative application identifier of the app whose full trust process component the caller wants to launch. The full-trust process can parse this to determine which app invoked it.</param>
+      <param name="parameterGroupId">The parameter group ID for the parameters that will be passed to the launched process.</param>
+      <returns>The IAsyncAction to await.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync">
+      <summary>Launch the full-trust process for the current application ID.</summary>
+      <returns>The IAsyncAction to await.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForCurrentAppAsync(System.String)">
+      <summary>Launch the full-trust process for the current application ID, with parameters.</summary>
+      <param name="parameterGroupId">The parameter group ID for the parameters that will be passed to the launched process.</param>
+      <returns>The IAsyncAction to await.</returns>
+    </member>
+  </members>
+</doc>

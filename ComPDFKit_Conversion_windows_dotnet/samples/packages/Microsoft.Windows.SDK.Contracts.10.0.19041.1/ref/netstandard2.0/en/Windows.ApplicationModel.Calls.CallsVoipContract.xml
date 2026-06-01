@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Calls.CallsVoipContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Calls.CallAnswerEventArgs">
+      <summary>Supports the AnswerRequested event of the VoipPhoneCall class.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.CallAnswerEventArgs.AcceptedMedia">
+      <summary>Gets the media types that the user selected when answering the call.</summary>
+      <returns>The media types that the user selected when answering the call.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.CallRejectEventArgs">
+      <summary>Supports the RejectRequested event of the VoipPhoneCall class.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.CallRejectEventArgs.RejectReason">
+      <summary>Gets the reason the incoming call was rejected.</summary>
+      <returns>The reason the incoming call was rejected.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.CallStateChangeEventArgs">
+      <summary>Supports the EndRequested, HoldRequested, and ResumeRequested events of the VoipPhoneCall class.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.CallStateChangeEventArgs.State">
+      <summary>Gets the current state of the VoIP call.</summary>
+      <returns>The current state of the VOIP call.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.CallsVoipContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.MuteChangeEventArgs">
+      <summary>Supports the NotifyMuted and NotifyUnmuted events.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.MuteChangeEventArgs.Muted">
+      <summary>Gets whether the call is currently muted.</summary>
+      <returns>Whether the call is currently muted.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.VoipCallCoordinator">
+      <summary>Allows an application to manage VoIP calls.</summary>
+    </member>
+    <member name="E:Windows.ApplicationModel.Calls.VoipCallCoordinator.MuteStateChanged">
+      <summary>Raised when the mute status for the phone call changes.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.CancelUpgrade(System.Guid)">
+      <summary>Cancels the upgrade to a VoIP call.</summary>
+      <param name="callUpgradeGuid">The GUID for the VoIP call.</param>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.GetDefault">
+      <summary>Retrieves the default instance of the VoipCallCoordinator class.</summary>
+      <returns>The default call coordinator.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyMuted">
+      <summary>Notifies the system that the user has muted the call using the VoIP app's UI.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.NotifyUnmuted">
+      <summary>Notifies the system that the user has unmuted the call using the VoIP app's UI.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestIncomingUpgradeToVideoCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.Foundation.TimeSpan)">
+      <summary>Makes a request to the system for an incoming video call that will replace an existing call.</summary>
+      <param name="context">A string that is passed to the associated foreground app as a deep link. This might be a contact name or other data that can be used to populate the app's UI more quickly. The maximum length is 128 characters. This parameter must be non-null and must refer to a task defined in the app's manifest file.</param>
+      <param name="contactName">The contact name of the caller to be displayed on the incoming call UI. The maximum length is 128 characters.</param>
+      <param name="contactNumber">The phone number of the caller to be displayed on the incoming call UI. The maximum length is 128 characters.</param>
+      <param name="contactImage">The Uri of an image file associated with the caller to be displayed on the incoming call UI. The file type must be PNG or JPG. The maximum file size is 1 MB.</param>
+      <param name="serviceName">The name of the VoIP service or application. The maximum length is 128 characters.</param>
+      <param name="brandingImage">The Uri of an image file that is a logo or icon of the VoIP service or application to be displayed on the incoming call UI. The file type must be PNG or JPG. The maximum file size is 128 KB.</param>
+      <param name="callDetails">A string indicating who the call is on behalf of. The maximum length is 128 characters.</param>
+      <param name="ringtone">The Uri of an audio file containing the ringtone for this call. The file type must be WMA or MP3. The maximum file size is 1 MB.</param>
+      <param name="ringTimeout">The time, in seconds, the system should wait for the user to answer or ignore the call before rejecting the call. The allowed range is 5 to 120 seconds. The default value is 30 seconds.</param>
+      <returns>The object representing the new incoming call.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewAppInitiatedCall(System.String,System.String,System.String,System.String,Windows.ApplicationModel.Calls.VoipPhoneCallMedia)">
+      <summary>Requests a new call object from the system. Call this method from your VoIP app to tell the system that there's a new incoming call, and that you want to host an incoming call notification for that new call.</summary>
+      <param name="context">A string that is passed to the associated foreground app as a deep link. The maximum length is 128 characters. This parameter must be non-null.</param>
+      <param name="contactName">The contact name of the caller to be displayed on the incoming call UI. The maximum length is 128 characters.</param>
+      <param name="contactNumber">The phone number of the caller to be displayed on the incoming call UI. The maximum length is 128 characters.</param>
+      <param name="serviceName">The name of the VoIP service or application. The maximum length is 128 characters.</param>
+      <param name="media">The media types of the new incoming call (either audio and video or audio only). Pass **Audio|Video** if the user should have the option of answering the call with outgoing video. This assumes that the user's device has a camera available for the app to use at the time the call arrives. If this is not the case, or the user should only use audio, pass **Audio**.</param>
+      <returns>The object representing the new initiated call.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.ApplicationModel.Calls.VoipPhoneCallMedia,Windows.Foundation.TimeSpan)">
+      <summary>Makes a request to the system for a new incoming call.</summary>
+      <param name="context">A string that is passed to the associated foreground app as a deep link. The maximum length is 128 characters. This parameter must be non-null.</param>
+      <param name="contactName">The contact name of the caller to be displayed on the incoming call UI. The maximum length is 128 characters.</param>
+      <param name="contactNumber">The phone number of the caller to be displayed on the incoming call UI. The maximum length is 128 characters.</param>
+      <param name="contactImage">The Uri of an image file associated with the caller to be displayed on the incoming call UI. The file type must be PNG or JPG. The maximum file size is 1MB.</param>
+      <param name="serviceName">The name of the VoIP service or application. The maximum length is 128 characters.</param>
+      <param name="brandingImage">The Uri of an image file that is a logo or icon of the VoIP service or application to be displayed on the incoming call UI. The file type must be PNG or JPG. The maximum file size is 128KB.</param>
+      <param name="callDetails">A string indicating who the call is on behalf of. The maximum length is 128 characters.</param>
+      <param name="ringtone">The Uri of an audio file containing the ringtone for this call. The file type must be WMA or MP3. The maximum file size is 1MB.</param>
+      <param name="media">The media types of the new incoming call (either audio and video or audio only). Pass **Audio|Video** if the user should have the option of answering the call with outgoing video. This assumes that the user's device has a camera available for the app to use at the time the call arrives. If this is not the case, or the user should only use audio, pass **Audio**.</param>
+      <param name="ringTimeout">The time, in seconds, the system should wait for the user to answer or ignore the call before rejecting the call. The allowed range is 5 to 120 seconds. The default value is 30 seconds.</param>
+      <returns>The object representing the new incoming call.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewIncomingCall(System.String,System.String,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,System.String,Windows.Foundation.Uri,Windows.ApplicationModel.Calls.VoipPhoneCallMedia,Windows.Foundation.TimeSpan,System.String)">
+      <summary>Makes a request to the system for a new incoming call.</summary>
+      <param name="context">A string that is passed to the associated foreground app as a deep link. The maximum length is 128 characters. This parameter must be non-null.</param>
+      <param name="contactName">The contact name of the caller to be displayed on the incoming call UI. The maximum length is 128 characters.</param>
+      <param name="contactNumber">The phone number of the caller to be displayed on the incoming call UI. The maximum length is 128 characters.</param>
+      <param name="contactImage">The Uri of an image file associated with the caller to be displayed on the incoming call UI. The file type must be PNG or JPG. The maximum file size is 1MB.</param>
+      <param name="serviceName">The name of the VoIP service or application. The maximum length is 128 characters.</param>
+      <param name="brandingImage">The Uri of an image file that is a logo or icon of the VoIP service or application to be displayed on the incoming call UI. The file type must be PNG or JPG. The maximum file size is 128KB.</param>
+      <param name="callDetails">A string indicating who the call is on behalf of. The maximum length is 128 characters.</param>
+      <param name="ringtone">The Uri of an audio file containing the ringtone for this call. The file type must be WMA or MP3. The maximum file size is 1MB.</param>
+      <param name="media">The media types of the new incoming call (either audio and video or audio only). Pass **Audio|Video** if the user should have the option of answering the call with outgoing video. This assumes that the user's device has a camera available for the app to use at the time the call arrives. If this is not the case, or the user should only use audio, pass **Audio**.</param>
+      <param name="ringTimeout">The time, in seconds, the system should wait for the user to answer or ignore the call before rejecting the call. The allowed range is 5 to 120 seconds. The default value is 30 seconds.</param>
+      <param name="contactRemoteId">The contact remote ID of the caller. The maximum length is 256 characters.</param>
+      <returns>The object representing the new incoming call.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestNewOutgoingCall(System.String,System.String,System.String,Windows.ApplicationModel.Calls.VoipPhoneCallMedia)">
+      <summary>Makes a request to the system for a new outgoing call.</summary>
+      <param name="context">A string that is passed to the associated foreground app as a deep link. The maximum length is 128 characters. This parameter must be non-null.</param>
+      <param name="contactName">The name or ID of the caller which is displayed in the phone's minimized call UI. The maximum length is 128 characters.</param>
+      <param name="serviceName">The name of the VoIP service which is displayed in the phone's minimized call UI. The maximum length is 128 characters.</param>
+      <param name="media">The media type of the new outgoing call (either audio and video or audio only). Pass **Audio|Video** if the user chose to start the call with outgoing video. This assumes that the user's device has a camera available for the app to use at the time the call is made. If this is not the case, or the user should only use audio, pass **Audio**.</param>
+      <returns>The object representing the new outgoing call.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.RequestOutgoingUpgradeToVideoCall(System.Guid,System.String,System.String,System.String)">
+      <summary>Makes a request of the system to create an outgoing video call that will replace an existing cellular call.</summary>
+      <param name="callUpgradeGuid">The GUID of the call.</param>
+      <param name="context">A string that is passed to the associated foreground app as a deep link. This might be a contact name or other data that can be used to populate the app's UI more quickly. The maximum length is 128 characters. This parameter must be non-null and must refer to a task defined in the app's manifest file.</param>
+      <param name="contactName">The name or ID of the caller which is displayed in the phone's minimized call UI. The maximum length is 128 characters.</param>
+      <param name="serviceName">The name of the VoIP service which is displayed in the phone's minimized call UI. The maximum length is 128 characters.</param>
+      <returns>The object representing the new outgoing call.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.ReserveCallResourcesAsync">
+      <summary>Reserves the CPU and memory resources necessary for a VoIP call. You should use this method only in a single-process application model.</summary>
+      <returns>The result of the reservation action.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.ReserveCallResourcesAsync(System.String)">
+      <summary>Reserves the CPU and memory resources necessary for a VoIP call. You should use this method only in a two-process application model.</summary>
+      <param name="taskEntryPoint">The name of an application-defined class that performs the work of a background task. For more information, see TaskEntryPoint.</param>
+      <returns>The result of the reservation action.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.SetupNewAcceptedCall(System.String,System.String,System.String,System.String,Windows.ApplicationModel.Calls.VoipPhoneCallMedia)">
+      <summary>Sets up a newly accepted call.</summary>
+      <param name="context">Information that is passed to the VoIP app's foreground UI process. This might be the contact name, or other data that helps the UI display more quickly.</param>
+      <param name="contactName">The name or ID of the caller.</param>
+      <param name="contactNumber">The phone number (if applicable) of the caller.</param>
+      <param name="serviceName">The name of the service or application.</param>
+      <param name="media">The media types of the new incoming call (either audio and video or audio only). Pass **Audio|Video** if the call should be answered with outgoing video. This assumes that the user's device has a camera available for the app to use at the time the call is answered. If this is not the case, or the user should only use audio, pass **Audio**.</param>
+      <returns>Returns the call as a VoipPhoneCall object.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipCallCoordinator.TerminateCellularCall(System.Guid)">
+      <summary>Terminates a cellular call in order to upgrade to a VoIP call.</summary>
+      <param name="callUpgradeGuid">The GUID for the VoIP call.</param>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.VoipPhoneCall">
+      <summary>Represents a VoIP phone call.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.CallMedia">
+      <summary>Gets the media types used by the call.</summary>
+      <returns>The media types used by the call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.ContactName">
+      <summary>Gets or sets contact name associated with the VoIP call.</summary>
+      <returns>The contact name associated with the VoIP call.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Calls.VoipPhoneCall.StartTime">
+      <summary>Gets or sets the start time associated with the VoIP call.</summary>
+      <returns>The start time associated with the call.</returns>
+    </member>
+    <member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.AnswerRequested">
+      <summary>Raised when the user answers an incoming call.</summary>
+    </member>
+    <member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.EndRequested">
+      <summary>Raised to alert the VoIP app that the call should be ended.</summary>
+    </member>
+    <member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.HoldRequested">
+      <summary>Raised to alert the VoIP app that the call should be placed on hold.</summary>
+    </member>
+    <member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.RejectRequested">
+      <summary>Raised when a call has been rejected.</summary>
+    </member>
+    <member name="E:Windows.ApplicationModel.Calls.VoipPhoneCall.ResumeRequested">
+      <summary>Raised to indicate that a previously held VoIP call should be made active.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallAccepted(Windows.ApplicationModel.Calls.VoipPhoneCallMedia)">
+      <summary>Notifies the system that the VoIP call has been accepted.</summary>
+      <param name="media">The media types of the new incoming call (either audio and video or audio only). Pass **Audio|Video** if the user chose to answer the call with outgoing video, or **Audio** if they answered with just audio.</param>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallActive">
+      <summary>Notifies the system that the VoIP call is active.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallEnded">
+      <summary>Notifies the system that the call has ended.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallHeld">
+      <summary>Notifies the system that the call is currently on hold.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.NotifyCallReady">
+      <summary>When upgrading a call from cellular to video, notifies the system that the app is done setting up the audio and video streams for the video call so that the system can end the existing cellular call.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Calls.VoipPhoneCall.TryShowAppUI">
+      <summary>Brings the VOIP app's user interface into the foreground after accepting a call.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallMedia">
+      <summary>Specifies the media types used by a VoIP call.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Audio">
+      <summary>The call uses audio.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.None">
+      <summary>The call uses no media.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallMedia.Video">
+      <summary>The call uses video.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason">
+      <summary>Specifies the reason that an incoming call was rejected.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.EmergencyCallExists">
+      <summary>An emergency call is in progress.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.InvalidCallState">
+      <summary>The call is in an invalid state.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.OtherIncomingCall">
+      <summary>Another incoming call was accepted.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.TimedOut">
+      <summary>The incoming call timed out.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallRejectReason.UserIgnored">
+      <summary>The user pressed a button to ignore the call.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus">
+      <summary>Indicates the result of attempting to reserve VoIP resources.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.ResourcesNotAvailable">
+      <summary>The resources were not reserved because they are not available.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallResourceReservationStatus.Success">
+      <summary>The resources have been reserved.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Calls.VoipPhoneCallState">
+      <summary>Specifies the state of a VoIP call.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Active">
+      <summary>The call is active.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Ended">
+      <summary>The call has ended.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Held">
+      <summary>The call is on hold.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Incoming">
+      <summary>The call is incoming but not yet active.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Calls.VoipPhoneCallState.Outgoing">
+      <summary>The call is outgoing but not yet active.</summary>
+    </member>
+  </members>
+</doc>
