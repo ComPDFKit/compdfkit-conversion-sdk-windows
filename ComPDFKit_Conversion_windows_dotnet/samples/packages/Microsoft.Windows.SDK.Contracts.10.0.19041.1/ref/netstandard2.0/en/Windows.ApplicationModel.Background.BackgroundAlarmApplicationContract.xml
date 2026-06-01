@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Background.BackgroundAlarmApplicationContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Background.AlarmAccessStatus">
+      <summary>Indicates whether the user has given permission for the app to set alarms.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Background.AlarmAccessStatus.AllowedWithoutWakeupCapability">
+      <summary>The user has given permission for the app to set alarms, but the alarms cannot wake up the computer from standby.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Background.AlarmAccessStatus.AllowedWithWakeupCapability">
+      <summary>The user has given permission for the app to set alarms, and alarms can wake up the computer from standby.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Background.AlarmAccessStatus.Denied">
+      <summary>The user has denied permission for the app to set alarms.</summary>
+    </member>
+    <member name="F:Windows.ApplicationModel.Background.AlarmAccessStatus.Unspecified">
+      <summary>The user has not responded to a permission request for the app to set alarms.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Background.AlarmApplicationManager">
+      <summary>Requests permission from the user to set alarms, and retrieves the status of user permission for the app to set alarms.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Background.AlarmApplicationManager.GetAccessStatus">
+      <summary>Retrieves the status of user permission for the app to set alarms.</summary>
+      <returns>Indicates whether the user has granted permission to set alarms.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Background.AlarmApplicationManager.RequestAccessAsync">
+      <summary>Requests permission from the user to set alarms.</summary>
+      <returns>This method returns an AlarmAccessStatus value when it completes.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Background.BackgroundAlarmApplicationContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

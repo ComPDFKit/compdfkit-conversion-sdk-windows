@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Management.Workplace.WorkplaceSettingsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Management.Workplace.WorkplaceSettings">
+      <summary>Enables UWP apps to access select enterprise settings that are managed through group policy or other management services.</summary>
+    </member>
+    <member name="P:Windows.Management.Workplace.WorkplaceSettings.IsMicrosoftAccountOptional">
+      <summary>Gets a value that indicates whether an enterprise ID can be used instead of a Microsoft account.</summary>
+      <returns>**true** if an enterprise ID can be used instead of a Microsoft account; otherwise, **false**.</returns>
+    </member>
+    <member name="T:Windows.Management.Workplace.WorkplaceSettingsContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

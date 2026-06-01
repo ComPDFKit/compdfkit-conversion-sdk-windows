@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Perception.Automation.Core.PerceptionAutomationCoreContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Perception.Automation.Core.CorePerceptionAutomation">
+      <summary>Provides automation services for the Perception API.</summary>
+    </member>
+    <member name="M:Windows.Perception.Automation.Core.CorePerceptionAutomation.SetActivationFactoryProvider(Windows.Foundation.IGetActivationFactory)">
+      <summary>Overrides the Windows Perception API and provides a custom class provider to implement the API.</summary>
+      <param name="provider">The automation provider.</param>
+    </member>
+    <member name="T:Windows.Perception.Automation.Core.PerceptionAutomationCoreContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

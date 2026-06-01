@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Phone.StartScreen.DualSimTileContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Phone.StartScreen.DualSimTile">
+      <summary>Creates toast, tile, and badge updater objects specific to Sim1 and Sim2 on dual sim devices.</summary>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.#ctor">
+      <summary>Creates a DualSimTile object.</summary>
+    </member>
+    <member name="P:Windows.Phone.StartScreen.DualSimTile.DisplayName">
+      <summary>Gets or sets a name that is associated with and displayed on the tile.</summary>
+      <returns>The display name.</returns>
+    </member>
+    <member name="P:Windows.Phone.StartScreen.DualSimTile.IsPinnedToStart">
+      <summary>Gets a value indicating whether the tile is pinned to Start.</summary>
+      <returns>Set to True if the tile is pinned; otherwise, False.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.CreateAsync">
+      <summary>Creates a new dual SIM app list entry.</summary>
+      <returns>When this async operation completes a boolean is returned.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.CreateBadgeUpdaterForSim1">
+      <summary>Creates and initializes a badge updater for the Sim1 tile.</summary>
+      <returns>The object you will use to send badge updates to the tile.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.CreateBadgeUpdaterForSim2">
+      <summary>Creates and initializes a badge updater for the Sim2 tile.</summary>
+      <returns>The object you will use to send badge updates to the tile.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.CreateTileUpdaterForSim1">
+      <summary>Creates and initializes a tile updater for the Sim1 tile.</summary>
+      <returns>The object you will use to send updates to the tile.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.CreateTileUpdaterForSim2">
+      <summary>Creates and initializes a tile updater for the Sim2 tile.</summary>
+      <returns>The object you will use to send badge updates to the tile.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.CreateToastNotifierForSim1">
+      <summary>Creates and initializes a toast notifier for Sim1.</summary>
+      <returns>The object you will use to send the toast notification.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.CreateToastNotifierForSim2">
+      <summary>Creates and initializes a toast notifier for Sim2.</summary>
+      <returns>The object you will use to send the toast notification to the app.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.DeleteAsync">
+      <summary>Deletes a dual SIM app list entry.</summary>
+      <returns>When this async operation completes a boolean is returned.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.GetTileForSim2">
+      <summary>Gets the Sim2 tile.</summary>
+      <returns>A reference to the Sim2 tile.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.UpdateAsync">
+      <summary>Updates a dual SIM app list entry.</summary>
+      <returns>When this async operation completes a boolean is returned.</returns>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.DualSimTile.UpdateDisplayNameForSim1Async(System.String)">
+      <summary>Updates the primary tile display name.</summary>
+      <param name="name">The display name.</param>
+      <returns>When this async operation completes a boolean is returned.</returns>
+    </member>
+    <member name="T:Windows.Phone.StartScreen.DualSimTileContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Phone.StartScreen.IToastNotificationManagerStatics3">
+      <summary>Creates ToastNotifier objects that can be used to raise toast notifications.</summary>
+    </member>
+    <member name="M:Windows.Phone.StartScreen.IToastNotificationManagerStatics3.CreateToastNotifierForSecondaryTile(System.String)">
+      <summary>Creates and initializes a toast notifier for the secondary tile.</summary>
+      <param name="tileId">The tile ID.</param>
+      <returns>The object you will use to send the toast notification to the tile.</returns>
+    </member>
+  </members>
+</doc>

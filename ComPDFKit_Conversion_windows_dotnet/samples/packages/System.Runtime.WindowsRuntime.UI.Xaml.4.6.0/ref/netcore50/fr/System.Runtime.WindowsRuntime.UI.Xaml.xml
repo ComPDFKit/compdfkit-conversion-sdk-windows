@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.WindowsRuntime.UI.Xaml</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.UI.Xaml.CornerRadius">
+      <summary>Décrit les caractéristiques d'un angle arrondi, tel qu'il peut être appliqué à un Windows.UI.Xaml.Controls.Border.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.#ctor(System.Double)">
+      <summary>Initialise une nouvelle structure <see cref="T:Windows.UI.Xaml.CornerRadius" />, en appliquant le même rayon uniforme à tous ses angles.</summary>
+      <param name="uniformRadius">Un rayon uniforme appliqué à toutes les quatre propriétés <see cref="T:Windows.UI.Xaml.CornerRadius" /> (<see cref="P:Windows.UI.Xaml.CornerRadius.TopLeft" />, <see cref="P:Windows.UI.Xaml.CornerRadius.TopRight" />, <see cref="P:Windows.UI.Xaml.CornerRadius.BottomRight" />, <see cref="P:Windows.UI.Xaml.CornerRadius.BottomLeft" />).</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>Initialise une nouvelle instance de la structure <see cref="T:Windows.UI.Xaml.CornerRadius" />, en appliquant des valeurs de rayon spécifiques à ses angles.</summary>
+      <param name="topLeft">Définit le <see cref="P:Windows.UI.Xaml.CornerRadius.TopLeft" /> initial.</param>
+      <param name="topRight">Définit le <see cref="P:Windows.UI.Xaml.CornerRadius.TopRight" /> initial.</param>
+      <param name="bottomRight">Définit le <see cref="P:Windows.UI.Xaml.CornerRadius.BottomLeft" /> initial.</param>
+      <param name="bottomLeft">Définit le <see cref="P:Windows.UI.Xaml.CornerRadius.BottomRight" /> initial.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.BottomLeft">
+      <summary>Obtient ou définit le rayon d'arrondi, en pixels, du coin inférieur gauche de l'objet où un <see cref="T:Windows.UI.Xaml.CornerRadius" /> est appliqué.</summary>
+      <returns>Un <see cref="T:System.Double" /> qui représente le rayon de l'arrondi, en pixels, du coin inférieur gauche de l'objet où un <see cref="T:Windows.UI.Xaml.CornerRadius" /> est appliqué.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.BottomRight">
+      <summary>Obtient ou définit le rayon d'arrondi, en pixels, du coin inférieur droit de l'objet où un <see cref="T:Windows.UI.Xaml.CornerRadius" /> est appliqué.</summary>
+      <returns>Un <see cref="T:System.Double" /> qui représente le rayon de l'arrondi, en pixels, du coin inférieur droit de l'objet où un <see cref="T:Windows.UI.Xaml.CornerRadius" /> est appliqué.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.Equals(System.Object)">
+      <summary>Compare l'égalité de cette structure <see cref="T:Windows.UI.Xaml.CornerRadius" /> à un autre objet.</summary>
+      <returns>true si les deux objets sont égaux ; sinon false.</returns>
+      <param name="obj">Objet à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.Equals(Windows.UI.Xaml.CornerRadius)">
+      <summary>Compare cette structure <see cref="T:Windows.UI.Xaml.CornerRadius" /> à une autre structure <see cref="T:Windows.UI.Xaml.CornerRadius" /> pour l'égalité.</summary>
+      <returns>true si les deux instances de <see cref="T:Windows.UI.Xaml.CornerRadius" /> sont égales ; sinon false.</returns>
+      <param name="cornerRadius">Instance de <see cref="T:Windows.UI.Xaml.CornerRadius" /> à comparer pour l'égalité.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.GetHashCode">
+      <summary>Retourne le code de hachage de la structure.</summary>
+      <returns>Code de hachage pour ce <see cref="T:Windows.UI.Xaml.CornerRadius" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.op_Equality(Windows.UI.Xaml.CornerRadius,Windows.UI.Xaml.CornerRadius)">
+      <summary>Compare la valeur de deux structures <see cref="T:Windows.UI.Xaml.CornerRadius" /> pour l'égalité.</summary>
+      <returns>true si les deux instances de <see cref="T:Windows.UI.Xaml.CornerRadius" /> sont égales ; sinon false.</returns>
+      <param name="cr1">Première structure à comparer.</param>
+      <param name="cr2">Autre structure à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.op_Inequality(Windows.UI.Xaml.CornerRadius,Windows.UI.Xaml.CornerRadius)">
+      <summary>Compare l'inégalité de deux structures <see cref="T:Windows.UI.Xaml.CornerRadius" />. </summary>
+      <returns>true si les deux instances de <see cref="T:Windows.UI.Xaml.CornerRadius" /> ne sont pas égales ; sinon false.</returns>
+      <param name="cr1">Première structure à comparer.</param>
+      <param name="cr2">Autre structure à comparer.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.TopLeft">
+      <summary>Obtient ou définit le rayon d'arrondi, en pixels, du coin supérieur gauche de l'objet où un <see cref="T:Windows.UI.Xaml.CornerRadius" /> est appliqué.</summary>
+      <returns>Un <see cref="T:System.Double" /> qui représente le rayon de l'arrondi, en pixels, du coin supérieur gauche de l'objet où un <see cref="T:Windows.UI.Xaml.CornerRadius" /> est appliqué.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.CornerRadius.TopRight">
+      <summary>Obtient ou définit le rayon d'arrondi, en pixels, du coin supérieur droit de l'objet où un <see cref="T:Windows.UI.Xaml.CornerRadius" /> est appliqué.</summary>
+      <returns>Un <see cref="T:System.Double" /> qui représente le rayon de l'arrondi, en pixels, du coin supérieur droit de l'objet où un <see cref="T:Windows.UI.Xaml.CornerRadius" /> est appliqué.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.CornerRadius.ToString">
+      <summary>Retourne la représentation sous forme de chaîne de la structure <see cref="T:Windows.UI.Xaml.CornerRadius" />.</summary>
+      <returns>
+        <see cref="T:System.String" /> qui représente la valeur <see cref="T:Windows.UI.Xaml.CornerRadius" />.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Duration">
+      <summary>Représente la durée pendant laquelle Windows.UI.Xaml.Media.Animation.Timeline est actif.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.#ctor(System.TimeSpan)">
+      <summary>Initialise une nouvelle instance de la structure <see cref="T:Windows.UI.Xaml.Duration" /> à l'aide de la valeur <see cref="T:System.TimeSpan" /> fournie.</summary>
+      <param name="timeSpan">Représente l'intervalle de temps initial de cette durée.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="timeSpan" /> donne pour résultat une valeur inférieure à <see cref="F:System.TimeSpan.Zero" />.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Add(Windows.UI.Xaml.Duration)">
+      <summary>Ajoute les valeurs de l'interface <see cref="T:Windows.UI.Xaml.Duration" /> spécifiée à la fin de ce <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Si chaque <see cref="T:Windows.UI.Xaml.Duration" /> impliqué a des valeurs, un <see cref="T:Windows.UI.Xaml.Duration" /> qui représente les valeurs combinées.Sinon, cette méthode retourne null.</returns>
+      <param name="duration">Instance de <see cref="T:Windows.UI.Xaml.Duration" /> qui représente la valeur de l'instance actuelle ainsi que <paramref name="duration" />.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.Automatic">
+      <summary>Obtient une valeur <see cref="T:Windows.UI.Xaml.Duration" /> qui est déterminée automatiquement.</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Duration" /> initialisé comme valeur automatique.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Compare(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Compare une valeur <see cref="T:Windows.UI.Xaml.Duration" /> à une autre.</summary>
+      <returns>Valeur négative qui représente la différence si <paramref name="t1" /> est inférieur à <paramref name="t2" />.Valeur 0 si <paramref name="t1" /> est égal à <paramref name="t2" />.Valeur positive qui représente la différence si <paramref name="t1" /> est supérieur à <paramref name="t2" />.</returns>
+      <param name="t1">Première instance du <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+      <param name="t2">Deuxième instance de <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(System.Object)">
+      <summary>Détermine si un objet spécifié est égal à un <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>true si la valeur est égale à ce <see cref="T:Windows.UI.Xaml.Duration" /> ; sinon, false.</returns>
+      <param name="value">Objet dont l'égalité doit être vérifiée.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(Windows.UI.Xaml.Duration)">
+      <summary>Détermine si le <see cref="T:Windows.UI.Xaml.Duration" /> spécifié est égal à ce <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>true si <paramref name="duration" /> est égal à ce <see cref="T:Windows.UI.Xaml.Duration" /> ; sinon false.</returns>
+      <param name="duration">
+        <see cref="T:Windows.UI.Xaml.Duration" /> dont l'égalité doit être vérifiée.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Equals(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Détermine si deux valeurs <see cref="T:Windows.UI.Xaml.Duration" /> sont égales.</summary>
+      <returns>true si <paramref name="t1" /> est égal à <paramref name="t2" /> ; sinon, false.</returns>
+      <param name="t1">Premier <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+      <param name="t2">Second <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.Forever">
+      <summary>Obtient une valeur <see cref="T:Windows.UI.Xaml.Duration" /> qui représente un intervalle infini.</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Duration" /> initialisé comme valeur illimitée.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.GetHashCode">
+      <summary>Obtient un code de hachage pour cet objet.</summary>
+      <returns>Identificateur de code de hachage.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.HasTimeSpan">
+      <summary>Obtient une valeur qui indique si <see cref="T:Windows.UI.Xaml.Duration" /> représente une valeur <see cref="T:System.TimeSpan" />.</summary>
+      <returns>true si <see cref="T:Windows.UI.Xaml.Duration" /> est une valeur <see cref="T:System.TimeSpan" /> ; sinon, false.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Addition(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Ajoute ensemble deux valeurs <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>Si les deux valeurs <see cref="T:Windows.UI.Xaml.Duration" /> ont les valeurs <see cref="T:System.TimeSpan" />, cette méthode retourne la somme des deux valeurs.Si <see cref="P:Windows.UI.Xaml.Duration.Automatic" /> est affecté à l'une des deux valeurs, la méthode retourne <see cref="P:Windows.UI.Xaml.Duration.Automatic" />.Si <see cref="P:Windows.UI.Xaml.Duration.Forever" /> est affecté à l'une des deux valeurs, la méthode retourne <see cref="P:Windows.UI.Xaml.Duration.Forever" />.Si <paramref name="t1" /> ou <paramref name="t2" /> n'a aucune valeur, cette méthode retourne null.</returns>
+      <param name="t1">Première valeur <see cref="T:Windows.UI.Xaml.Duration" /> à ajouter.</param>
+      <param name="t2">Seconde valeur <see cref="T:Windows.UI.Xaml.Duration" /> à ajouter.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Equality(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Détermine si deux cas <see cref="T:Windows.UI.Xaml.Duration" /> sont égaux.</summary>
+      <returns>true si les deux valeurs <see cref="T:Windows.UI.Xaml.Duration" /> ont des valeurs de propriété égales, ou si toutes les valeurs <see cref="T:Windows.UI.Xaml.Duration" /> sont null.Sinon, cette méthode retourne false.</returns>
+      <param name="t1">Premier <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+      <param name="t2">Deuxième <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_GreaterThan(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Détermine si un <see cref="T:Windows.UI.Xaml.Duration" /> est supérieur à un autre.</summary>
+      <returns>true si <paramref name="t1" /> et <paramref name="t2" /> ont des valeurs et si <paramref name="t1" /> est supérieur à <paramref name="t2" /> ; sinon, false.</returns>
+      <param name="t1">Valeur <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+      <param name="t2">Seconde valeur <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_GreaterThanOrEqual(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Détermine si un <see cref="T:Windows.UI.Xaml.Duration" /> est supérieur ou égal à un autre.</summary>
+      <returns>true si <paramref name="t1" /> et <paramref name="t2" /> ont des valeurs et si <paramref name="t1" /> est supérieur ou égal à <paramref name="t2" /> ; sinon, false.</returns>
+      <param name="t1">Première instance du <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+      <param name="t2">Deuxième instance de <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Implicit(System.TimeSpan)~Windows.UI.Xaml.Duration">
+      <summary>Crée implicitement <see cref="T:Windows.UI.Xaml.Duration" /> à partir d'un <see cref="T:System.TimeSpan" /> donné.</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Duration" /> créé.</returns>
+      <param name="timeSpan">
+        <see cref="T:System.TimeSpan" /> à partir duquel un <see cref="T:Windows.UI.Xaml.Duration" /> est créé implicitement.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="timeSpan" /> donne pour résultat une valeur inférieure à <see cref="F:System.TimeSpan.Zero" />.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Inequality(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Détermine si deux cas <see cref="T:Windows.UI.Xaml.Duration" /> ne sont pas égaux.</summary>
+      <returns>true si <paramref name="t1" /> ou <paramref name="t2" /> représente une valeur ou si les deux représentent des valeurs qui ne sont pas égales ; sinon, false.</returns>
+      <param name="t1">Premier <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+      <param name="t2">Deuxième <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_LessThan(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Détermine si un <see cref="T:Windows.UI.Xaml.Duration" /> est inférieur à la valeur d'une autre instance.</summary>
+      <returns>true si <paramref name="t1" /> et <paramref name="t2" /> ont des valeurs et si <paramref name="t1" /> est inférieur à <paramref name="t2" /> ; sinon, false.</returns>
+      <param name="t1">Premier <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+      <param name="t2">Deuxième <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_LessThanOrEqual(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Détermine si un <see cref="T:Windows.UI.Xaml.Duration" /> est inférieur ou égal à un autre.</summary>
+      <returns>true si <paramref name="t1" /> et <paramref name="t2" /> ont des valeurs et si <paramref name="t1" /> est inférieur ou égal à <paramref name="t2" /> ; sinon, false.</returns>
+      <param name="t1">
+        <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+      <param name="t2">
+        <see cref="T:Windows.UI.Xaml.Duration" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_Subtraction(Windows.UI.Xaml.Duration,Windows.UI.Xaml.Duration)">
+      <summary>Soustrait la valeur d'un <see cref="T:Windows.UI.Xaml.Duration" /> d'un autre.</summary>
+      <returns>Si chaque <see cref="T:Windows.UI.Xaml.Duration" /> a des valeurs, un <see cref="T:Windows.UI.Xaml.Duration" /> qui représente la valeur de <paramref name="t1" /> moins <paramref name="t2" />.Si <paramref name="t1" /> présente une valeur de <see cref="P:Windows.UI.Xaml.Duration.Forever" /> et <paramref name="t2" /> une valeur de <see cref="P:Windows.UI.Xaml.Duration.TimeSpan" />, cette méthode retourne <see cref="P:Windows.UI.Xaml.Duration.Forever" />.Sinon, cette méthode retourne null.</returns>
+      <param name="t1">Première <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+      <param name="t2">
+        <see cref="T:Windows.UI.Xaml.Duration" /> à soustraire.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.op_UnaryPlus(Windows.UI.Xaml.Duration)">
+      <summary>Retourne le <see cref="T:Windows.UI.Xaml.Duration" /> spécifié.</summary>
+      <returns>Résultat de l'opération <see cref="T:Windows.UI.Xaml.Duration" />.</returns>
+      <param name="duration">
+        <see cref="T:Windows.UI.Xaml.Duration" /> à obtenir.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.Subtract(Windows.UI.Xaml.Duration)">
+      <summary>Soustrait le <see cref="T:Windows.UI.Xaml.Duration" /> spécifié de ce <see cref="T:Windows.UI.Xaml.Duration" />.</summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Duration" /> soustrait.</returns>
+      <param name="duration">
+        <see cref="T:Windows.UI.Xaml.Duration" /> à soustraire de ce <see cref="T:Windows.UI.Xaml.Duration" />.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Duration.TimeSpan">
+      <summary>Obtient la valeur <see cref="T:System.TimeSpan" /> que <see cref="T:Windows.UI.Xaml.Duration" /> représente.</summary>
+      <returns>Valeur <see cref="T:System.TimeSpan" /> que <see cref="T:Windows.UI.Xaml.Duration" /> représente.</returns>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="T:Windows.UI.Xaml.Duration" /> ne représente pas un <see cref="T:System.TimeSpan" />.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Duration.ToString">
+      <summary>Convertit un <see cref="T:Windows.UI.Xaml.Duration" /> en une représentation <see cref="T:System.String" />.</summary>
+      <returns>Représentation <see cref="T:System.String" /> de <see cref="T:Windows.UI.Xaml.Duration" />.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.DurationType">
+      <summary>Spécifie si une <see cref="T:Windows.UI.Xaml.Duration" /> a la valeur spéciale Automatic ou Forever, ou contient des informations valides dans son composant <see cref="T:System.TimeSpan" />. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.Automatic">
+      <summary>A la valeur spéciale « automatique ». </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.Forever">
+      <summary>A la valeur spéciale « infini ». </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.DurationType.TimeSpan">
+      <summary>A des informations valides dans le composant <see cref="T:System.TimeSpan" />. </summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.GridLength">
+      <summary>Représente la longueur des éléments qui prennent en charge explicitement des types d'unité <see cref="F:Windows.UI.Xaml.GridUnitType.Star" />. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.#ctor(System.Double)">
+      <summary>Initialise une nouvelle instance de la structure <see cref="T:Windows.UI.Xaml.GridLength" /> à l'aide de la valeur absolue spécifiée en pixels. </summary>
+      <param name="pixels">Nombre absolu de pixels à établir comme valeur.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.#ctor(System.Double,Windows.UI.Xaml.GridUnitType)">
+      <summary>Initialise une nouvelle instance de la structure <see cref="T:Windows.UI.Xaml.GridLength" /> et spécifie le type de valeur qu'elle contient. </summary>
+      <param name="value">Valeur initiale de cette instance de <see cref="T:Windows.UI.Xaml.GridLength" />.</param>
+      <param name="type">
+        <see cref="T:Windows.UI.Xaml.GridUnitType" /> maintenu par cette instance de <see cref="T:Windows.UI.Xaml.GridLength" />.</param>
+      <exception cref="T:System.ArgumentException">La valeur est inférieure à 0 ou n'est pas un nombre.- ou -Le type n'est pas un <see cref="T:Windows.UI.Xaml.GridUnitType" /> valide.</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.Auto">
+      <summary>Obtient une instance de <see cref="T:Windows.UI.Xaml.GridLength" /> qui maintient une valeur dont la taille est déterminée par les propriétés de taille de l'objet de contenu.</summary>
+      <returns>Instance de <see cref="T:Windows.UI.Xaml.GridLength" /> dont la propriété <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> a la valeur <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" />. </returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.Equals(System.Object)">
+      <summary>Détermine si l'objet spécifié est égal à l'instance <see cref="T:Windows.UI.Xaml.GridLength" /> actuelle. </summary>
+      <returns>true si l'objet spécifié a la même valeur et <see cref="T:Windows.UI.Xaml.GridUnitType" /> que l'instance actuelle ; sinon, false.</returns>
+      <param name="oCompare">Objet à comparer avec l'instance actuelle.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.Equals(Windows.UI.Xaml.GridLength)">
+      <summary>Détermine si le <see cref="T:Windows.UI.Xaml.GridLength" /> spécifié est égal au <see cref="T:Windows.UI.Xaml.GridLength" /> actuel.</summary>
+      <returns>true si le <see cref="T:Windows.UI.Xaml.GridLength" /> spécifié a la même valeur et <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> que l'instance actuelle ; sinon, false.</returns>
+      <param name="gridLength">Structure <see cref="T:Windows.UI.Xaml.GridLength" /> à comparer avec l'instance actuelle.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.GetHashCode">
+      <summary>Obtient un code de hachage pour le <see cref="T:Windows.UI.Xaml.GridLength" />. </summary>
+      <returns>Code de hachage pour <see cref="T:Windows.UI.Xaml.GridLength" />. </returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.GridUnitType">
+      <summary>Obtient le <see cref="T:Windows.UI.Xaml.GridUnitType" /> associé pour <see cref="T:Windows.UI.Xaml.GridLength" />. </summary>
+      <returns>Une des valeurs de <see cref="T:Windows.UI.Xaml.GridUnitType" />.La valeur par défaut est <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsAbsolute">
+      <summary>Obtient une valeur qui indique si <see cref="T:Windows.UI.Xaml.GridLength" /> maintient une valeur qui est exprimée en pixels. </summary>
+      <returns>true si la propriété <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> est <see cref="F:Windows.UI.Xaml.GridUnitType.Pixel" /> ; sinon, false.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsAuto">
+      <summary>Obtient une valeur qui indique si <see cref="T:Windows.UI.Xaml.GridLength" /> maintient une valeur dont la taille est déterminée par les propriétés de taille de l'objet de contenu. </summary>
+      <returns>true si la propriété <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> est <see cref="F:Windows.UI.Xaml.GridUnitType.Auto" /> ; sinon, false. </returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.IsStar">
+      <summary>Obtient une valeur qui indique si <see cref="T:Windows.UI.Xaml.GridLength" /> maintient une valeur qui est exprimée comme une proportion pondérée d'espace disponible. </summary>
+      <returns>true si la propriété <see cref="P:Windows.UI.Xaml.GridLength.GridUnitType" /> est <see cref="F:Windows.UI.Xaml.GridUnitType.Star" /> ; sinon, false. </returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.op_Equality(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)">
+      <summary>Compare l'égalité de deux structures <see cref="T:Windows.UI.Xaml.GridLength" />.</summary>
+      <returns>true si les deux instances de <see cref="T:Windows.UI.Xaml.GridLength" /> ont la même valeur et <see cref="T:Windows.UI.Xaml.GridUnitType" /> ; sinon, false.</returns>
+      <param name="gl1">Première instance du <see cref="T:Windows.UI.Xaml.GridLength" /> à comparer.</param>
+      <param name="gl2">Deuxième instance de <see cref="T:Windows.UI.Xaml.GridLength" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.op_Inequality(Windows.UI.Xaml.GridLength,Windows.UI.Xaml.GridLength)">
+      <summary>Compare deux structures <see cref="T:Windows.UI.Xaml.GridLength" /> pour déterminer si elles sont inégales.</summary>
+      <returns>true si les deux instances de <see cref="T:Windows.UI.Xaml.GridLength" /> n'ont pas la même valeur et <see cref="T:Windows.UI.Xaml.GridUnitType" /> ; sinon, false.</returns>
+      <param name="gl1">Première instance du <see cref="T:Windows.UI.Xaml.GridLength" /> à comparer.</param>
+      <param name="gl2">Deuxième instance de <see cref="T:Windows.UI.Xaml.GridLength" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.GridLength.ToString">
+      <summary>Retourne une représentation <see cref="T:System.String" /> de <see cref="T:Windows.UI.Xaml.GridLength" />.</summary>
+      <returns>Représentation de la structure <see cref="T:System.String" /><see cref="T:Windows.UI.Xaml.GridLength" /> actuelle.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.GridLength.Value">
+      <summary>Obtient <see cref="T:System.Double" /> qui représente la valeur de <see cref="T:Windows.UI.Xaml.GridLength" />.</summary>
+      <returns>
+        <see cref="T:System.Double" /> qui représente la valeur de l'instance actuelle. </returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.GridUnitType">
+      <summary>Décrit le type de valeur qu'un objet <see cref="T:Windows.UI.Xaml.GridLength" /> contient. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Auto">
+      <summary>La taille est déterminée par les propriétés de taille de l'objet de contenu. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Pixel">
+      <summary>La valeur est exprimée en pixels. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.GridUnitType.Star">
+      <summary>La valeur est exprimée sous la forme d'une proportion pondérée d'espace disponible. </summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.LayoutCycleException">
+      <summary>Exception levée par le cycle de disposition.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> avec les valeurs par défaut. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor(System.String)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> avec un message d'erreur spécifié.</summary>
+      <param name="message">Message d'erreur indiquant la raison de l'exception. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.LayoutCycleException.#ctor(System.String,System.Exception)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.LayoutCycleException" /> avec un message d'erreur spécifié et une référence à l'exception interne ayant provoqué cette exception. </summary>
+      <param name="message">Message d'erreur indiquant la raison de l'exception. </param>
+      <param name="innerException">L'exception qui est la cause de l'exception actuelle ou null si aucune exception interne n'est spécifiée.</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Thickness">
+      <summary>Décrit l'épaisseur d'un cadre autour d'un rectangle.Quatre valeurs <see cref="T:System.Double" /> décrivent les côtés <see cref="P:Windows.UI.Xaml.Thickness.Left" />, <see cref="P:Windows.UI.Xaml.Thickness.Top" />, <see cref="P:Windows.UI.Xaml.Thickness.Right" /> et <see cref="P:Windows.UI.Xaml.Thickness.Bottom" /> du rectangle, respectivement.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.#ctor(System.Double)">
+      <summary>Initialise une structure <see cref="T:Windows.UI.Xaml.Thickness" /> qui a la longueur uniforme spécifiée sur chaque côté. </summary>
+      <param name="uniformLength">Longueur uniforme appliquée aux quatre côtés du rectangle englobant.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.#ctor(System.Double,System.Double,System.Double,System.Double)">
+      <summary>Initialise une structure <see cref="T:Windows.UI.Xaml.Thickness" /> qui a des longueurs spécifiques (fournies comme <see cref="T:System.Double" />) appliquées à chaque côté du rectangle. </summary>
+      <param name="left">Épaisseur du côté gauche du rectangle.</param>
+      <param name="top">Épaisseur du côté supérieur du rectangle.</param>
+      <param name="right">Épaisseur du côté droit du rectangle.</param>
+      <param name="bottom">Épaisseur du côté inférieur du rectangle.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Bottom">
+      <summary>Obtient ou définit la largeur, en pixels, du côté inférieur du rectangle englobant.</summary>
+      <returns>
+        <see cref="T:System.Double" /> qui représente la largeur, en pixels, du côté inférieur du rectangle englobant pour cette instance de <see cref="T:Windows.UI.Xaml.Thickness" />.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.Equals(System.Object)">
+      <summary>Compare cette structure <see cref="T:Windows.UI.Xaml.Thickness" /> à un autre <see cref="T:System.Object" /> pour l'égalité.</summary>
+      <returns>true si les deux objets sont égaux ; sinon false.</returns>
+      <param name="obj">Objet à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.Equals(Windows.UI.Xaml.Thickness)">
+      <summary>Compare cette structure <see cref="T:Windows.UI.Xaml.Thickness" /> à une autre structure <see cref="T:Windows.UI.Xaml.Thickness" /> pour l'égalité.</summary>
+      <returns>true si les deux instances de <see cref="T:Windows.UI.Xaml.Thickness" /> sont égales ; sinon false.</returns>
+      <param name="thickness">Instance de <see cref="T:Windows.UI.Xaml.Thickness" /> à comparer pour l'égalité.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.GetHashCode">
+      <summary>Retourne le code de hachage de la structure.</summary>
+      <returns>Code de hachage pour cette instance de <see cref="T:Windows.UI.Xaml.Thickness" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Left">
+      <summary>Obtient ou définit la largeur, en pixels, du côté gauche du rectangle englobant. </summary>
+      <returns>
+        <see cref="T:System.Double" /> qui représente la largeur, en pixels, du côté gauche du rectangle englobant pour cette instance de <see cref="T:Windows.UI.Xaml.Thickness" />.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.op_Equality(Windows.UI.Xaml.Thickness,Windows.UI.Xaml.Thickness)">
+      <summary>Compare la valeur de deux structures <see cref="T:Windows.UI.Xaml.Thickness" /> pour l'égalité.</summary>
+      <returns>true si les deux instances de <see cref="T:Windows.UI.Xaml.Thickness" /> sont égales ; sinon false.</returns>
+      <param name="t1">Première structure à comparer.</param>
+      <param name="t2">Autre structure à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.op_Inequality(Windows.UI.Xaml.Thickness,Windows.UI.Xaml.Thickness)">
+      <summary>Compare l'inégalité de deux structures <see cref="T:Windows.UI.Xaml.Thickness" />. </summary>
+      <returns>true si les deux instances de <see cref="T:Windows.UI.Xaml.Thickness" /> ne sont pas égales ; sinon false.</returns>
+      <param name="t1">Première structure à comparer.</param>
+      <param name="t2">Autre structure à comparer.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Right">
+      <summary>Obtient ou définit la largeur, en pixels, du côté droit du rectangle englobant. </summary>
+      <returns>
+        <see cref="T:System.Double" /> qui représente la largeur, en pixels, du côté droit du rectangle englobant pour cette instance de <see cref="T:Windows.UI.Xaml.Thickness" />.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Thickness.Top">
+      <summary>Obtient ou définit la largeur, en pixels, du côté supérieur du rectangle englobant.</summary>
+      <returns>
+        <see cref="T:System.Double" /> qui représente la largeur, en pixels, du côté supérieur du rectangle englobant pour cette instance de <see cref="T:Windows.UI.Xaml.Thickness" />.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Thickness.ToString">
+      <summary>Retourne la représentation sous forme de chaîne de la structure <see cref="T:Windows.UI.Xaml.Thickness" />.</summary>
+      <returns>
+        <see cref="T:System.String" /> qui représente la valeur <see cref="T:Windows.UI.Xaml.Thickness" />.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Automation.ElementNotAvailableException">
+      <summary>Exception qui est levée en cas de tentative d'accès à un élément UI Automation correspondant à une partie de l'interface utilisateur qui n'est plus disponible.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> avec les valeurs par défaut. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor(System.String)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" /> avec un message d'erreur spécifié. </summary>
+      <param name="message">Message décrivant l'erreur. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotAvailableException.#ctor(System.String,System.Exception)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Automation.ElementNotAvailableException" />, avec un message d'erreur spécifié et une référence à l'exception interne ayant provoqué cette exception. </summary>
+      <param name="message">Message décrivant l'erreur. </param>
+      <param name="innerException">L'exception qui est la cause de l'exception actuelle ou null si aucune exception interne n'est spécifiée. </param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Automation.ElementNotEnabledException">
+      <summary>Exception qui est levée en cas de tentative de manipulation via UI Automation d'un contrôle qui n'est pas activé. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> avec les valeurs par défaut. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor(System.String)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" /> avec un message d'erreur spécifié.</summary>
+      <param name="message">Message décrivant l'erreur. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Automation.ElementNotEnabledException.#ctor(System.String,System.Exception)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Automation.ElementNotEnabledException" />, avec un message d'erreur spécifié et une référence à l'exception interne ayant provoqué cette exception.</summary>
+      <param name="message">Message décrivant l'erreur. </param>
+      <param name="innerException">L'exception qui est la cause de l'exception actuelle ou null si aucune exception interne n'est spécifiée. </param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> est utilisé pour décrire la position d'un élément géré par Windows.UI.Xaml.Controls.ItemContainerGenerator.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.#ctor(System.Int32,System.Int32)">
+      <summary>Initialise une nouvelle instance de <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> avec l'index et l'offset spécifiés.</summary>
+      <param name="index">Index <see cref="T:System.Int32" /> relatif aux éléments générés (réalisés).-1 est une valeur spéciale qui fait référence à un élément fictif au début ou à la fin de la liste des éléments.</param>
+      <param name="offset">Offset <see cref="T:System.Int32" /> relatif aux éléments non générés (non réalisés) près de l'élément indexé.Un offset ayant la valeur 0 fait référence à l'élément indexé lui-même, un offset ayant la valeur 1 fait référence à l'élément non généré (non réalisé) suivant et un offset ayant la valeur -1 fait référence à l'élément précédent.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Equals(System.Object)">
+      <summary>Compare l'instance spécifiée à l'instance actuelle de la <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> pour vérifier l'égalité des valeurs.</summary>
+      <returns>true si <paramref name="o" /> et cette instance de <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> ont la même valeur.</returns>
+      <param name="o">Instance de <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.GetHashCode">
+      <summary>Retourne le code de hachage pour ce <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />.</summary>
+      <returns>Code de hachage pour ce <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Index">
+      <summary>Obtient ou définit l'index <see cref="T:System.Int32" /> relatif aux éléments générés (réalisés).</summary>
+      <returns>Index <see cref="T:System.Int32" /> relatif aux éléments générés (réalisés).</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.Offset">
+      <summary>Obtient ou définit l'offset <see cref="T:System.Int32" /> relatif aux éléments non générés (non réalisés) près de l'élément indexé.</summary>
+      <returns>Offset <see cref="T:System.Int32" /> relatif aux éléments non générés (non réalisés) près de l'élément indexé.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.op_Equality(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition,Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)">
+      <summary>Compare deux objets <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> pour vérifier l'égalité de leur valeur.</summary>
+      <returns>true si les deux objets sont égaux ; sinon false.</returns>
+      <param name="gp1">Première instance à comparer.</param>
+      <param name="gp2">Deuxième instance à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.op_Inequality(Windows.UI.Xaml.Controls.Primitives.GeneratorPosition,Windows.UI.Xaml.Controls.Primitives.GeneratorPosition)">
+      <summary>Compare deux objets <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" /> pour détecter s'ils présentent des valeurs différentes.</summary>
+      <returns>true si ces valeurs sont différentes ; false dans le cas contraire.</returns>
+      <param name="gp1">Première instance à comparer.</param>
+      <param name="gp2">Deuxième instance à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition.ToString">
+      <summary>Retourne une représentation sous forme de chaîne de cette instance de <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />.</summary>
+      <returns>Représentation sous forme de chaîne de cette instance de <see cref="T:Windows.UI.Xaml.Controls.Primitives.GeneratorPosition" />.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Markup.XamlParseException">
+      <summary>L'exception levée lorsqu'une erreur se produit pendant l'analyse de Xaml. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> avec les valeurs par défaut. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor(System.String)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" /> avec un message d'erreur spécifié. </summary>
+      <param name="message">Message d'erreur indiquant la raison de l'exception. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Markup.XamlParseException.#ctor(System.String,System.Exception)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Markup.XamlParseException" />, avec un message d'erreur spécifié et une référence à l'exception interne ayant provoqué cette exception.</summary>
+      <param name="message">Message d'erreur indiquant la raison de l'exception. </param>
+      <param name="innerException">L'exception qui est la cause de l'exception actuelle ou null si aucune exception interne n'est spécifiée. </param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Matrix">
+      <summary> Représente une matrice de transformation affine de 3x3 utilisée pour les transformations dans un espace en deux dimensions. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Initialise une structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <param name="m11">Coefficient <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" /> de la structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="m12">Coefficient <see cref="P:Windows.UI.Xaml.Media.Matrix.M12" /> de la structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="m21">Coefficient <see cref="P:Windows.UI.Xaml.Media.Matrix.M21" /> de la structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="m22">Coefficient <see cref="P:Windows.UI.Xaml.Media.Matrix.M22" /> de la structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="offsetX">Coefficient <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" /> de la structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+      <param name="offsetY">Coefficient <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> de la structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Equals(System.Object)">
+      <summary>Détermine si le <see cref="T:System.Object" /> spécifié est une structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> identique à cette <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>true si <paramref name="o" /> est une structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> identique à cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> ; sinon, false.</returns>
+      <param name="o">
+        <see cref="T:System.Object" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Equals(Windows.UI.Xaml.Media.Matrix)">
+      <summary>Détermine si la structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> spécifiée est identique à cette instance. </summary>
+      <returns>true si les instances sont égales ; sinon, false. </returns>
+      <param name="value">Instance de <see cref="T:Windows.UI.Xaml.Media.Matrix" /> à comparer à cette instance.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.GetHashCode">
+      <summary>Retourne le code de hachage pour cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Code de hachage pour cette instance.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.Identity">
+      <summary>Obtient une identité <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Matrice d'identité.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.IsIdentity">
+      <summary>Obtient une valeur qui indique si cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> est une matrice d'identité. </summary>
+      <returns>true si la structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> est une matrice d'identité ; sinon, false.La valeur par défaut est true.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M11">
+      <summary>Obtient ou définit la valeur de la première ligne et de la première colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Valeur de la première ligne et de la première colonne de cette <see cref="T:Windows.UI.Xaml.Media.Matrix" />.La valeur par défaut est 1.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M12">
+      <summary>Obtient ou définit la valeur de la première ligne et de la deuxième colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Valeur de la première ligne et de la deuxième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Matrix" />.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M21">
+      <summary>Obtient ou définit la valeur de la deuxième ligne et de la première colonne pour cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</summary>
+      <returns>Valeur de la deuxième ligne et de la première colonne de cette <see cref="T:Windows.UI.Xaml.Media.Matrix" />.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.M22">
+      <summary>Obtient ou définit la valeur de la deuxième ligne et de la deuxième colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Valeur de la deuxième ligne et de la deuxième colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.La valeur par défaut est 1.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.OffsetX">
+      <summary>Obtient ou définit la valeur de la troisième ligne et de la première colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.  </summary>
+      <returns>Valeur de la troisième ligne et de la première colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Matrix.OffsetY">
+      <summary>Obtient ou définit la valeur de la troisième ligne et de la deuxième colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>Valeur de la troisième ligne et de la deuxième colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.La valeur par défaut est 0.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.op_Equality(Windows.UI.Xaml.Media.Matrix,Windows.UI.Xaml.Media.Matrix)">
+      <summary>Détermine si les deux structures <see cref="T:Windows.UI.Xaml.Media.Matrix" /> spécifiées sont identiques.</summary>
+      <returns>true si <paramref name="matrix1" /> et <paramref name="matrix2" /> sont identiques ; sinon, false.</returns>
+      <param name="matrix1">Première structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> à comparer.</param>
+      <param name="matrix2">Deuxième structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.op_Inequality(Windows.UI.Xaml.Media.Matrix,Windows.UI.Xaml.Media.Matrix)">
+      <summary>Détermine si les deux structures <see cref="T:Windows.UI.Xaml.Media.Matrix" /> spécifiées ne sont pas identiques.</summary>
+      <returns>true si <paramref name="matrix1" /> et <paramref name="matrix2" /> ne sont pas identiques ; sinon, false.</returns>
+      <param name="matrix1">Première structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> à comparer.</param>
+      <param name="matrix2">Deuxième structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>Pour obtenir une description de ce membre, consultez <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+      <returns>Chaîne contenant la valeur de l'instance actuelle au format spécifié.</returns>
+      <param name="format">Chaîne spécifiant le format à utiliser. ou null pour utiliser le format par défaut défini pour le type de l'implémentation IFormattable. </param>
+      <param name="provider">IFormatProvider à utiliser pour mettre en forme la valeur. ou null pour obtenir les informations de mise en forme des nombres à partir des paramètres régionaux définis dans le système d'exploitation. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.ToString">
+      <summary>Crée une représentation <see cref="T:System.String" /> de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />. </summary>
+      <returns>
+        <see cref="T:System.String" /> contenant les valeurs <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M12" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M21" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M22" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" />, et <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> de cette <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.ToString(System.IFormatProvider)">
+      <summary>Crée une représentation <see cref="T:System.String" /> de cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" /> avec des informations de mise en forme propres à la culture. </summary>
+      <returns>
+        <see cref="T:System.String" /> contenant les valeurs <see cref="P:Windows.UI.Xaml.Media.Matrix.M11" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M12" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M21" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.M22" />, <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetX" />, et <see cref="P:Windows.UI.Xaml.Media.Matrix.OffsetY" /> de cette <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</returns>
+      <param name="provider">Informations de mise en forme propres à la culture.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Matrix.Transform(Windows.Foundation.Point)">
+      <summary>Transforme le point spécifié par la <see cref="T:Windows.UI.Xaml.Media.Matrix" /> et renvoie le résultat.</summary>
+      <returns>Résultat de la transformation de <paramref name="point" /> par cette structure <see cref="T:Windows.UI.Xaml.Media.Matrix" />.</returns>
+      <param name="point">Point à transformer.</param>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.KeyTime">
+      <summary>Spécifie quand une image clé particulière doit prendre place pendant une animation. </summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(System.Object)">
+      <summary>Indique si un <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> est égal à ce <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>true si <paramref name="value" /> est un <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> qui représente la même durée que ce <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> ; sinon, false.</returns>
+      <param name="value">
+        <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> à comparer à ce <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>Indique si le <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> spécifié est égal à <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>true si <paramref name="value" /> est égal à ce <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> ; sinon false.</returns>
+      <param name="value">
+        <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> à comparer à ce <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.Equals(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>Indique si deux valeurs <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> sont égales.</summary>
+      <returns>true si les valeurs de <paramref name="keyTime1" /> et de <paramref name="keyTime2" /> sont égales ; sinon, false.</returns>
+      <param name="keyTime1">Première valeur à comparer.</param>
+      <param name="keyTime2">Deuxième valeur à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.FromTimeSpan(System.TimeSpan)">
+      <summary>Crée un nouveau <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> à l'aide du <see cref="T:System.TimeSpan" /> fourni.</summary>
+      <returns>Nouveau <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />, avec valeur initialisée sur <paramref name="timeSpan" />.</returns>
+      <param name="timeSpan">Valeur de la nouvelle instance <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">Le <paramref name="timeSpan" /> spécifié est en dehors de la plage autorisée.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.GetHashCode">
+      <summary>Retourne un code de hachage représentant ce <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>Identificateur de code de hachage.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Equality(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>Compare si deux valeurs <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> sont égales.</summary>
+      <returns>true si les valeurs <paramref name="keyTime1" /> et <paramref name="keyTime2" /> sont égales ; sinon, false.</returns>
+      <param name="keyTime1">Première valeur à comparer.</param>
+      <param name="keyTime2">Deuxième valeur à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Implicit(System.TimeSpan)~Windows.UI.Xaml.Media.Animation.KeyTime">
+      <summary>Convertit implicitement <see cref="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan" /> en <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</summary>
+      <returns>Élément <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> créé.</returns>
+      <param name="timeSpan">Valeur <see cref="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan" /> à convertir.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.op_Inequality(Windows.UI.Xaml.Media.Animation.KeyTime,Windows.UI.Xaml.Media.Animation.KeyTime)">
+      <summary>Compare si deux valeurs <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" /> sont inégales.</summary>
+      <returns>true si les valeurs <paramref name="keyTime1" /> et <paramref name="keyTime2" /> ne sont pas égales ; sinon, false. </returns>
+      <param name="keyTime1">Première valeur à comparer.</param>
+      <param name="keyTime2">Deuxième valeur à comparer.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.KeyTime.TimeSpan">
+      <summary>Obtient le délai, exprimé sous forme de valeur relative au début de l'animation, au bout duquel l'image s'achève.</summary>
+      <returns>Délai, exprimé sous forme de temps par rapport au début de l'animation, au bout duquel l'image clé s'achève.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.KeyTime.ToString">
+      <summary>Retourne une représentation sous forme de chaîne de <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />. </summary>
+      <returns>Représentation sous forme de chaîne de <see cref="T:Windows.UI.Xaml.Media.Animation.KeyTime" />.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior">
+      <summary>Décrit comment un Windows.UI.Xaml.Media.Animation.Timeline répète sa durée simple.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.#ctor(System.Double)">
+      <summary>Initialise une nouvelle instance de la structure <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> avec le nombre d'itérations spécifié. </summary>
+      <param name="count">Nombre supérieur ou égal à 0 qui indique le nombre d'itérations pour une animation. </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="count" /> est égal à l'infini, est une valeur qui n'est pas un nombre ou est négatif.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.#ctor(System.TimeSpan)">
+      <summary>Initialise une nouvelle instance de la structure <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> avec la durée de répétition spécifiée. </summary>
+      <param name="duration">Durée totale du Windows.UI.Xaml.Media.Animation.Timeline (sa durée active). </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="duration" /> est égal à un nombre négatif.</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Count">
+      <summary>Obtient le nombre de répétitions attendu d'un Windows.UI.Xaml.Media.Animation.Timeline. </summary>
+      <returns>Nombre d'itérations à répéter.</returns>
+      <exception cref="T:System.InvalidOperationException">Ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> décrit une durée de répétition, pas un nombre d'itérations.</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Duration">
+      <summary>Obtient la durée totale attendue d'un Windows.UI.Xaml.Media.Animation.Timeline. </summary>
+      <returns>Durée totale attendue d'une chronologie. </returns>
+      <exception cref="T:System.InvalidOperationException">Ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> décrit un nombre d'itérations, pas une durée de répétition.</exception>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(System.Object)">
+      <summary>Indique si l'objet spécifié est égal à ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+      <returns>true si <paramref name="value" /> est un <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> qui représente le même comportement de répétition que ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> ; sinon, false.</returns>
+      <param name="value">Objet à comparer à ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>Retourne une valeur qui indique si le <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> spécifié est égal à ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+      <returns>true si le type et le comportement de répétition de <paramref name="repeatBehavior" /> sont égaux à ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> ; sinon, false.</returns>
+      <param name="repeatBehavior">Valeur à comparer avec ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Equals(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>Indique si les deux valeurs <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> spécifiées sont égales. </summary>
+      <returns>true si le type et le comportement de répétition de <paramref name="repeatBehavior1" /> sont égaux à ceux de <paramref name="repeatBehavior2" /> ; sinon, false.</returns>
+      <param name="repeatBehavior1">Première valeur à comparer.</param>
+      <param name="repeatBehavior2">Deuxième valeur à comparer.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Forever">
+      <summary>Obtient un <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> qui spécifie un nombre infini de répétitions.  </summary>
+      <returns>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> qui spécifie un nombre infini de répétitions.   </returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.GetHashCode">
+      <summary>Retourne le code de hachage de cette instance.</summary>
+      <returns>Code de hachage.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.HasCount">
+      <summary>Obtient une valeur qui indique si le comportement de répétition a un nombre d'itérations spécifié.</summary>
+      <returns>true si l'instance représente un nombre d'itérations ; sinon, false. </returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.HasDuration">
+      <summary>Obtient une valeur qui indique si le comportement de répétition a une durée de répétition spécifiée. </summary>
+      <returns>true si l'instance représente une durée de répétition ; sinon, false.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.op_Equality(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>Indique si les deux valeurs <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> spécifiées sont égales. </summary>
+      <returns>true si le type et le comportement de répétition de <paramref name="repeatBehavior1" /> sont égaux à ceux de <paramref name="repeatBehavior2" /> ; sinon, false.</returns>
+      <param name="repeatBehavior1">Première valeur à comparer.</param>
+      <param name="repeatBehavior2">Deuxième valeur à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.op_Inequality(Windows.UI.Xaml.Media.Animation.RepeatBehavior,Windows.UI.Xaml.Media.Animation.RepeatBehavior)">
+      <summary>Indique si les deux valeurs <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> ne sont pas égales. </summary>
+      <returns>true si <paramref name="repeatBehavior1" /> et <paramref name="repeatBehavior2" /> ont des types différents ou si les propriétés du comportement de répétition ne sont pas égales ; sinon, false.</returns>
+      <param name="repeatBehavior1">Première valeur à comparer.</param>
+      <param name="repeatBehavior2">Deuxième valeur à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>Pour obtenir une description de ce membre, consultez <see cref="M:System.IFormattable.ToString(System.String,System.IFormatProvider)" />.</summary>
+      <returns>Chaîne contenant la valeur de l'instance actuelle au format spécifié.</returns>
+      <param name="format">Chaîne spécifiant le format à utiliser ou null pour utiliser le format par défaut défini pour le type de l'implémentation IFormattable. </param>
+      <param name="formatProvider">IFormatProvider à utiliser pour mettre en forme la valeur ou null pour obtenir les informations de mise en forme des nombres à partir des paramètres régionaux définis dans le système d'exploitation. </param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.ToString">
+      <summary>Retourne une représentation sous forme de chaîne de <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />. </summary>
+      <returns>Représentation sous forme de chaîne de <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Animation.RepeatBehavior.ToString(System.IFormatProvider)">
+      <summary>Retourne une représentation sous forme de chaîne de ce <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> avec le format spécifié. </summary>
+      <returns>Représentation sous forme de chaîne de <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" />.</returns>
+      <param name="formatProvider">Format utilisé pour construire la valeur de retour.</param>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Animation.RepeatBehavior.Type">
+      <summary>Obtient ou définit une des valeurs <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType" /> qui décrivent le mode de répétition du comportement. </summary>
+      <returns>Type de comportement de répétition. </returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType">
+      <summary>Spécifie le mode de répétition qu'une valeur brute <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> représente. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Count">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> représente un cas où la chronologie doit se répéter pour un nombre fixe d'exécutions complètes. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Duration">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> représente un cas où la chronologie doit se répéter pendant une durée, ce qui peut provoquer l'arrêt d'une animation à mi-chemin. </summary>
+    </member>
+    <member name="F:Windows.UI.Xaml.Media.Animation.RepeatBehaviorType.Forever">
+      <summary>
+        <see cref="T:Windows.UI.Xaml.Media.Animation.RepeatBehavior" /> représente un cas où la chronologie doit se répéter indéfiniment. </summary>
+    </member>
+    <member name="T:Windows.UI.Xaml.Media.Media3D.Matrix3D">
+      <summary>Représente une matrice 4 × 4 utilisée pour les transformations dans un espace tridimensionnel (3D).</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+      <summary>Initialise une nouvelle instance de la classe <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />. </summary>
+      <param name="m11">Valeur du champ (1,1) de la nouvelle matrice.</param>
+      <param name="m12">La valeur du champ (1,2) de la nouvelle matrice.</param>
+      <param name="m13">La valeur du champ (1,3) de la nouvelle matrice.</param>
+      <param name="m14">La valeur du champ (1,4) de la nouvelle matrice.</param>
+      <param name="m21">La valeur du champ (2,1) de la nouvelle matrice.</param>
+      <param name="m22">La valeur du champ (2,2) de la nouvelle matrice.</param>
+      <param name="m23">La valeur du champ (2,3) de la nouvelle matrice.</param>
+      <param name="m24">La valeur du champ (2,4) de la nouvelle matrice.</param>
+      <param name="m31">La valeur du champ (3,1) de la nouvelle matrice.</param>
+      <param name="m32">La valeur du champ (3,2) de la nouvelle matrice.</param>
+      <param name="m33">La valeur du champ (3,3) de la nouvelle matrice.</param>
+      <param name="m34">La valeur du champ (3,4) de la nouvelle matrice.</param>
+      <param name="offsetX">La valeur du champ offset X de la nouvelle matrice.</param>
+      <param name="offsetY">La valeur du champ offset Y de la nouvelle matrice.</param>
+      <param name="offsetZ">la valeur du champ offset Z de la nouvelle matrice.</param>
+      <param name="m44">La valeur du champ (4,4) de la nouvelle matrice.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Equals(System.Object)">
+      <summary>Teste l'égalité entre deux matrices.</summary>
+      <returns>true si les matrices sont égales ; sinon false.</returns>
+      <param name="o">Objet dont la similitude doit être testée.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Equals(Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>Teste l'égalité entre deux matrices.</summary>
+      <returns>true si les matrices sont égales ; sinon false.</returns>
+      <param name="value">
+        <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.GetHashCode">
+      <summary>Retourne le code de hachage pour cette matrice.</summary>
+      <returns>Entier qui spécifie le code de hachage pour cette matrice.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.HasInverse">
+      <summary>Obtient une valeur qui indique si <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> est réversible.</summary>
+      <returns>true si la <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> a un inverse ; sinon, false.La valeur par défaut est true.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.Identity">
+      <summary>Change une structure <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> en une identité <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Identité <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.Invert">
+      <summary>Inverse cette structure <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <exception cref="T:System.InvalidOperationException">La matrice n'est pas réversible.</exception>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.IsIdentity">
+      <summary>Détermine si cette structure <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> est une identité <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>true si le <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> est une identité <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />; sinon, false.La valeur par défaut est true.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M11">
+      <summary>Obtient ou définit la valeur de la première ligne et de la première colonne pour cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la première ligne et de la première colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M12">
+      <summary>Obtient ou définit la valeur de la première ligne et de la deuxième colonne pour cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la première ligne et de la deuxième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M13">
+      <summary>Obtient ou définit la valeur de la première ligne et de la troisième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la première ligne et de la troisième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M14">
+      <summary>Obtient ou définit la valeur de la première ligne et de la quatrième colonne pour cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la première ligne et de la quatrième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M21">
+      <summary>Obtient ou définit la valeur de la deuxième ligne et de la première colonne pour cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la deuxième ligne et de la première colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M22">
+      <summary>Obtient ou définit la valeur de la deuxième ligne et de la deuxième colonne pour cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la deuxième ligne et de la deuxième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M23">
+      <summary>Obtient ou définit la valeur de la deuxième ligne et de la troisième colonne pour cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la deuxième ligne et de la troisième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M24">
+      <summary>Obtient ou définit la valeur de la deuxième ligne et de la quatrième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la deuxième ligne et de la quatrième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M31">
+      <summary>Obtient ou définit la valeur de la troisième ligne et de la première colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la troisième ligne et de la première colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M32">
+      <summary>Obtient ou définit la valeur de la troisième ligne et de la deuxième colonne pour cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la troisième ligne et de la deuxième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M33">
+      <summary>Obtient ou définit la valeur de la troisième ligne et de la troisième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la troisième ligne et de la troisième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M34">
+      <summary>Obtient ou définit la valeur de la troisième ligne et de la quatrième colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la troisième ligne et de la quatrième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.M44">
+      <summary>Obtient ou définit la valeur de la quatrième ligne et de la quatrième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la quatrième ligne et de la quatrième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetX">
+      <summary>Obtient ou définit la valeur de la quatrième ligne et de la première colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la quatrième ligne et de la première colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetY">
+      <summary>Obtient ou définit la valeur de la quatrième ligne et de la deuxième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la quatrième ligne et de la deuxième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Media.Media3D.Matrix3D.OffsetZ">
+      <summary>Obtient ou définit la valeur de la quatrième ligne et de la troisième colonne de cette structure <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Valeur de la quatrième ligne et de la troisième colonne de cette <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Equality(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>Compare l'égalité exacte de deux instances de <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>true si les matrices sont égales ; sinon false.</returns>
+      <param name="matrix1">Première matrice à comparer.</param>
+      <param name="matrix2">Deuxième matrice à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Inequality(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>Compare deux instances <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> pour vérifier leur inégalité.</summary>
+      <returns>true si les matrices sont différentes ; sinon, false.</returns>
+      <param name="matrix1">Première matrice à comparer.</param>
+      <param name="matrix2">Deuxième matrice à comparer.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.op_Multiply(Windows.UI.Xaml.Media.Media3D.Matrix3D,Windows.UI.Xaml.Media.Media3D.Matrix3D)">
+      <summary>Multiplie les matrices spécifiées.</summary>
+      <returns>Le <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" /> constituant le résultat de la multiplication.</returns>
+      <param name="matrix1">Matrice à multiplier.</param>
+      <param name="matrix2">Matrice par laquelle la première matrice est multipliée.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.System#IFormattable#ToString(System.String,System.IFormatProvider)">
+      <summary>Pour obtenir une description de ce membre, consultez <see cref="M:System.IFormattable.ToString" />.</summary>
+      <returns>Valeur de l'instance actuelle au format spécifié.</returns>
+      <param name="format">Format à utiliser.</param>
+      <param name="provider">Fournisseur à utiliser.</param>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.ToString">
+      <summary>Crée une représentation sous forme de chaîne de ce <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Représentation sous forme de chaîne de <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+    </member>
+    <member name="M:Windows.UI.Xaml.Media.Media3D.Matrix3D.ToString(System.IFormatProvider)">
+      <summary>Crée une représentation sous forme de chaîne de ce <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</summary>
+      <returns>Représentation sous forme de chaîne de <see cref="T:Windows.UI.Xaml.Media.Media3D.Matrix3D" />.</returns>
+      <param name="provider">Informations de mise en forme spécifiées par culture.</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Gaming.UI.GamingUIProviderContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Gaming.UI.GameUIProviderActivatedEventArgs">
+      <summary>Event arguments associated with a **GameUIProvider** activation. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameUIProviderActivatedEventArgs.GameUIArgs">
+      <summary>Event arguments associated with a **GameUIProvider** activation. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>Event arguments associated with a **GameUIProvider** activation.</returns>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameUIProviderActivatedEventArgs.Kind">
+      <summary>The type of activation. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>The type of activation.</returns>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameUIProviderActivatedEventArgs.PreviousExecutionState">
+      <summary>The previous execution state. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>The previous execution state.</returns>
+    </member>
+    <member name="P:Windows.Gaming.UI.GameUIProviderActivatedEventArgs.SplashScreen">
+      <summary>The app's splash screen. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <returns>The app's splash screen.</returns>
+    </member>
+    <member name="M:Windows.Gaming.UI.GameUIProviderActivatedEventArgs.ReportCompleted(Windows.Foundation.Collections.ValueSet)">
+      <summary>Signals the experience as complete, and communicates any resulting data back to the calling app. This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, your app cannot use this API.</summary>
+      <param name="results">The resulting data from the **GameUIProvider** app.</param>
+    </member>
+    <member name="T:Windows.Gaming.UI.GamingUIProviderContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

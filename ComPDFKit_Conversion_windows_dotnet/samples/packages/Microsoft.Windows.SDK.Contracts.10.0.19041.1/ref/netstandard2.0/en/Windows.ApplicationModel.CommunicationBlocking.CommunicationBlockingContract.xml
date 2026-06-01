@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Background.CommunicationBlockingAppSetAsActiveTrigger">
+      <summary>Represents a trigger to activate a communication blocking application when it is selected as the preferred blocking app.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Background.CommunicationBlockingAppSetAsActiveTrigger.#ctor">
+      <summary>Initializes a new instance of the CommunicationBlockingAppSetAsActiveTrigger.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager">
+      <summary>The manager responsible for keeping track of blocked numbers and displaying the appropriate blocking user interfaces.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.IsBlockingActive">
+      <summary>Gets whether or not blocking is currently enabled.</summary>
+      <returns>Determines if blocking is enabled.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.IsBlockedNumberAsync(System.String)">
+      <summary>An asynchronous operation that returns whether or not a number is on the block list.</summary>
+      <param name="number">The number to check.</param>
+      <returns>Asynchronously returns whether or not the number is blocked.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.ShowBlockedCallsUI">
+      <summary>Displays the list of blocked calls.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.ShowBlockedMessagesUI">
+      <summary>Displays the list of blocked messages.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.ShowBlockNumbersUI(Windows.Foundation.Collections.IIterable{System.String})">
+      <summary>Launches a UI to block numbers if there as an active blocking app.</summary>
+      <param name="phoneNumbers">The list of numbers to add to the block list.</param>
+      <returns>Returns **true** if the active blocking app is launched, otherwise returns **false**.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAccessManager.ShowUnblockNumbersUI(Windows.Foundation.Collections.IIterable{System.String})">
+      <summary>Launches the app to unblock numbers if there as an active blocking app.</summary>
+      <param name="phoneNumbers">The list of numbers to remove from the block list.</param>
+      <returns>Returns **true** if the active blocking app is launched, otherwise returns **false**.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager">
+      <summary>Determines the application to use as a blocking application.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager.IsCurrentAppActiveBlockingApp">
+      <summary>Indicates whether the current application is the active blocking application.</summary>
+      <returns>Value that tells whether the current application is the active blocking app.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager.RequestSetAsActiveBlockingAppAsync">
+      <summary>Calls a dialog to set the current app as the default phone communication blocking application.</summary>
+      <returns>Indicates whether the app was set as the default phone origin application.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingAppManager.ShowCommunicationBlockingSettingsUI">
+      <summary>Displays the UI to select the currently active blocking application.</summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.CommunicationBlocking.CommunicationBlockingContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

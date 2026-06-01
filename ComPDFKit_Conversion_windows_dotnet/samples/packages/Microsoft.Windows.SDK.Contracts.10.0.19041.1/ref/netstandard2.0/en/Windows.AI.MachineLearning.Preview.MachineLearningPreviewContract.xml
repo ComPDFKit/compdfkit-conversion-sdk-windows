@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.AI.MachineLearning.Preview.MachineLearningPreviewContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview">
+      <summary>**Deprecated.** Defines the list of supported feature data types.</summary>
+      <deprecated type="deprecate">Use TensorKind instead of FeatureElementKindPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Boolean">
+      <summary>Feature element is of type Boolean.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Complex128">
+      <summary>Feature element is of type Complex128.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Complex64">
+      <summary>Feature element is of type Complex64.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Double">
+      <summary>Feature element is of type Double.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Float">
+      <summary>Feature element is of type Float.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Float16">
+      <summary>Feature element is of type Float16.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Int16">
+      <summary>Feature element is of type Int16.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Int32">
+      <summary>Feature element is of type Int32.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Int64">
+      <summary>Feature element is of type Int64.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Int8">
+      <summary>Feature element is of type Int8.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.String">
+      <summary>Feature element is of type String.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.UInt16">
+      <summary>Feature element is of type UInt16.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.UInt32">
+      <summary>Feature element is of type UInt32.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.UInt64">
+      <summary>Feature element is of type UInt64.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.UInt8">
+      <summary>Feature element is of type UInt8.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.FeatureElementKindPreview.Undefined">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview">
+      <summary>**Deprecated.** Represents the variable descriptor information.</summary>
+      <deprecated type="deprecate">Use ILearningModelFeatureDescriptor instead of ILearningModelVariableDescriptorPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview.Description">
+      <summary>**Deprecated.** Gets the description of the variable.</summary>
+      <returns>The description of the variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview.IsRequired">
+      <summary>**Deprecated.** Gets whether the variable is required or optional.</summary>
+      <returns>True if the variable is required; otherwise false.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview.ModelFeatureKind">
+      <summary>**Deprecated.** Gets the data type of the variable.</summary>
+      <returns>The data type of the variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ILearningModelVariableDescriptorPreview.Name">
+      <summary>**Deprecated.** Gets the name of the variable.</summary>
+      <returns>The name of the variable.</returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview">
+      <summary>**Deprecated.** Represents the image descriptor information.</summary>
+      <deprecated type="deprecate">Use ImageFeatureDescriptor instead of ImageVariableDescriptorPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.BitmapPixelFormat">
+      <summary>**Deprecated.** Gets the pixel format of the image.</summary>
+      <returns>Pixel format of the image.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.Description">
+      <summary>**Deprecated.** Gets the description of the image variable.</summary>
+      <returns>The description of the image variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.Height">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.IsRequired">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.ModelFeatureKind">
+      <summary>**Deprecated.** Gets the data type of the variable.</summary>
+      <returns>The data type of the variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.Name">
+      <summary>**Deprecated.** Gets the name of the image variable.</summary>
+      <returns>The name of the image variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.ImageVariableDescriptorPreview.Width">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.InferencingOptionsPreview">
+      <summary>**Deprecated.** Represents the inference options for controlling the evaluation of a model.</summary>
+      <deprecated type="deprecate">Use LearningModelSession instead of InferencingOptionsPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.IsTracingEnabled">
+      <summary>**Deprecated.** Gets or sets whether tracing is enabled during model evaluation.</summary>
+      <returns>True if tracing is enabled; otherwise false. The default value is false.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.MaxBatchSize">
+      <summary>**Deprecated.** Gets or sets the maximum batch size for model evaluation.</summary>
+      <returns>The maximum batch size. Preview API only supports batching size of 1.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.MinimizeMemoryAllocation">
+      <summary>**Deprecated.** Gets or sets whether to minimize memory allocation after model evaluation.</summary>
+      <returns>True if minimizing memory allocation during evaluation; otherwise false. The default is false.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.PreferredDeviceKind">
+      <summary>**Deprecated.** Gets or sets the preferred device that the evaluation will be performed on.</summary>
+      <returns>The preferred device. The default value is LearningDeviceAny.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.InferencingOptionsPreview.ReclaimMemoryAfterEvaluation">
+      <summary>**Deprecated.** Gets or sets whether to reclaim allocated memory after the model evaluation.</summary>
+      <returns>True if reclaiming allocated memory after evaluation; otherwise false. The default value is false.</returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview">
+      <summary>**Deprecated.** Represents the associations between model inputs and variable instances.</summary>
+      <deprecated type="deprecate">Use LearningModelBinding instead of LearningModelBindingPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.#ctor(Windows.AI.MachineLearning.Preview.LearningModelPreview)">
+      <summary>
+      </summary>
+      <deprecated type="deprecate">Use ILearningModelBindingFactory instead of ILearningModelBindingPreviewFactory. For more info, see MSDN.</deprecated>
+      <param name="model">
+      </param>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Size">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Bind(System.String,System.Object)">
+      <summary>**Deprecated.** Binds a single input or output feature to a defined variable.</summary>
+      <deprecated type="deprecate">Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.</deprecated>
+      <param name="name">The name of the input/output feature.</param>
+      <param name="value">The value of the input/output feature.</param>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Bind(System.String,System.Object,Windows.Foundation.Collections.IPropertySet)">
+      <summary>
+      </summary>
+      <deprecated type="deprecate">Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.</deprecated>
+      <param name="name">
+      </param>
+      <param name="value">
+      </param>
+      <param name="metadata">
+      </param>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Clear">
+      <summary>**Deprecated.** Clears all bound variables.</summary>
+      <deprecated type="deprecate">Use ILearningModelBinding instead of ILearningModelBindingPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.First">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.HasKey(System.String)">
+      <summary>
+      </summary>
+      <param name="key">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Lookup(System.String)">
+      <summary>
+      </summary>
+      <param name="key">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelBindingPreview.Split(Windows.Foundation.Collections.IMapView{System.String,System.Object}@,Windows.Foundation.Collections.IMapView{System.String,System.Object}@)">
+      <summary>
+      </summary>
+      <param name="first">
+      </param>
+      <param name="second">
+      </param>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview">
+      <summary>**Deprecated.** Represents the metadata and property descriptions for the provided model.</summary>
+      <deprecated type="deprecate">Use LearningModel instead of LearningModelDescriptionPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.Author">
+      <summary>**Deprecated.** Gets the author information from the model.</summary>
+      <returns>The author information from the model.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.Description">
+      <summary>**Deprecated.** Gets the custom description of the model.</summary>
+      <returns>The custom description of the model.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.Domain">
+      <summary>**Deprecated.** Gets the domain information for the model.</summary>
+      <returns>The domain information for the model.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.InputFeatures">
+      <summary>**Deprecated.** Gets the input descriptions for the model.</summary>
+      <returns>The input descriptions for the model, keyed by name of input.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.Metadata">
+      <summary>**Deprecated.** Gets the metadata from the model.</summary>
+      <returns>The metadata for the provided model.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.Name">
+      <summary>**Deprecated.** Gets the name of the model.</summary>
+      <returns>The name of the model.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.OutputFeatures">
+      <summary>**Deprecated.** Gets the output descriptions of the model.</summary>
+      <returns>The output descriptions for the model, keyed by the name of the output.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelDescriptionPreview.Version">
+      <summary>**Deprecated.** Gets the version information of the model.</summary>
+      <returns>The version information of the model.</returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview">
+      <summary>**Deprecated.** Defines the list of constants representing Windows Machine Learning supported device kinds.</summary>
+      <deprecated type="deprecate">Use LearningModelDeviceKind instead of LearningModelDeviceKindPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview.LearningDeviceAny">
+      <summary>The defualt value. Any device.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview.LearningDeviceCpu">
+      <summary>A central processor.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview.LearningDeviceDsp">
+      <summary>A digital signal proccesor.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview.LearningDeviceFpga">
+      <summary>A field-programmable gate array.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview.LearningDeviceGpu">
+      <summary>A graphics processor.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelDeviceKindPreview.LearningDeviceNpu">
+      <summary>A neural processor.</summary>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview">
+      <summary>**Deprecated.** Gets the set of output predictions and corresponding probabilities correlated to the model evaluation.</summary>
+      <deprecated type="deprecate">Use LearningModelEvaluationResult instead of LearningModelEvaluationResultPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview.CorrelationId">
+      <summary>**Deprecated.** Gets the value to correlate the output results with the evaluation call.</summary>
+      <returns>The value to correlate the output results with the evaluation call.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelEvaluationResultPreview.Outputs">
+      <summary>**Deprecated.** Gets the set of features representing the output prediction along with probabilities.</summary>
+      <returns>The set of features representing the output prediction and probabilities.</returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview">
+      <summary>**Deprecated.** Defines the list of data types for a model feature</summary>
+      <deprecated type="deprecate">Use LearningModelFeatureKind instead of LearningModelFeatureKindPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview.Image">
+      <summary>The feature type is an Image.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview.Map">
+      <summary>The feature type is a Map.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview.Sequence">
+      <summary>The feature type is a Sequence.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview.Tensor">
+      <summary>The feature type is a Tensor.</summary>
+    </member>
+    <member name="F:Windows.AI.MachineLearning.Preview.LearningModelFeatureKindPreview.Undefined">
+      <summary>The feature type is Undefined.</summary>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.LearningModelPreview">
+      <summary>**Deprecated.** Represents a machine learning model.</summary>
+      <deprecated type="deprecate">Use LearningModel instead of LearningModelPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelPreview.Description">
+      <summary>**Deprecated.** Gets the descriptive metadata for the trained machine learning model.</summary>
+      <returns>The descriptive metadata for the machine learning model.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelPreview.InferencingOptions">
+      <summary>**Deprecated.** Gets or sets the inferencing options for the evaluation of a model.</summary>
+      <returns>The inferencing options for the evaluation of a model.</returns>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelPreview.EvaluateAsync(Windows.AI.MachineLearning.Preview.LearningModelBindingPreview,System.String)">
+      <summary>
+      </summary>
+      <deprecated type="deprecate">Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.</deprecated>
+      <param name="binding">
+      </param>
+      <param name="correlationId">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelPreview.EvaluateFeaturesAsync(Windows.Foundation.Collections.IMap{System.String,System.Object},System.String)">
+      <summary>**Deprecated.** Asynchronously evaluates names variable instances as the inputs and outputs for the model.</summary>
+      <deprecated type="deprecate">Use ILearningModel instead of ILearningModelPreview. For more info, see MSDN.</deprecated>
+      <param name="features">The features to bind as inputs.</param>
+      <param name="correlationId">The value to correlate the evaluation with the output results.</param>
+      <returns>The evaluation result.</returns>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelPreview.LoadModelFromStorageFileAsync(Windows.Storage.IStorageFile)">
+      <summary>**Deprecated.** Asynchronously loads a model from file storage.</summary>
+      <deprecated type="deprecate">Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.</deprecated>
+      <param name="modelFile">The location of the model file.</param>
+      <returns>Returns a LearningModelPreview.</returns>
+    </member>
+    <member name="M:Windows.AI.MachineLearning.Preview.LearningModelPreview.LoadModelFromStreamAsync(Windows.Storage.Streams.IRandomAccessStreamReference)">
+      <summary>**Deprecated.** Asynchronously loads a model from a provided stream.</summary>
+      <deprecated type="deprecate">Use ILearningModelStatics instead of ILearningModelPreviewStatics. For more info, see MSDN.</deprecated>
+      <param name="modelStream">The file stream for the model.</param>
+      <returns>Returns a LearningModelPreview.</returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview">
+      <summary>
+      </summary>
+      <deprecated type="deprecate">Use ILearningModelFeatureDescriptor instead of LearningModelVariableDescriptorPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview.Description">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview.IsRequired">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview.ModelFeatureKind">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.LearningModelVariableDescriptorPreview.Name">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.MachineLearningPreviewContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview">
+      <summary>**Deprecated.** Represents the map variable descriptor information.</summary>
+      <deprecated type="deprecate">Use MapFeatureDescriptor instead of MapVariableDescriptorPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.Description">
+      <summary>**Deprecated.** Gets the description map variable.</summary>
+      <returns>The description of the map variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.Fields">
+      <summary>**Deprecated.** Gets the data type of the field of the map variable.</summary>
+      <returns>The data type of the field of the map variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.IsRequired">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.KeyKind">
+      <summary>**Deprecated.** Gets the data type of the key for the map variable.</summary>
+      <returns>The data type of the key.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.ModelFeatureKind">
+      <summary>**Deprecated.** Gets the data type of the variable.</summary>
+      <returns>The data type of the variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.Name">
+      <summary>**Deprecated.** Gets the name of the map variable.</summary>
+      <returns>The name of the map variable. This must be unique across all variables in the model.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.ValidIntegerKeys">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.MapVariableDescriptorPreview.ValidStringKeys">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview">
+      <summary>**Deprecated.** Represents a sequence variable's descriptor information.</summary>
+      <deprecated type="deprecate">Use SequenceFeatureDescriptor instead of SequenceVariableDescriptorPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.Description">
+      <summary>**Deprecated.** Gets the description of the sequence variable.</summary>
+      <returns>The description of the sequence variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.ElementType">
+      <summary>**Deprecated.** Gets the type of the sequence variable.</summary>
+      <returns>The type of the sequence variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.IsRequired">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.ModelFeatureKind">
+      <summary>**Deprecated.** Gets the data type of the variable.</summary>
+      <returns>The data type of the variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.SequenceVariableDescriptorPreview.Name">
+      <summary>**Deprecated.** Gets the name of the sequence variable.</summary>
+      <returns>The name of the sequence variable. This must be unique across all variables in the model.</returns>
+    </member>
+    <member name="T:Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview">
+      <summary>**Deprecated.** Represents a Tensor variable's descriptor information.</summary>
+      <deprecated type="deprecate">Use TensorFeatureDescriptor instead of TensorVariableDescriptorPreview. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.DataType">
+      <summary>**Deprecated.** Gets the type of the tensor data.</summary>
+      <returns>The type of the tensor data.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.Description">
+      <summary>**Deprecated.** Gets the description of the tensor.</summary>
+      <returns>The description of the tensor.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.IsRequired">
+      <summary>
+      </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.ModelFeatureKind">
+      <summary>**Deprecated.** Gets the data type of the variable.</summary>
+      <returns>The data type of the variable.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.Name">
+      <summary>**Deprecated.** Gets the name of the tensor.</summary>
+      <returns>The name of the tensor. This must be unique across all variables in the model.</returns>
+    </member>
+    <member name="P:Windows.AI.MachineLearning.Preview.TensorVariableDescriptorPreview.Shape">
+      <summary>**Deprecated.** Gets the n-dimensional shape of the tensor.</summary>
+      <returns>The n-dimensional shape of the tensor.</returns>
+    </member>
+  </members>
+</doc>

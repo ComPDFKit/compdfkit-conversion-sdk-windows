@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.Printers.Extensions.ExtensionsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Devices.Printers.Extensions.ExtensionsContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Devices.Printers.Extensions.PrintExtensionContext">
+      <summary>Provides the context for the printer extension object.</summary>
+    </member>
+    <member name="M:Windows.Devices.Printers.Extensions.PrintExtensionContext.FromDeviceId(System.String)">
+      <summary>Gets the context for the printer extension object based on the DeviceInformation ID.</summary>
+      <param name="deviceId">The device information ID for the print device.</param>
+      <returns>Pointer to the context.</returns>
+    </member>
+    <member name="T:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails">
+      <summary>Contains properties that allow a client to access and/or manipulate print event data and print device name information.</summary>
+    </member>
+    <member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.EventData">
+      <summary>Gets or sets the event data for a print notification event.</summary>
+      <returns>The print notification event data.</returns>
+    </member>
+    <member name="P:Windows.Devices.Printers.Extensions.PrintNotificationEventDetails.PrinterName">
+      <summary>Gets the name of the print device associated with the print notification.</summary>
+      <returns>The print device name.</returns>
+    </member>
+    <member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfiguration">
+      <summary>Allows a client to retrieve the print task extension context, and also to add an event handler to the print task.</summary>
+    </member>
+    <member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.PrinterExtensionContext">
+      <summary>Gets the context for the print task extension.</summary>
+      <returns>The context for the print task extension.</returns>
+    </member>
+    <member name="E:Windows.Devices.Printers.Extensions.PrintTaskConfiguration.SaveRequested">
+      <summary>Raised by the print window for your app to notify the device app that the print ticket must be updated.</summary>
+    </member>
+    <member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest">
+      <summary>Called when the print dialog for your app raises a SaveRequested event.</summary>
+    </member>
+    <member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Deadline">
+      <summary>Gets the date-time object that provides the deadline information for the print task.</summary>
+      <returns>The deadline for the print task.</returns>
+    </member>
+    <member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Cancel">
+      <summary>Called by the device app to cancel the client's request to save the print task configuration.</summary>
+    </member>
+    <member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.GetDeferral">
+      <summary>Called by the device app when it has to complete some asynchronous tasks before it can save the print task configuration information.</summary>
+      <returns>The object that represents the deferral for the print task configuration save request.</returns>
+    </member>
+    <member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest.Save(System.Object)">
+      <summary>Called by the device app to save the print task configuration.</summary>
+      <param name="printerExtensionContext">The object that represents the print task extension context.</param>
+    </member>
+    <member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral">
+      <summary>Called by the device app to provide an update of the status of the deferral.</summary>
+    </member>
+    <member name="M:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral.Complete">
+      <summary>Called by the device app when the deferral is completed.</summary>
+    </member>
+    <member name="T:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs">
+      <summary>Called to notify the device app that the print task configuration must be saved.</summary>
+    </member>
+    <member name="P:Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs.Request">
+      <summary>Gets the information that is required for updating the print task configuration.</summary>
+      <returns>The print task configuration save request.</returns>
+    </member>
+  </members>
+</doc>

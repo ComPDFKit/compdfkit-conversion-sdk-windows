@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Playlists.PlaylistsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Media.Playlists.Playlist">
+      <summary>Provides access to a media playlist.</summary>
+    </member>
+    <member name="M:Windows.Media.Playlists.Playlist.#ctor">
+      <summary>Creates a new instance of a Playlist object.</summary>
+    </member>
+    <member name="P:Windows.Media.Playlists.Playlist.Files">
+      <summary>The set of media files that make up the playlist.</summary>
+      <returns>The list of media files that make up the playlist.</returns>
+    </member>
+    <member name="M:Windows.Media.Playlists.Playlist.LoadAsync(Windows.Storage.IStorageFile)">
+      <summary>Asynchronously loads files into a playlist.</summary>
+      <param name="file">Represents the files to load.</param>
+      <returns>Represents the asynchronous operation for loading the playlist. The GetResults method of this IAsyncOperation object returns the playlist.</returns>
+    </member>
+    <member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption)">
+      <summary>Asynchronously saves the playlist to a specified file and folder.</summary>
+      <param name="saveLocation">The folder in which to save the playlist.</param>
+      <param name="desiredName">The name of the playlist to save.</param>
+      <param name="option">The action to take if the playlist is saved to an existing file. One of the values of the NameCollisionOption enumeration.</param>
+      <returns>Represents the asynchronous operation to save the playlist to a specified file and folder.</returns>
+    </member>
+    <member name="M:Windows.Media.Playlists.Playlist.SaveAsAsync(Windows.Storage.IStorageFolder,System.String,Windows.Storage.NameCollisionOption,Windows.Media.Playlists.PlaylistFormat)">
+      <summary>Asynchronously saves the playlist to a specified file and folder, in a specified format.</summary>
+      <param name="saveLocation">The folder in which to save the playlist.</param>
+      <param name="desiredName">The name of the playlist to save.</param>
+      <param name="option">The action to take if the playlist is saved to an existing file. One of the values of the NameCollisionOption enumeration.</param>
+      <param name="playlistFormat">The playlist format. One of the values of the PlaylistFormat enumeration.</param>
+      <returns>Represents the asynchronous operation to save the playlist to a specified file and folder.</returns>
+    </member>
+    <member name="M:Windows.Media.Playlists.Playlist.SaveAsync">
+      <summary>Asynchronously saves the playlist.</summary>
+      <returns>Represents the asynchronous action to save the playlist.</returns>
+    </member>
+    <member name="T:Windows.Media.Playlists.PlaylistFormat">
+      <summary>Indicates the format of a playlist file.</summary>
+    </member>
+    <member name="F:Windows.Media.Playlists.PlaylistFormat.M3u">
+      <summary>M3U playlist.</summary>
+    </member>
+    <member name="F:Windows.Media.Playlists.PlaylistFormat.WindowsMedia">
+      <summary>Windows Media playlist.</summary>
+    </member>
+    <member name="F:Windows.Media.Playlists.PlaylistFormat.Zune">
+      <summary>Zune playlist.</summary>
+    </member>
+    <member name="T:Windows.Media.Playlists.PlaylistsContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

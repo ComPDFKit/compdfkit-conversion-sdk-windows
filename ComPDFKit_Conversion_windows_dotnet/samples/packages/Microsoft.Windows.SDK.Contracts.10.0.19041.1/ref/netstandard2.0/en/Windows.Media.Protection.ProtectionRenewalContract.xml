@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Media.Protection.ProtectionRenewalContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Media.Protection.ComponentRenewal">
+      <summary>Enables applications to initiate renewal of components which need updating in order to play protected media content.</summary>
+    </member>
+    <member name="M:Windows.Media.Protection.ComponentRenewal.RenewSystemComponentsAsync(Windows.Media.Protection.RevocationAndRenewalInformation)">
+      <summary>Initiates updating of critical content protection components after prompting the user.</summary>
+      <param name="information">Revocation and renewal information.</param>
+      <returns>An object that is used to control the asynchronous operation.</returns>
+    </member>
+    <member name="T:Windows.Media.Protection.ProtectionRenewalContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Media.Protection.RenewalStatus">
+      <summary>Defines the possible values returned from RenewSystemComponentsAsync.</summary>
+    </member>
+    <member name="F:Windows.Media.Protection.RenewalStatus.AppComponentsMayNeedUpdating">
+      <summary>Specifies that no system components were detected that need updating. But app components may need to be updated, in which case the user may need to get an updated application from the store.</summary>
+    </member>
+    <member name="F:Windows.Media.Protection.RenewalStatus.NoComponentsFound">
+      <summary>Specifies that no components were found that need to be updated.</summary>
+    </member>
+    <member name="F:Windows.Media.Protection.RenewalStatus.NotStarted">
+      <summary>Specifies that renewal has not started.</summary>
+    </member>
+    <member name="F:Windows.Media.Protection.RenewalStatus.UpdatesInProgress">
+      <summary>Specifies that there are updates and the user has allowed updated to proceed</summary>
+    </member>
+    <member name="F:Windows.Media.Protection.RenewalStatus.UserCancelled">
+      <summary>Specifies that the user declined to allow updates to proceed.</summary>
+    </member>
+  </members>
+</doc>

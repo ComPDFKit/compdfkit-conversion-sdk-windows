@@ -1,0 +1,1281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Devices.DevicesLowLevelContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Devices.DevicesLowLevelContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Devices.ILowLevelDevicesAggregateProvider">
+      <summary>Represents properties common to all low level device aggregate providers.</summary>
+    </member>
+    <member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>Gets the default ADC provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The ADC provider.</returns>
+    </member>
+    <member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>Gets the default GPIO provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The GPIO provider.</returns>
+    </member>
+    <member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>Gets the default I&lt;sup&gt;2&lt;/sup&gt; C provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The I&lt;sup&gt;2&lt;/sup&gt; C provider.</returns>
+    </member>
+    <member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>Gets the default PWM provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The PWM provider.</returns>
+    </member>
+    <member name="P:Windows.Devices.ILowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>Gets the default SPI provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The SPI provider.</returns>
+    </member>
+    <member name="T:Windows.Devices.LowLevelDevicesAggregateProvider">
+      <summary>Represents the low level bus device providers. This class gives access to the default provider for the low level bus controllers.</summary>
+    </member>
+    <member name="M:Windows.Devices.LowLevelDevicesAggregateProvider.#ctor(Windows.Devices.Adc.Provider.IAdcControllerProvider,Windows.Devices.Pwm.Provider.IPwmControllerProvider,Windows.Devices.Gpio.Provider.IGpioControllerProvider,Windows.Devices.I2c.Provider.II2cControllerProvider,Windows.Devices.Spi.Provider.ISpiControllerProvider)">
+      <summary>Creates an instance of LowLevelDevicesAggregateProvider and sets the supplied providers as defaults for the respective bus.</summary>
+      <param name="adc">The ADC provider.</param>
+      <param name="pwm">The PWM provider.</param>
+      <param name="gpio">The GPIO provider.</param>
+      <param name="i2c">The I&lt;sup&gt;2&lt;/sup&gt; C provider.</param>
+      <param name="spi">The SPI provider.</param>
+    </member>
+    <member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.AdcControllerProvider">
+      <summary>Gets the default ADC provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The ADC provider.</returns>
+    </member>
+    <member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.GpioControllerProvider">
+      <summary>Gets the default GPIO provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The GPIO provider.</returns>
+    </member>
+    <member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.I2cControllerProvider">
+      <summary>Gets the default I&lt;sup&gt;2&lt;/sup&gt; C provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The I&lt;sup&gt;2&lt;/sup&gt; C provider.</returns>
+    </member>
+    <member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.PwmControllerProvider">
+      <summary>Gets the default PWM provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The PWM provider.</returns>
+    </member>
+    <member name="P:Windows.Devices.LowLevelDevicesAggregateProvider.SpiControllerProvider">
+      <summary>Gets the default SPI provider. If the default provider is not explicitly set, it will fall back to the normal driver/controller.</summary>
+      <returns>The SPI provider.</returns>
+    </member>
+    <member name="T:Windows.Devices.LowLevelDevicesController">
+      <summary>Represents a low level bus device controller, and it's associated provider.</summary>
+    </member>
+    <member name="P:Windows.Devices.LowLevelDevicesController.DefaultProvider">
+      <summary>Gets or sets the default provider for the controller.</summary>
+      <returns>The device aggregate provider.</returns>
+    </member>
+    <member name="T:Windows.Devices.Adc.AdcChannel">
+      <summary>Represents a single ADC channel.</summary>
+    </member>
+    <member name="P:Windows.Devices.Adc.AdcChannel.Controller">
+      <summary>Gets the ADC controller for this channel.</summary>
+      <returns>The ADC controller.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.AdcChannel.Close">
+      <summary>Closes the connection on this channel, making it available to be opened by others.</summary>
+    </member>
+    <member name="M:Windows.Devices.Adc.AdcChannel.ReadRatio">
+      <summary>Reads the value as a percentage of the max value possible for this controller.</summary>
+      <returns>The value as percentage of the max value.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.AdcChannel.ReadValue">
+      <summary>Reads the digital representation of the analog value from the ADC.</summary>
+      <returns>The digital value.</returns>
+    </member>
+    <member name="T:Windows.Devices.Adc.AdcChannelMode">
+      <summary>Describes the channel modes that the ADC controller can use for input.</summary>
+    </member>
+    <member name="F:Windows.Devices.Adc.AdcChannelMode.Differential">
+      <summary>Difference between two pins.</summary>
+    </member>
+    <member name="F:Windows.Devices.Adc.AdcChannelMode.SingleEnded">
+      <summary>Simple value of a particular pin.</summary>
+    </member>
+    <member name="T:Windows.Devices.Adc.AdcController">
+      <summary>Represents an ADC controller on the system</summary>
+    </member>
+    <member name="P:Windows.Devices.Adc.AdcController.ChannelCount">
+      <summary>The number of channels available on the ADC controller.</summary>
+      <returns>Number of channels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Adc.AdcController.ChannelMode">
+      <summary>Gets or sets the channel mode for the ADC controller.</summary>
+      <returns>The ADC channel mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Adc.AdcController.MaxValue">
+      <summary>Gets the maximum value that the controller can report.</summary>
+      <returns>The maximum value.</returns>
+    </member>
+    <member name="P:Windows.Devices.Adc.AdcController.MinValue">
+      <summary>The minimum value the controller can report.</summary>
+      <returns>The minimum value.</returns>
+    </member>
+    <member name="P:Windows.Devices.Adc.AdcController.ResolutionInBits">
+      <summary>Gets the resolution of the controller as number of bits it has. For example, if we have a 10-bit ADC, that means it can detect 1024 (2^10) discrete levels.</summary>
+      <returns>The number of bits the ADC controller has.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.AdcController.GetControllersAsync(Windows.Devices.Adc.Provider.IAdcProvider)">
+      <summary>Gets all the controllers that are connected to the system asynchronously .</summary>
+      <param name="provider">The ADC provider for the controllers on the system.</param>
+      <returns>When the method completes successfully, it returns a list of values that represent the controllers available on the system.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.AdcController.GetDefaultAsync">
+      <summary>Gets the default ADC controller on the system.</summary>
+      <returns>The default ADC controller on the system, or null if the system has no ADC controller.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.AdcController.IsChannelModeSupported(Windows.Devices.Adc.AdcChannelMode)">
+      <summary>Verifies that the specified channel mode is supported by the controller.</summary>
+      <param name="channelMode">The channel mode.</param>
+      <returns>True if the specified channel mode is supported, otherwise false.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.AdcController.OpenChannel(System.Int32)">
+      <summary>Opens a connection to the specified ADC channel.</summary>
+      <param name="channelNumber">The channel to connect to.</param>
+      <returns>The ADC channel.</returns>
+    </member>
+    <member name="T:Windows.Devices.Adc.Provider.IAdcControllerProvider">
+      <summary>Represents properties and methods common to all ADC controllers.</summary>
+    </member>
+    <member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelCount">
+      <summary>Gets the number of channels available on for the controller.</summary>
+      <returns>Number of channels.</returns>
+    </member>
+    <member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ChannelMode">
+      <summary>Gets or sets the controller channel mode.</summary>
+      <returns>The channel mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MaxValue">
+      <summary>Gets the maximum value that the controller can return.</summary>
+      <returns>The maximum value.</returns>
+    </member>
+    <member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.MinValue">
+      <summary>Gets the minimum value that the controller can return.</summary>
+      <returns>The minimum value.</returns>
+    </member>
+    <member name="P:Windows.Devices.Adc.Provider.IAdcControllerProvider.ResolutionInBits">
+      <summary>Gets the resolution of the controller as number of bits it has.</summary>
+      <returns>The resolution as number of bits.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.AcquireChannel(System.Int32)">
+      <summary>Acquires a connection to the specified channel.</summary>
+      <param name="channel">Which channel to connect to.</param>
+    </member>
+    <member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.IsChannelModeSupported(Windows.Devices.Adc.Provider.ProviderAdcChannelMode)">
+      <summary>Determines if the specified channel mode is supported by the controller.</summary>
+      <param name="channelMode">The channel mode in question.</param>
+      <returns>True if the specified channel mode is supported, otherwise false.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReadValue(System.Int32)">
+      <summary>Gets the digital representation of the analog value on the specified channel.</summary>
+      <param name="channelNumber">Which channel to read from.</param>
+      <returns>The digital representation of the analog value.</returns>
+    </member>
+    <member name="M:Windows.Devices.Adc.Provider.IAdcControllerProvider.ReleaseChannel(System.Int32)">
+      <summary>Releases the channel connection, opening that channel for others to use.</summary>
+      <param name="channel">Which channel to close the connection to.</param>
+    </member>
+    <member name="T:Windows.Devices.Adc.Provider.IAdcProvider">
+      <summary>Represents methods common to all ADC providers.</summary>
+    </member>
+    <member name="M:Windows.Devices.Adc.Provider.IAdcProvider.GetControllers">
+      <summary>Gets the ADC controllers available on the system.</summary>
+      <returns>When this method completes it returns a list of all the available controllers on the system.</returns>
+    </member>
+    <member name="T:Windows.Devices.Adc.Provider.ProviderAdcChannelMode">
+      <summary>Determines how the pin value is represented. Implementation of specifics are decided by the provider, so differential may be fully or pseudo differential.</summary>
+    </member>
+    <member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.Differential">
+      <summary>Difference between two pins.</summary>
+    </member>
+    <member name="F:Windows.Devices.Adc.Provider.ProviderAdcChannelMode.SingleEnded">
+      <summary>Simple value of a particular pin.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioChangeCount">
+      <summary>Represents a near-simultaneous sampling of the number of times a pin has changed value, and the time at which this count was sampled. This structure can be used to determine the number of pin value changes over a period of time.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioChangeCount.Count">
+      <summary>The number of times the transition of polarity specified by GpioChangeCounter.Polarity occured on the pin.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioChangeCount.RelativeTime">
+      <summary>The time at which this count was sampled. The time is sampled close to (but not simultaneously with) the count. This timestamp can be used to determine the elapsed time between two GpioChangeCount records. It does not correspond to any absolute or system time.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioChangeCounter">
+      <summary>Counts changes of a specified polarity on a general-purpose I/O (GPIO) pin.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeCounter.#ctor(Windows.Devices.Gpio.GpioPin)">
+      <summary>Creates a new GpioChangeCounter associated with the specified pin. Only a single GpioChangeCounter may be associated with a pin at any given time.</summary>
+      <param name="pin">The pin on which to count changes. This pin must have been opened in Exclusive mode, and cannot be associated with another GpioChangeCounter.</param>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioChangeCounter.IsStarted">
+      <summary>Gets whether pin change counting is currently active.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioChangeCounter.Polarity">
+      <summary>Gets or sets the polarity of transitions that will be counted. The polarity may only be changed when pin counting is not started.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeCounter.Close">
+      <summary>Closes the change counter, disassociating it from its pin.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeCounter.Read">
+      <summary>Reads the current count of polarity changes. Before counting has been started, this will return 0.</summary>
+      <returns>A GpioChangeCount structure containing a count and an associated timestamp.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeCounter.Reset">
+      <summary>Resets the count to 0 and returns the previous count.</summary>
+      <returns>A GpioChangeCount structure containing a count and an associated timestamp.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeCounter.Start">
+      <summary>Starts counting changes in pin polarity. This method may only be called when change counting is not already active.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeCounter.Stop">
+      <summary>Stop counting changes in pin polarity. This method may only be called when change counting is currently active.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioChangePolarity">
+      <summary>Represents the polarity of changes that are relevant to the associated action.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioChangePolarity.Both">
+      <summary>Transitions from both low to high and high to low should trigger the associated action.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioChangePolarity.Falling">
+      <summary>Transitions from high to low should trigger the associated action.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioChangePolarity.Rising">
+      <summary>Transitions from low to high should trigger the associated action.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioChangeReader">
+      <summary>Represents a shared circular buffer between kernel mode and user mode into which high-resolution timestamps are placed when a general-purpose I/O (GPIO) pin changes value.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.#ctor(Windows.Devices.Gpio.GpioPin)">
+      <summary>Creates a new GpioChangeReader associated with the specified pin. Only a single GpioChangeReader may be associated with a pin at any given time.</summary>
+      <param name="pin">The pin on which to read changes. The pin must have been opened in Exclusive mode, and cannot be associated with another change reader.</param>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.#ctor(Windows.Devices.Gpio.GpioPin,System.Int32)">
+      <summary>Creates a new GpioChangeReader associated with the specified pin and with the specified minimum capacity for change records. Only a single GpioChangeReader may be associated with a pin at any given time.</summary>
+      <param name="pin">The pin on which to read changes. The pin must have been opened in Exclusive mode, and cannot be associated with another change reader.</param>
+      <param name="minCapacity">The minimum number of change records that the reader must be able to hold.</param>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioChangeReader.Capacity">
+      <summary>Gets the maximum number of change records that the GpioChangeReader can store at one time.</summary>
+      <returns>The maximum number of change records.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioChangeReader.IsEmpty">
+      <summary>Gets whether there are currently zero change records in the reader.</summary>
+      <returns>Returns true if there are zero change items in the reader, and false otherwise.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioChangeReader.IsOverflowed">
+      <summary>Gets whether an attempt to place a change record into the reader's buffer has failed due to the buffer being full.</summary>
+      <returns>Returns true if an attempt at placement has been unsuccessful, and false otherwise.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioChangeReader.IsStarted">
+      <summary>Gets whether pin change recording is currently active.</summary>
+      <returns>Returns true if pin changes are currently being recorded, and false otherwise.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioChangeReader.Length">
+      <summary>Gets the number of records currently in the change reader.</summary>
+      <returns>The current number of change records.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioChangeReader.Polarity">
+      <summary>Gets or sets the polarity of transitions that will be recorded. The polarity may only be changed when pin change recording is not started.</summary>
+      <returns>Rising or Falling. The default polarity value is Falling.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.Clear">
+      <summary>Discards all change records from the reader's buffer.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.Close">
+      <summary>Closes the change reader, releasing the associated memory buffer and disassociating the reader from its pin.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.GetAllItems">
+      <summary>Removes and returns all items current in the reader's buffer.</summary>
+      <returns>IVector&lt;GpioChangeRecord &gt;</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.GetNextItem">
+      <summary>Retrieves and removes the earliest inserted change record from the reader's buffer.</summary>
+      <returns>A GpioChangeRecord structure containing the timestamp and polarity (rising or falling) of the change.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.PeekNextItem">
+      <summary>Retrieves the earlier inserted change record from the reader's buffer, without removing it.</summary>
+      <returns>A GpioChangeRecord structure containing the timestamp and polarity (rising or falling) of the change.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.Start">
+      <summary>Starts recording changes in pin polarity. This method may only be called when change recording is not already active.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.Stop">
+      <summary>Stop recording changes in pin polarity. This method may only be called when change recording is currently active.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioChangeReader.WaitForItemsAsync(System.Int32)">
+      <summary>Waits for the buffer to fill with at least *count* number of items, at which point the async action will complete. This action is cancelable.</summary>
+      <param name="count">The number of items with which the buffer must fill before the async operation completes.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioChangeRecord">
+      <summary>Stores a relative timestap of a general-purpose I/O (GPIO) pin value change, and whether the pin transitioned from low to high or from high to low.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioChangeRecord.Edge">
+      <summary>A GpioPinEdge object corresponding to the transition type.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioChangeRecord.RelativeTime">
+      <summary>A relative timestamp that can be used to determine the difference in time between two change records. This timestamp does not correspond to any absolute or system time.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioController">
+      <summary>Represents the default general-purpose I/O (GPIO) controller for the system.</summary>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioController.PinCount">
+      <summary>Gets the number of pins on the general-purpose I/O (GPIO) controller.</summary>
+      <returns>The number of pins on the GPIO controller. Some pins may not be available in user mode. For information about how the pin numbers correspond to physical pins, see the documentation for your circuit board.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioController.GetControllersAsync(Windows.Devices.Gpio.Provider.IGpioProvider)">
+      <summary>Gets all the controllers that are connected to the system asynchronously.</summary>
+      <param name="provider">The GPIO provider for the controllers on the system.</param>
+      <returns>When the method completes successfully, it returns a list of values that represent the controllers available on the system.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioController.GetDefault">
+      <summary>Gets the default general-purpose I/O (GPIO) controller for the system.</summary>
+      <returns>The default GPIO controller for the system, or null if the system has no GPIO controller.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioController.GetDefaultAsync">
+      <summary>Gets the default general-purpose I/O (GPIO) controller for the system.</summary>
+      <returns>The default GPIO controller for the system, or null if the system has no GPIO controller.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32)">
+      <summary>Opens a connection to the specified general-purpose I/O (GPIO) pin in exclusive mode.</summary>
+      <param name="pinNumber">The pin number of the GPIO pin that you want to open. The pin number must be</param>
+      <returns>The opened GPIO pin.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioController.OpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode)">
+      <summary>Opens the specified general-purpose I/O (GPIO) pin in the specified mode.</summary>
+      <param name="pinNumber">The pin number of the GPIO pin that you want to open. The pin number must be</param>
+      <param name="sharingMode">The mode in which you want to open the GPIO pin, which determines whether other connections to the pin can be opened while you have the pin open.</param>
+      <returns>The opened GPIO pin.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioController.TryOpenPin(System.Int32,Windows.Devices.Gpio.GpioSharingMode,Windows.Devices.Gpio.GpioPin@,Windows.Devices.Gpio.GpioOpenStatus@)">
+      <summary>Opens the specified general-purpose I/O (GPIO) pin in the specified mode, and gets a status value that you can use to handle a failure to open the pin programmatically.</summary>
+      <param name="pinNumber">The pin number of the GPIO pin that you want to open. Some pins may not be available in user mode. For information about how the pin numbers correspond to physical pins, see the documentation for your circuit board.</param>
+      <param name="sharingMode">The mode in which you want to open the GPIO pin, which determines whether other connections to the pin can be opened while you have the pin open.</param>
+      <param name="pin">The opened GPIO pin if the return value is true; otherwise null.</param>
+      <param name="openStatus">An enumeration value that indicates either that the attempt to open the GPIO pin succeeded, or the reason that the attempt to open the GPIO pin failed.</param>
+      <returns>True if the method successfully opened the pin; otherwise false.</returns>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioOpenStatus">
+      <summary>Describes the possible results of opening a pin with the GpioController.TryOpenPin method.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioOpenStatus.MuxingConflict">
+      <summary>The pin is currently opened for a different function, such as **I2c**, **Spi**, or **UART**. Ensure the pin is not in use by another function.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinOpened">
+      <summary>The GPIO pin was successfully opened.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioOpenStatus.PinUnavailable">
+      <summary>The pin is reserved by the system and is not available to apps that run in user mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioOpenStatus.SharingViolation">
+      <summary>The pin is currently open in an incompatible sharing mode. For example:</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioOpenStatus.UnknownError">
+      <summary>The pin could not be opened.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioPin">
+      <summary>Represents a general-purpose I/O (GPIO) pin.</summary>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioPin.DebounceTimeout">
+      <summary>Gets or sets the debounce timeout for the general-purpose I/O (GPIO) pin, which is an interval during which changes to the value of the pin are filtered out, and do not generate ValueChanged events.</summary>
+      <returns>The debounce timeout (of type TimeSpan ) for the GPIO pin. If the length of this interval is 0, then all changes to the value of the pin generate ValueChanged events.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioPin.PinNumber">
+      <summary>Gets the pin number of the general-purpose I/O (GPIO) pin.</summary>
+      <returns>The pin number of the GPIO pin.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioPin.SharingMode">
+      <summary>Gets the sharing mode in which the general-purpose I/O (GPIO) pin is open.</summary>
+      <returns>The sharing mode in which the GPIO pin is open.</returns>
+    </member>
+    <member name="E:Windows.Devices.Gpio.GpioPin.ValueChanged">
+      <summary>Occurs when the value of the general-purpose I/O (GPIO) pin changes, either because of an external stimulus when the pin is configured as an input, or when a value is written to the pin when the pin in configured as an output.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioPin.Close">
+      <summary>Closes the general-purpose I/O (GPIO) pin and releases the resources associated with it.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioPin.GetDriveMode">
+      <summary>Gets the current drive mode for the general-purpose I/O (GPIO) pin. The drive mode specifies whether the pin is configured as an input or an output, and determines how values are driven onto the pin.</summary>
+      <returns>An enumeration value that indicates the current drive mode for the GPIO pin. The drive mode specifies whether the pin is configured as an input or an output, and determines how values are driven onto the pin.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioPin.IsDriveModeSupported(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>Gets whether the general-purpose I/O (GPIO) pin supports the specified drive mode.</summary>
+      <param name="driveMode">The drive mode that you want to check for support.</param>
+      <returns>True if the GPIO pin supports the drive mode that *driveMode* specifies; otherwise false. If you specify a drive mode for which this method returns false when you call SetDriveMode, SetDriveMode generates an exception.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioPin.Read">
+      <summary>Reads the current value of the general-purpose I/O (GPIO) pin.</summary>
+      <returns>The current value of the GPIO pin. If the pin is configured as an output, this value is the last value written to the pin.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioPin.SetDriveMode(Windows.Devices.Gpio.GpioPinDriveMode)">
+      <summary>Sets the drive mode of the general-purpose I/O (GPIO) pin. The drive mode specifies whether the pin is configured as an input or an output, and determines how values are driven onto the pin.</summary>
+      <param name="value">An enumeration value that specifies drive mode to use for the GPIO pin. The drive mode specifies whether the pin is configured as an input or an output, and determines how values are driven onto the pin.</param>
+    </member>
+    <member name="M:Windows.Devices.Gpio.GpioPin.Write(Windows.Devices.Gpio.GpioPinValue)">
+      <summary>Drives the specified value onto the general purpose I/O (GPIO) pin according to the current drive mode for the pin if the pin is configured as an output, or updates the latched output value for the pin if the pin is configured as an input.</summary>
+      <param name="value">The enumeration value to write to the GPIO pin.</param>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioPinDriveMode">
+      <summary>Describes whether a general-purpose I/O (GPIO) pin is configured as an input or an output, and how values are driven onto the pin.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Input">
+      <summary>Configures the GPIO pin in floating mode, with high impedance.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullDown">
+      <summary>Configures the GPIO pin as high impedance with a pull-down resistor to ground.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinDriveMode.InputPullUp">
+      <summary>Configures the GPIO pin as high impedance with a pull-up resistor to the voltage charge connection (VCC).</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinDriveMode.Output">
+      <summary>Configures the GPIO pin in strong drive mode, with low impedance.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrain">
+      <summary>Configures the GPIO in open drain mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>Configures the GPIO pin in open drain mode with resistive pull-up mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSource">
+      <summary>Configures the GPIO pin in open collector mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>Configures the GPIO pin in open collector mode with resistive pull-down mode.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioPinEdge">
+      <summary>Describes the possible types of change that can occur to the value of the general-purpose I/O (GPIO) pin for the GpioPin.ValueChanged event.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinEdge.FallingEdge">
+      <summary>The value of the GPIO pin changed from high to low.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinEdge.RisingEdge">
+      <summary>The value of the GPIO pin changed from low to high.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioPinValue">
+      <summary>Describes the possible values for a general-purpose I/O (GPIO) pin.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinValue.High">
+      <summary>The value of the GPIO pin is high.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioPinValue.Low">
+      <summary>The value of the GPIO pin is low.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioPinValueChangedEventArgs">
+      <summary>Provides data about the GpioPin.ValueChanged event that occurs when the value of the general-purpose I/O (GPIO) pin changes, either because of an external stimulus when the pin is configured as an input, or when a value is written to the pin when the pin in configured as an output.</summary>
+    </member>
+    <member name="P:Windows.Devices.Gpio.GpioPinValueChangedEventArgs.Edge">
+      <summary>Gets the type of change that occurred to the value of the general-purpose I/O (GPIO) pin for the GpioPin.ValueChanged event.</summary>
+      <returns>An enumeration value that indicates the type of change that occurred to the value of the GPIO pin for the GpioPin.ValueChanged event.</returns>
+    </member>
+    <member name="T:Windows.Devices.Gpio.GpioSharingMode">
+      <summary>Describes the modes in which you can open a general-purpose I/O (GPIO) pin. These modes determine whether other connections to the GPIO pin can be opened while you have the pin open.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioSharingMode.Exclusive">
+      <summary>Opens the GPIO pin exclusively, so that no other connection to the pin can be opened.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.GpioSharingMode.SharedReadOnly">
+      <summary>Opens the GPIO pin as shared, so that other connections in **SharedReadOnly** mode to the pin can be opened.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs">
+      <summary>Provides information about the IGpioPinProvider.ValueChanged event.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.#ctor(Windows.Devices.Gpio.Provider.ProviderGpioPinEdge)">
+      <summary>Contructs the GpioPinProviderValueChangedEventArgs class with the specified edge value.</summary>
+      <param name="edge">The desired pin edge.</param>
+    </member>
+    <member name="P:Windows.Devices.Gpio.Provider.GpioPinProviderValueChangedEventArgs.Edge">
+      <summary>Gets the value the pin has changed to.</summary>
+      <returns>The pin edge.</returns>
+    </member>
+    <member name="T:Windows.Devices.Gpio.Provider.IGpioControllerProvider">
+      <summary>Represents the actions common to all general-purpose I/O (GPIO) controllers.</summary>
+    </member>
+    <member name="P:Windows.Devices.Gpio.Provider.IGpioControllerProvider.PinCount">
+      <summary>Gets the number of general-purpose I/O (GPIO) pins available.</summary>
+      <returns>The number of GPIO pins available.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.Provider.IGpioControllerProvider.OpenPinProvider(System.Int32,Windows.Devices.Gpio.Provider.ProviderGpioSharingMode)">
+      <summary>Opens and returns the general-purpose I/O (GPIO) pin provider for a specific pin.</summary>
+      <param name="pin">The desired GPIO pin number.</param>
+      <param name="sharingMode">The sharing mode to open the pin as.</param>
+      <returns>The GPIO pin provider for the specified pin.</returns>
+    </member>
+    <member name="T:Windows.Devices.Gpio.Provider.IGpioPinProvider">
+      <summary>Represents actions common to general-purpose I/O (GPIO) pin providers.</summary>
+    </member>
+    <member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.DebounceTimeout">
+      <summary>Gets or sets the debounce timeout for the general-purpose I/O (GPIO) pin, which is an interval during which changes to the value of the pin are filtered out and do not generate ValueChanged events.</summary>
+      <returns>The debounce timeout for the GPIO pin, which is an interval during which changes to the value of the pin are filtered out and do not generate ValueChanged events. If the length of this interval is 0, all changes to the value of the pin generate ValueChanged events.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.PinNumber">
+      <summary>Gets the pin number of the general-purpose I/O (GPIO) pin.</summary>
+      <returns>The pin number of the GPIO pin.</returns>
+    </member>
+    <member name="P:Windows.Devices.Gpio.Provider.IGpioPinProvider.SharingMode">
+      <summary>Gets the sharing mode in which the general-purpose I/O (GPIO) pin is open.</summary>
+      <returns>The sharing mode in which the GPIO pin is open.</returns>
+    </member>
+    <member name="E:Windows.Devices.Gpio.Provider.IGpioPinProvider.ValueChanged">
+      <summary>Event that fires when the value of the pin has changed.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.GetDriveMode">
+      <summary>Gets the pin's currently configured drive mode.</summary>
+      <returns>The drive mode of the pin.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.IsDriveModeSupported(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>Determines if a drive mode is supported for the pin.</summary>
+      <param name="driveMode">The desired drive mode.</param>
+      <returns>True if the drive mode is supported; otherwise false.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Read">
+      <summary>Reads the current value of the pin.</summary>
+      <returns>The pin's value.</returns>
+    </member>
+    <member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.SetDriveMode(Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode)">
+      <summary>Sets the pin's drive mode.</summary>
+      <param name="value">The desired drive mode for the pin.</param>
+    </member>
+    <member name="M:Windows.Devices.Gpio.Provider.IGpioPinProvider.Write(Windows.Devices.Gpio.Provider.ProviderGpioPinValue)">
+      <summary>Writes a value to the pin.</summary>
+      <param name="value">The value to write.</param>
+    </member>
+    <member name="T:Windows.Devices.Gpio.Provider.IGpioProvider">
+      <summary>Represents actions common to general-purpose I/O (GPIO) controller providers.</summary>
+    </member>
+    <member name="M:Windows.Devices.Gpio.Provider.IGpioProvider.GetControllers">
+      <summary>Gets the controllers available on the system.</summary>
+      <returns>A list of values that represent the controllers available on the system.</returns>
+    </member>
+    <member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode">
+      <summary>Describes whether a general-purpose I/O (GPIO) pin is configured as an input or an output, and how values are driven onto the pin.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Input">
+      <summary>Configures the GPIO pin in floating mode, with high impedance.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullDown">
+      <summary>Configures the GPIO pin as high impedance with a pull-down resistor to ground.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.InputPullUp">
+      <summary>Configures the GPIO pin as high impedance with a pull-up resistor to the voltage charge connection (VCC).</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.Output">
+      <summary>Configures the GPIO pin in strong drive mode, with low impedance.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrain">
+      <summary>Configures the GPIO in open drain mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenDrainPullUp">
+      <summary>Configures the GPIO pin in open drain mode with resistive pull-up mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSource">
+      <summary>Configures the GPIO pin in open collector mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinDriveMode.OutputOpenSourcePullDown">
+      <summary>Configures the GPIO pin in open collector mode with resistive pull-down mode.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge">
+      <summary>Describes the possible types of change that can occur to the value of the general-purpose I/O (GPIO) pin.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.FallingEdge">
+      <summary>The falling edge, or when value goes from high to low.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinEdge.RisingEdge">
+      <summary>The rising edge, or when value goes from low to high.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.Provider.ProviderGpioPinValue">
+      <summary>Describes the possible values for a general-purpose I/O (GPIO) pin.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.High">
+      <summary>The value of the GPIO pin is high.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioPinValue.Low">
+      <summary>The value of the GPIO pin is low.</summary>
+    </member>
+    <member name="T:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode">
+      <summary>Describes the modes in which you can open a general-purpose I/O (GPIO) pin. These modes determine whether other connections to the GPIO pin can be opened while you have the pin open.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.Exclusive">
+      <summary>Opens the GPIO pin exclusively, so that no other connection to the pin can be opened.</summary>
+    </member>
+    <member name="F:Windows.Devices.Gpio.Provider.ProviderGpioSharingMode.SharedReadOnly">
+      <summary>Opens the GPIO pin as shared, so that other connections in **SharedReadOnly** mode to the pin can be opened. Only operations that do not change the state of the pin can be performed.</summary>
+    </member>
+    <member name="T:Windows.Devices.I2c.I2cBusSpeed">
+      <summary>Describes the bus speeds that are available for connecting to an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device. The bus speed is the frequency at which to clock the I&lt;sup&gt;2&lt;/sup&gt; C bus when accessing the device.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cBusSpeed.FastMode">
+      <summary>A fast speed of 400 kHz.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cBusSpeed.StandardMode">
+      <summary>The standard speed of 100 kilohertz (kHz). This speed is the default.</summary>
+    </member>
+    <member name="T:Windows.Devices.I2c.I2cConnectionSettings">
+      <summary>Represents the connection settings you want to use for an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device.</summary>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cConnectionSettings.#ctor(System.Int32)">
+      <summary>Creates and initializes a new instance of the I2cConnectionSettings class for inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device with specified bus address, using the default settings of the standard mode for the bus speed and exclusive sharing mode.</summary>
+      <param name="slaveAddress">The bus address of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device to which the settings of the I2cConnectionSettings should apply. Only 7-bit addressing is supported, so the range of values that are valid is from 8 to 119.</param>
+    </member>
+    <member name="P:Windows.Devices.I2c.I2cConnectionSettings.BusSpeed">
+      <summary>Gets or sets the bus speed to use for connecting to an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device. The bus speed is the frequency at which to clock the I&lt;sup&gt;2&lt;/sup&gt; C bus when accessing the device.</summary>
+      <returns>The bus speed to use for connecting to anI&lt;sup&gt;2&lt;/sup&gt; C device.</returns>
+    </member>
+    <member name="P:Windows.Devices.I2c.I2cConnectionSettings.SharingMode">
+      <summary>Gets or sets the sharing mode to use to connect to the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus address. This mode determines whether other connections to the I&lt;sup&gt;2&lt;/sup&gt; C bus address can be opened while you are connect to the I&lt;sup&gt;2&lt;/sup&gt; C bus address.</summary>
+      <returns>The sharing mode to use to connect to the I&lt;sup&gt;2&lt;/sup&gt; C bus address.</returns>
+    </member>
+    <member name="P:Windows.Devices.I2c.I2cConnectionSettings.SlaveAddress">
+      <summary>Gets or sets the bus address of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device.</summary>
+      <returns>The bus address of the I&lt;sup&gt;2&lt;/sup&gt; C device. Only 7-bit addressing is supported, so the range of values that are valid is from 8 to 119.</returns>
+    </member>
+    <member name="T:Windows.Devices.I2c.I2cController">
+      <summary>Represents the I&lt;sup&gt;2&lt;/sup&gt; C controller for the system.</summary>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cController.GetControllersAsync(Windows.Devices.I2c.Provider.II2cProvider)">
+      <summary>Gets all the I&lt;sup&gt;2&lt;/sup&gt; C controllers that are on the system.</summary>
+      <param name="provider">The I&lt;sup&gt;2&lt;/sup&gt; C provider for the controllers on the system.</param>
+      <returns>When the method completes successfully, it returns a list of values that represent the available I&lt;sup&gt;2&lt;/sup&gt; C controllers on the system.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cController.GetDefaultAsync">
+      <summary>Gets the default I&lt;sup&gt;2&lt;/sup&gt; C controller on the system.</summary>
+      <returns>The default I&lt;sup&gt;2&lt;/sup&gt; C controller on the system, or null if the system has no I&lt;sup&gt;2&lt;/sup&gt; C controller.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cController.GetDevice(Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Gets the I&lt;sup&gt;2&lt;/sup&gt; C device with the specified settings.</summary>
+      <param name="settings">The desired connection settings.</param>
+      <returns>The I&lt;sup&gt;2&lt;/sup&gt; C device.</returns>
+    </member>
+    <member name="T:Windows.Devices.I2c.I2cDevice">
+      <summary>Represents a communications channel to a device on an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus.</summary>
+    </member>
+    <member name="P:Windows.Devices.I2c.I2cDevice.ConnectionSettings">
+      <summary>Gets the connection settings used for communication with the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device.</summary>
+      <returns>The connection settings used for communication with the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device.</returns>
+    </member>
+    <member name="P:Windows.Devices.I2c.I2cDevice.DeviceId">
+      <summary>Gets the plug and play device identifier of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus controller for the device.</summary>
+      <returns>The plug and play device identifier of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus controller for the device.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.Close">
+      <summary>Closes the connection to the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device.</summary>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Retrieves an I2cDevice object asynchronously for the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus controller that has the specified plug and play device identifier, using the specified connection settings.</summary>
+      <param name="deviceId">The plug and play device identifier of the I&lt;sup&gt;2&lt;/sup&gt; C bus controller for which you want to create an I2cDevice object.</param>
+      <param name="settings">The connection settings to use for communication with the I&lt;sup&gt;2&lt;/sup&gt; C bus controller that *deviceId* specifies.</param>
+      <returns>An asynchronous operation that returns the I2cDevice object.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector">
+      <summary>Retrieves an Advanced Query Syntax (AQS) string for all of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus controllers on the system. You can use this string with the DeviceInformation.FindAllAsync method to get DeviceInformation objects for those bus controllers.</summary>
+      <returns>An AQS string for all of the I&lt;sup&gt;2&lt;/sup&gt; C bus controllers on the system, which you can use with the DeviceInformation.FindAllAsync method to get DeviceInformation objects for those bus controllers.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.GetDeviceSelector(System.String)">
+      <summary>Retrieves an Advanced Query Syntax (AQS) string for the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus that has the specified friendly name. You can use this string with the DeviceInformation.FindAllAsync method to get a DeviceInformation object for that bus.</summary>
+      <param name="friendlyName">A friendly name for the particular I&lt;sup&gt;2&lt;/sup&gt; C bus on a particular hardware platform for which you want to get the AQS string.</param>
+      <returns>An AQS string for the I&lt;sup&gt;2&lt;/sup&gt; C bus that *friendlyName* specifies, which you can use with the DeviceInformation.FindAllAsync method to get a DeviceInformation object for that bus.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.Read(System.Byte[])">
+      <summary>Reads data from the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected into the specified buffer.</summary>
+      <param name="buffer">The buffer to which you want to read the data from the I&lt;sup&gt;2&lt;/sup&gt; C bus. The length of the buffer determines how much data to request from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.ReadPartial(System.Byte[])">
+      <summary>Reads data from the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected into the specified buffer, and returns information about the success of the operation that you can use for error handling.</summary>
+      <param name="buffer">The buffer to which you want to read the data from the I&lt;sup&gt;2&lt;/sup&gt; C bus. The length of the buffer determines how much data to request from the device.</param>
+      <returns>A structure that contains information about the success of the read operation and the actual number of bytes that the operation read into the buffer.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.Write(System.Byte[])">
+      <summary>Writes data to the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected, based on the bus address specified in the I2cConnectionSetting s object that you used to create the I2cDevice object.</summary>
+      <param name="buffer">A buffer that contains the data that you want to write to the I&lt;sup&gt;2&lt;/sup&gt; C device. This data should not include the bus address.</param>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.WritePartial(System.Byte[])">
+      <summary>Writes data to the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected, and returns information about the success of the operation that you can use for error handling.</summary>
+      <param name="buffer">A buffer that contains the data that you want to write to the I&lt;sup&gt;2&lt;/sup&gt; C device. This data should not include the bus address.</param>
+      <returns>A structure that contains information about the success of the write operation and the actual number of bytes that the operation wrote into the buffer.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.WriteRead(System.Byte[],System.Byte[])">
+      <summary>Performs an atomic operation to write data to and then read data from the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected, and sends a restart condition between the write and read operations.</summary>
+      <param name="writeBuffer">A buffer that contains the data that you want to write to the I&lt;sup&gt;2&lt;/sup&gt; C device. This data should not include the bus address.</param>
+      <param name="readBuffer">The buffer to which you want to read the data from the I&lt;sup&gt;2&lt;/sup&gt; C bus. The length of the buffer determines how much data to request from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.I2c.I2cDevice.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>Performs an atomic operation to write data to and then read data from the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected, and returns information about the success of the operation that you can use for error handling.</summary>
+      <param name="writeBuffer">A buffer that contains the data that you want to write to the I&lt;sup&gt;2&lt;/sup&gt; C device. This data should not include the bus address.</param>
+      <param name="readBuffer">The buffer to which you want to read the data from the I&lt;sup&gt;2&lt;/sup&gt; C bus. The length of the buffer determines how much data to request from the device.</param>
+      <returns>A structure that contains information about whether both the read and write parts of the operation succeeded and the sum of the actual number of bytes that the operation wrote and the actual number of bytes that the operation read.</returns>
+    </member>
+    <member name="T:Windows.Devices.I2c.I2cSharingMode">
+      <summary>Describes the modes in which you can connect to an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus address. These modes determine whether other connections to the I&lt;sup&gt;2&lt;/sup&gt; C bus address can be opened while you are connected to the I&lt;sup&gt;2&lt;/sup&gt; C bus address.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cSharingMode.Exclusive">
+      <summary>Connects to the I&lt;sup&gt;2&lt;/sup&gt; C bus address exclusively, so that no other connection to the I&lt;sup&gt;2&lt;/sup&gt; C bus address can be made while you remain connected. This mode is the default mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cSharingMode.Shared">
+      <summary>Connects to the I&lt;sup&gt;2&lt;/sup&gt; C bus address in shared mode, so that other connections to the I&lt;sup&gt;2&lt;/sup&gt; C bus address can be made while you remain connected.</summary>
+    </member>
+    <member name="T:Windows.Devices.I2c.I2cTransferResult">
+      <summary>Provides information about whether the data transfers that the ReadPartial, WritePartial, or WriteReadPartial method performed succeeded, and the actual number of bytes the method transferred.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cTransferResult.BytesTransferred">
+      <summary>The actual number of bytes that the operation actually transferred. The following table describes what this value represents for each method.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cTransferResult.Status">
+      <summary>An enumeration value that indicates if the read or write operation transferred the full number of bytes that the method requested, or the reason that the full transfer did not succeed. For WriteReadPartial, the value indicates whether the data for both the write and the read operations was entirely transferred.</summary>
+    </member>
+    <member name="T:Windows.Devices.I2c.I2cTransferStatus">
+      <summary>Describes whether the data transfers that the ReadPartial, WritePartial, or WriteReadPartial method performed succeeded, or provides the reason that the transfers did not succeed.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cTransferStatus.ClockStretchTimeout">
+      <summary>The transfer failed due to the clock being stretched for too long. Ensure the clock line is not being held low.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cTransferStatus.FullTransfer">
+      <summary>The data was entirely transferred. For WriteReadPartial, the data for both the write and the read operations was entirely transferred.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cTransferStatus.PartialTransfer">
+      <summary>The I&lt;sup&gt;2&lt;/sup&gt; C device negatively acknowledged the data transfer before all of the data was transferred.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>The bus address was not acknowledged.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.I2cTransferStatus.UnknownError">
+      <summary>The transfer failed for an unknown reason.</summary>
+    </member>
+    <member name="T:Windows.Devices.I2c.II2cDeviceStatics">
+      <summary>Provides ways to open a communications channel to a device on an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus.</summary>
+    </member>
+    <member name="M:Windows.Devices.I2c.II2cDeviceStatics.FromIdAsync(System.String,Windows.Devices.I2c.I2cConnectionSettings)">
+      <summary>Retrieves an I2cDevice object asynchronously for the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus controller that has the specified plug and play device identifier, using the specified connection settings.</summary>
+      <param name="deviceId">The plug and play device identifier of the I&lt;sup&gt;2&lt;/sup&gt; C bus controller for which you want to create an I2cDevice object.</param>
+      <param name="settings">The connection settings to use for communication with the I&lt;sup&gt;2&lt;/sup&gt; C bus controller that *deviceId* specifies.</param>
+      <returns>An asynchronous operation that returns the I2cDevice object.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector">
+      <summary>Retrieves an Advanced Query Syntax (AQS) string for all of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus controllers on the system. You can use this string with the DeviceInformation.FindAllAsync method to get DeviceInformation objects for those bus controllers.</summary>
+      <returns>An AQS string for all of the I&lt;sup&gt;2&lt;/sup&gt; C bus controllers on the system, which you can use with the DeviceInformation.FindAllAsync method to get DeviceInformation objects for those bus controllers.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.II2cDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>Retrieves an Advanced Query Syntax (AQS) string for the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus that has the specified friendly name. You can use this string with the DeviceInformation.FindAllAsync method to get a DeviceInformation object for that bus.</summary>
+      <param name="friendlyName">A friendly name for the particular I&lt;sup&gt;2&lt;/sup&gt; C bus on a particular hardware platform for which you want to get the AQS string.</param>
+      <returns>An AQS string for the I&lt;sup&gt;2&lt;/sup&gt; C bus that *friendlyName* specifies, which you can use with the DeviceInformation.FindAllAsync method to get a DeviceInformation object for that bus.</returns>
+    </member>
+    <member name="T:Windows.Devices.I2c.Provider.II2cControllerProvider">
+      <summary>Represents properties and methods common to all I&lt;sup&gt;2&lt;/sup&gt; C controllers.</summary>
+    </member>
+    <member name="M:Windows.Devices.I2c.Provider.II2cControllerProvider.GetDeviceProvider(Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings)">
+      <summary>Gets the I&lt;sup&gt;2&lt;/sup&gt; C device provider with the specified settings.</summary>
+      <param name="settings">The desired settings.</param>
+      <returns>The I&lt;sup&gt;2&lt;/sup&gt; C device provider.</returns>
+    </member>
+    <member name="T:Windows.Devices.I2c.Provider.II2cDeviceProvider">
+      <summary>Represents methods common to all I&lt;sup&gt;2&lt;/sup&gt; C device providers.</summary>
+    </member>
+    <member name="P:Windows.Devices.I2c.Provider.II2cDeviceProvider.DeviceId">
+      <summary>Gets the plug and play device identifier of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus controller for the device.</summary>
+      <returns>The plug and play device identifier of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus controller for the device.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Read(System.Byte[])">
+      <summary>Reads data from the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected into the specified buffer.</summary>
+      <param name="buffer">The buffer to which you want to read the data from the I&lt;sup&gt;2&lt;/sup&gt; C bus. The length of the buffer determines how much data to request from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.ReadPartial(System.Byte[])">
+      <summary>Reads data from the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected into the specified buffer, and returns information about the success of the operation that you can use for error handling.</summary>
+      <param name="buffer">The buffer to which you want to read the data from the I&lt;sup&gt;2&lt;/sup&gt; C bus. The length of the buffer determines how much data to request from the device.</param>
+      <returns>A structure that contains information about the success of the read operation and the actual number of bytes that the operation read into the buffer.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.Write(System.Byte[])">
+      <summary>Writes data to the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected.</summary>
+      <param name="buffer">A buffer that contains the data that you want to write to the I&lt;sup&gt;2&lt;/sup&gt; C device. This data should not include the bus address.</param>
+    </member>
+    <member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WritePartial(System.Byte[])">
+      <summary>Writes data to the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected, and returns information about the success of the operation that you can use for error handling.</summary>
+      <param name="buffer">A buffer that contains the data that you want to write to the I&lt;sup&gt;2&lt;/sup&gt; C device. This data should not include the bus address.</param>
+      <returns>A structure that contains information about the success of the write operation and the actual number of bytes that the operation wrote into the buffer.</returns>
+    </member>
+    <member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteRead(System.Byte[],System.Byte[])">
+      <summary>Performs an atomic operation to write data to and then read data from the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected, and sends a restart condition between the write and read operations.</summary>
+      <param name="writeBuffer">A buffer that contains the data that you want to write to the I&lt;sup&gt;2&lt;/sup&gt; C device. This data should not include the bus address.</param>
+      <param name="readBuffer">The buffer to which you want to read the data from the I&lt;sup&gt;2&lt;/sup&gt; C bus. The length of the buffer determines how much data to request from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.I2c.Provider.II2cDeviceProvider.WriteReadPartial(System.Byte[],System.Byte[])">
+      <summary>Performs an atomic operation to write data to and then read data from the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus on which the device is connected, and returns information about the success of the operation that you can use for error handling.</summary>
+      <param name="writeBuffer">A buffer that contains the data that you want to write to the I&lt;sup&gt;2&lt;/sup&gt; C device. This data should not include the bus address.</param>
+      <param name="readBuffer">The buffer to which you want to read the data from the I&lt;sup&gt;2&lt;/sup&gt; C bus. The length of the buffer determines how much data to request from the device.</param>
+      <returns>A structure that contains information about whether both the read and write parts of the operation succeeded and the sum of the actual number of bytes that the operation wrote and the actual number of bytes that the operation read.</returns>
+    </member>
+    <member name="T:Windows.Devices.I2c.Provider.II2cProvider">
+      <summary>Represents actions common to all I&lt;sup&gt;2&lt;/sup&gt; C providers.</summary>
+    </member>
+    <member name="M:Windows.Devices.I2c.Provider.II2cProvider.GetControllersAsync">
+      <summary>Gets all the I&lt;sup&gt;2&lt;/sup&gt; C controllers that are on the system.</summary>
+      <returns>When the method completes successfully, it returns a list of values that represent the available I&lt;sup&gt;2&lt;/sup&gt; C controllers on the system.</returns>
+    </member>
+    <member name="T:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed">
+      <summary>Describes the bus speeds that are available for connecting to an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device. The bus speed is the frequency at which to clock the I&lt;sup&gt;2&lt;/sup&gt; C bus when accessing the device.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.FastMode">
+      <summary>A fast speed of 400 kHz.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cBusSpeed.StandardMode">
+      <summary>The standard speed of 100 kilohertz (kHz). This speed is the default.</summary>
+    </member>
+    <member name="T:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings">
+      <summary>Represents the connection settings you want to use for an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device.</summary>
+    </member>
+    <member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.BusSpeed">
+      <summary>Gets or sets the bus speed to use for connecting to an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device. The bus speed is the frequency at which to clock the I&lt;sup&gt;2&lt;/sup&gt; C bus when accessing the device.</summary>
+      <returns>The bus speed to use for connecting to an I&lt;sup&gt;2&lt;/sup&gt; C device.</returns>
+    </member>
+    <member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SharingMode">
+      <summary>Gets or sets the sharing mode to use to connect to the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus address. This mode determines whether other connections to the I&lt;sup&gt;2&lt;/sup&gt; C bus address can be opened while you are connect to the I&lt;sup&gt;2&lt;/sup&gt; C bus address.</summary>
+      <returns>The sharing mode to use to connect to the I&lt;sup&gt;2&lt;/sup&gt; C bus address.</returns>
+    </member>
+    <member name="P:Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings.SlaveAddress">
+      <summary>Gets or sets the bus address of the inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) device.</summary>
+      <returns>The bus address of the I&lt;sup&gt;2&lt;/sup&gt; C device. Only 7-bit addressing is supported, so the range of values that are valid is from 8 to 119.</returns>
+    </member>
+    <member name="T:Windows.Devices.I2c.Provider.ProviderI2cSharingMode">
+      <summary>Describes the modes in which you can connect to an inter-integrated circuit (I&lt;sup&gt;2&lt;/sup&gt; C) bus address. These modes determine whether other connections to the I&lt;sup&gt;2&lt;/sup&gt; C bus address can be opened while you are connected to the I&lt;sup&gt;2&lt;/sup&gt; C bus address.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Exclusive">
+      <summary>Connects to the I&lt;sup&gt;2&lt;/sup&gt; C bus address exclusively, so that no other connection to the I&lt;sup&gt;2&lt;/sup&gt; C bus address can be made while you remain connected. This mode is the default mode.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cSharingMode.Shared">
+      <summary>Connects to the I&lt;sup&gt;2&lt;/sup&gt; C bus address in shared mode, so that other connections to the I&lt;sup&gt;2&lt;/sup&gt; C bus address can be made while you remain connected.</summary>
+    </member>
+    <member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferResult">
+      <summary>Provides information about whether the data transfers that the ReadPartial, WritePartial, or WriteReadPartial method performed succeeded, and the actual number of bytes the method transferred.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.BytesTransferred">
+      <summary>The actual number of bytes that the operation actually transferred. The following table describes what this value represents for each method.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferResult.Status">
+      <summary>An enumeration value that indicates if the read or write operation transferred the full number of bytes that the method requested, or the reason that the full transfer did not succeed. For WriteReadPartial, the value indicates whether the data for both the write and the read operations was entirely transferred.</summary>
+    </member>
+    <member name="T:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus">
+      <summary>Describes whether the data transfers that the ReadPartial, WritePartial, or WriteReadPartial method performed succeeded, or provides the reason that the transfers did not succeed.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.FullTransfer">
+      <summary>The data was entirely transferred. For WriteReadPartial, the data for both the write and the read operations was entirely transferred.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.PartialTransfer">
+      <summary>The I&lt;sup&gt;2&lt;/sup&gt; C device negatively acknowledged the data transfer before all of the data was transferred.</summary>
+    </member>
+    <member name="F:Windows.Devices.I2c.Provider.ProviderI2cTransferStatus.SlaveAddressNotAcknowledged">
+      <summary>The bus address was not acknowledged.</summary>
+    </member>
+    <member name="T:Windows.Devices.Pwm.PwmController">
+      <summary>Represents a PWM controller connected to the system.</summary>
+    </member>
+    <member name="P:Windows.Devices.Pwm.PwmController.ActualFrequency">
+      <summary>Gets the actual frequency of the PWM.</summary>
+      <returns>The frequency in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Pwm.PwmController.MaxFrequency">
+      <summary>Gets the maximum frequency offered by the controller.</summary>
+      <returns>The maximum frequency in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Pwm.PwmController.MinFrequency">
+      <summary>Gets the minimum frequency offered by the controller.</summary>
+      <returns>The minimum frequency in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Pwm.PwmController.PinCount">
+      <summary>Gets the number of pins available on the system.</summary>
+      <returns>The number of pins.</returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmController.FromIdAsync(System.String)">
+      <summary>Initializes a PWM controller instance based on the given DeviceInformation ID.</summary>
+      <param name="deviceId">The acquired DeviceInformation ID.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmController.GetControllersAsync(Windows.Devices.Pwm.Provider.IPwmProvider)">
+      <summary>Gets all the controllers on the system asynchronously.</summary>
+      <param name="provider">The PWM provider that is on the system.</param>
+      <returns>When the method completes successfully, it returns a list of values that represent the controllers available on the system.</returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmController.GetDefaultAsync">
+      <summary>Gets the default PWM controller on the system.</summary>
+      <returns>The default PWM controller on the system, or null if the system has no PWM controller.</returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmController.GetDeviceSelector">
+      <summary>Retrieves an Advanced Query Syntax (AQS) string for all the PWM controllers on the system. You can use this string with the DeviceInformation.FindAllAsync method to get DeviceInformation objects for those controllers.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmController.GetDeviceSelector(System.String)">
+      <summary>Retrieves an Advanced Query Syntax (AQS) string for the PWM controller that has the specified friendly name. You can use this string with the DeviceInformation.FindAllAsync method to get DeviceInformation objects for those controllers.</summary>
+      <param name="friendlyName">A friendly name for the particular PWM controller for which you want to get the corresponding AQS string.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmController.OpenPin(System.Int32)">
+      <summary>Opens the pin for use.</summary>
+      <param name="pinNumber">Which pin to open.</param>
+      <returns>The requested pin now available for use.</returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmController.SetDesiredFrequency(System.Double)">
+      <summary>Sets the PWM frequency.</summary>
+      <param name="desiredFrequency">Then value of the desired frequency in Hz.</param>
+      <returns>The actual frequency that was set. This will be the closest supported match as determined by the provider.</returns>
+    </member>
+    <member name="T:Windows.Devices.Pwm.PwmPin">
+      <summary>Represents a single PWM pin on the system.</summary>
+    </member>
+    <member name="P:Windows.Devices.Pwm.PwmPin.Controller">
+      <summary>Gets the PWM controller in use by this pin.</summary>
+      <returns>The controller.</returns>
+    </member>
+    <member name="P:Windows.Devices.Pwm.PwmPin.IsStarted">
+      <summary>Gets the started state of the pin.</summary>
+      <returns>True if the PWM has started on this pin, otherwise false.</returns>
+    </member>
+    <member name="P:Windows.Devices.Pwm.PwmPin.Polarity">
+      <summary>Gets or sets the polarity of the pin.</summary>
+      <returns>The pin polarity.</returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmPin.Close">
+      <summary>Closes current connection to the pin, and makes pin available to be opened by others.</summary>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmPin.GetActiveDutyCyclePercentage">
+      <summary>Retrieves the duty cycle percentage for this pin.</summary>
+      <returns>The duty cycle percentage, between 0.0 and 1.0.</returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmPin.SetActiveDutyCyclePercentage(System.Double)">
+      <summary>Sets the duty cycle percentage for this pin.</summary>
+      <param name="dutyCyclePercentage">The desired duty cycle percentage, represented as a value between 0.0 and 1.0.</param>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmPin.Start">
+      <summary>Starts the PWM on this pin.</summary>
+    </member>
+    <member name="M:Windows.Devices.Pwm.PwmPin.Stop">
+      <summary>Stops the PWM on this pin.</summary>
+    </member>
+    <member name="T:Windows.Devices.Pwm.PwmPulsePolarity">
+      <summary>Describes which polarity the PWM signal should start in.</summary>
+    </member>
+    <member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveHigh">
+      <summary>Configures the PWM signal to start in the active high state.</summary>
+    </member>
+    <member name="F:Windows.Devices.Pwm.PwmPulsePolarity.ActiveLow">
+      <summary>Configures the PWM signal to start in the active low state.</summary>
+    </member>
+    <member name="T:Windows.Devices.Pwm.Provider.IPwmControllerProvider">
+      <summary>Represents properties and methods common to all PWM controllers.</summary>
+    </member>
+    <member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ActualFrequency">
+      <summary>Gets the actual frequency of the PWM.</summary>
+      <returns>The frequency in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MaxFrequency">
+      <summary>Gets the maximum frequency offered by the controller.</summary>
+      <returns>The maximum frequency in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.MinFrequency">
+      <summary>Gets the minimum frequency offered by the controller.</summary>
+      <returns>The minimum frequency in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Pwm.Provider.IPwmControllerProvider.PinCount">
+      <summary>Gets the number of PWM pins available on the system.</summary>
+      <returns>The number of pins available.</returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.AcquirePin(System.Int32)">
+      <summary>Acquires the specified pin and opens that pin for use.</summary>
+      <param name="pin">Which pin to open a PWM connection to.</param>
+    </member>
+    <member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.DisablePin(System.Int32)">
+      <summary>Stops the PWM on this pin.</summary>
+      <param name="pin">Which pin to stop the PWM signal on.</param>
+    </member>
+    <member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.EnablePin(System.Int32)">
+      <summary>Starts the PWM signal on the specified pin.</summary>
+      <param name="pin">Which pin to start the PWM signal on.</param>
+    </member>
+    <member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.ReleasePin(System.Int32)">
+      <summary>Releases connection to specified pin and makes that pin available to others.</summary>
+      <param name="pin">Which pin to release.</param>
+    </member>
+    <member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetDesiredFrequency(System.Double)">
+      <summary>Sets the desired PWM frequency.</summary>
+      <param name="frequency">The desired frequency in Hz.</param>
+      <returns>The actual PWM frequency after setting to above value. This will be the closest supported match as determined by the provider.</returns>
+    </member>
+    <member name="M:Windows.Devices.Pwm.Provider.IPwmControllerProvider.SetPulseParameters(System.Int32,System.Double,System.Boolean)">
+      <summary>Sets the PWM parameters for pin, duty cycle, and polarity.</summary>
+      <param name="pin">Indicates which pin these values apply to.</param>
+      <param name="dutyCycle">The duty cycle percentage, with value between 0 and 100 inclusive.</param>
+      <param name="invertPolarity">True if polarity of pin should be inverted, otherwise false.</param>
+    </member>
+    <member name="T:Windows.Devices.Pwm.Provider.IPwmProvider">
+      <summary>Represents methods common to all PWM providers.</summary>
+    </member>
+    <member name="M:Windows.Devices.Pwm.Provider.IPwmProvider.GetControllers">
+      <summary>Gets the controllers available on the system.</summary>
+      <returns>Returns a list of PWM controllers available on the system.</returns>
+    </member>
+    <member name="T:Windows.Devices.Spi.ISpiDeviceStatics">
+      <summary>Represents SPI device statistics common to SPI devices.</summary>
+    </member>
+    <member name="M:Windows.Devices.Spi.ISpiDeviceStatics.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Opens a device with the connection settings provided.</summary>
+      <param name="busId">The id of the bus.</param>
+      <param name="settings">The connection settings.</param>
+      <returns>The SPI device.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetBusInfo(System.String)">
+      <summary>Retrieves the info about a certain bus.</summary>
+      <param name="busId">The id of the bus.</param>
+      <returns>The bus info requested.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector">
+      <summary>Gets all the SPI buses found on the system.</summary>
+      <returns>String containing all the buses on the system.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.ISpiDeviceStatics.GetDeviceSelector(System.String)">
+      <summary>Gets all the SPI buses found on the system that match the input parameter.</summary>
+      <param name="friendlyName">Input parameter specifying an identifying name for the desired bus. This usually corresponds to a name on the schematic.</param>
+      <returns>String containing all the buses that have the input in the name.</returns>
+    </member>
+    <member name="T:Windows.Devices.Spi.SpiBusInfo">
+      <summary>Represents the info about a SPI bus.</summary>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiBusInfo.ChipSelectLineCount">
+      <summary>Gets the number of chip select lines available on the bus.</summary>
+      <returns>Number of chip select lines.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiBusInfo.MaxClockFrequency">
+      <summary>Maximum clock cycle frequency of the bus.</summary>
+      <returns>The clock cycle in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiBusInfo.MinClockFrequency">
+      <summary>Minimum clock cycle frequency of the bus.</summary>
+      <returns>The clock cycle in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiBusInfo.SupportedDataBitLengths">
+      <summary>Gets the bit lengths that can be used on the bus for transmitting data.</summary>
+      <returns>The supported data lengths.</returns>
+    </member>
+    <member name="T:Windows.Devices.Spi.SpiConnectionSettings">
+      <summary>Represents the settings for the connection with an SpiDevice.</summary>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiConnectionSettings.#ctor(System.Int32)">
+      <summary>Initializes new instance of SpiConnectionSettings.</summary>
+      <param name="chipSelectLine">The chip select line on which the connection will be made.</param>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiConnectionSettings.ChipSelectLine">
+      <summary>Gets or sets the chip select line for the connection to the SPI device.</summary>
+      <returns>The chip select line.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiConnectionSettings.ClockFrequency">
+      <summary>Gets or sets the clock frequency for the connection.</summary>
+      <returns>Value of the clock frequency in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiConnectionSettings.DataBitLength">
+      <summary>Gets or sets the bit length for data on this connection.</summary>
+      <returns>The data bit length.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiConnectionSettings.Mode">
+      <summary>Gets or sets the SpiMode for this connection.</summary>
+      <returns>The communication mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiConnectionSettings.SharingMode">
+      <summary>Gets or sets the sharing mode for the SPI connection.</summary>
+      <returns>The sharing mode.</returns>
+    </member>
+    <member name="T:Windows.Devices.Spi.SpiController">
+      <summary>Represents the SPI controller on the system.</summary>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiController.GetControllersAsync(Windows.Devices.Spi.Provider.ISpiProvider)">
+      <summary>Gets all the SPI controllers that are on the system.</summary>
+      <param name="provider">The SPI provider for the controllers on the system.</param>
+      <returns>When the method completes successfully, it returns a list of values that represent the available SPI controllers on the system.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiController.GetDefaultAsync">
+      <summary>Gets the default SPI controller on the system.</summary>
+      <returns>The default SPI controller on the system, or null if the system has no SPI controller.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiController.GetDevice(Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Gets the SPI device with the specified settings.</summary>
+      <param name="settings">The desired connection settings.</param>
+      <returns>The SPI device.</returns>
+    </member>
+    <member name="T:Windows.Devices.Spi.SpiDevice">
+      <summary>Represents a device connected through the SPI bus.</summary>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiDevice.ConnectionSettings">
+      <summary>Gets the connection settings for the device.</summary>
+      <returns>The connection settings.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.SpiDevice.DeviceId">
+      <summary>Gets the unique ID associated with the device.</summary>
+      <returns>The ID.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.Close">
+      <summary>Closes the connection to the device.</summary>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.FromIdAsync(System.String,Windows.Devices.Spi.SpiConnectionSettings)">
+      <summary>Opens a device with the connection settings provided.</summary>
+      <param name="busId">The id of the bus.</param>
+      <param name="settings">The connection settings.</param>
+      <returns>The SPI device requested.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.GetBusInfo(System.String)">
+      <summary>Retrieves the info about a certain bus.</summary>
+      <param name="busId">The id of the bus.</param>
+      <returns>The bus info requested.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector">
+      <summary>Gets all the SPI buses found on the system.</summary>
+      <returns>String containing all the buses found on the system.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.GetDeviceSelector(System.String)">
+      <summary>Gets all the SPI buses found on the system that match the input parameter.</summary>
+      <param name="friendlyName">Input parameter specifying an identifying name for the desired bus. This usually corresponds to a name on the schematic.</param>
+      <returns>String containing all the buses that have the input in the name.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.Read(System.Byte[])">
+      <summary>Reads from the connected device.</summary>
+      <param name="buffer">Array containing data read from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>Transfer data using a full duplex communication system. Full duplex allows both the master and the slave to communicate simultaneously.</summary>
+      <param name="writeBuffer">Array containing data to write to the device.</param>
+      <param name="readBuffer">Array containing data read from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>Transfer data sequentially to the device.</summary>
+      <param name="writeBuffer">Array containing data to write to the device.</param>
+      <param name="readBuffer">Array containing data read from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.Spi.SpiDevice.Write(System.Byte[])">
+      <summary>Writes to the connected device.</summary>
+      <param name="buffer">Array containing the data to write to the device.</param>
+    </member>
+    <member name="T:Windows.Devices.Spi.SpiMode">
+      <summary>Defines the SPI communication mode. The communication mode defines the clock edge on which the master out line toggles, the master in line samples, and the signal clock's signal steady level (named SCLK). Each mode is defined with a pair of parameters called clock polarity (CPOL) and clock phase (CPHA).</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.SpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.SpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.SpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.SpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1.</summary>
+    </member>
+    <member name="T:Windows.Devices.Spi.SpiSharingMode">
+      <summary>Defines the sharing mode for the SPI bus.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.SpiSharingMode.Exclusive">
+      <summary>SPI bus segment is not shared.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.SpiSharingMode.Shared">
+      <summary>SPI bus is shared.</summary>
+    </member>
+    <member name="T:Windows.Devices.Spi.Provider.ISpiControllerProvider">
+      <summary>Represents actions common to all SPI controllers.</summary>
+    </member>
+    <member name="M:Windows.Devices.Spi.Provider.ISpiControllerProvider.GetDeviceProvider(Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings)">
+      <summary>Gets the SPI device with the specified settings.</summary>
+      <param name="settings">The desired connection settings.</param>
+      <returns>The SPI device.</returns>
+    </member>
+    <member name="T:Windows.Devices.Spi.Provider.ISpiDeviceProvider">
+      <summary>Represents actions common to a device connected through the SPI bus.</summary>
+    </member>
+    <member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.ConnectionSettings">
+      <summary>Gets the connection settings for the device.</summary>
+      <returns>The connection settings.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.Provider.ISpiDeviceProvider.DeviceId">
+      <summary>Gets the unique ID associated with the device.</summary>
+      <returns>The device ID.</returns>
+    </member>
+    <member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Read(System.Byte[])">
+      <summary>Reads from the connected device.</summary>
+      <param name="buffer">Array containing data read from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferFullDuplex(System.Byte[],System.Byte[])">
+      <summary>Transfer data using a full duplex communication system. Full duplex allows both the master and the slave to communicate simultaneously.</summary>
+      <param name="writeBuffer">Array containing data to write to the device.</param>
+      <param name="readBuffer">Array containing data read from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.TransferSequential(System.Byte[],System.Byte[])">
+      <summary>Transfer data sequentially to the device.</summary>
+      <param name="writeBuffer">Array containing data to write to the device.</param>
+      <param name="readBuffer">Array containing data read from the device.</param>
+    </member>
+    <member name="M:Windows.Devices.Spi.Provider.ISpiDeviceProvider.Write(System.Byte[])">
+      <summary>Writes to the connected device.</summary>
+      <param name="buffer">Array containing the data to write to the device.</param>
+    </member>
+    <member name="T:Windows.Devices.Spi.Provider.ISpiProvider">
+      <summary>Represents actions common to SPI controller providers.</summary>
+    </member>
+    <member name="M:Windows.Devices.Spi.Provider.ISpiProvider.GetControllersAsync">
+      <summary>Gets all the SPI controllers on the system for the provider.</summary>
+      <returns>When the method completes successfully, it returns a list of values that represent the available SPI controllers on the system.</returns>
+    </member>
+    <member name="T:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings">
+      <summary>Represents the provider settings for the connection to a device.</summary>
+    </member>
+    <member name="M:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.#ctor(System.Int32)">
+      <summary>Initializes a new instance of ProviderSpiConnectionSettings.</summary>
+      <param name="chipSelectLine">The chip select line on which the connection will be made.</param>
+    </member>
+    <member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ChipSelectLine">
+      <summary>Gets or sets the chip select line for the connection to the SPI device.</summary>
+      <returns>The chip select line.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.ClockFrequency">
+      <summary>Gets or sets the clock frequency for the connection.</summary>
+      <returns>Value of the clock frequency in Hz.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.DataBitLength">
+      <summary>Gets or sets the bit length for data on this connection.</summary>
+      <returns>The data bit length.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.Mode">
+      <summary>Gets or sets the ProviderSpiMode for this connection.</summary>
+      <returns>The communication mode.</returns>
+    </member>
+    <member name="P:Windows.Devices.Spi.Provider.ProviderSpiConnectionSettings.SharingMode">
+      <summary>Gets or sets the sharing mode for the SPI connection.</summary>
+      <returns>The sharing mode.</returns>
+    </member>
+    <member name="T:Windows.Devices.Spi.Provider.ProviderSpiMode">
+      <summary>Defines the SPI communication mode. The communication mode defines the clock edge on which the master out line toggles, the master in line samples, and the signal clock's signal steady level (named SCLK). Each mode is defined with a pair of parameters called clock polarity (CPOL) and clock phase (CPHA).</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode0">
+      <summary>CPOL = 0, CPHA = 0.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode1">
+      <summary>CPOL = 0, CPHA = 1.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode2">
+      <summary>CPOL = 1, CPHA = 0.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.Provider.ProviderSpiMode.Mode3">
+      <summary>CPOL = 1, CPHA = 1.</summary>
+    </member>
+    <member name="T:Windows.Devices.Spi.Provider.ProviderSpiSharingMode">
+      <summary>Defines the sharing mode for the SPI bus.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Exclusive">
+      <summary>SPI bus segment is not shared.</summary>
+    </member>
+    <member name="F:Windows.Devices.Spi.Provider.ProviderSpiSharingMode.Shared">
+      <summary>SPI bus is shared.</summary>
+    </member>
+  </members>
+</doc>

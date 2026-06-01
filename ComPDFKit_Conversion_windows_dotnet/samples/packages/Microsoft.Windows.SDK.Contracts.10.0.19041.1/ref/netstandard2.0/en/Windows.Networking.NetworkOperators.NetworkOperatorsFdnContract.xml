@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Networking.NetworkOperators.NetworkOperatorsFdnContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Networking.NetworkOperators.FdnAccessManager">
+      <summary>Manages access to the Fixed Dialing Number (FDN) list.</summary>
+    </member>
+    <member name="M:Windows.Networking.NetworkOperators.FdnAccessManager.RequestUnlockAsync(System.String)">
+      <summary>Static method that prompts the user for the PIN required to change a contact list of Fixed Dialing Numbers (FDNs). Typically your code calls this method when planning to make a change to the contact list. If the return value on successful completion is **true**, then you will be able to change the list of FDN contacts.</summary>
+      <param name="contactListId">A ContactList ID for the contact list you wish to change.</param>
+      <returns>An asynchronous retrieval operation. On successful completion, contains a Boolean value representing whether the PIN was entered successfully.</returns>
+    </member>
+    <member name="T:Windows.Networking.NetworkOperators.NetworkOperatorsFdnContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

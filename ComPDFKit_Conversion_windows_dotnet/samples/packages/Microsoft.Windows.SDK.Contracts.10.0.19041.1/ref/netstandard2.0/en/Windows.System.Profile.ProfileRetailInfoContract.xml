@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileRetailInfoContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.System.Profile.KnownRetailInfoProperties">
+      <summary>Identifies the string keys that might exist within the RetailInfo.Properties map of retail-demo relevant property values.</summary>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.BatteryLifeDescription">
+      <summary>Gets the string that identifies the **KnownRetailInfoProperties** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.DisplayDescription">
+      <summary>Gets the string that identifies the **DisplayDescription** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.DisplayModelName">
+      <summary>Gets the string that identifies the **DisplayModelName** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.FormFactor">
+      <summary>Gets the string that identifies the **FormFactor** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.FrontCameraDescription">
+      <summary>Gets the string that identifies the **FrontCameraDescription** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.GraphicsDescription">
+      <summary>Gets the string that identifies the **GraphicsDescription** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.HasNfc">
+      <summary>Gets the string that identifies the **HasNfc** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.HasOpticalDrive">
+      <summary>Gets the string that identifies the **HasOpticalDrive** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.HasSdSlot">
+      <summary>Gets the string that identifies the **HasSdSlot** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.IsFeatured">
+      <summary>Gets the string that identifies the **IsFeatured** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.IsOfficeInstalled">
+      <summary>Gets the string that identifies the **IsOfficeInstalled** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.ManufacturerName">
+      <summary>Gets the string that identifies the **ManufacturerName** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.Memory">
+      <summary>Gets the string that identifies the **Memory** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.ModelName">
+      <summary>Gets the string that identifies the **ModelName** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.Price">
+      <summary>Gets the string that identifies the **Price** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.ProcessorDescription">
+      <summary>Gets the string that identifies the **ProcessorDescription** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.RearCameraDescription">
+      <summary>Gets the string that identifies the **RearCameraDescription** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.RetailAccessCode">
+      <summary>Gets the string that identifies the **RetailAccessCode** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.ScreenSize">
+      <summary>Gets the string that identifies the **ScreenSize** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.StorageDescription">
+      <summary>Gets the string that identifies the **StorageDescription** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.Weight">
+      <summary>Gets the string that identifies the **Weight** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.KnownRetailInfoProperties.WindowsEdition">
+      <summary>Gets the string that identifies the **WindowsEdition** retail demo property.</summary>
+      <returns>The string that identifies the retail demo property.</returns>
+    </member>
+    <member name="T:Windows.System.Profile.ProfileRetailInfoContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.System.Profile.RetailInfo">
+      <summary>A utility class that supports one method, IsDemoModeEnabled, and one property, Properties. Call IsDemoModeEnabled to determine whether the device where the app is running has specifically enabled its retail demo mode.</summary>
+    </member>
+    <member name="P:Windows.System.Profile.RetailInfo.IsDemoModeEnabled">
+      <summary>Determines whether the device where the app is running has specifically enabled its retail demo mode.</summary>
+      <returns>**true** if the device where the app is running has specifically enabled its retail demo mode, otherwise **false**.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.RetailInfo.Properties">
+      <summary>Gets an object that represents the set of available retail demo properties and their values.</summary>
+      <returns>A read-only collection of key-value pairs, each pair representing an available retail demo property. This is an instance of a collection interface, not a strongly typed collection, so use the interface APIs to work with the items.</returns>
+    </member>
+  </members>
+</doc>

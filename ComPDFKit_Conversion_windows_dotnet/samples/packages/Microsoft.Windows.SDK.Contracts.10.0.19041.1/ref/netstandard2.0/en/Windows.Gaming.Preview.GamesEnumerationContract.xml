@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Gaming.Preview.GamesEnumerationContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Gaming.Preview.GamesEnumerationContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.GameList">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="E:Windows.Gaming.Preview.GamesEnumeration.GameList.GameAdded">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="E:Windows.Gaming.Preview.GamesEnumeration.GameList.GameRemoved">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="E:Windows.Gaming.Preview.GamesEnumeration.GameList.GameUpdated">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameList.FindAllAsync">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameList.FindAllAsync(System.String)">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="packageFamilyName">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameList.MergeEntriesAsync(Windows.Gaming.Preview.GamesEnumeration.GameListEntry,Windows.Gaming.Preview.GamesEnumeration.GameListEntry)">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="left">
+      </param>
+      <param name="right">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameList.UnmergeEntryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListEntry)">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="mergedEntry">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.GameListCategory">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="F:Windows.Gaming.Preview.GamesEnumeration.GameListCategory.Candidate">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.Gaming.Preview.GamesEnumeration.GameListCategory.ConfirmedBySystem">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.Gaming.Preview.GamesEnumeration.GameListCategory.ConfirmedByUser">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.GameListChangedEventHandler">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="game">
+      </param>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.GameListEntry">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.Category">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.DisplayInfo">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.GameModeConfiguration">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.LaunchableState">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.LauncherExecutable">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.LaunchParameters">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.Properties">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.TitleId">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.LaunchAsync">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.SetCategoryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListCategory)">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.SetLauncherExecutableFileAsync(Windows.Storage.IStorageFile)">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="executableFile">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.SetLauncherExecutableFileAsync(Windows.Storage.IStorageFile,System.String)">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="executableFile">
+      </param>
+      <param name="launchParams">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameListEntry.SetTitleIdAsync(System.String)">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="id">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="F:Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState.ByLastRunningFullPath">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState.ByTile">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState.ByUserProvidedPath">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.Gaming.Preview.GamesEnumeration.GameListEntryLaunchableState.NotLaunchable">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.GameListRemovedEventHandler">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="identifier">
+      </param>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.AffinitizeToExclusiveCpus">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.CpuExclusivityMaskHigh">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.CpuExclusivityMaskLow">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.IsEnabled">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.MaxCpuCount">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.PercentGpuMemoryAllocatedToGame">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.PercentGpuMemoryAllocatedToSystemCompositor">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.PercentGpuTimeAllocatedToGame">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.RelatedProcessNames">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameModeConfiguration.SaveAsync">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration.GamingRelatedProcessNames">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration.GetDefault">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.GameModeUserConfiguration.SaveAsync">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Windows.Gaming.Preview.GamesEnumeration.IGameListEntry">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.IGameListEntry.Category">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.IGameListEntry.DisplayInfo">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:Windows.Gaming.Preview.GamesEnumeration.IGameListEntry.Properties">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.IGameListEntry.LaunchAsync">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.Gaming.Preview.GamesEnumeration.IGameListEntry.SetCategoryAsync(Windows.Gaming.Preview.GamesEnumeration.GameListCategory)">
+      <summary>This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.</summary>
+      <param name="value">
+      </param>
+      <returns>
+      </returns>
+    </member>
+  </members>
+</doc>

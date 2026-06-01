@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.UserProfile.UserProfileContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.System.UserProfile.AccountPictureKind">
+      <summary>Allows you to request a specific image type when using GetAccountPicture.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="F:Windows.System.UserProfile.AccountPictureKind.LargeImage">
+      <summary>Indicates you want the large image for the user's account.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.AccountPictureKind.SmallImage">
+      <summary>Indicates you want the small image for the user's account.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.AccountPictureKind.Video">
+      <summary>Indicates you want the video for the user's account.</summary>
+    </member>
+    <member name="T:Windows.System.UserProfile.SetAccountPictureResult">
+      <summary>A result that is returned when you try to set the image for a user account.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetAccountPictureResult.ChangeDisabled">
+      <summary>Indicates that the picture was not set because the AccountPictureChangeEnabled property is disabled, or the user cancelled the consent prompt.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetAccountPictureResult.Failure">
+      <summary>Indicates the picture or video was not set.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetAccountPictureResult.FileSizeError">
+      <summary>Indicates the picture was not set because the file size was too large.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetAccountPictureResult.LargeOrDynamicError">
+      <summary>Indicates that the picture was not set because the picture was too large.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetAccountPictureResult.Success">
+      <summary>Indicates the picture was successfully set.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetAccountPictureResult.VideoFrameSizeError">
+      <summary>Indicates that the video was not set because of its frame size was too large.</summary>
+    </member>
+    <member name="T:Windows.System.UserProfile.SetImageFeedResult">
+      <summary>Specifies the result of a call to LockScreen.RequestSetImageFeedAsync</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetImageFeedResult.ChangeDisabled">
+      <summary>The feed was not set because the lock screen image slide show is disabled by group policy.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetImageFeedResult.Success">
+      <summary>The image feed was set successfully.</summary>
+    </member>
+    <member name="F:Windows.System.UserProfile.SetImageFeedResult.UserCanceled">
+      <summary>The operation was canceled by the user.</summary>
+    </member>
+    <member name="T:Windows.System.UserProfile.UserInformation">
+      <summary>Represents information about the user, such as name and account picture.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+    </member>
+    <member name="P:Windows.System.UserProfile.UserInformation.AccountPictureChangeEnabled">
+      <summary>Determines if the user's account picture can be changed.</summary>
+      <returns>True if the user's account picture can be changed; false otherwise.</returns>
+    </member>
+    <member name="P:Windows.System.UserProfile.UserInformation.NameAccessAllowed">
+      <summary>Allows you to see if your app is allowed to access the user's information.</summary>
+      <returns>True if your app is allowed access to the AccountPictureChanged event, and is allowed to retrieve user information by using the GetAccountPicture, GetDisplayNameAsync, GetDomainNameAsync, GetFirstNameAsync, GetLastNameAsync, and GetSessionInitiationProtocolUriAsync methods. Otherwise, this property is false.</returns>
+    </member>
+    <member name="E:Windows.System.UserProfile.UserInformation.AccountPictureChanged">
+      <summary>Occurs when the user's image or name changes.</summary>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.GetAccountPicture(Windows.System.UserProfile.AccountPictureKind)">
+      <summary>Gets the account picture for the user.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <param name="kind">An enumeration that you can use to determine what type of image you want (small, large, and so on).</param>
+      <returns>An object that contains the image.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.GetDisplayNameAsync">
+      <summary>Gets the display name for the user account.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <returns>The display name for the user account.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.GetDomainNameAsync">
+      <summary>Gets the domain name for the user.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <returns>A string that represents the domain name for the user.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.GetFirstNameAsync">
+      <summary>Gets the user's first name.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <returns>The user's first name.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.GetLastNameAsync">
+      <summary>Gets the user's last name.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <returns>The user's last name.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.GetPrincipalNameAsync">
+      <summary>Gets the principal name for the user. This name is the User Principal Name (typically the user's address, although this is not always true.)</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <returns>The user's principal name.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.GetSessionInitiationProtocolUriAsync">
+      <summary>Gets the Uniform Resource Identifier (URI) of the session initiation protocol for the user.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <returns>The Uniform Resource Identifier (URI) of the session initiation protocol.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureAsync(Windows.Storage.IStorageFile)">
+      <summary>Sets the picture for the user's account using an IStorageFile object.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <param name="image">A file that contains the image.</param>
+      <returns>A value that indicates the success or failure of the operation.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.SetAccountPictureFromStreamAsync(Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Sets the picture for the user's account using an IRandomAccessStream object.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <param name="image">The image.</param>
+      <returns>A value that indicates the success or failure of the operation.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesAsync(Windows.Storage.IStorageFile,Windows.Storage.IStorageFile,Windows.Storage.IStorageFile)">
+      <summary>Sets the pictures for the user's account using an IStorageFile object. Supports adding a small image, large image, and video.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <param name="smallImage">A small version of the image.</param>
+      <param name="largeImage">A large version of the image.</param>
+      <param name="video">A video.</param>
+      <returns>A value that indicates the success or failure of the operation.</returns>
+    </member>
+    <member name="M:Windows.System.UserProfile.UserInformation.SetAccountPicturesFromStreamsAsync(Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream,Windows.Storage.Streams.IRandomAccessStream)">
+      <summary>Sets the pictures for the user's account using an IRandomAccessStream object. Supports adding a small image, large image, and video.</summary>
+      <deprecated type="deprecate">Use User instead of UserInformation. For more info, see MSDN.</deprecated>
+      <param name="smallImage">A small version of the image.</param>
+      <param name="largeImage">A large version of the image.</param>
+      <param name="video">A video.</param>
+      <returns>A value that indicates the success or failure of the operation.</returns>
+    </member>
+    <member name="T:Windows.System.UserProfile.UserProfileContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

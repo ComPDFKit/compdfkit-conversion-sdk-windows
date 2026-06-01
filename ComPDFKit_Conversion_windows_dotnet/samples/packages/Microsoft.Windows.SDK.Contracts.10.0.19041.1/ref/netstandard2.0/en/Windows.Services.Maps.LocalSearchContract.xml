@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.Services.Maps.LocalSearchContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Services.Maps.LocalSearchContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.Services.Maps.LocalSearch.LocalCategories">
+      <summary>Provides names of search categories that you can use to limit search results when calling the FindLocalLocationsAsync method.</summary>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.All">
+      <summary>Gets a value that represents all search categories.</summary>
+      <returns>A value that indicates search results are not limited by search categories.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.BankAndCreditUnions">
+      <summary>Gets the name of the search category for banks and credit unions.</summary>
+      <returns>The name of the Search category for banks and credit unions.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.EatDrink">
+      <summary>Gets the name of the search category for places to eat and drink.</summary>
+      <returns>The name of the Search category for places to eat and drink.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Hospitals">
+      <summary>Gets the name of the search category for hospitals.</summary>
+      <returns>The name of the Search category for hospitals.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.HotelsAndMotels">
+      <summary>Gets the name of the search category for hotels and motels.</summary>
+      <returns>The name of the Search category for hotels and motels.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Parking">
+      <summary>Gets the name of the search category for parking locations.</summary>
+      <returns>The name of the search category for parking locations.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.SeeDo">
+      <summary>Gets the name of the search category for places to see and things to do.</summary>
+      <returns>The name of the search category for places to see and things to do.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalCategories.Shop">
+      <summary>Gets the name of the search category for places to shop.</summary>
+      <returns>The name of the search category for places to shop.</returns>
+    </member>
+    <member name="T:Windows.Services.Maps.LocalSearch.LocalLocation">
+      <summary>Represents a business or place.</summary>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Address">
+      <summary>Gets the postal address of the business or place.</summary>
+      <returns>The postal address of the business or place.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Category">
+      <summary>Get the category of this location.</summary>
+      <returns>The category of this location.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.DataAttribution">
+      <summary>Gets the name of the data source that provided the business or place information.</summary>
+      <returns>The name of the data source that provided the business or place information.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Description">
+      <summary>Gets the description of the business or place.</summary>
+      <returns>The description of the business or place.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.DisplayName">
+      <summary>Gets the name of the business or place.</summary>
+      <returns>The name of the business or place.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.HoursOfOperation">
+      <summary>Gets the hours of operation of this location.</summary>
+      <returns>The hours of operation of this location.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Identifier">
+      <summary>Gets the search result identifier of the business or place.</summary>
+      <returns>The search result identifier of the business or place.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.PhoneNumber">
+      <summary>Gets the phone number of the business or place.</summary>
+      <returns>The phone number of the business or place.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.Point">
+      <summary>Gets the geographic location of the business or place.</summary>
+      <returns>The geographic location of the business or place.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocation.RatingInfo">
+      <summary>Gets the rating information of this place.</summary>
+      <returns>The rating information of this location.</returns>
+    </member>
+    <member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinder">
+      <summary>Searches for businesses and places.</summary>
+    </member>
+    <member name="M:Windows.Services.Maps.LocalSearch.LocalLocationFinder.FindLocalLocationsAsync(System.String,Windows.Devices.Geolocation.Geocircle,System.String,System.UInt32)">
+      <summary>Gets information about businesses and places that meet the specified search criteria.</summary>
+      <param name="searchTerm">The query text of the search; that which you're searching for.</param>
+      <param name="searchArea">The geographic area to be included in the search.</param>
+      <param name="localCategory">The search categories used to limit search results. We recommend using one or more LocalCategories properties to specify *localCategory*. Use a semicolon "**;** " separator to specify more than one category.</param>
+      <param name="maxResults">The maximum number of results to return from the search.</param>
+      <returns>The relevant businesses or places that meet the specified search criteria, of type LocalLocationFinderResult.</returns>
+    </member>
+    <member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult">
+      <summary>Represents the results of a search performed by the FindLocalLocationsAsync method.</summary>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.LocalLocations">
+      <summary>Gets the businesses and places that meet the specified search criteria, if any.</summary>
+      <returns>The businesses and places that meet the specified search criteria, if any, of type LocalLocation.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocationFinderResult.Status">
+      <summary>Gets the status of the search performed by the FindLocalLocationsAsync method.</summary>
+      <returns>The status of the search performed by the FindLocalLocationsAsync method.</returns>
+    </member>
+    <member name="T:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus">
+      <summary>Specifies the status of a search performed by the FindLocalLocationsAsync method.</summary>
+    </member>
+    <member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidCategory">
+      <summary>One or more of the specified categories are not valid.</summary>
+    </member>
+    <member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidCredentials">
+      <summary>The app does not have the credentials necessary to perform the search.</summary>
+    </member>
+    <member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidSearchArea">
+      <summary>The specified geographic area is not valid.</summary>
+    </member>
+    <member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.InvalidSearchTerm">
+      <summary>The specified search text is not valid.</summary>
+    </member>
+    <member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.NetworkFailure">
+      <summary>The search encountered a network failure.</summary>
+    </member>
+    <member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.NotSupported">
+      <summary>The search is not supported on this device.</summary>
+    </member>
+    <member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.Success">
+      <summary>The search completed successfully.</summary>
+    </member>
+    <member name="F:Windows.Services.Maps.LocalSearch.LocalLocationFinderStatus.UnknownError">
+      <summary>The search encountered an unknown error.</summary>
+    </member>
+    <member name="T:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem">
+      <summary>Contains the hours of operation for a location.</summary>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Day">
+      <summary>Gets the day the property is in operation.</summary>
+      <returns>The day the property is in operation.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Span">
+      <summary>Gets the time span of operation for the property.</summary>
+      <returns>The time span of operation for the property.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem.Start">
+      <summary>Gets the start of operation for the location.</summary>
+      <returns>The start of operation for the location.</returns>
+    </member>
+    <member name="T:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo">
+      <summary>Contains the location rating information.</summary>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.AggregateRating">
+      <summary>Gets the aggregate rating of the location.</summary>
+      <returns>The aggregate rating of the location.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.ProviderIdentifier">
+      <summary>Gets the provider ID for the rating.</summary>
+      <returns>The provider ID for the rating.</returns>
+    </member>
+    <member name="P:Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo.RatingCount">
+      <summary>Gets the rating count for this location.</summary>
+      <returns>The rating count for this location.</returns>
+    </member>
+    <member name="T:Windows.Services.Maps.LocalSearch.PlaceInfoHelper">
+      <summary>Creates PlaceInfo instances by using businesses and places found in searches that are performed against data that has been cached locally on the device.</summary>
+    </member>
+    <member name="M:Windows.Services.Maps.LocalSearch.PlaceInfoHelper.CreateFromLocalLocation(Windows.Services.Maps.LocalSearch.LocalLocation)">
+      <summary>Creates a PlaceInfo instance.</summary>
+      <param name="location">The location of a business or place.</param>
+      <returns>A PlaceInfo that describes the business or place.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs">
+      <summary>Provides data for the BusinessLandmarkClick event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.#ctor">
+      <summary>Initializes a new instance of the MapControlBusinessLandmarkClickEventArgs class.</summary>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkClickEventArgs.LocalLocations">
+      <summary>Gets the businesses that correspond to the business landmark.</summary>
+      <returns>The businesses that correspond to the business landmark, of type LocalLocation.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs">
+      <summary>Provides data for the BusinessLandmarkPointerEntered event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.#ctor">
+      <summary>Creates a new MapControlBusinessLandmarkPointerEnteredEventArgs object.</summary>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs.LocalLocations">
+      <summary>Gets the local locations for the business landmark.</summary>
+      <returns>The local locations for the business landmark.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs">
+      <summary>Provides data for the BusinessLandmarkPointerExited event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.#ctor">
+      <summary>Constructs a new MapControlBusinessLandmarkPointerExitedEventArgs object.</summary>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs.LocalLocations">
+      <summary>Gets the local locations of the business land mark.</summary>
+      <returns>The local locations of the business land mark.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs">
+      <summary>Provides data for the BusinessLandmarkRightTapped event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.#ctor">
+      <summary>Initializes a new instance of the MapControlBusinessLandmarkRightTappedEventArgs class.</summary>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkRightTappedEventArgs.LocalLocations">
+      <summary>Gets the businesses that correspond to the business landmark.</summary>
+      <returns>The businesses that correspond to the business landmark, of type LocalLocation.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper">
+      <summary>Provides events that indicate the user has clicked on a business location or transit feature.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.#ctor(Windows.UI.Xaml.Controls.Maps.MapControl)">
+      <summary>Creates an instance of the MapControlDataHelper class for the specified MapControl.</summary>
+      <param name="map">The map control that provides the business and transit locations to the MapControlDataHelper.</param>
+    </member>
+    <member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkClick">
+      <summary>Occurs when the user taps a business location or clicks on it with the left mouse button. An instance of MapControlBusinessLandmarkClickEventArgs provides data for this event.</summary>
+    </member>
+    <member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkPointerEntered">
+      <summary>Indicates the pointer entered a business landmark.</summary>
+    </member>
+    <member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkPointerExited">
+      <summary>Indicates the pointer exited the business landmark.</summary>
+    </member>
+    <member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.BusinessLandmarkRightTapped">
+      <summary>Occurs when the user presses-and-holds a business location or clicks on it with the right mouse button. An instance of MapControlBusinessLandmarkRightTappedEventArgs provides data for this event.</summary>
+    </member>
+    <member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeatureClick">
+      <summary>Occurs when the user taps a transit feature or clicks on it with the left mouse button. An instance of MapControlTransitFeatureClickEventArgs provides data for this event.</summary>
+    </member>
+    <member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeaturePointerEntered">
+      <summary>Indicates the pointer entered the transit feature.</summary>
+    </member>
+    <member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeaturePointerExited">
+      <summary>Indicates the pointer exited the transit feature.</summary>
+    </member>
+    <member name="E:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.TransitFeatureRightTapped">
+      <summary>Occurs when the user presses-and-holds a transit feature or clicks on it with the right mouse button. An instance of MapControlTransitFeatureRightTappedEventArgs provides data for this event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlDataHelper.CreateMapControl(System.Boolean)">
+      <summary>Creates a MapControl in raster-mode.</summary>
+      <param name="rasterRenderMode">Specifies whether to create the MapControl in raster-mode.</param>
+      <returns>A MapControl</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs">
+      <summary>Provides data for the TransitFeatureClick event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.#ctor">
+      <summary>Initializes a new instance of the MapControlTransitFeatureClickEventArgs class.</summary>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.DisplayName">
+      <summary>Gets the name of the transit feature.</summary>
+      <returns>The name of the transit feature.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.Location">
+      <summary>Gets the geographic location of the transit feature.</summary>
+      <returns>The geographic location of the transit feature.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureClickEventArgs.TransitProperties">
+      <summary>Gets the property bag for the transit feature.</summary>
+      <returns>The property bag for the transit feature.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs">
+      <summary>Provides data for the TransitFeaturePointerEntered event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.#ctor">
+      <summary>Constructs a new MapControlTransitFeaturePointerEnteredEventArgs object.</summary>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.DisplayName">
+      <summary>Gets the display name.</summary>
+      <returns>The display name.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.Location">
+      <summary>Gets the location.</summary>
+      <returns>The location.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs.TransitProperties">
+      <summary>Gets the transit properties.</summary>
+      <returns>The transit properties.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs">
+      <summary>Provides data to the TransitFeaturePointerExited event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.#ctor">
+      <summary>Constructs a new MapControlTransitFeaturePointerExitedEventArgs object.</summary>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.DisplayName">
+      <summary>Gets the display name.</summary>
+      <returns>The display name.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.Location">
+      <summary>Gets the location.</summary>
+      <returns>The location.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs.TransitProperties">
+      <summary>Gets the transit properties.</summary>
+      <returns>The transit properties.</returns>
+    </member>
+    <member name="T:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs">
+      <summary>Provides data for the TransitFeatureRightTapped event.</summary>
+    </member>
+    <member name="M:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.#ctor">
+      <summary>Initializes a new instance of the MapControlTransitFeatureRightTappedEventArgs class.</summary>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.DisplayName">
+      <summary>Gets the name of the transit feature.</summary>
+      <returns>The name of the transit feature.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.Location">
+      <summary>Gets the geographic location of the transit feature.</summary>
+      <returns>The geographic location of the transit feature.</returns>
+    </member>
+    <member name="P:Windows.UI.Xaml.Controls.Maps.MapControlTransitFeatureRightTappedEventArgs.TransitProperties">
+      <summary>Gets the property bag for the transit feature.</summary>
+      <returns>The property bag for the transit feature.</returns>
+    </member>
+  </members>
+</doc>

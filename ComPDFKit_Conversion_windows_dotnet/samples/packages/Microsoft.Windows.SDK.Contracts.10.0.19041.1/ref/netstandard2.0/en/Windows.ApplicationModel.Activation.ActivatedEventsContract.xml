@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Activation.ActivatedEventsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Activation.ActivatedEventsContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs">
+      <summary>Provides event information when communication to and from the lock screen is required.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.ILockScreenCallActivatedEventArgs.CallUI">
+      <summary>Gets the UI that handles communication to and from the lock screen.</summary>
+      <returns>The UI that handles communication to and from the lock screen.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs">
+      <summary>Provides information about an event that occurs when the app is launched as a workflow for three-dimensional printing.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IPrint3DWorkflowActivatedEventArgs.Workflow">
+      <summary>Gets the workflow that the app should use for three-dimensional printing.</summary>
+      <returns>The workflow that the app should use for three-dimensional printing.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs">
+      <summary>Provides information in response to the event that is raised when print task settings are activated.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.IPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Gets the configuration information for the print task.</summary>
+      <returns>The print task configuration information.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs">
+      <summary>Provides event information when communication to and from the lock screen is required.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Arguments">
+      <summary>Gets the arguments that are passed to the app to launch it.</summary>
+      <returns>The list of arguments.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CallUI">
+      <summary>Gets the UI that handles communication to and from the lock screen.</summary>
+      <returns>The UI that handles communication to and from the lock screen.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>Gets the identifier for the currently shown app view.</summary>
+      <returns>The identifier for the currently shown app view.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.LockScreenCall enumeration value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.TileId">
+      <summary>Gets the identifier of the source that launched the app.</summary>
+      <returns>The identifier of the tile.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs.ViewSwitcher">
+      <summary>Gets the view switcher object that allows you to set the view for the application.</summary>
+      <returns>Use the ActivationViewSwitcher to show or switch the view in response to the activation. The value will be **null** in hosted scenarios such as Share and File Picker activations.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs">
+      <summary>Provides information about an event that occurs when the app is launched as a 3D printing workflow.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.Print3DWorkflow enumeration value.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object that provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs.Workflow">
+      <summary>Gets a customized printing experience for a 3D printer.</summary>
+      <returns>The customized printing experience for a 3D printer.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs">
+      <summary>Provides information in response to the event that is raised when print task settings are activated.</summary>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Gets the configuration information for the print task.</summary>
+      <returns>The print task configuration information.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>Gets the activation type for the print task settings.</summary>
+      <returns>The type of activation for the print task.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before the settings were activated.</summary>
+      <returns>The execution state of the app.</returns>
+    </member>
+    <member name="P:Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs">
+      <summary>Provides event information when communication to and from the lock screen is required.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Arguments">
+      <summary>Gets the arguments that are passed to the app during its launch activation.</summary>
+      <returns>The list of arguments.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CallUI">
+      <summary>Gets the UI that handles communication to and from the lock screen.</summary>
+      <returns>The UI that handles communication to and from the lock screen.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.CurrentlyShownApplicationViewId">
+      <summary>Gets the identifier for the currently shown app view.</summary>
+      <returns>The identifier for the currently shown app view.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>The ActivationKind.lockScreenCall enumeration value.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before it was activated.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object, which provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUILockScreenCallActivatedEventArgs.TileId">
+      <summary>Gets the identifier of the source that launched the app.</summary>
+      <returns>The identifier of the tile.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs">
+      <summary>Represents the arguments related to activating a 3D print workflow.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the activated operation.</summary>
+      <returns>The activated operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Kind">
+      <summary>Gets the kind of activation.</summary>
+      <returns>The kind of activation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the previous execution state.</summary>
+      <returns>The previous state.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object that provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The splash screen.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrint3DWorkflowActivatedEventArgs.Workflow">
+      <summary>Gets the print workflow.</summary>
+      <returns>The print workflow.</returns>
+    </member>
+    <member name="T:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs">
+      <summary>Provided in response to the event that is raised when print task settings are activated.</summary>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.ActivatedOperation">
+      <summary>Gets the app activated operation.</summary>
+      <returns>The activation operation.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Configuration">
+      <summary>Gets the configuration information for the print task.</summary>
+      <returns>The print task configuration information.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.Kind">
+      <summary>Gets the activation type.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.PreviousExecutionState">
+      <summary>Gets the execution state of the app before the settings were activated.</summary>
+      <returns>One of the enumeration values.</returns>
+    </member>
+    <member name="P:Windows.UI.WebUI.WebUIPrintTaskSettingsActivatedEventArgs.SplashScreen">
+      <summary>Gets the splash screen object that provides information about the transition from the splash screen to the activated app.</summary>
+      <returns>The object that provides splash screen information.</returns>
+    </member>
+  </members>
+</doc>

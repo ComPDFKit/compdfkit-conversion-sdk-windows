@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.ViewManagement.ViewManagementViewScalingContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.UI.ViewManagement.ApplicationViewScaling">
+      <summary>Provides methods and properties for controlling layout scaling.</summary>
+    </member>
+    <member name="P:Windows.UI.ViewManagement.ApplicationViewScaling.DisableLayoutScaling">
+      <summary>Gets a value that indicates whether layout scaling is disabled.</summary>
+      <returns>**true** if layout scaling is disabled; otherwise, **false**.</returns>
+    </member>
+    <member name="M:Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(System.Boolean)">
+      <summary>Attempts to set the DisableLayoutScaling property to the specified value.</summary>
+      <param name="disableLayoutScaling">**true** to disable layout scaling; **false** to enable it.</param>
+      <returns>**true** if the property was set successfully; otherwise, **false**.</returns>
+    </member>
+    <member name="T:Windows.UI.ViewManagement.ViewManagementViewScalingContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

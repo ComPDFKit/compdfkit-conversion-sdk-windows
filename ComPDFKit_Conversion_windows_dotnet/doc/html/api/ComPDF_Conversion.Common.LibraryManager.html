@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class LibraryManager | ComPDFKit Conversion SDK </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class LibraryManager | ComPDFKit Conversion SDK ">
+    
+    <meta name="description" content="Manages all operations related to the SDK library. The LibraryManager class serves as a central hub for managing the lifecycle of an SDK library. It provides functionalities such as initializing the library with specified resources, verifying licenses, installing fonts, setting up logging and progress callbacks, retrieving version information, and counting pages in documents.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ComPDF_Conversion.Common.LibraryManager">
+
+
+
+  <h1 id="ComPDF_Conversion_Common_LibraryManager" data-uid="ComPDF_Conversion.Common.LibraryManager" class="text-break">Class LibraryManager</h1>
+  <div class="markdown level0 summary"><p>Manages the public SDK lifecycle, including library loading, resource initialization, license verification, version retrieval, page counting, and release.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">LibraryManager</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ComPDF_Conversion.html">ComPDF_Conversion</a>.<a class="xref" href="ComPDF_Conversion.Common.html">Common</a></h6>
+  <h6><strong>Assembly</strong>: cpdfconversionsdk_dotnet.dll</h6>
+  <h5 id="ComPDF_Conversion_Common_LibraryManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LibraryManager</code></pre>
+  </div>
+  <h3 id="methods">Methods
+</h3>
+
+
+  <a id="ComPDF_Conversion_Common_LibraryManager_GetPageCount_" data-uid="ComPDF_Conversion.Common.LibraryManager.GetPageCount*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_GetPageCount_System_String_System_String_" data-uid="ComPDF_Conversion.Common.LibraryManager.GetPageCount(System.String,System.String)">GetPageCount(string, string)</h4>
+  <div class="markdown level1 summary"><p>Returns the number of pages in a document.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetPageCount(string file_path, string password)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">file_path</span></td>
+        <td><p>Path to the document file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">password</span></td>
+        <td><p>Password for opening the PDF file (if required).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>The total number of pages in the document.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="ComPDF_Conversion_Common_LibraryManager_GetVersion_" data-uid="ComPDF_Conversion.Common.LibraryManager.GetVersion*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_GetVersion" data-uid="ComPDF_Conversion.Common.LibraryManager.GetVersion">GetVersion()</h4>
+  <div class="markdown level1 summary"><p>Gets the version of the SDK library.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetVersion()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A string representing the version of the SDK.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="ComPDF_Conversion_Common_LibraryManager_InitLibrary_" data-uid="ComPDF_Conversion.Common.LibraryManager.InitLibrary*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_InitLibrary_System_String_" data-uid="ComPDF_Conversion.Common.LibraryManager.InitLibrary(System.String)">InitLibrary(string)</h4>
+  <div class="markdown level1 summary"><p>Initializes the library with the specified library path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool InitLibrary(string libraryPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">libraryPath</span></td>
+        <td><p>The path to the library resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the library was successfully initialized, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="ComPDF_Conversion_Common_LibraryManager_Initialize_" data-uid="ComPDF_Conversion.Common.LibraryManager.Initialize*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_Initialize_System_String_" data-uid="ComPDF_Conversion.Common.LibraryManager.Initialize(System.String)">Initialize(string)</h4>
+  <div class="markdown level1 summary"><p>Initializes the SDK with the specified resource path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Initialize(string resourcePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">resourcePath</span></td>
+        <td><p>Path to the resources required by the SDK.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>True if the SDK was successfully initialized, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="ComPDF_Conversion_Common_LibraryManager_LicenseVerify_" data-uid="ComPDF_Conversion.Common.LibraryManager.LicenseVerify*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_LicenseVerify_System_String_" data-uid="ComPDF_Conversion.Common.LibraryManager.LicenseVerify(System.String)">LicenseVerify(string)</h4>
+  <div class="markdown level1 summary"><p>Verifies the provided license key along with device ID and application ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ErrorCode LicenseVerify(string license)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">license</span></td>
+        <td><p>The license key string to be verified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComPDF_Conversion.Common.ErrorCode.html">ErrorCode</a></td>
+        <td><p>ErrorCode indicating the success or failure of the verification process.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ComPDF_Conversion_Common_LibraryManager_ReleaseDocumentAIModel_" data-uid="ComPDF_Conversion.Common.LibraryManager.ReleaseDocumentAIModel*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_ReleaseDocumentAIModel" data-uid="ComPDF_Conversion.Common.LibraryManager.ReleaseDocumentAIModel">ReleaseDocumentAIModel()</h4>
+  <div class="markdown level1 summary"><p>Releases the memory used by the DocumentAI model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void ReleaseDocumentAIModel()</code></pre>
+  </div>
+  <h5 class="remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Call <code>SetDocumentAIModel</code> again before using OCR, layout analysis, or table recognition features after this call.</p>
+</div>
+
+
+  <a id="ComPDF_Conversion_Common_LibraryManager_SetDocumentAIModel_" data-uid="ComPDF_Conversion.Common.LibraryManager.SetDocumentAIModel*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_SetDocumentAIModel_System_String_System_Int32_" data-uid="ComPDF_Conversion.Common.LibraryManager.SetDocumentAIModel(System.String,System.Int32)">SetDocumentAIModel(string, int)</h4>
+  <div class="markdown level1 summary"><p>Sets the DocumentAI model used by OCR, layout analysis, and table recognition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ErrorCode SetDocumentAIModel(string modelPath, int gpuId = -1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">modelPath</span></td>
+        <td><p>Path to the DocumentAI model file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">gpuId</span></td>
+        <td><p>GPU device index for the AI model. Use -1 to disable GPU acceleration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ComPDF_Conversion.Common.ErrorCode.html">ErrorCode</a></td>
+        <td><p>ErrorCode indicating the success or failure of setting the model.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="ComPDF_Conversion_Common_LibraryManager_SetDocumentAIModelCount_" data-uid="ComPDF_Conversion.Common.LibraryManager.SetDocumentAIModelCount*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_SetDocumentAIModelCount_System_Int32_System_Int32_" data-uid="ComPDF_Conversion.Common.LibraryManager.SetDocumentAIModelCount(System.Int32,System.Int32)">SetDocumentAIModelCount(int, int)</h4>
+  <div class="markdown level1 summary"><p>Sets the number of DocumentAI model instances for layout analysis and table recognition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetDocumentAIModelCount(int layoutModelCount, int tableModelCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">layoutModelCount</span></td>
+        <td><p>Number of layout analysis model instances.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">tableModelCount</span></td>
+        <td><p>Number of table recognition model instances.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="ComPDF_Conversion_Common_LibraryManager_Release_" data-uid="ComPDF_Conversion.Common.LibraryManager.Release*"></a>
+  <h4 id="ComPDF_Conversion_Common_LibraryManager_Release" data-uid="ComPDF_Conversion.Common.LibraryManager.Release">Release()</h4>
+  <div class="markdown level1 summary"><p>Releases all resources used by the library. Should be called when the SDK is no longer needed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Release()</code></pre>
+  </div>
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

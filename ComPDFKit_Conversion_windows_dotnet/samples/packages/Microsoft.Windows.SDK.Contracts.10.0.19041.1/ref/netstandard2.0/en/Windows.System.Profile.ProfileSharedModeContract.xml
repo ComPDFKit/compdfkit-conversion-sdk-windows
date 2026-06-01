@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.Profile.ProfileSharedModeContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.System.Profile.ProfileSharedModeContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.System.Profile.SharedModeSettings">
+      <summary>Provides access to the settings for shared mode. For example, devices with large screens could support communal shared apps.</summary>
+    </member>
+    <member name="P:Windows.System.Profile.SharedModeSettings.IsEnabled">
+      <summary>Gets a Boolean value that indicates if shared mode is currently enabled.</summary>
+      <returns>A Boolean value that indicates if shared mode is currently enabled.</returns>
+    </member>
+    <member name="P:Windows.System.Profile.SharedModeSettings.ShouldAvoidLocalStorage">
+      <summary>Gets a Boolean value indicating that your app should not store files on the local hard drive.</summary>
+      <returns>A Boolean value indicating that apps should not store files on the local hard drive. Instead, files should be saved to cloud storage.</returns>
+    </member>
+  </members>
+</doc>

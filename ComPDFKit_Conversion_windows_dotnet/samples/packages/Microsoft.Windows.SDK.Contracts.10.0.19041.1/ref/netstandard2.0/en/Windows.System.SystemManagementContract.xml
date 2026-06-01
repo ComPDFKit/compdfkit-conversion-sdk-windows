@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.System.SystemManagementContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.Services.Cortana.CortanaSettings">
+      <summary>Provides access to Cortana settings.</summary>
+    </member>
+    <member name="P:Windows.Services.Cortana.CortanaSettings.HasUserConsentToVoiceActivation">
+      <summary>Gets whether the user has consented to voice activation.</summary>
+      <returns>**true** if the user has consented. Otherwise, **false**.</returns>
+    </member>
+    <member name="P:Windows.Services.Cortana.CortanaSettings.IsVoiceActivationEnabled">
+      <summary>Gets or sets whether voice activation is enabled.</summary>
+      <returns>**true** if voice activation is enabled. Otherwise, **false**.</returns>
+    </member>
+    <member name="M:Windows.Services.Cortana.CortanaSettings.GetDefault">
+      <summary>Retrieves the Cortana settings for the current user.</summary>
+      <returns>A CortanaSettings object.</returns>
+    </member>
+    <member name="M:Windows.Services.Cortana.CortanaSettings.IsSupported">
+      <summary>Retrieves whether Cortana settings are supported.</summary>
+      <returns>**true** if Cortana settings are supported. Otherwise, **false**.</returns>
+    </member>
+    <member name="T:Windows.System.AutoUpdateTimeZoneStatus">
+      <summary>The status of the automatic time zone request.</summary>
+    </member>
+    <member name="F:Windows.System.AutoUpdateTimeZoneStatus.Attempted">
+      <summary>Time zone detection attempted. </summary>
+    </member>
+    <member name="F:Windows.System.AutoUpdateTimeZoneStatus.Failed">
+      <summary>The time zone could not be detected due to lack of hardware support, or catastrophic failure.</summary>
+    </member>
+    <member name="F:Windows.System.AutoUpdateTimeZoneStatus.TimedOut">
+      <summary>Request timed out. </summary>
+    </member>
+    <member name="T:Windows.System.DateTimeSettings">
+      <summary>Sets the system date and time.</summary>
+    </member>
+    <member name="M:Windows.System.DateTimeSettings.SetSystemDateTime(Windows.Foundation.DateTime)">
+      <summary>Set the system date and time.</summary>
+      <param name="utcDateTime">The date and time value (in coordinated universal time (UTC)) to set the system clock to.</param>
+    </member>
+    <member name="T:Windows.System.PowerState">
+      <summary>Represents power states for fixed-purpose devices.</summary>
+    </member>
+    <member name="F:Windows.System.PowerState.ConnectedStandby">
+      <summary>Represents the Connected Standby state.</summary>
+    </member>
+    <member name="F:Windows.System.PowerState.SleepS3">
+      <summary>Represents the Sleep S3 state.</summary>
+    </member>
+    <member name="T:Windows.System.ProcessLauncher">
+      <summary>Starts the specified process with associated arguments, if any.</summary>
+    </member>
+    <member name="M:Windows.System.ProcessLauncher.RunToCompletionAsync(System.String,System.String)">
+      <summary>Launches a new process. This asynchronous function completes when the launched process terminates.</summary>
+      <param name="fileName">The name of the process to launch.</param>
+      <param name="args">Arguments for running the process.</param>
+      <returns>When the asynchronous operation completes, it contains the exit code from the launched process.</returns>
+    </member>
+    <member name="M:Windows.System.ProcessLauncher.RunToCompletionAsync(System.String,System.String,Windows.System.ProcessLauncherOptions)">
+      <summary>Launches a new process, including the specified options. This asynchronous function completes when the launched process terminates.</summary>
+      <param name="fileName">File name of process to start.</param>
+      <param name="args">Arguments for the specified process.</param>
+      <param name="options">Associated options for running the process.</param>
+      <returns>When the asynchronous operation completes, it contains the exit code from the launched process.</returns>
+    </member>
+    <member name="T:Windows.System.ProcessLauncherOptions">
+      <summary>Specifies the options used to launch the specified process.</summary>
+    </member>
+    <member name="M:Windows.System.ProcessLauncherOptions.#ctor">
+      <summary>Creates and initializes a new instance of the process launcher options object.</summary>
+    </member>
+    <member name="P:Windows.System.ProcessLauncherOptions.StandardError">
+      <summary>Specifies where a standard error is directed to.</summary>
+      <returns>The stream to direct standard errors to.</returns>
+    </member>
+    <member name="P:Windows.System.ProcessLauncherOptions.StandardInput">
+      <summary>Specifies where a standard input is coming from.</summary>
+      <returns>The input stream for standard input.</returns>
+    </member>
+    <member name="P:Windows.System.ProcessLauncherOptions.StandardOutput">
+      <summary>Specifies where a standard output is directed to.</summary>
+      <returns>The stream to which standard output is directed.</returns>
+    </member>
+    <member name="P:Windows.System.ProcessLauncherOptions.WorkingDirectory">
+      <summary>Gets or sets the directory the process launcher will work in.</summary>
+      <returns>The working directory.</returns>
+    </member>
+    <member name="T:Windows.System.ProcessLauncherResult">
+      <summary>Represents the return of the launched process.</summary>
+    </member>
+    <member name="P:Windows.System.ProcessLauncherResult.ExitCode">
+      <summary>Represents the exit code of the process that was run from ProcessLauncher.</summary>
+      <returns>The exit code.</returns>
+    </member>
+    <member name="T:Windows.System.ShutdownKind">
+      <summary>Describes the types of shutdown that you can perform for a device that runs in fixed-purpose mode.</summary>
+    </member>
+    <member name="F:Windows.System.ShutdownKind.Restart">
+      <summary>Shuts down the fixed-purpose device, then restarts the device.</summary>
+    </member>
+    <member name="F:Windows.System.ShutdownKind.Shutdown">
+      <summary>Shuts down the fixed-purpose device without restarting the device.</summary>
+    </member>
+    <member name="T:Windows.System.ShutdownManager">
+      <summary>Manages the shutdown of devices that run in fixed-purpose mode.</summary>
+    </member>
+    <member name="M:Windows.System.ShutdownManager.BeginShutdown(Windows.System.ShutdownKind,Windows.Foundation.TimeSpan)">
+      <summary>Shuts down a device that runs in fixed-purpose mode, and optionally restarts the device after the specified number of seconds.</summary>
+      <param name="shutdownKind">The type of shutdown to perform, either with or without restarting the device.</param>
+      <param name="timeout">The amount of time in seconds to wait before restarting the device if *shutdownKind* is **ShutdownKind.Restart**.</param>
+    </member>
+    <member name="M:Windows.System.ShutdownManager.CancelShutdown">
+      <summary>Cancels a shutdown of a fixed-purpose device that is already in progress.</summary>
+    </member>
+    <member name="M:Windows.System.ShutdownManager.EnterPowerState(Windows.System.PowerState)">
+      <summary>Instructs a fixed-purpose device to enter the given power state.</summary>
+      <param name="powerState">The power state to enter.</param>
+    </member>
+    <member name="M:Windows.System.ShutdownManager.EnterPowerState(Windows.System.PowerState,Windows.Foundation.TimeSpan)">
+      <summary>Instructs a fixed-purpose device to enter the given power state, then wake up after the given period of time.</summary>
+      <param name="powerState">The power state to enter.</param>
+      <param name="wakeUpAfter">The period of time to remain in the specified power state. After this time elapses, the device will wake up.</param>
+    </member>
+    <member name="M:Windows.System.ShutdownManager.IsPowerStateSupported(Windows.System.PowerState)">
+      <summary>Gets whether a given power state is supported on a fixed-purpose device.</summary>
+      <param name="powerState">The power state to be examined.</param>
+      <returns>This method returns TRUE if the power state is supported on the specified device, and FALSE otherwise.</returns>
+    </member>
+    <member name="T:Windows.System.SystemManagementContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.System.TimeZoneSettings">
+      <summary>Contains methods and properties for interacting with time zones.</summary>
+    </member>
+    <member name="P:Windows.System.TimeZoneSettings.CanChangeTimeZone">
+      <summary>Gets whether the time zone can be changed.</summary>
+      <returns>True if the time zone can be changed; otherwise, false.</returns>
+    </member>
+    <member name="P:Windows.System.TimeZoneSettings.CurrentTimeZoneDisplayName">
+      <summary>Gets the display name of the current time zone.</summary>
+      <returns>The display name of the current time zone.</returns>
+    </member>
+    <member name="P:Windows.System.TimeZoneSettings.SupportedTimeZoneDisplayNames">
+      <summary>Gets the display names for all supported time zones.</summary>
+      <returns>The display names for all supported time zones.</returns>
+    </member>
+    <member name="M:Windows.System.TimeZoneSettings.AutoUpdateTimeZoneAsync(Windows.Foundation.TimeSpan)">
+      <summary>Attempts to automatically determine and set the time zone for embedded mode devices.</summary>
+      <param name="timeout">If the time-out period is exceeded, this method returns a value of **TimedOut** for the AutoUpdateTimeZoneStatus.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.System.TimeZoneSettings.ChangeTimeZoneByDisplayName(System.String)">
+      <summary>Changes the time zone using the display name.</summary>
+      <param name="timeZoneDisplayName">The display name of the time zone to change to.</param>
+    </member>
+    <member name="T:Windows.System.Update.SystemUpdateAttentionRequiredReason">
+      <summary>Reason why user attention is required.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateAttentionRequiredReason.InsufficientBattery">
+      <summary>Insufficient battery power to begin updating system.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateAttentionRequiredReason.InsufficientDiskSpace">
+      <summary>Insufficient disk space to download updates.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateAttentionRequiredReason.NetworkRequired">
+      <summary>Network connection requires attention.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateAttentionRequiredReason.None">
+      <summary>No attention required.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateAttentionRequiredReason.UpdateBlocked">
+      <summary>Update cannot proceed.</summary>
+    </member>
+    <member name="T:Windows.System.Update.SystemUpdateItem">
+      <summary>Describes the update bundle's properties and status.</summary>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateItem.Description">
+      <summary>Describes the contents of the SystemUpdateItem.</summary>
+      <returns>Description of the contents of the system update package.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateItem.DownloadProgress">
+      <summary>Download progress percentage.</summary>
+      <returns>Download progress percentage.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateItem.ExtendedError">
+      <summary>Extended error information, if available.</summary>
+      <returns>Extended error information, if available.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateItem.Id">
+      <summary>A unique identifer which identifies this update item.</summary>
+      <returns>A unique identifer which identifies this update item.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateItem.InstallProgress">
+      <summary>Install progress percentage.</summary>
+      <returns>Install progress percentage.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateItem.Revision">
+      <summary>The revision number of the update bundle.  Starts at 1 and increases if revisions are made to the original update bundle.</summary>
+      <returns>The revision number of the update bundle.  Starts at 1 and increases if revisions are made to the original update bundle.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateItem.State">
+      <summary>State of the current update item.</summary>
+      <returns>State of the current update item.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateItem.Title">
+      <summary>Title of the update item.</summary>
+      <returns>Title of the update item.</returns>
+    </member>
+    <member name="T:Windows.System.Update.SystemUpdateItemState">
+      <summary>State of a SystemUpdateItem.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.Calculating">
+      <summary>Calculating update item actions.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.Completed">
+      <summary>Update completed.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.Downloading">
+      <summary>Update item downloading.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.Error">
+      <summary>Error encountered when trying to update—see ExtendedError</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.Initializing">
+      <summary>Update item initializing.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.Installing">
+      <summary>Update item installing.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.NotStarted">
+      <summary>Update not started.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.Preparing">
+      <summary>Preparing update item.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateItemState.RebootRequired">
+      <summary>Reboot required.</summary>
+    </member>
+    <member name="T:Windows.System.Update.SystemUpdateLastErrorInfo">
+      <summary>Information about the last failed system update.</summary>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateLastErrorInfo.ExtendedError">
+      <summary>Extended error description.</summary>
+      <returns>Extended error description.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateLastErrorInfo.IsInteractive">
+      <summary>Specifies if the last update error occurred during an interactive update.</summary>
+      <returns>**True** if the error occurred during an interactive update. **False** if the update was an automatic update.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateLastErrorInfo.State">
+      <summary>**SystemUpdateManager** state when the last error occurred.</summary>
+      <returns>**SystemUpdateManager** state when the last error occurred.</returns>
+    </member>
+    <member name="T:Windows.System.Update.SystemUpdateManager">
+      <summary>The **SystemUpdateManager** allows interactive control of system updates.</summary>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.AttentionRequiredReason">
+      <summary>Reason why user attention is required.</summary>
+      <returns>**SystemUpdateManager** state when the last error occurred.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.DownloadProgress">
+      <summary>Download progress percentage.</summary>
+      <returns>Download progress percentage.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.ExtendedError">
+      <summary>Extended error information if available.</summary>
+      <returns>Extended error information if available.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.InstallProgress">
+      <summary>Install progress percentage.</summary>
+      <returns>Install progress percentage.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.LastErrorInfo">
+      <summary>Information about the last failed system update.</summary>
+      <returns>Information about the last failed system update.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.LastUpdateCheckTime">
+      <summary>Time of last check for updates.</summary>
+      <returns>Time of last check for updates.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.LastUpdateInstallTime">
+      <summary>Time of last update install.</summary>
+      <returns>Time of last update install.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.State">
+      <summary>The current state of the **SystemUpdateManager**.</summary>
+      <returns>The current state of the **SystemUpdateManager**.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.UserActiveHoursEnd">
+      <summary>Gets the user active hours end time value.</summary>
+      <returns>Gets the user active hours end time value.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.UserActiveHoursMax">
+      <summary>Gets the maximum interval allowed between **UserActiveHoursStart** and **UserActiveHoursEnd** in hours.</summary>
+      <returns>Gets the maximum interval allowed between **UserActiveHoursStart** and **UserActiveHoursEnd** in hours.</returns>
+    </member>
+    <member name="P:Windows.System.Update.SystemUpdateManager.UserActiveHoursStart">
+      <summary>Gets the user active hours start time value.</summary>
+      <returns>Gets the user active hours start time value.</returns>
+    </member>
+    <member name="E:Windows.System.Update.SystemUpdateManager.StateChanged">
+      <summary>State property change notification event.</summary>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.BlockAutomaticRebootAsync(System.String)">
+      <summary>Block automatic reboots for update until UnblockAutomaticRebootAsync is called or until reboot is enforced by system policy.</summary>
+      <param name="lockId">Identifier consisting of A-Z,a-z,0-9.  Use Guid.NewGuid.ToString() to generate a new random id.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.GetAutomaticRebootBlockIds">
+      <summary>Get the IDs of automatic reboot block requests.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.GetFlightRing">
+      <summary>Get the flight ring.</summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.GetUpdateItems">
+      <summary>Get list of pending update items.</summary>
+      <returns>A list of the SystemUpdateItem</returns>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.IsSupported">
+      <summary>Indicates whether this API is supported on this device.</summary>
+      <returns>**true** if the API is supported; otherwise **false**.</returns>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.RebootToCompleteInstall">
+      <summary>Reboots the device to complete the install, if a reboot is required.</summary>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.SetFlightRing(System.String)">
+      <summary>Sets the flight ring.</summary>
+      <param name="flightRing">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.StartCancelUpdates">
+      <summary>Start cancelling updates if any updates are in progress.</summary>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.StartInstall(Windows.System.Update.SystemUpdateStartInstallAction)">
+      <summary>Start the detection, downloading, and installation of pending updates.</summary>
+      <param name="action">See SystemUpdateStartInstallAction</param>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.TrySetUserActiveHours(Windows.Foundation.TimeSpan,Windows.Foundation.TimeSpan)">
+      <summary>Try to set the user defined Active Hours during which automatic reboots for update will not be allowed.</summary>
+      <param name="start">Start time of active hours.</param>
+      <param name="end">End time of active hours.</param>
+      <returns>Returns true if active hours were set. Returns false otherwise.</returns>
+    </member>
+    <member name="M:Windows.System.Update.SystemUpdateManager.UnblockAutomaticRebootAsync(System.String)">
+      <summary>Unblock automatic update reboots, if blocked.</summary>
+      <param name="lockId">Identifier consisting of A-Z,a-z,0-9.  Use Guid.NewGuid.ToString() to generate a new random id. Must match the value passed into BlockAutomaticRebootAsync.</param>
+      <returns>Returns true if no blocks remain on automatic reboots.</returns>
+    </member>
+    <member name="T:Windows.System.Update.SystemUpdateManagerState">
+      <summary>Enumeration that describes the current state of system updates.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.AttentionRequired">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.Completed">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.Detecting">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.Downloading">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.Error">
+      <summary>An error has occurred. Check ExtendedError.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.Finalizing">
+      <summary>System updates are finalizing.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.Idle">
+      <summary>The SystemUpdateManager is idle.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.Installing">
+      <summary>System updates are installing.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.ReadyToDownload">
+      <summary>System updates are ready to download.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.ReadyToFinalize">
+      <summary>System updates are ready to finalize.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.ReadyToInstall">
+      <summary>System updates are ready to install.</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateManagerState.RebootRequired">
+      <summary>A reboot is required to complete the install.</summary>
+    </member>
+    <member name="T:Windows.System.Update.SystemUpdateStartInstallAction">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateStartInstallAction.AllowReboot">
+      <summary>Download, and install.  If reboots are required reboot automatically as sson as they are required</summary>
+    </member>
+    <member name="F:Windows.System.Update.SystemUpdateStartInstallAction.UpToReboot">
+      <summary>Download, and install.  Wait for interactive reboot to install or automatic reboot window if reboots are required.</summary>
+    </member>
+  </members>
+</doc>

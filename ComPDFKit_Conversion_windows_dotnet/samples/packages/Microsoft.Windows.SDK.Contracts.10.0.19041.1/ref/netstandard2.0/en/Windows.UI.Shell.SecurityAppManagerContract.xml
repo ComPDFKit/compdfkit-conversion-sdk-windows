@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Shell.SecurityAppManagerContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.UI.Shell.SecurityAppKind">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.UI.Shell.SecurityAppKind.WebProtection">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.UI.Shell.SecurityAppManager">
+      <summary>
+      </summary>
+    </member>
+    <member name="M:Windows.UI.Shell.SecurityAppManager.#ctor">
+      <summary>
+      </summary>
+    </member>
+    <member name="M:Windows.UI.Shell.SecurityAppManager.Register(Windows.UI.Shell.SecurityAppKind,System.String,Windows.Foundation.Uri,System.Boolean)">
+      <summary>
+      </summary>
+      <param name="kind">
+      </param>
+      <param name="displayName">
+      </param>
+      <param name="detailsUri">
+      </param>
+      <param name="registerPerUser">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Windows.UI.Shell.SecurityAppManager.Unregister(Windows.UI.Shell.SecurityAppKind,System.Guid)">
+      <summary>
+      </summary>
+      <param name="kind">
+      </param>
+      <param name="guidRegistration">
+      </param>
+    </member>
+    <member name="M:Windows.UI.Shell.SecurityAppManager.UpdateState(Windows.UI.Shell.SecurityAppKind,System.Guid,Windows.UI.Shell.SecurityAppState,Windows.UI.Shell.SecurityAppSubstatus,Windows.Foundation.Uri)">
+      <summary>
+      </summary>
+      <param name="kind">
+      </param>
+      <param name="guidRegistration">
+      </param>
+      <param name="state">
+      </param>
+      <param name="substatus">
+      </param>
+      <param name="detailsUri">
+      </param>
+    </member>
+    <member name="T:Windows.UI.Shell.SecurityAppManagerContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.UI.Shell.SecurityAppState">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.UI.Shell.SecurityAppState.Disabled">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.UI.Shell.SecurityAppState.Enabled">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.UI.Shell.SecurityAppSubstatus">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.UI.Shell.SecurityAppSubstatus.ActionNeeded">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.UI.Shell.SecurityAppSubstatus.ActionRecommended">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.UI.Shell.SecurityAppSubstatus.NoActionNeeded">
+      <summary>
+      </summary>
+    </member>
+    <member name="F:Windows.UI.Shell.SecurityAppSubstatus.Undetermined">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>

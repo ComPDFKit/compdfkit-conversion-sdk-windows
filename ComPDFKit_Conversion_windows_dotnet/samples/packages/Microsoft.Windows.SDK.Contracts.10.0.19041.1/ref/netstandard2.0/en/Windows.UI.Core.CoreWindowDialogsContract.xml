@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.UI.Core.CoreWindowDialogsContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.UI.Core.CoreWindowDialog">
+      <summary>Defines a child dialog of an app window.</summary>
+    </member>
+    <member name="M:Windows.UI.Core.CoreWindowDialog.#ctor">
+      <summary>Creates a default instance of the CoreWindowDialog class.</summary>
+    </member>
+    <member name="M:Windows.UI.Core.CoreWindowDialog.#ctor(System.String)">
+      <summary>Creates an instance of the CoreWindowDialog class with the supplied title.</summary>
+      <param name="title">The title of the dialog.</param>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowDialog.BackButtonCommand">
+      <summary>Gets or sets the delegate called when the back button on the dialog is selected.</summary>
+      <returns>The delegate called when the back button on the dialog is selected.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowDialog.CancelCommandIndex">
+      <summary>Gets and sets the command index value for the dialog cancel operation.</summary>
+      <returns>The command index value for the dialog cancel operation.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowDialog.Commands">
+      <summary>Gets the set of user interface commands (UI) available on the dialog.</summary>
+      <returns>The set of UI commands available on the dialog.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowDialog.DefaultCommandIndex">
+      <summary>Gets or sets the index of the dialog window's default command.</summary>
+      <returns>The index value of the dialog window's default command (such as **OK**).</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowDialog.IsInteractionDelayed">
+      <summary>Gets or sets a value that indicates whether any UI interaction event message is slightly delayed or not. This delay prevents a user from accidentally invoking an action on the dialog window.</summary>
+      <returns>**true** if a fractional delay is introduced to any interactions with the dialog; **false** if it is not.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowDialog.MaxSize">
+      <summary>Gets the maximum size of the dialog.</summary>
+      <returns>The maximum size of the dialog, in pixels.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowDialog.MinSize">
+      <summary>Gets the minimum size of the dialog.</summary>
+      <returns>The minimum size of the dialog, in pixels.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowDialog.Title">
+      <summary>Gets or sets the title of the dialog.</summary>
+      <returns>The title of the dialog.</returns>
+    </member>
+    <member name="E:Windows.UI.Core.CoreWindowDialog.Showing">
+      <summary>Is fired when the dialog is displayed.</summary>
+    </member>
+    <member name="M:Windows.UI.Core.CoreWindowDialog.ShowAsync">
+      <summary>Displays the dialog and asynchronously waits for the user to take an action.</summary>
+      <returns>The action performed by the user on the dialog, as well as information about the action.</returns>
+    </member>
+    <member name="T:Windows.UI.Core.CoreWindowDialogsContract">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:Windows.UI.Core.CoreWindowFlyout">
+      <summary>Defines a child flyout of an app window.</summary>
+    </member>
+    <member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point)">
+      <summary>Creates an instance of the CoreWindowFlyout class at the supplied position.</summary>
+      <param name="position">The pixel position on the screen where the flyout is to originate. The position provides the upper-leftmost corner of the flyout.</param>
+    </member>
+    <member name="M:Windows.UI.Core.CoreWindowFlyout.#ctor(Windows.Foundation.Point,System.String)">
+      <summary>Creates an instance of the CoreWindowFlyout class at the specified position with the supplied title.</summary>
+      <param name="position">The pixel position on the screen where the flyout is to originate. The position provides the upper-leftmost corner of the flyout.</param>
+      <param name="title">The title of the flyout.</param>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowFlyout.BackButtonCommand">
+      <summary>Gets or sets the delegate called when the back button on the flyout is selected.</summary>
+      <returns>The delegate called when the back button on the flyout is selected.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowFlyout.Commands">
+      <summary>Gets the set of user interface commands available on the flyout.</summary>
+      <returns>The set of user interface commands available on the flyout.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowFlyout.DefaultCommandIndex">
+      <summary>Gets or sets the index of the flyout window's default command.</summary>
+      <returns>The index value of the flyout window's default command (such as **OK**).</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowFlyout.IsInteractionDelayed">
+      <summary>Gets or sets a value that indicates whether any UI interaction event message is slightly delayed or not. This delay prevents a user from accidentally invoking an action on the flyout window.</summary>
+      <returns>**true** if a fractional delay is introduced to any interactions with the flyout; **false** if it is not.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowFlyout.MaxSize">
+      <summary>Gets the maximum size of the flyout.</summary>
+      <returns>The maximum size of the flyout, in pixels.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowFlyout.MinSize">
+      <summary>Gets the minimum size of the flyout.</summary>
+      <returns>The minimum size of the flyout, in pixels.</returns>
+    </member>
+    <member name="P:Windows.UI.Core.CoreWindowFlyout.Title">
+      <summary>Gets or sets the title of the flyout.</summary>
+      <returns>The title of the flyout.</returns>
+    </member>
+    <member name="E:Windows.UI.Core.CoreWindowFlyout.Showing">
+      <summary>Is fired when the flyout is displayed.</summary>
+    </member>
+    <member name="M:Windows.UI.Core.CoreWindowFlyout.ShowAsync">
+      <summary>Displays the flyout and asynchronously waits for the user to take an action.</summary>
+      <returns>The action performed by the user on the flyout, as well as information about the action.</returns>
+    </member>
+    <member name="T:Windows.UI.Core.CoreWindowPopupShowingEventArgs">
+      <summary>Defines a method for setting the desired size of a popup window.</summary>
+    </member>
+    <member name="M:Windows.UI.Core.CoreWindowPopupShowingEventArgs.SetDesiredSize(Windows.Foundation.Size)">
+      <summary>Sets the desired size of the popup.</summary>
+      <param name="value">The desired size of the popup.</param>
+    </member>
+  </members>
+</doc>

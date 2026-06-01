@@ -1,0 +1,443 @@
+{
+    "source_base_path":  "",
+    "xrefmap":  "xrefmap.yml",
+    "files":  [
+                  {
+                      "type":  "Resource",
+                      "output":  {
+                                     "resource":  {
+                                                      "relative_path":  "index.json"
+                                                  }
+                                 }
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.ConvertCallback.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.ConvertCallback.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.ConvertCallback",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.ConvertCallback.yml\" sourcestartlinenumber=\"1\"\u003eContains handle and delegates for conversion callbacks.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.DetectionResult.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.DetectionResult.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.DetectionResult",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.DetectionResult.yml\" sourcestartlinenumber=\"1\"\u003eDetection result.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.ErrorCode.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.ErrorCode.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.ErrorCode",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.ErrorCode.yml\" sourcestartlinenumber=\"1\"\u003eEnumeration for error code.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.ExcelOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.ExcelOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.ExcelOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.ExcelOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Excel conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.ExcelWorksheetOption.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.ExcelWorksheetOption.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.ExcelWorksheetOption",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.ExcelWorksheetOption.yml\" sourcestartlinenumber=\"1\"\u003eExcel Worksheet option.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.HtmlOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.HtmlOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.HtmlOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.HtmlOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Html conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.HtmlPageOption.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.HtmlPageOption.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.HtmlPageOption",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.HtmlPageOption.yml\" sourcestartlinenumber=\"1\"\u003eHtml page option.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.ImageColorMode.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.ImageColorMode.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.ImageColorMode",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.ImageColorMode.yml\" sourcestartlinenumber=\"1\"\u003eImage Color Mode.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.ImageOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.ImageOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.ImageOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.ImageOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Image conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.ImageType.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.ImageType.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.ImageType",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.ImageType.yml\" sourcestartlinenumber=\"1\"\u003eImage type.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.JsonOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.JsonOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.JsonOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.JsonOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Json conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.LibraryManager.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.LibraryManager.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.LibraryManager",
+                      "Summary":  "LibraryManager provides model lifecycle APIs SetDocumentAIModel, SetDocumentAIModelCount, and ReleaseDocumentAIModel, plus GetPageCount, GetVersion, and Release."
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.MarkdownOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.MarkdownOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.MarkdownOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.MarkdownOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Markdown conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.OCRLanguage.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.OCRLanguage.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.OCRLanguage",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.OCRLanguage.yml\" sourcestartlinenumber=\"1\"\u003eOCR Language.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.OCROption.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.OCROption.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.OCROption",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.OCROption.yml\" sourcestartlinenumber=\"1\"\u003eOCR option.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.OfdOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.OfdOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.OfdOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.OfdOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Ofd conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.OnCancel.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.OnCancel.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.OnCancel",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.OnCancel.yml\" sourcestartlinenumber=\"1\"\u003eThe delegate for the LibraryManager object, called to determine whether a conversion operation should be canceled.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.OnProgress.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.OnProgress.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.OnProgress",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.OnProgress.yml\" sourcestartlinenumber=\"1\"\u003eThe delegate for the LibraryManager object,called when a conversion operation finishes working on a page in a document.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.PageLayoutMode.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.PageLayoutMode.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.PageLayoutMode",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.PageLayoutMode.yml\" sourcestartlinenumber=\"1\"\u003ePage Layout Mode.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.PptOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.PptOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.PptOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.PptOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Powerpoint conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.RtfOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.RtfOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.RtfOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.RtfOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Rtf conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.SearchablePdfOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.SearchablePdfOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.SearchablePdfOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.SearchablePdfOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to PDF conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.TxtOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.TxtOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.TxtOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.TxtOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Txt conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.WordOptions.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.WordOptions.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common.WordOptions",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Common.WordOptions.yml\" sourcestartlinenumber=\"1\"\u003ePDF to Word conversion parameter object.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Common.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Common.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Common",
+                      "Summary":  null
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Conversion.CPDFConversion.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Conversion.CPDFConversion.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Conversion.CPDFConversion",
+                      "Summary":  "\u003cp sourcefile=\"api/ComPDF_Conversion.Conversion.CPDFConversion.yml\" sourcestartlinenumber=\"1\"\u003eProvides functionalities to convert PDF files into various formats such as Word, Excel, PPT, HTML, etc.\u003c/p\u003e"
+                  },
+                  {
+                      "type":  "ManagedReference",
+                      "source_relative_path":  "api/ComPDF_Conversion.Conversion.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/ComPDF_Conversion.Conversion.html"
+                                               }
+                                 },
+                      "version":  "",
+                      "Uid":  null,
+                      "IsMRef":  true,
+                      "Title":  "ComPDF_Conversion.Conversion",
+                      "Summary":  null
+                  },
+                  {
+                      "type":  "Toc",
+                      "source_relative_path":  "api/toc.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "api/toc.html"
+                                               },
+                                     ".json":  {
+                                                   "relative_path":  "api/toc.json"
+                                               }
+                                 },
+                      "version":  ""
+                  },
+                  {
+                      "type":  "Conceptual",
+                      "source_relative_path":  "getting-started.md",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "getting-started.html"
+                                               }
+                                 },
+                      "version":  ""
+                  },
+                  {
+                      "type":  "Conceptual",
+                      "source_relative_path":  "introduction.md",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "introduction.html"
+                                               }
+                                 },
+                      "version":  ""
+                  },
+                  {
+                      "type":  "Toc",
+                      "source_relative_path":  "toc.yml",
+                      "output":  {
+                                     ".html":  {
+                                                   "relative_path":  "toc.html"
+                                               },
+                                     ".json":  {
+                                                   "relative_path":  "toc.json"
+                                               }
+                                 },
+                      "version":  ""
+                  }
+              ],
+    "groups":  [
+                   {
+                       "xrefmap":  "xrefmap.yml"
+                   }
+               ]
+}

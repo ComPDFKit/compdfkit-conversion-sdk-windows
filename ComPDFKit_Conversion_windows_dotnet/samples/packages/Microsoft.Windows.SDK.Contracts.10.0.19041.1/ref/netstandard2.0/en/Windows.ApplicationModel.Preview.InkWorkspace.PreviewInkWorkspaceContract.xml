@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract</name>
+  </assembly>
+  <members>
+    <member name="T:Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager">
+      <summary>Represents the manager for apps hosted in the Windws Ink Workspace.</summary>
+    </member>
+    <member name="M:Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager.GetForCurrentApp">
+      <summary>Retrieves a reference to the Ink Workspace manager for this app.</summary>
+      <returns>An Ink Workspace reference.</returns>
+    </member>
+    <member name="M:Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager.SetThumbnailAsync(Windows.Graphics.Imaging.SoftwareBitmap)">
+      <summary>Asynchronously sets the thumbnail image for the Ink Workspace app.</summary>
+      <param name="bitmap">An uncompressed bitmap.</param>
+      <returns>An asynchronous action that doesn't return anything.</returns>
+    </member>
+    <member name="T:Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract">
+      <summary>
+      </summary>
+    </member>
+  </members>
+</doc>
