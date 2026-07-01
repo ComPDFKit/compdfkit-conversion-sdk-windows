@@ -2,7 +2,7 @@
 
 As part of the KDAN ecosystem, ComPDF Conversion SDK helps you build high-quality PDF conversion features into your Windows application. Empower your apps to convert PDF files into editable Office files, images, HTML, RTF, CSV, TXT, and more — while preserving layout, tables, text structure, and formatting. Whether you're building a document processing tool for enterprise users or a file converter for consumers, you can integrate reliable PDF conversion capabilities using a straightforward C# API.
 
-> If you find this library helpful, please consider giving us a ⭐ **Star** on GitHub! Have feedback or questions? Join the conversation in our [Discussions](https://github.com/orgs/ComPDFKit/discussions).
+> If you find this library helpful, please consider giving us a ⭐ **Star** on GitHub! Have feedback or questions? Join the conversation in our [Discussions](https://github.com/ComPDFKit/compdfkit-conversion-sdk-windows/discussions).
 
 **Supported Features**
 
